@@ -1,0 +1,90 @@
+import React, { Component, createContext } from 'react';
+import axios from 'axios';
+import { isAuthenticated } from '../../../utils/jwtUtil';
+import { clearLocalStorage, getLocalStorage, setLocalStorage } from '../../../utils/storageUtil';
+import history from '../../../utils/history';
+
+const AuthContext = createContext({
+    user: {},
+    isAuthenticated: false,
+});
+
+const AuthConsumer = AuthContext.Consumer;
+
+class AuthProvider extends Component {
+
+    state = {
+        user: getLocalStorage('user') || {},
+        isAuthenticated: isAuthenticated() || false,
+    };
+
+    login = ({ email, password }) => {
+        return axios.post(`$`, { email, password }).then((response) => {
+            setLocalStorage('token', response.data.data.token);
+            setLocalStorage('fullName', response.data.data.fullName);
+            setLocalStorage('customerCode', response.data.data.customerId);
+            setLocalStorage('registrationId', response.data.data.registrationId);
+            setLocalStorage('customerEmail', response.data.data.userId);
+            setLocalStorage('customerStatus', response.data.data.customerStatus);
+            setLocalStorage('user', response.data.data);
+            this.setState({ isAuthenticated: true, user: response.data.data });
+            return response;
+        })
+    };
+
+    logout = () => {
+        clearLocalStorage('token');
+        clearLocalStorage('fullName');
+        clearLocalStorage('customerCode');
+        clearLocalStorage('registrationId');
+        clearLocalStorage('customerEmail');
+        clearLocalStorage('customerStatus');
+        clearLocalStorage('user');
+        clearLocalStorage('calculation');
+        clearLocalStorage('customerCode');
+
+        this.setState({ user: {}, isAuthenticated: false });
+    };
+
+    goToDashboard = () => {
+        history.push({ pathname: '/dashboard' });
+    };
+
+
+    render() {
+        return (
+            <AuthContext.Provider
+                {...this.props}
+                value={{
+                    ...this.state,
+                    login: this.login,
+                    logout: this.logout,
+                    goToDashboard: this.goToDashboard,
+                }}
+            >
+                {this.props.children}
+            </AuthContext.Provider>
+        );
+    }
+}
+
+export { AuthProvider, AuthConsumer, AuthContext };
+
+export const withContext = Component => {
+    return props => {
+        return (
+            <AuthContext.Consumer>
+                {
+                    globalState => {
+                        return (
+                            <Component
+                                {...globalState}
+                                {...props}
+                            />
+                        );
+                    }
+                }
+            </AuthContext.Consumer>
+        );
+    };
+};
