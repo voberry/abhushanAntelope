@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
-import Dashboard from '../../components/Dashboard/Dashboard';
 
-class DashboardContainer extends Component {
+// Import custom components
+import RegisterPage from '../../components/Auth/RegisterPage';
+
+class RegisterPageContainer extends Component {
 
     render() {
         return (
-            <Dashboard
+            <RegisterPage
                 {...this.props}
             />
         );
@@ -33,4 +34,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps,
-)(DashboardContainer);
+)(RegisterPageContainer);

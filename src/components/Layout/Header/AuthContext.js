@@ -1,7 +1,7 @@
-import React, { Component, createContext } from 'react';
+import React, {Component, createContext} from 'react';
 import axios from 'axios';
-import { isAuthenticated } from '../../../utils/jwtUtil';
-import { clearLocalStorage, getLocalStorage, setLocalStorage } from '../../../utils/storageUtil';
+import {isAuthenticated} from '../../../utils/jwtUtil';
+import {clearLocalStorage, getLocalStorage, setLocalStorage} from '../../../utils/storageUtil';
 import history from '../../../utils/history';
 
 const AuthContext = createContext({
@@ -19,18 +19,12 @@ class AuthProvider extends Component {
     };
 
     login = ({ email, password }) => {
-        return axios.post(`$`, { email, password }).then((response) => {
-            setLocalStorage('token', response.data.data.token);
-            setLocalStorage('fullName', response.data.data.fullName);
-            setLocalStorage('customerCode', response.data.data.customerId);
-            setLocalStorage('registrationId', response.data.data.registrationId);
-            setLocalStorage('customerEmail', response.data.data.userId);
-            setLocalStorage('customerStatus', response.data.data.customerStatus);
-            setLocalStorage('user', response.data.data);
+        return axios.post(`https://dev.citytech.global:1443/customers/v1/login`, { email, password }).then((response) => {
             this.setState({ isAuthenticated: true, user: response.data.data });
             return response;
         })
     };
+
 
     logout = () => {
         clearLocalStorage('token');
@@ -43,11 +37,11 @@ class AuthProvider extends Component {
         clearLocalStorage('calculation');
         clearLocalStorage('customerCode');
 
-        this.setState({ user: {}, isAuthenticated: false });
+        this.setState({user: {}, isAuthenticated: false});
     };
 
     goToDashboard = () => {
-        history.push({ pathname: '/dashboard' });
+        history.push({pathname: '/dashboard'});
     };
 
 
@@ -68,7 +62,7 @@ class AuthProvider extends Component {
     }
 }
 
-export { AuthProvider, AuthConsumer, AuthContext };
+export {AuthProvider, AuthConsumer, AuthContext};
 
 export const withContext = Component => {
     return props => {

@@ -34,38 +34,16 @@ class AppHeader extends Component {
                                 <MDBNavbarToggler onClick={this.toggleCollapse}/>
                                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
                                     <MDBNavbarNav left>
-                                        <MDBNavItem active>
+                                        <MDBNavItem>
                                             <NavLink className='nav-link waves-effect waves-light' to="#!">Home</NavLink>
                                         </MDBNavItem>
-                                        <MDBNavItem>
-                                            <NavLink className='nav-link waves-effect waves-light' to="#!">Features</NavLink>
-                                        </MDBNavItem>
-                                        <MDBNavItem>
-                                            <NavLink className='nav-link waves-effect waves-light' to="#!">Pricing</NavLink>
-                                        </MDBNavItem>
-                                        <MDBNavItem>
-                                            <MDBDropdown>
-                                                <MDBDropdownToggle nav caret>
-                                                    <span className="mr-2">Dropdown</span>
-                                                </MDBDropdownToggle>
-                                                <MDBDropdownMenu>
-                                                    <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                                                    <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                                                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                                                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                                                </MDBDropdownMenu>
-                                            </MDBDropdown>
-                                        </MDBNavItem>
+
                                     </MDBNavbarNav>
                                     <MDBNavbarNav right>
-                                        <MDBNavItem>
-                                            <MDBFormInline waves>
-                                                <div className="md-form my-0">
-                                                    <input className="form-control mr-sm-2" type="text"
-                                                           placeholder="Search" aria-label="Search"/>
-                                                </div>
-                                            </MDBFormInline>
-                                        </MDBNavItem>
+                                        <React.Fragment>
+                                            <Link to={`/signup`} className="btn btn-sm btn-info">Sign up <span className="d-none d-md-inline">for Free</span></Link>
+                                            <NavLink className='nav-link waves-effect waves-light' to="/login">Login</NavLink>
+                                        </React.Fragment>
                                     </MDBNavbarNav>
                                 </MDBCollapse>
                             </MDBNavbar>
