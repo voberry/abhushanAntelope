@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AppHeader from '../../Layout/Header';
+import AppHeader from '../../Layout/Header/MinHeader';
 import { getLocalStorage, setLocalStorage } from '../../../utils/storageUtil';
 
 class StaticLayout extends Component {
