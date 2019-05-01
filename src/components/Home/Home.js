@@ -1,146 +1,46 @@
-import React, {Component} from 'react';
-import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter} from "mdbreact";
-import '../../index.css'
-import '../../assets/scrollbar.css'
-import questions from '../../mocks/questions';
-import QuestionsDeleteModal from './QuestionsDeleteModal';
-import QuestionsRecordModal from './QuestionsRecordModal';
+import React, { Component } from 'react';
+import {MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 
-class Home extends Component {
-
-    state= {
-        hasUpdated : false,
-        isDeleteModalVisible : false,
-        isRecordModalVisible : false
-    };
-
-    deleteModalHide = () => {
-        this.setState({
-            isDeleteModalVisible : false
-        })
-    };
-
-    recordModalHide = () => {
-        this.setState({
-            isRecordModalVisible : false
-        })
-    };
-
-    recordModalShow = (itemId) => {
-        console.log(itemId);
-        this.setState({
-            isRecordModalVisible : true
-        })
-    };
-
-    deleteModalShow = (itemId) => {
-        this.setState({
-            isDeleteModalVisible : true
-        })
-    }
-
-    handleNewQuestion = () => {
-        questions.questions.push({title: 'New Question', completed: false});
-        this.setState({
-            hasUpdated: true
-        }, ()=>{
-            console.log(this.state.hasUpdated)
-        });
-    };
-
-    handleSubmit = () => {
-        alert('Submitted');
-    };
-
-    render() {
-
-        const modalProps = {
-            isRecordModalVisible : this.state.isRecordModalVisible,
-            isDeleteModalVisible : this.state.isDeleteModalVisible,
-            recordModalHide : this.recordModalHide,
-            deleteModalHide : this.deleteModalHide,
-        };
-
-        return (
+class Home extends Component{
+    render(){
+        return(
             <React.Fragment>
-                <MDBContainer className="text-center pt-3">
-                    <section className="text-center mx-5 px-5">
-                        <h6 className="h5-responsive font-weight-bold my-4 main-text">
-                            <i className="fas fa-folder-open pr-2"/> Video interview
-                        </h6>
-                        <MDBRow className={'pr-5'}>
-                            <MDBCol md={1} className={'float-left'}>
+                <MDBContainer className="text-center mt-5 pt-5">
+                    <section className="text-center my-5">
+                        <h2 className="h1-responsive font-weight-bold my-5">
+                            A Material-Formik Boilerplate
+                        </h2>
+                        <p className="lead grey-text w-responsive mx-auto mb-5">
+                            A Working Boilerplate
+                        </p>
+                        <MDBRow>
+                            <MDBCol md="4">
+                                <MDBIcon icon="chart-area" size="3x" className="red-text" />
+                                <h5 className="font-weight-bold my-4">Item 1</h5>
+                                <p className="grey-text mb-md-0 mb-5">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                </p>
                             </MDBCol>
-                            <MDBCol md={8} className={'text-left barely-visible-text pl-5'}>
-                                Question
+                            <MDBCol md="4">
+                                <MDBIcon icon="book" size="3x" className="cyan-text" />
+                                <h5 className="font-weight-bold my-4">Item 2</h5>
+                                <p className="grey-text mb-md-0 mb-5">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                </p>
                             </MDBCol>
-                            <MDBCol md={1} className={'float-left barely-visible-text'}>
-                                Record
+                            <MDBCol md="4">
+                                <MDBIcon far icon="comments" size="3x" className="orange-text" />
+                                <h5 className="font-weight-bold my-4">Item 3</h5>
+                                <p className="grey-text mb-md-0 mb-5">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                </p>
                             </MDBCol>
-                            <MDBCol md={1} className={'text-center barely-visible-text mb-2'}>
-                                Delete
-                            </MDBCol>
-                            <MDBCol md={1} className={'float-right'}>
-                            </MDBCol>
-                        </MDBRow>
-
-                        <MDBRow className={'scrollableDiv scrollbar scrollbar-primary mx-auto pr-5'}>
-                            {questions && questions.questions.map((item, id=1) => (<React.Fragment>
-                                <MDBCol sm={12} md={1} className={'float-left sideNumbers'}>
-                                    {id = id + 1}
-                                </MDBCol>
-
-                                <MDBCol sm={12} md={11}
-                                        className={'card font-weight-bold main-text p-3 pl-5 pr-0 text-left mb-1'}>
-                                    <div className={'row'}>
-                                        <div className="col-md-9">
-                                            {item.title}
-                                        </div>
-
-                                        {item.completed ?
-                                            (<div className="col-md-1 col-sm-12 ">
-                                                <i className="fas fa-check green-text pointer" onClick={()=> this.recordModalShow(id)}/>
-                                            </div>) :
-                                            (<div className="col-md-1 col-sm-12 ">
-                                                <i className="fas fa-circle red-text pointer" onClick={()=> this.recordModalShow(id)}/>
-                                            </div>)}
-
-                                        <div className="col-md-1 text-center col-sm-12">
-                                            <i className="fas fa-trash grey-text pointer " onClick={()=> this.deleteModalShow(id)}/>
-                                        </div>
-
-                                        <div className="col-md-1">
-                                            <i className="fas fa-arrows-alt grey-text"/>
-                                        </div>
-                                    </div>
-                                </MDBCol>
-                            </React.Fragment>))}
-                        </MDBRow>
-                        <MDBRow className={'pr-5 mx-auto pr-5 mb-3'}>
-                            <MDBCol sm={12} md={1} className={'float-left sideNumbers'}>
-
-                            </MDBCol>
-                            <MDBCol sm={12} md={11}
-                                    className={'card font-weight-bold main-text p-3 pl-5 mt-3 pr-0 text-left mb-1 dotted-borders pointer'} onClick={this.handleNewQuestion}>
-                                <div className={'row'}>
-                                    <div className="col-md-12 barely-visible-text grey-text text-left font-weight-bold">
-
-                                        <i className="fas fa-plus-circle mr-3"/>Add more question
-                                    </div>
-                                </div>
-                            </MDBCol>
-                        </MDBRow>
-
-                        <MDBRow className={'d-flex justify-content-center align-items-center mt-4'}>
-                            <button onClick={this.handleSubmit} className={'btn btn-sm light-blue-btn white-text'}><i
-                                className="fas fa-check mr-2 "/>Done
-                            </button>
                         </MDBRow>
                     </section>
                 </MDBContainer>
-
-                <QuestionsDeleteModal {...modalProps} {...this.props} />
-                <QuestionsRecordModal {...modalProps} {...this.props} />
             </React.Fragment>
         )
     }
