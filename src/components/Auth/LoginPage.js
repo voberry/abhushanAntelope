@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Alert } from 'react-bootstrap';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBBtn } from 'mdbreact';
 import { AuthConsumer, withContext } from './../Layout/Header/AuthContext';
 import { isEmpty } from '../../utils/commonUtil';
-import axios from "axios";
-
-const loginSchema = Yup.object().shape({
-    email: Yup.string()
-        .email('E-mail is not valid')
-        .max(50, 'E-mail must be less than 50 characters')
-        .required('E-mail is required'),
-    password: Yup.string()
-        .required('Password is required'),
-});
 
 class LoginPage extends Component {
 

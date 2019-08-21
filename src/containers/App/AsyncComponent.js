@@ -11,11 +11,6 @@ export const AsyncLoginForm = loadable({
     loading: LoadingComponent,
 });
 
-export const AsyncDashboard = loadable({
-    loader: () => import('../../containers/Dashboard/DashboardContainer'),
-    loading: LoadingComponent,
-});
-
 export const AsyncRegisterPage = loadable({
     loader: () => import('../../containers/Auth/RegisterPageContainer'),
     loading: LoadingComponent,

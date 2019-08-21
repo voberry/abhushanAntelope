@@ -1,49 +1,110 @@
-import React, { Component } from 'react';
-import {MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import React, {useState} from 'react';
+import {MDBView, MDBMask} from "mdbreact";
+import {withRouter} from 'react-router-dom'
+import {Form, Input, DatePicker, InputNumber, Button} from 'antd';
+import moment from 'moment'
 
-class Home extends Component{
-    render(){
-        return(
-            <React.Fragment>
-                <MDBContainer className="text-center mt-5 pt-5">
-                    <section className="text-center my-5">
-                        <h2 className="h1-responsive font-weight-bold my-5">
-                            A Material-Formik Boilerplate
-                        </h2>
-                        <p className="lead grey-text w-responsive mx-auto mb-5">
-                            A Working Boilerplate
-                        </p>
-                        <MDBRow>
-                            <MDBCol md="4">
-                                <MDBIcon icon="chart-area" size="3x" className="red-text" />
-                                <h5 className="font-weight-bold my-4">Item 1</h5>
-                                <p className="grey-text mb-md-0 mb-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Reprehenderit maiores aperiam minima assumenda deleniti hic.
-                                </p>
-                            </MDBCol>
-                            <MDBCol md="4">
-                                <MDBIcon icon="book" size="3x" className="cyan-text" />
-                                <h5 className="font-weight-bold my-4">Item 2</h5>
-                                <p className="grey-text mb-md-0 mb-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Reprehenderit maiores aperiam minima assumenda deleniti hic.
-                                </p>
-                            </MDBCol>
-                            <MDBCol md="4">
-                                <MDBIcon far icon="comments" size="3x" className="orange-text" />
-                                <h5 className="font-weight-bold my-4">Item 3</h5>
-                                <p className="grey-text mb-md-0 mb-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Reprehenderit maiores aperiam minima assumenda deleniti hic.
-                                </p>
-                            </MDBCol>
-                        </MDBRow>
-                    </section>
-                </MDBContainer>
-            </React.Fragment>
-        )
-    }
+const FormItem = Form.Item;
+
+const Home = (props) => {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const {validateFields, getFieldDecorator} = props.form;
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        validateFields((err, values) => {
+            if (!err) {
+                values.checkIn = values.checkIn
+                    ? moment(values.checkIn).format('MM-DD-YYYY')
+                    : null;
+                values.checkOut = values.checkOut
+                    ? moment(values.checkOut).format('MM-DD-YYYY')
+                    : null;
+                setIsSubmitted(true);
+                console.log(values);
+            }
+        });
+    };
+
+    return (
+        <React.Fragment>
+            <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(50).jpg">
+                <MDBMask overlay="black-light" className="flex-center flex-column text-white text-center">
+                    <h1 className={'h1-lg'}>Adventures you dream of.</h1>
+                    <h1 className={'h1-lg'}>With us.</h1>
+                    <br/>
+                    <h6 className={'text-center px-5 mx-5'}>With Antelope Nepal, you can create the holidays you
+                        dream of from the click of your mouse, on the go. And we do it according to your
+                        tastes. </h6>
+
+                    <button className={'btn my-2 antelope-green-bg white-text'}>Click Here</button>
+
+                    <div className="container px-5 mx-5">
+                        <Form layout="inline" onSubmit={handleSubmit}>
+                            <div className="row mt-3">
+                                <div className="col-md-2 px-3">
+                                    <FormItem label={'Where?'}>
+                                        {getFieldDecorator('where', {})(
+                                            <Input
+                                                type="text"
+                                                placeholder={'Eg . Kathmandu'}
+                                                className={'form-control w-100'}
+                                            />
+                                        )}
+                                    </FormItem>
+                                </div>
+                                <div className="col-md-2 px-3">
+                                    <FormItem label={'Check-In'} className={'white-text'}>
+                                        {getFieldDecorator('checkIn', {})(
+                                            <DatePicker
+                                                className={'w-100'}
+                                            />
+                                        )}
+                                    </FormItem>
+                                </div>
+                                <div className="col-md-2 px-3">
+                                    <FormItem label={'Check-Out'} className={'white-text'}>
+                                        {getFieldDecorator('checkOut', {})(
+                                            <DatePicker
+                                                className={'w-100'}
+                                            />
+                                        )}
+                                    </FormItem>
+                                </div>
+                                <div className="col-md-2 px-3">
+                                    <FormItem label={'Adults'}>
+                                        {getFieldDecorator('adults', {})(
+                                            <InputNumber
+                                                className={'form-control w-100'}
+                                                min={0}
+                                            />
+                                        )}
+                                    </FormItem>
+                                </div>
+                                <div className="col-md-2 px-3">
+                                    <FormItem label={'Price'}>
+                                        {getFieldDecorator('price', {})(
+                                            <InputNumber
+                                                className={'form-control w-100'}
+                                                min={0}
+                                            />
+                                        )}
+                                    </FormItem>
+                                </div>
+                                <div className="col-md-2 px-3">
+                                    <Button  htmlType="submit" className={'mt-5 btn-success antelope-green-bg white-text w-100'}>
+                                        Lets go
+                                    </Button>
+                                </div>
+                            </div>
+                        </Form>
+                    </div>
+
+                    {isSubmitted && <div/>}
+                </MDBMask>
+            </MDBView>
+        </React.Fragment>
+    )
 }
 
-export default Home
+export default Form.create()(withRouter(Home));

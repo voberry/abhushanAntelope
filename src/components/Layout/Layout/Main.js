@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import AppHeader from '../../Layout/Header';
-import { getLocalStorage, setLocalStorage } from '../../../utils/storageUtil';
+import { getLocalStorage } from '../../../utils/storageUtil';
 
 class MainLayout extends Component {
 

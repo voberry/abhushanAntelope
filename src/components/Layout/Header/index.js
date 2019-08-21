@@ -1,59 +1,59 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, withRouter, Link, NavLink} from 'react-router-dom';
-import {
-    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
-} from "mdbreact";
+import React from 'react';
+import {withRouter, Link} from 'react-router-dom'
+import {MDBNavbar, MDBNavbarBrand} from 'mdbreact'
 
-import {AuthConsumer} from './AuthContext';
-import {getLocalStorage, setLocalStorage} from '../../../utils/storageUtil';
+import logo from '../../../assets/images/carefree.png'
 
-class AppHeader extends Component {
+const AppHeader = () => {
+    return (
+        <div>
+            <MDBNavbar transparent dark expand="md" fixed="top">
+                <div className="container">
+                    <div className="row w-100">
+                        <div className="col-md-5">
+                            <ul className="nav justify-content-end lighten-4 py-3">
+                                <Link className="nav-link px-4 white-text" to="/our-services">
+                                    Our Services
+                                </Link>
+                                <Link className="nav-link px-4 white-text" to="/gallery">
+                                    Gallery
+                                </Link>
+                                <Link className="nav-link px-4 white-text" to="/about">
+                                    About
+                                </Link>
+                            </ul>
+                        </div>
+                        <div className="col-md-1">
+                            <MDBNavbarBrand className={'nav justify-content-center lighten-4'}>
+                                <img src={logo} className={'rounded-circle img-fluid'} style={{
+                                    position: "absolute",
+                                    height: '100px',
+                                    background: 'white'
+                                }} alt=""/>
+                            </MDBNavbarBrand>
+                        </div>
+                        <div className="col-md-6 pl-5">
+                            <ul className="nav justify-content-start lighten-4 py-3">
+                                <Link className="nav-link px-4 white-text" to="/our-services">
+                                    Blog
+                                </Link>
+                                <Link className="nav-link px-4 white-text" to="/gallery">
+                                    Contact
+                                </Link>
+                                <Link className="nav-link px-4 white-text" to="/about">
+                                    Login
+                                </Link>
+                                <Link className="nav-link px-4 white-text" to="/about">
+                                    Sign Up
+                                </Link>
+                            </ul>
+                        </div>
+                    </div>
 
-    state = {
-        isOpen: false
-    };
-
-    toggleCollapse = () => {
-        this.setState({isOpen: !this.state.isOpen});
-    }
-
-    render() {
-        const pathName = window.location.pathname;
-        return (
-            <React.Fragment>
-                <header>
-                    <AuthConsumer>
-                        {({isAuthenticated, logout, goToDashboard}) => (
-                            <MDBNavbar color="unique-color-dark" fixed='top' dark expand="md" scrolling>
-                                <MDBNavbarBrand>
-                                    <Link to='/'>
-                                    <strong className="white-text">Navbar</strong>
-                                    </Link>
-                                </MDBNavbarBrand>
-                                <MDBNavbarToggler onClick={this.toggleCollapse}/>
-                                <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-                                    <MDBNavbarNav left>
-                                        <MDBNavItem>
-                                            <NavLink className='nav-link waves-effect waves-light' to="#!">Home</NavLink>
-                                        </MDBNavItem>
-
-                                    </MDBNavbarNav>
-                                    <MDBNavbarNav right>
-                                        <React.Fragment>
-                                            <Link to={`/signup`} className="btn btn-sm btn-info">Sign up <span className="d-none d-md-inline">for Free</span></Link>
-                                            <NavLink className='nav-link waves-effect waves-light' to="/login">Login</NavLink>
-                                        </React.Fragment>
-                                    </MDBNavbarNav>
-                                </MDBCollapse>
-                            </MDBNavbar>
-                        )}
-                    </AuthConsumer>
-                </header>
-            </React.Fragment>
-        )
-
-    }
-}
+                </div>
+            </MDBNavbar>
+        </div>
+    );
+};
 
 export default withRouter(AppHeader);

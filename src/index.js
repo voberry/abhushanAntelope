@@ -8,10 +8,12 @@ import {Router} from 'react-router-dom';
 import configureStore, {history} from './store/configureStore'
 
 import {AuthProvider} from './components/Layout/Header/AuthContext';
+import "antd/dist/antd.css";
 import './styles/themes/bootstrap.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import './assets/style.css'
 
 import * as serviceWorker from './serviceWorker';
 const store = configureStore();

@@ -1,7 +1,7 @@
 import React, {Component, createContext} from 'react';
 import axios from 'axios';
 import {isAuthenticated} from '../../../utils/jwtUtil';
-import {clearLocalStorage, getLocalStorage, setLocalStorage} from '../../../utils/storageUtil';
+import {clearLocalStorage, getLocalStorage} from '../../../utils/storageUtil';
 import history from '../../../utils/history';
 
 const AuthContext = createContext({
