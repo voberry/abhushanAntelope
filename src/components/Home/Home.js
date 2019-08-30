@@ -37,8 +37,6 @@ const Home = (props) => {
                         dream of from the click of your mouse, on the go. And we do it according to your
                         tastes. </h6>
 
-                    <button className={'btn my-2 antelope-green-bg white-text'}>Click Here</button>
-
                     <div className="container px-5 mx-5">
                         <Form layout="inline" onSubmit={handleSubmit}>
                             <div className="row mt-3">
@@ -99,9 +97,8 @@ const Home = (props) => {
                             </div>
                         </Form>
                     </div>
-
-                    {isSubmitted && <div/>}
                 </MDBMask>
+
             </MDBView>
         </React.Fragment>
     )

@@ -1,7 +1,11 @@
 .h1-lg{
     font-size: 4rem;
+    transition: 2s
 }
 
+.h3-lg{
+    font-size: 2rem
+}
 
 
 .ant-form-item-label > label {
