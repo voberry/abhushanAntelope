@@ -1,8 +1,8 @@
 .home-transition-before {
     height: 100vh;
-    transition: height 1.5s;
+    transition: height 1.5s ease;
 }
 
 .home-transition-after {
-    height: 60vh !important;
+    height: 50vh !important;
 }
