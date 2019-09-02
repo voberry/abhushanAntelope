@@ -23,7 +23,8 @@ export default {
                 image: Kathmandu,
                 latitude: '27.700769',
                 longitude: '85.300140',
-                day: 5
+                day: 5,
+                icon: 'place-of-worship'
             },
             {
                 id: 2,
@@ -35,7 +36,8 @@ export default {
                 image: Pokhara,
                 latitude: '28.26689',
                 longitude: '83.96851',
-                day: 3
+                day: 3,
+                icon: 'glass-cheers'
             },
             {
                 id: 3,
@@ -45,7 +47,8 @@ export default {
                 image: Chitwan,
                 latitude: '27.68333',
                 longitude: '84.43333',
-                day: 2
+                day: 2,
+                icon: 'hippo'
             }
         ]
     }

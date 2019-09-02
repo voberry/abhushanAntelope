@@ -13,14 +13,14 @@ export const fetchLocations = (formData = {}) => {
     return dispatch => {
         dispatch(locationFetchRequest());
 
-        return store('todos', formData)
-            .then(response => {
-                if (response) {
+        // return store('api/v1/employees', formData)
+        //     .then(response => {
+        //         if (response) {
                     dispatch(locationFetchRequestSuccess(locations.locations.data));
-                } else {
-                    // TODO
-                }
-            })
-            .catch(error => dispatch(locationFetchRequestFailure(error.response.data)));
+            //     } else {
+            //         // TODO
+            //     }
+            // })
+            // .catch(error => dispatch(locationFetchRequestFailure(error.response.data)));
     };
 };

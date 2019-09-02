@@ -7,6 +7,7 @@ import {MDBAnimation} from "mdbreact";
 import locationOptions from '../../services/__mocks__/locations'
 import Package from "./Package";
 import {isEmpty} from "../../utils/commonUtil";
+import PredefinedPackages from "./PredefinedPackages";
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -184,17 +185,31 @@ const Home = (props) => {
                 duration="1s"
                 delay="1.5s">
                 <div className={'container-fluid mt-3 px-5"'}>
-                    <div className="d-flex justify-content-around flex-fill px-5 mx-5 antelope-green-bg">
+                    <div className="d-flex justify-content-around flex-fill px-5 mx-5">
 
                         {!isEmpty(locations) && locations.map(item =>
                             <div className="text-center p-2">
-                                <i className="fas fa-chart-area fa-3x white-text"/>
+                                <i className={`fas fa-${item.icon} fa-3x white-text`}/>
                                 <h5 className="font-weight-bold my-4 white-text">{item.title}</h5>
                                 <h6 className="font-weight-bold my-4 white-text">{item.day} Days</h6>
                             </div>
                         )}
                     </div>
 
+                    <div className="d-flex justify-content-around flex-fill px-5 mx-5 my-5">
+                        <div className="row w-100">
+                            <div className="col-md-3">
+                                <Tabs defaultActiveKey="1">
+                                    <TabPane tab="Premade Packages" key="1">
+                                        <PredefinedPackages/>
+                                    </TabPane>
+                                    <TabPane tab="Customized" key="2">
+                                        <Package/>
+                                    </TabPane>
+                                </Tabs>
+                            </div>
+                    </div>
+                    </div>
                 </div>
 
             </MDBAnimation>}

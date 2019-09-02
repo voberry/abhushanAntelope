@@ -1,4 +1,4 @@
-export const API_URL = `https://jsonplaceholder.typicode.com/`;
+export const API_URL = `http://dummy.restapiexample.com/`;
 export const PERMISSION_KEY = 'antelope-nepal';
 export const MENU_KEY = 'antelope-menu';
 export const JWT_TOKEN = 'antelope-token';
