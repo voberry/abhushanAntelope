@@ -8,6 +8,7 @@ import locationOptions from '../../services/__mocks__/locations'
 import Package from "./Package";
 import {isEmpty} from "../../utils/commonUtil";
 import PredefinedPackages from "./PredefinedPackages";
+import LocationMap from "./LocationMap";
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -208,7 +209,13 @@ const Home = (props) => {
                                     </TabPane>
                                 </Tabs>
                             </div>
-                    </div>
+
+                            <div className="col-md-9">
+                                <LocationMap
+                                    location={locations}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
 

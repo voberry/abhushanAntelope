@@ -15,6 +15,7 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import './assets/style.css'
 
+
 import * as serviceWorker from './serviceWorker';
 const store = configureStore();
 const mountNode = document.getElementById('root');
