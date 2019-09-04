@@ -9,8 +9,8 @@ const AppHeader = () => {
         <div>
             <MDBNavbar transparent dark expand="md" fixed="top">
                 <div className="container">
-                    <div className="row w-100">
-                        <div className="col-md-5">
+                    <div className="d-flex flex-fill w-100 justify-content-center">
+                        <div>
                             <ul className="nav justify-content-end lighten-4 py-3">
                                 <Link className="nav-link px-4 white-text" to="/our-services">
                                     Our Services
@@ -23,7 +23,7 @@ const AppHeader = () => {
                                 </Link>
                             </ul>
                         </div>
-                        <div className="col-md-1">
+                        <div>
                             <MDBNavbarBrand className={'nav justify-content-center lighten-4'}>
                                 <img src={logo} className={'rounded-circle img-fluid'} style={{
                                     position: "absolute",
@@ -32,7 +32,7 @@ const AppHeader = () => {
                                 }} alt=""/>
                             </MDBNavbarBrand>
                         </div>
-                        <div className="col-md-6 pl-5">
+                        <div >
                             <ul className="nav justify-content-start lighten-4 py-3">
                                 <Link className="nav-link px-4 white-text" to="/our-services">
                                     Blog

@@ -1,10 +1,10 @@
 .h1-lg{
     font-size: 4rem;
-    transition: 2s
 }
 
 .h3-lg{
-    font-size: 2rem
+    font-size: 2rem;
+    transition: font 1.5s ease
 }
 
 

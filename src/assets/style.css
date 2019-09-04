@@ -1,4 +1,6 @@
-@import 'typography.css';
-@import 'colors.css';
-@import 'styles.css';
-@import 'animations.css';
+@import './css/typography.css';
+@import './css/colors.css';
+@import './css/styles.css';
+@import './css/animations.css';
+@import './css/div.css';
+@import './css/rotating-card.css';
