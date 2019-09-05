@@ -27,6 +27,17 @@ export default {
                 icon: 'place-of-worship'
             },
             {
+                id: 3,
+                code: 'CHT',
+                title: 'Chitwan',
+                description: "Chitwan District (Nepali: चितवन जिल्ला) is one of 77 districts of Nepal, and is located in the southwestern part of Province No. 3 with Bharatpur, the fourth largest city of Nepal, as its district headquarters. It covers an area of 2,238.39 km2 (864.25 sq mi), and in 2011 had a population of 579,984 (279,087 male and 300,897 female) people. Bharatpur is a commercial and service centre of central south Nepal and major destination for higher education, health care and transportation in the region. ",
+                image: Chitwan,
+                latitude: '27.68333',
+                longitude: '84.43333',
+                day: 2,
+                icon: 'hippo'
+            },
+            {
                 id: 2,
                 code: 'PKR',
                 title: 'Pokhara',
@@ -38,17 +49,6 @@ export default {
                 longitude: '83.96851',
                 day: 3,
                 icon: 'glass-cheers'
-            },
-            {
-                id: 3,
-                code: 'CHT',
-                title: 'Chitwan',
-                description: "Chitwan District (Nepali: चितवन जिल्ला) is one of 77 districts of Nepal, and is located in the southwestern part of Province No. 3 with Bharatpur, the fourth largest city of Nepal, as its district headquarters. It covers an area of 2,238.39 km2 (864.25 sq mi), and in 2011 had a population of 579,984 (279,087 male and 300,897 female) people. Bharatpur is a commercial and service centre of central south Nepal and major destination for higher education, health care and transportation in the region. ",
-                image: Chitwan,
-                latitude: '27.68333',
-                longitude: '84.43333',
-                day: 2,
-                icon: 'hippo'
             }
         ]
     }
