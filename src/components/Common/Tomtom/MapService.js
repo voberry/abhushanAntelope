@@ -1,11 +1,9 @@
 import React, {useEffect} from 'react';
-import '../../assets/style.css'
 
-const TomTom = props => {
+const MapService = props => {
 
-    console.log(props);
+    console.log(props)
 
-    console.log('process.env.PUBLIC_URL', process.env.PUBLIC_URL)
     useEffect(()=>{
         let map = window.tomtom.L.map('map', {
             key: 'srmwhKEhBWfETVCcS2e0wYlMd0GoW21h',
@@ -15,9 +13,8 @@ const TomTom = props => {
         });
         map.zoomControl.setPosition('topright');
 
-        // Adding the route widget
         let routeOnMapView = window.tomtom.routeOnMap({
-            // Options for the route start marker
+
             startMarker: {
                 icon: window.tomtom.L.icon({
                     iconUrl: process.env.PUBLIC_URL + `/sdk/images/start-white.png`,
@@ -25,7 +22,7 @@ const TomTom = props => {
                     iconAnchor: [15, 15]
                 })
             },
-            // Options for the route end marker
+
             endMarker: {
                 icon: window.tomtom.L.icon({
                     iconUrl: process.env.PUBLIC_URL + `/sdk/images/end-white.png`,
@@ -35,11 +32,9 @@ const TomTom = props => {
             }
         }).addTo(map);
 
-        // Creating route inputs widget
         let routeInputsInstance = window.tomtom.routeInputs({location: false})
             .addTo(map);
 
-        // Connecting the route inputs widget with the route widget
         routeInputsInstance.on(routeInputsInstance.Events.LocationsFound, function(eventObject) {
             routeOnMapView.draw(eventObject.points);
         });
@@ -51,8 +46,8 @@ const TomTom = props => {
     });
 
 
-    return <div id='map' className={'w-100 h-100'}/>
+    return <div id='map'/>
 
 };
 
-export default TomTom;
+export default MapService;

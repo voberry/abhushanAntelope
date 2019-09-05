@@ -9,7 +9,8 @@ import Package from "./Package";
 import {isEmpty} from "../../utils/commonUtil";
 import PredefinedPackages from "./PredefinedPackages";
 import LocationMap from "./LocationMap";
-import TomTom from "./TomTom";
+import MapService from "../Common/Tomtom/MapService";
+import {TOMTOM_API_KEY, MAP_CENTER} from "../../constants/appConfig";
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -20,6 +21,7 @@ const Home = (props) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const {form, fetchLocations, locations, locationErrors, locationsLoading} = props;
     const {validateFields, getFieldDecorator} = form;
+
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -212,7 +214,7 @@ const Home = (props) => {
                             </div>
 
                             <div className="col-md-9">
-                                <TomTom
+                                <LocationMap
                                     location={locations}
                                 />
                             </div>

@@ -6,6 +6,8 @@ export const LOGGED_IN_USER = 'antelope-user';
 export const USER_FULL_NAME = 'antelope-user-name';
 export const LANGUAGE_KEY = 'antelope-language';
 export const PAGE_SIZE = 10;
+export const TOMTOM_API_KEY = 'srmwhKEhBWfETVCcS2e0wYlMd0GoW21h';
+export const MAP_CENTER = [28.3949, 84.1240];
 
 let date = new Date();
 let year = date.getFullYear();
