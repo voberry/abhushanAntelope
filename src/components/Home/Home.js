@@ -9,6 +9,7 @@ import Package from "./Package";
 import {isEmpty} from "../../utils/commonUtil";
 import PredefinedPackages from "./PredefinedPackages";
 import LocationMap from "./LocationMap";
+import TomTom from "./TomTom";
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -211,7 +212,7 @@ const Home = (props) => {
                             </div>
 
                             <div className="col-md-9">
-                                <LocationMap
+                                <TomTom
                                     location={locations}
                                 />
                             </div>
