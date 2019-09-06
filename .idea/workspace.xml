@@ -3,47 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ee2aee-31e2-42a1-b486-7a63ae94f088" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Header/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Header/AuthContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App/AsyncComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/AsyncComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Dashboard/DashboardContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Dashboard/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/HomeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/HomeContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Fragment</find>
-      <find>MDBNavLink</find>
-      <find>Material-F</find>
-      <find>main-text p-3</find>
-      <find>&lt;i className=&quot;fas fa-circle red-text&quot;&gt;&lt;/i&gt;</find>
-      <find>'true'</find>
-      <find>Tell me about yourself</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>React.Fragment</replace>
-      <replace>NavLink</replace>
-      <replace>main-text p-2</replace>
-      <replace>&lt;i className=&quot;fas fa-circle red-text&quot; /&gt;</replace>
-      <replace>true</replace>
-      <replace>Scroll Enabler</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,7 +91,8 @@
       <workItem from="1556729479424" duration="5541000" />
       <workItem from="1556736242366" duration="540000" />
       <workItem from="1566382416162" duration="236000" />
-      <workItem from="1566400427541" duration="9980000" />
+      <workItem from="1566400427541" duration="10611000" />
+      <workItem from="1567686962905" duration="12000" />
     </task>
     <servers />
   </component>
@@ -143,7 +109,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
