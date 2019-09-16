@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import AppHeader from '../../Layout/Header/';
+import AppFooter from '../../Layout/Footer/';
 import { getLocalStorage, setLocalStorage } from '../../../utils/storageUtil';
 
 class StaticLayout extends Component {
@@ -28,6 +29,7 @@ class StaticLayout extends Component {
                 <section className="body-main">
                     <AppHeader/>
                     {children}
+                    <AppFooter/>
                 </section>
             </section>
         );

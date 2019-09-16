@@ -1,27 +1,21 @@
 import React, { Component } from 'react';
 
 import AppHeader from '../../Layout/Header';
-import { getLocalStorage } from '../../../utils/storageUtil';
+import AppFooter from '../../Layout/Footer';
 
 class MainLayout extends Component {
-
-  state = {
-    countryCode: getLocalStorage('countryCode'),
-  };
-
   render() {
 
-    const children = React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, {
-        countryCode: this.state.countryCode,
-      });
+    const children = React.Children.map( child => {
+      return React.cloneElement(child);
     });
 
     return (
       <section className="body-wrapper">
         <section className="body-main">
-          <AppHeader changeCountryFrom={this.changeCountryFrom}/>
+          <AppHeader/>
           {children}
+          <AppFooter />
         </section>
       </section>
 
