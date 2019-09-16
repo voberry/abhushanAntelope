@@ -9,3 +9,37 @@
 /*    justify-content: center;*/
 /*    align-items: end !important;*/
 /*}*/
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.carousel-indicators {
+    bottom: -10px;
+}
+
+.carousel-control-prev
+{
+    display: initial;
+    position: relative;
+    margin: 5%;
+}
+
+.carousel-control-next
+{
+    display: initial;
+    position: relative;
+    float: right;
+
+}
+
+.ant-tabs-top-bar{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
