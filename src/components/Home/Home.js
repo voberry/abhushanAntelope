@@ -11,6 +11,7 @@ import PredefinedPackages from "./PredefinedPackages";
 import LocationMap from "./LocationMap";
 import Locations from "./Locations";
 import Carousels from "./Carousels";
+import AboutUsSection from "./AboutUsSection";
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -266,6 +267,11 @@ const Home = (props) => {
 
             </MDBAnimation>
             }
+
+            <div>
+                <AboutUsSection/>
+            </div>
+
         </div>
     )
 };
