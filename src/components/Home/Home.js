@@ -9,8 +9,8 @@ import Package from "./Package";
 import {isEmpty} from "../../utils/commonUtil";
 import PredefinedPackages from "./PredefinedPackages";
 import LocationMap from "./LocationMap";
-import MapService from "../Common/Tomtom/MapService";
-import {TOMTOM_API_KEY, MAP_CENTER} from "../../constants/appConfig";
+import Locations from "./Locations";
+import Carousels from "./Carousels";
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -184,7 +184,8 @@ const Home = (props) => {
                 </div>
             </div>
 
-            {isSubmitted && <MDBAnimation
+            {isSubmitted &&
+            <MDBAnimation
                 type="fadeIn"
                 duration="1s"
                 delay="1.5s">
@@ -203,11 +204,11 @@ const Home = (props) => {
                     <div className="d-flex justify-content-around flex-fill px-5 mx-5 my-5">
                         <div className="row w-100">
                             <div className="col-md-3">
-                                <Tabs defaultActiveKey="1">
-                                    <TabPane tab="Premade Packages" key="1">
+                                <Tabs defaultActiveKey="premade">
+                                    <TabPane tab="Premade Packages" key="premade">
                                         <PredefinedPackages/>
                                     </TabPane>
-                                    <TabPane tab="Customized" key="2">
+                                    <TabPane tab="Customized" key="custom">
                                         <Package/>
                                     </TabPane>
                                 </Tabs>
@@ -220,9 +221,51 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
+                    <hr className={'white px-5 mx-5'}/>
                 </div>
 
-            </MDBAnimation>}
+
+                <div className={'container-fluid mt-3 px-5"'}>
+                    <div className="d-flex justify-content-around flex-fill px-5 mx-5">
+
+                        <div className="row w-100">
+                            <div className="col-md-9">
+                                <Locations/>
+
+                                <div style={{
+                                    color: 'white'
+                                }}>
+                                    <Tabs defaultActiveKey="premade">
+                                        <TabPane tab="Hotels" key="hotels" className={'white-text'}>
+                                            <Carousels/>
+                                        </TabPane>
+                                        <TabPane tab="Vehicle Rentals" key="vehicles" className={'white-text'}>
+                                        </TabPane>
+                                        <TabPane tab="Restaurants" key="restaurants" className={'white-text'}>
+                                        </TabPane>
+                                    </Tabs>
+                                </div>
+
+
+                            </div>
+
+                            <div className="col-md-3">
+                                <div className="card mt-5">
+                                    <div className="card-body">
+
+                                        <h4 className="card-title"><a>Kathmandu Packages</a></h4>
+                                        <p className="card-text">Some quick example text to build on the card
+                                            title and make up the bulk of the card's content.</p>
+                                        <a href="#" className="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </MDBAnimation>
+            }
         </div>
     )
 };

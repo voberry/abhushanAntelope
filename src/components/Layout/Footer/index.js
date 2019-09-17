@@ -3,7 +3,7 @@ import {Form, Input} from "antd";
 
 const FooterPage = () => {
     return (
-        <footer className="page-footer font-small stylish-color-dark pt-4">
+        <footer className="page-footer font-small stylish-color-dark pt-4 mt-5">
 
             <div className="container text-center text-md-left">
 
