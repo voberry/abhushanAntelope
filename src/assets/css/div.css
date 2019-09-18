@@ -4,12 +4,6 @@
     align-items: center;
 }
 
-/*.home-flex-end {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: end !important;*/
-/*}*/
-
 .carousel-item {
     height: 100%;
 }
