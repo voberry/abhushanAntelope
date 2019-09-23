@@ -6,6 +6,11 @@ export const AsyncHome = loadable({
     loading: LoadingComponent,
 });
 
+export const AsyncUsers = loadable({
+    loader: () => import('../../containers/Users'),
+    loading: LoadingComponent,
+});
+
 export const AsyncLoginForm = loadable({
     loader: () => import('../../containers/Auth/LoginPageContainer'),
     loading: LoadingComponent,
