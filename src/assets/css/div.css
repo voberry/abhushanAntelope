@@ -37,3 +37,8 @@
     justify-content: space-around;
     color: white;
 }
+
+.h-300
+{
+    height: 300px;
+}
