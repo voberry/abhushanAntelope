@@ -6,15 +6,21 @@ import StaticLayout from '../../components/Layout/Layout/Static';
 
 import {
     AsyncHome,
+    AsyncUsers,
     AsyncLoginForm,
-    AsyncRegisterPage
+    AsyncRegisterPage,
+    AsyncAbout,
+    AsyncContact
 } from "./AsyncComponent";
 
 const App = () =>(
     <React.Fragment>
         <Switch>
             <PublicRoute exact path='/' layout={StaticLayout} component={AsyncHome}/>
+            <PublicRoute path='/users' layout={StaticLayout} component={AsyncUsers}/>
             <PublicRoute exact path='/login' layout={StaticLayout} component={AsyncLoginForm}/>
+            <PublicRoute exact path='/contact-us' layout={StaticLayout} component={AsyncContact}/>
+            <PublicRoute exact path='/about-us' layout={StaticLayout} component={AsyncAbout}/>
             <PublicRoute exact path='/signup' layout={StaticLayout} component={AsyncRegisterPage}/>
         </Switch>
     </React.Fragment>

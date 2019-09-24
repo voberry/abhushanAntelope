@@ -4,7 +4,7 @@ import Pokhara from '../../assets/images/pokhara.jpg'
 
 const AboutUsSection = () => {
     return (
-        <section className="white-text">
+        <section className="">
             <MDBRow className={'w-100'}>
                 <MDBCol lg="6" className="text-center text-lg-left">
                     <img

@@ -4,5 +4,6 @@
 }
 
 .home-transition-after {
-    height: 60vh !important;
+    margin-top: 80px;
+    height: 50vh !important;
 }

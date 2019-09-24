@@ -12,13 +12,13 @@ const AppHeader = () => {
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div>
                             <ul className="nav justify-content-end lighten-4 py-3">
-                                <Link className="nav-link px-4 white-text" to="/our-services">
+                                <Link className="nav-link px-4" to="/our-services">
                                     Our Services
                                 </Link>
-                                <Link className="nav-link px-4 white-text" to="/gallery">
+                                <Link className="nav-link px-4" to="/gallery">
                                     Gallery
                                 </Link>
-                                <Link className="nav-link px-4 white-text" to="/about">
+                                <Link className="nav-link px-4" to="/about">
                                     About
                                 </Link>
                             </ul>
@@ -34,16 +34,16 @@ const AppHeader = () => {
                         </div>
                         <div >
                             <ul className="nav justify-content-start lighten-4 py-3">
-                                <Link className="nav-link px-4 white-text" to="/our-services">
+                                <Link className="nav-link px-4" to="/our-services">
                                     Blog
                                 </Link>
-                                <Link className="nav-link px-4 white-text" to="/gallery">
+                                <Link className="nav-link px-4" to="/gallery">
                                     Contact
                                 </Link>
-                                <Link className="nav-link px-4 white-text" to="/about">
+                                <Link className="nav-link px-4" to="/about">
                                     Login
                                 </Link>
-                                <Link className="nav-link px-4 white-text" to="/about">
+                                <Link className="nav-link px-4" to="/about">
                                     Sign Up
                                 </Link>
                             </ul>

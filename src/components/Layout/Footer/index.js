@@ -141,8 +141,8 @@ const FooterPage = () => {
                             </a>
                         </li>
                     </ul>
-                    <div className="footer-copyright text-center py-3">© 2019 Copyright:
-                        <a href="https://mdbootstrap.com/education/bootstrap/"> Voberry Technologies</a>
+                    <div className="footer-copyright text-center py-3">© 2019 Copyright. All rights reserved:
+                        <a> Voberry Technologies Pvt. Ltd.</a>
                     </div>
         </footer>
 

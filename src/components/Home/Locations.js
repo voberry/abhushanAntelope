@@ -18,7 +18,7 @@ const Locations = () => {
 
                 </div>
 
-                <div className="col-lg-7 white-text">
+                <div className="col-lg-7 ">
 
                     <a href="#!" className="green-text">
                         <h6 className="font-weight-bold mb-3"><i className="fas fa-city pr-2" />City of Temples</h6>

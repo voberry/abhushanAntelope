@@ -19,7 +19,7 @@ const {TabPane} = Tabs;
 const FormItem = Form.Item;
 
 const Home = (props) => {
-    const [isSubmitted, setIsSubmitted] = useState(true);
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const {form, fetchLocations, locations, locationErrors, locationsLoading} = props;
     const {validateFields, getFieldDecorator} = form;
 
@@ -44,8 +44,11 @@ const Home = (props) => {
         <div style={{
             height: '100%'
         }}>
+            <div style={{
+                backgroundImage: `url(https://miro.medium.com/max/3840/1*BchBq5jkzBFZKfH5SrQGTQ.jpeg)`
+            }}>
             <div
-                className={`text-white text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
+                className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                 <div>
                     <h1 className={!isSubmitted ? `h1-lg` : `h3-lg`}>Adventures you dream of.</h1>
                     <h1 className={!isSubmitted ? `h1-lg` : `h3-lg`}>With us.</h1>
@@ -103,7 +106,7 @@ const Home = (props) => {
                                 </div>
 
                                 <div className="px-3">
-                                    <FormItem label={'Check-In'} className={'white-text'}>
+                                    <FormItem label={'Check-In'} >
                                         {getFieldDecorator('checkIn', {
                                             rules: [
                                                 {
@@ -120,7 +123,7 @@ const Home = (props) => {
                                 </div>
 
                                 <div className="px-3">
-                                    <FormItem label={'Check-Out'} className={'white-text'}>
+                                    <FormItem label={'Check-Out'} >
                                         {getFieldDecorator('checkOut', {
                                             rules: [
                                                 {
@@ -175,7 +178,7 @@ const Home = (props) => {
                                 </div>
                                 <div className="px-3">
                                     <Button htmlType="submit"
-                                            className={'mt-5 btn-success antelope-green-bg white-text w-100'}>
+                                            className={'mt-5 btn-success antelope-green-bg  w-100'}>
                                         LETS GO!
                                     </Button>
                                 </div>
@@ -195,9 +198,9 @@ const Home = (props) => {
 
                         {!isEmpty(locations) && locations.map(item =>
                             <div className="text-center p-2">
-                                <i className={`fas fa-${item.icon} fa-3x white-text`}/>
-                                <h5 className="font-weight-bold my-4 white-text">{item.title}</h5>
-                                <h6 className="font-weight-bold my-4 white-text">{item.day} Days</h6>
+                                <i className={`fas fa-${item.icon} fa-3x `}/>
+                                <h5 className="font-weight-bold my-4 ">{item.title}</h5>
+                                <h6 className="font-weight-bold my-4 ">{item.day} Days</h6>
                             </div>
                         )}
                     </div>
@@ -205,7 +208,7 @@ const Home = (props) => {
                     <div className="d-flex justify-content-around flex-fill px-5 mx-5 my-5">
                         <div className="row w-100">
                             <div className="col-md-3">
-                                <Tabs defaultActiveKey="premade">
+                                <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills'}>
                                     <TabPane tab="Premade Packages" key="premade">
                                         <PredefinedPackages/>
                                     </TabPane>
@@ -222,11 +225,12 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                    <hr className={'white px-5 mx-5'}/>
                 </div>
 
 
-                <div className={'container-fluid mt-3 px-5"'}>
+                <div className={'container-fluid mt-3 px-5"'} style={{
+                    background: 'aliceblue'
+                }}>
                     <div className="d-flex justify-content-around flex-fill px-5 mx-5">
 
                         <div className="row w-100">
@@ -237,12 +241,12 @@ const Home = (props) => {
                                     color: 'white'
                                 }}>
                                     <Tabs defaultActiveKey="premade">
-                                        <TabPane tab="Hotels" key="hotels" className={'white-text'}>
+                                        <TabPane tab="Hotels" key="hotels" >
                                             <Carousels/>
                                         </TabPane>
-                                        <TabPane tab="Vehicle Rentals" key="vehicles" className={'white-text'}>
+                                        <TabPane tab="Vehicle Rentals" key="vehicles" >
                                         </TabPane>
-                                        <TabPane tab="Restaurants" key="restaurants" className={'white-text'}>
+                                        <TabPane tab="Restaurants" key="restaurants" >
                                         </TabPane>
                                     </Tabs>
                                 </div>
@@ -267,6 +271,7 @@ const Home = (props) => {
 
             </MDBAnimation>
             }
+            </div>
 
             <div>
                 <AboutUsSection/>
