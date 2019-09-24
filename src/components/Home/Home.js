@@ -205,7 +205,7 @@ const Home = (props) => {
                     <div className="d-flex justify-content-around flex-fill px-5 mx-5 my-5">
                         <div className="row w-100">
                             <div className="col-md-3">
-                                <Tabs defaultActiveKey="premade">
+                                <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills'}>
                                     <TabPane tab="Premade Packages" key="premade">
                                         <PredefinedPackages/>
                                     </TabPane>

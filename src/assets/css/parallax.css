@@ -47,20 +47,23 @@
     text-align: center;
 }
 
-.profile-img {
+.profile-img-raised {
     max-width: 160px;
-    width: 80%;
     margin: 0 auto;
     transform: translate3d(0,-50%,0);
 }
+
+.profile-img {
+    max-width: 10.5rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 .parallax-img-raised {
     box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2);
 }
 
-.rounded-circle {
-    border-radius: 50%!important;
-}
 
 .profile .name {
     margin-top: -80px;
