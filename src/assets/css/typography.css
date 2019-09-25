@@ -17,3 +17,36 @@
     padding: 6px;
     font-size: larger;
 }
+
+.font-libre-franklin {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.font-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-family {
+    font-family: 'Nunito', sans-serif;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-700
+{
+    font-weight: 700;
+}
+
+.font-weight-300{
+    font-weight: 300;
+}
+
+.dim-grey-text {
+    color: #6c6c6c;
+}
+
+.dark-grey-text {
+    color : #a1a1a1
+}

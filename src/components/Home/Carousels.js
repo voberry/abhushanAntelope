@@ -24,10 +24,10 @@ const Carousels = () => {
 
     return (
         <div>
-            <Carousel touch={true} className={'mb-5'} nextIcon={nextItemButton} prevIcon={previousItemButton}>
+            <Carousel touch={true} className={'mb-5'} nextIcon={nextItemButton} prevIcon={previousItemButton} interval={null}>
                 {carouselData && carouselData.map(item => <Carousel.Item>
                     <div className="d-flex justify-content-around align-items-center w-100">
-                        {item.map(it =>  <div className="card mx-4">
+                        {item.map(it =>  <div className="card mx-2">
                             <div className="view overlay">
                                 <img className="card-img-top h-300"
                                      src="https://via.placeholder.com/300.png/09f/fff"
@@ -37,10 +37,10 @@ const Carousels = () => {
                                 </a>
                             </div>
                             <div className="card-body">
-                                <h4 className="card-title">Card title</h4>
-                                <p className="card-text">Some quick example text to build on the card title and make up
+                                <h4 className="card-title font-poppins">Card title</h4>
+                                <p className="card-text font-libre-franklin">Some quick example text to build on the card title and make up
                                     the bulk of the card's content.</p>
-                                <button className="btn btn-primary">Button</button>
+                                <button className="btn btn-primary btn-sm">Button</button>
 
                             </div>
 

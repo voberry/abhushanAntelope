@@ -8,7 +8,7 @@ const AdvancedCard = () => {
                     This is the heading you gumball
                 </div>
                 <div className="advanced-card-body">
-                    <h1> This is a heading for a card</h1>
+                    <h1 className='h1-responsive'> This is a heading for a card</h1>
                 </div>
             </div>
         </div>

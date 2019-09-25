@@ -45,7 +45,7 @@ const ProfilePage = props => {
                 </div>
                 <div className="container-fluid">
                     <div className="row d-flex align-items-stretch">
-                        <div className="col-md-3 p-5">
+                        <div className="col-md-2 p-5" >
                             <ul className="nav nav-pills nav-pills-primary flex-column">
                                 <li className="nav-item mx-5 mb-2">
                                     <button
@@ -119,7 +119,7 @@ const ProfilePage = props => {
                             </div>
                         </div>
 
-                        <div className="col-md-2 p-5">
+                        <div className="col-md-3 p-5">
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="card mb-3">

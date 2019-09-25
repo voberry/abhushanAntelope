@@ -20,7 +20,7 @@ class LoginPage extends Component {
                 {({ loginError }) => (
                     <MDBContainer className='mt-5 pt-5 d-flex justify-content-center align-items-center'>
                         <div>
-                            <h1>Login Page</h1>
+                            <h1 className='h1-responsive'>Login Page</h1>
 
                             <Formik
                                 initialValues={{ email: '', password: '' }}

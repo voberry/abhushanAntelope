@@ -50,8 +50,8 @@ const Home = (props) => {
             <div
                 className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                 <div>
-                    <h1 className={!isSubmitted ? `h1-lg` : `h3-lg`}>Adventures you dream of.</h1>
-                    <h1 className={!isSubmitted ? `h1-lg` : `h3-lg`}>With us.</h1>
+                    <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `h3-responsive h3-lg`}>Adventures you dream of.</h1>
+                    <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `h3-responsive h3-lg`}>With us.</h1>
                     <br/>
                     <h6 className={'text-center px-5 mx-5'}>With Antelope Nepal, you can create the holidays you
                         dream of from the click of your mouse, on the go. And we do it according to your

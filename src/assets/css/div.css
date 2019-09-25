@@ -1,3 +1,7 @@
+body{
+    margin-top: 90px;
+}
+
 .home-flex-center {
     display: flex;
     justify-content: center;
@@ -35,13 +39,8 @@
 .ant-tabs-top-bar{
     display: flex;
     justify-content: space-around;
-    color: white;
 }
 
-.h-300
-{
-    height: 300px;
-}
 .advanced-card {
     color: rgba(0, 0, 0, 0.87);
     width: 20%;
@@ -106,3 +105,11 @@
     border-right : 2px solid whitesmoke
 }
 
+.navbar .navbar-brand img {
+    height: 65px;
+}
+
+.chart-canvas canvas {
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12)
+}

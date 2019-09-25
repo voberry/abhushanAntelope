@@ -7,7 +7,7 @@ const Locations = () => {
 
             <div className="row">
 
-                <div className="col-lg-5">
+                <div className="col-lg-5 d-flex justify-content-center align-items-center">
 
                     <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
                         <img className="img-fluid" src="https://d3hne3c382ip58.cloudfront.net/resized/750x420/kathmandu-valley-trek-tour-2-269861_1559744945.JPG" alt="Sample image" />
@@ -28,9 +28,7 @@ const Locations = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus enim eum harum quae tenetur, ullam? Ab adipisci aut culpa earum perspiciatis porro quis quisquam reiciendis velit veritatis, voluptas voluptates?
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi, commodi doloribus magnam magni modi placeat quia quidem sint ut! Asperiores consectetur dolores, eos itaque magni omnis quisquam reprehenderit voluptatum!
                         <br/>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae dignissimos exercitationem facere facilis harum ipsam laborum nobis odit perferendis perspiciatis qui quisquam reiciendis, sapiente sequi sunt totam veniam voluptatum!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur, dolor ducimus eius et ipsa iusto, nihil odio quos reiciendis sapiente sequi ullam, vero. Aliquid delectus et molestias optio quis!
-                        <br/>
+
                     </p>
 
                 </div>
