@@ -20,7 +20,7 @@ const FormItem = Form.Item;
 
 const Home = (props) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const {form, fetchLocations, locations, locationErrors, locationsLoading} = props;
+    const {form, fetchLocations, locations} = props;
     const {validateFields, getFieldDecorator} = form;
 
 
