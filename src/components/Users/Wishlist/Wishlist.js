@@ -33,7 +33,7 @@ const Wishlist = () => {
                                             </a>
                                         </div>
                                     </td>
-                                    <td className="td-name w-25">
+                                    <td className="td-name w-50">
                                         <a className={'font-weight-bold'}>Pokhara Trip</a>
                                         <br />
                                         <small className={'font-libre-franklin grey-text'}> Kathmandu - Chitwan - Pokhara</small>
@@ -43,13 +43,19 @@ const Wishlist = () => {
                                         <br/>
                                         <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
                                     </td>
-                                    <td className={'font-weight-bold'}>
+                                    <td className={'font-weight-bold'} style={{
+                                        width: '10%'
+                                    }}>
                                         Economy
                                     </td>
-                                    <td className="td-number text-right w-25 font-weight-bold">
+                                    <td className="td-number text-right w-25 font-weight-bold" style={{
+                                        width: '10%'
+                                    }}>
                                         <small>€</small>549
                                     </td>
-                                    <td className="td-actions">
+                                    <td className="td-actions" style={{
+                                        width: '10%'
+                                    }}>
                                         <button type="button" rel="tooltip" data-placement="left" title=""
                                                 className="btn btn-link" data-original-title="Remove item">
                                             <i className="material-icons red-text">delete</i>
@@ -66,7 +72,7 @@ const Wishlist = () => {
                                             </a>
                                         </div>
                                     </td>
-                                    <td className="td-name w-25">
+                                    <td className="td-name w-50">
                                         <a  className={'font-weight-bold'}>Kathmandu Trip</a>
                                         <br />
                                         <small className={'font-libre-franklin grey-text'}> Kathmandu - Chitwan - Pokhara</small>
@@ -76,13 +82,19 @@ const Wishlist = () => {
                                         <br/>
                                         <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
                                     </td>
-                                    <td className={'font-weight-bold'}>
+                                    <td className={'font-weight-bold'} style={{
+                                        width: '10%'
+                                    }}>
                                         Premium
                                     </td>
-                                    <td className="td-number text-right w-25 font-weight-bold">
+                                    <td className="td-number text-right font-weight-bold" style={{
+                                        width: '10%'
+                                    }}>
                                         <small>€</small>549
                                     </td>
-                                    <td className="td-actions">
+                                    <td className="td-actions" style={{
+                                        width: '10%'
+                                    }}>
                                         <button type="button" rel="tooltip" data-placement="left" title=""
                                                 className="btn btn-link" data-original-title="Remove item">
                                             <i className="material-icons red-text">delete</i>
@@ -99,7 +111,7 @@ const Wishlist = () => {
                                             </a>
                                         </div>
                                     </td>
-                                    <td className="td-name w-25">
+                                    <td className="td-name w-50">
                                         <a  className={'font-weight-bold'}>Chitwan Trip</a>
                                         <br />
                                         <small className={'font-libre-franklin grey-text'}> Kathmandu - Chitwan - Pokhara</small>
@@ -109,13 +121,19 @@ const Wishlist = () => {
                                         <br/>
                                         <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
                                     </td>
-                                    <td className={'font-weight-bold'}>
+                                    <td className={'font-weight-bold'} style={{
+                                        width: '10%'
+                                    }}>
                                         Moderate
                                     </td>
-                                    <td className="td-number text-right w-25 font-weight-bold">
+                                    <td className="td-number text-right font-weight-bold" style={{
+                                        width: '10%'
+                                    }}>
                                         <small>€</small>549
                                     </td>
-                                    <td className="td-actions">
+                                    <td className="td-actions" style={{
+                                        width: '10%'
+                                    }}>
                                         <button type="button" rel="tooltip" data-placement="left" title=""
                                                 className="btn btn-link" data-original-title="Remove item">
                                             <i className="material-icons red-text">delete</i>
