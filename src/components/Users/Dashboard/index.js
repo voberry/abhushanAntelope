@@ -1,16 +1,15 @@
 import React from 'react';
 import Charts from './Charts'
-import {MDBInput} from "mdbreact";
 
-const Dashboard = () => {
+const Index = () => {
     return (
         <div>
             <div className='row'>
                 <div className="col-md-4">
                     <div className="card">
                         <div className="card-body ">
-                            <h5> Number of trips</h5>
-                            <h6>10</h6>
+                            <h5 className={'h5-responsive'}> Number of trips</h5>
+                            <h6 className={'h6-responsive'}>10</h6>
                         </div>
                     </div>
                 </div>
@@ -18,8 +17,8 @@ const Dashboard = () => {
                 <div className="col-md-4">
                     <div className="card">
                         <div className="card-body ">
-                            <h5> Points </h5>
-                            <h6>1000 </h6>
+                            <h5 className={'h5-responsive'}> Points </h5>
+                            <h6 className={'h6-responsive'}>1000 </h6>
                         </div>
                     </div>
                 </div>
@@ -27,8 +26,8 @@ const Dashboard = () => {
                 <div className="col-md-4">
                     <div className="card">
                         <div className="card-body ">
-                            <h5> Advertisement </h5>
-                            <h6>Some stuff</h6>
+                            <h5 className={'h5-responsive'}> Advertisement </h5>
+                            <h6 className={'h6-responsive'}>Some stuff</h6>
                         </div>
                     </div>
                 </div>
@@ -39,7 +38,7 @@ const Dashboard = () => {
 
                 <div className="col-md-12 mt-3 ">
                     <form className={'card p-4'}>
-                        <p className="h4 mb-4">Review</p>
+                        <p className="h4-responsive mb-4">Review</p>
                         <label className="grey-text">
                             Title
                         </label>
@@ -64,4 +63,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Index;

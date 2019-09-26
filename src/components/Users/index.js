@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import Wallpaper from '../../assets/images/wallpaper.jpg'
 import Kathmandu from '../../assets/images/kathmandu.jpeg'
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard/'
 import Profile from './Profile'
-import Wishlist from './Wishlist'
-import Blogs from './Blogs'
-import MyTrips from './MyTrips'
+import Wishlist from './Wishlist/Wishlist'
+import Blogs from './Blogs/Blogs'
+import MyTrips from './MyTrips/MyTrips'
 
-const ProfilePage = props => {
+const Index = props => {
 
-    const [activeTabs, setActiveTabs] = useState('dashboard');
+    const [activeTabs, setActiveTabs] = useState('profile');
 
     const handleTabs = (tabs) => {
         setActiveTabs(tabs);
@@ -23,7 +23,7 @@ const ProfilePage = props => {
             <div style={{
                 background : '#f2f2f2'
             }}>
-                <div className="avatar text-center mx-5 mb-5 ">
+                <div className="avatar text-center mx-5 mb-1 ">
                     <button className={'btn antelope-green-bg'} style={{
                         borderRadius: '50%',
                         transform: 'translate3d(0,-50%,0)',
@@ -32,14 +32,14 @@ const ProfilePage = props => {
                         <img src={Kathmandu} alt="some name"
                              className={'img-raised rounded-circle profile-img-raised d-block'}/>
                     </button>
-                    <h1 style={{
+                    <h1 className={'h1-responsive'} style={{
                         marginTop: '-100px'
                     }}
                     >
                         User Name
                     </h1>
 
-                    <h6>
+                    <h6 className={'h6-responsive'}>
                         User description
                     </h6>
                 </div>
@@ -99,7 +99,7 @@ const ProfilePage = props => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-md-7 p-5">
+                        <div className="col-md-8 py-5">
                             <div className="tab-content p-0">
                                 <div className={`tab-pane ${activeTabs === 'dashboard' && 'active'}`}>
                                     <Dashboard/>
@@ -119,7 +119,7 @@ const ProfilePage = props => {
                             </div>
                         </div>
 
-                        <div className="col-md-3 p-5">
+                        <div className="col-md-2 p-5">
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="card mb-3">
@@ -166,4 +166,4 @@ const ProfilePage = props => {
     );
 };
 
-export default ProfilePage;
+export default Index;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
 import { Alert } from 'react-bootstrap';
 import { MDBContainer, MDBBtn } from 'mdbreact';
 import { AuthConsumer, withContext } from './../Layout/Header/AuthContext';

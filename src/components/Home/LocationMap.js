@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react'
-import {Map, Marker, Popup, TileLayer, Polyline, Circle, Tooltip, ZoomControl} from 'react-leaflet'
-import Kathmandu from '../../assets/images/kathmandu.jpeg';
+import {Map, TileLayer, Polyline, Circle, Tooltip} from 'react-leaflet'
 import axios from 'axios';
 import {isEmpty} from "../../utils/commonUtil";
 
-const position = [28.3949, 84.1240];
 const DEFAULT_VIEWPORT = {
     center: [28.3949, 84.1240],
     zoom: 7,
@@ -19,7 +17,6 @@ const LocationMap = (props) => {
 
     useEffect(() => {
         let tempLocationArray = [...locationRoutes];
-        console.log(location)
         location.forEach(item => {
             let tempArray = [];
             tempArray.push(item.latitude);

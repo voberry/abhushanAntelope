@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Button, DatePicker, Form, Input, InputNumber, Select, Tabs} from "antd";
-import {withRouter} from 'react-router-dom';
+import {Button, DatePicker, Form, InputNumber, Select, Tabs} from "antd";
+import {withRouter, Link} from 'react-router-dom';
 import moment from "moment";
 import {MDBAnimation} from "mdbreact";
 
@@ -258,10 +258,10 @@ const Home = (props) => {
                                 <div className="card mt-5">
                                     <div className="card-body">
 
-                                        <h4 className="card-title"><a>Kathmandu Packages</a></h4>
+                                        <h4 className="card-title"><Link to='#'>Kathmandu Packages</Link></h4>
                                         <p className="card-text">Some quick example text to build on the card
                                             title and make up the bulk of the card's content.</p>
-                                        <a href="#" className="btn btn-primary">Button</a>
+                                        <Link to='#' className="btn btn-primary">Button</Link>
                                     </div>
                                 </div>
                             </div>

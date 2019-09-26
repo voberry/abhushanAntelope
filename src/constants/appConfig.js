@@ -45,26 +45,26 @@ const APP_CONFIG = {
 export default APP_CONFIG;
 
 //regex
-export const regexAlphabetOnly = /^[A-Za-z]+$/;
-export const regexAlphabetWithSpace = /^[A-Za-z ]+$/;
-export const regexAlphabetWithSpecialCharacters = /^[A-Za-z #'.,\-/()]+$/;
-export const regexAlphaNumeric = /^[A-Za-z0-9]+$/;
-export const regexAlphaNumericWithSpace = /^[A-Za-z0-9 ]+$/;
-export const regexNumberOnly = /^[0-9]+$/;
-export const regexNumberBeginningWithZero = /^[0]{1}[0-9]*$/;
-export const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-export const regexAlphaNumericWithSpecialCharacters = /^[A-Za-z0-9 #'.,\-/()]+$/;
-
-export const regexDescription = RegExp(/^[a-zA-Z ]{5,30}$/);
-export const regexCode = RegExp(/^[a-zA-Z]{3,5}$/);
-export const regexCurrencyName = RegExp(/^[a-zA-Z ]{3,50}$/);
-export const regexISOAlpha = /^[A-Za-z]{3}$/;
-export const regexISONumeric = /^[0-9]{3}$/;
-export const regexDecimalDescription = RegExp(/^[a-zA-Z ]{3,20}$/);
-export const regexSanctionId = /^[A-Za-z0-9 \-\/]+$/;
-
-// format
-export const sendingDateFormat = 'YYYY-MM-DD';
-export const dateTimeFormat = 'YYYY-MM-DD HH:mm';
-export const effectiveTimeFormat = 'hh:mm A';
-export const newDateFormat = 'YYYY-MM-DD';
+// export const regexAlphabetOnly = /^[A-Za-z]+$/;
+// export const regexAlphabetWithSpace = /^[A-Za-z ]+$/;
+// export const regexAlphabetWithSpecialCharacters = /^[A-Za-z #'.,\-/()]+$/;
+// export const regexAlphaNumeric = /^[A-Za-z0-9]+$/;
+// export const regexAlphaNumericWithSpace = /^[A-Za-z0-9 ]+$/;
+// export const regexNumberOnly = /^[0-9]+$/;
+// export const regexNumberBeginningWithZero = /^[0]{1}[0-9]*$/;
+// export const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// export const regexAlphaNumericWithSpecialCharacters = /^[A-Za-z0-9 #'.,\-/()]+$/;
+//
+// export const regexDescription = RegExp(/^[a-zA-Z ]{5,30}$/);
+// export const regexCode = RegExp(/^[a-zA-Z]{3,5}$/);
+// export const regexCurrencyName = RegExp(/^[a-zA-Z ]{3,50}$/);
+// export const regexISOAlpha = /^[A-Za-z]{3}$/;
+// export const regexISONumeric = /^[0-9]{3}$/;
+// export const regexDecimalDescription = RegExp(/^[a-zA-Z ]{3,20}$/);
+// export const regexSanctionId = /^[A-Za-z0-9 \-\/]+$/;
+//
+// // format
+// export const sendingDateFormat = 'YYYY-MM-DD';
+// export const dateTimeFormat = 'YYYY-MM-DD HH:mm';
+// export const effectiveTimeFormat = 'hh:mm A';
+// export const newDateFormat = 'YYYY-MM-DD';

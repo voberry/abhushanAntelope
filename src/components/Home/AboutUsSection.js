@@ -1,5 +1,5 @@
 import React from "react";
-import {MDBRow, MDBCol, MDBIcon} from "mdbreact";
+import {MDBRow, MDBCol} from "mdbreact";
 import antelope from '../../assets/images/antelope.png'
 
 const AboutUsSection = () => {

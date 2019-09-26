@@ -4,7 +4,7 @@ import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 import PrivateRoute from './PrivateRoute';
-import Dashboard from '../containers/Dashboard';
+import Dashboard from '../containers/Index';
 import * as jwtUtil from "../utils/jwtUtil";
 
 Enzyme.configure({adapter: new Adapter()});

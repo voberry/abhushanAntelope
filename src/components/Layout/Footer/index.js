@@ -1,5 +1,6 @@
 import React from "react";
 import {Form, Input} from "antd";
+import {withRouter , Link} from "react-router-dom";
 
 const FooterPage = () => {
     return (
@@ -36,16 +37,16 @@ const FooterPage = () => {
 
                             <ul className="list-unstyled">
                                 <li className={'footer-lists'}>
-                                    <a href="#!">Contact</a>
+                                    <Link to='#' >Contact</Link>
                                 </li>
                                 <li className={'footer-lists'}>
-                                    <a href="#!">About us</a>
+                                    <Link to='#' >About us</Link>
                                 </li>
                                 <li className={'footer-lists'}>
-                                    <a href="#!">How To?</a>
+                                    <Link to='#' >How To?</Link>
                                 </li>
                                 <li className={'footer-lists'}>
-                                    <a href="#!">Team</a>
+                                    <Link to='#' >Team</Link>
                                 </li>
                             </ul>
 
@@ -59,16 +60,16 @@ const FooterPage = () => {
 
                                 <ul className="list-unstyled">
                                     <li className={'footer-lists'}>
-                                        <a href="#!">Our Partners</a>
+                                        <Link to='#' >Our Partners</Link>
                                     </li>
                                     <li className={'footer-lists'}>
-                                        <a href="#!">Privacy Policy</a>
+                                        <Link to='#' >Privacy Policy</Link>
                                     </li>
                                     <li className={'footer-lists'}>
-                                        <a href="#!">FAQ</a>
+                                        <Link to='#' >FAQ</Link>
                                     </li>
                                     <li className={'footer-lists'}>
-                                        <a href="#!">Terms of Use</a>
+                                        <Link to='#' >Terms of Use</Link>
                                     </li>
                                 </ul>
 
@@ -82,16 +83,16 @@ const FooterPage = () => {
 
                                     <ul className="list-unstyled">
                                         <li className={'footer-lists'}>
-                                            <a href="#!">Destinations</a>
+                                            <Link to='#' >Destinations</Link>
                                         </li>
                                         <li className={'footer-lists'}>
-                                            <a href="#!">Trips</a>
+                                            <Link to='#' >Trips</Link>
                                         </li>
                                         <li className={'footer-lists'}>
-                                            <a href="#!">Adventure Sports</a>
+                                            <Link to='#' >Adventure Sports</Link>
                                         </li>
                                         <li className={'footer-lists'}>
-                                            <a href="#!">Others</a>
+                                            <Link to='#' >Others</Link>
                                         </li>
                                     </ul>
 
@@ -108,7 +109,7 @@ const FooterPage = () => {
                         <h5 className="mb-1">Where do you want to go next?</h5>
                     </li>
                     <li className="list-inline-item">
-                        <a href="#!" className="btn btn-danger btn-rounded">Start Planning!</a>
+                        <Link to='#'  className="btn btn-danger btn-rounded">Start Planning!</Link>
                     </li>
                 </ul>
 
@@ -116,37 +117,37 @@ const FooterPage = () => {
 
                     <ul className="list-unstyled list-inline text-center">
                         <li className="list-inline-item">
-                            <a className="btn-floating btn-fb mx-1">
+                            <Link to='#' className="btn-floating btn-fb mx-1">
                                 <i className="fab fa-facebook-f"> </i>
-                            </a>
+                            </Link>
                         </li>
                         <li className="list-inline-item">
-                            <a className="btn-floating btn-tw mx-1">
+                            <Link to='#' className="btn-floating btn-tw mx-1">
                                 <i className="fab fa-twitter"> </i>
-                            </a>
+                            </Link>
                         </li>
                         <li className="list-inline-item">
-                            <a className="btn-floating btn-gplus mx-1">
+                            <Link to='#' className="btn-floating btn-gplus mx-1">
                                 <i className="fab fa-google-plus-g"> </i>
-                            </a>
+                            </Link>
                         </li>
                         <li className="list-inline-item">
-                            <a className="btn-floating btn-li mx-1">
+                            <Link to='#' className="btn-floating btn-li mx-1">
                                 <i className="fab fa-linkedin-in"> </i>
-                            </a>
+                            </Link>
                         </li>
                         <li className="list-inline-item">
-                            <a className="btn-floating btn-dribbble mx-1">
+                            <Link to='#' className="btn-floating btn-dribbble mx-1">
                                 <i className="fab fa-dribbble"> </i>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div className="footer-copyright text-center py-3">© 2019 Copyright. All rights reserved:
-                        <a> Voberry Technologies Pvt. Ltd.</a>
+                        <Link to ='#'> Voberry Technologies Pvt. Ltd.</Link>
                     </div>
         </footer>
 
     );
 }
 
-export default FooterPage;
+export default withRouter(FooterPage);

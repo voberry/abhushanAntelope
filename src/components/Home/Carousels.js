@@ -32,7 +32,7 @@ const Carousels = () => {
                                 <img className="card-img-top h-300"
                                      src="https://via.placeholder.com/300.png/09f/fff"
                                      alt="Card image cap"/>
-                                <a href="#!">
+                                <a >
                                     <div className="mask rgba-white-slight"/>
                                 </a>
                             </div>

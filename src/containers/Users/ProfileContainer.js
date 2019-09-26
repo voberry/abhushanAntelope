@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import ProfilePage from '../../components/Users/ProfilePage';
+import Index from '../../components/Users';
 
 export class ProfileContainer extends Component {
 
     render() {
         return (
-            <ProfilePage
+            <Index
                 {...this.props}
             />
         );
