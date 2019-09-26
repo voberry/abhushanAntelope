@@ -9,7 +9,7 @@ import MyTrips from './MyTrips/MyTrips'
 
 const Index = props => {
 
-    const [activeTabs, setActiveTabs] = useState('profile');
+    const [activeTabs, setActiveTabs] = useState('wishList');
 
     const handleTabs = (tabs) => {
         setActiveTabs(tabs);

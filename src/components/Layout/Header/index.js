@@ -25,7 +25,9 @@ const AppHeader = () => {
                         </div>
                         <div>
                             <MDBNavbarBrand className={'nav justify-content-center lighten-4 mr-0 nav-header'}>
-                                <img src={logo} className={' img-fluid '} alt=""/>
+                                <Link to={'/'}>
+                                    <img src={logo} className={' img-fluid '} alt=""/>
+                                </Link>
                             </MDBNavbarBrand>
                         </div>
                         <div className={'ml-5'}>
@@ -36,10 +38,10 @@ const AppHeader = () => {
                                 <Link className="nav-link px-4  black-text" to="/gallery">
                                     Contact
                                 </Link>
-                                <Link className="nav-link px-4  black-text" to="/about">
+                                <Link className="nav-link px-4  black-text" to="/login">
                                     Login
                                 </Link>
-                                <Link className="nav-link px-4  black-text" to="/about">
+                                <Link className="nav-link px-4  black-text" to="/register">
                                     Sign Up
                                 </Link>
                             </ul>

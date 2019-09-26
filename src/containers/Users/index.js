@@ -12,7 +12,7 @@ import Profile from './ProfileContainer';
 const Users = ({ match }) => (
     <Fragment>
         <Switch>
-            <Route exact path={`${match.url}/profile`} component={Profile} />
+            <Route exact path={`${match.url}/`} component={Profile} />
             {/*<Route exact path={`${match.url}/add`} component={AddForm} />*/}
             {/*<Route exact path={`${match.url}/:id/edit/`} component={EditForm} />*/}
             {/*<Route exact path={`${match.url}/pending/`} component={PendingList} />*/}

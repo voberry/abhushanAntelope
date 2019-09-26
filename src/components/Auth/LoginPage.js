@@ -22,26 +22,9 @@ class LoginPage extends Component {
                             <h1 className='h1-responsive'>Login Page</h1>
 
                             <Formik
-                                initialValues={{ email: '', password: '' }}
-                                validate={values => {
-                                    let errors = {};
-                                    if (!values.email) {
-                                        errors.email = 'Required';
-                                    } else if (
-                                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                                    ) {
-                                        errors.email = 'Invalid email address';
-                                    }
-                                    return errors;
-                                }}
+                                initialValues={{ text: '', password: '' }}
                                 onSubmit={values => {
-                                    this.props.login(values).then((response) => {
-                                            this.props.history.push('/dashboard');
-                                    })
-                                        .catch(error => {
-                                            this.setState({ errorMessage: error.response.data.data });
-                                        });
-
+                                            this.props.history.push('/users/')
                                 }}
                             >
                                 {({ isSubmitting }) => (
@@ -53,8 +36,8 @@ class LoginPage extends Component {
                                                 <h5>Login Failed. Please Try Again</h5>
                                             </div>}
                                         </Alert>}
-                                        <Field type="text" name="email" />
-                                        <ErrorMessage name="email" component="div" />
+                                        <Field type="text" name="text" />
+                                        <ErrorMessage name="text" component="div" />
                                         <Field type="password" name="password" />
                                         <ErrorMessage name="password" component="div" />
                                         <MDBBtn color="indigo" type="submit" >Login</MDBBtn>
