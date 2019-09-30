@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import StickyBox from 'react-sticky-box'
+
 import Wallpaper from '../../assets/images/wallpaper.jpg'
 import Kathmandu from '../../assets/images/kathmandu.jpeg'
 import Dashboard from './Dashboard/'
@@ -9,7 +11,7 @@ import MyTrips from './MyTrips/MyTrips'
 
 const Index = props => {
 
-    const [activeTabs, setActiveTabs] = useState('wishList');
+    const [activeTabs, setActiveTabs] = useState('dashboard');
 
     const handleTabs = (tabs) => {
         setActiveTabs(tabs);
@@ -44,9 +46,10 @@ const Index = props => {
                     </h6>
                 </div>
                 <div className="container-fluid">
-                    <div className="row d-flex align-items-stretch">
-                        <div className="col-md-2 p-5" >
-                            <ul className="nav nav-pills nav-pills-primary flex-column">
+                    <div className="row d-flex">
+                        <nav className="col-md-2 p-5">
+                            <StickyBox offsetTop={100}>
+                            <ul className="nav nav-pills nav-pills-primary flex-column" >
                                 <li className="nav-item mx-5 mb-2">
                                     <button
                                         className={`nav-link w-100  py-4 px-1 ${activeTabs === 'dashboard' && 'active'}`}
@@ -98,7 +101,8 @@ const Index = props => {
                                     </button>
                                 </li>
                             </ul>
-                        </div>
+                            </StickyBox>
+                        </nav>
                         <div className="col-md-8 py-5">
                             <div className="tab-content p-0">
                                 <div className={`tab-pane ${activeTabs === 'dashboard' && 'active'}`}>
@@ -119,18 +123,12 @@ const Index = props => {
                             </div>
                         </div>
 
+
+
                         <div className="col-md-2 p-5">
+                            <StickyBox offsetTop={100} >
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="card mb-3">
-                                        <div className="card-title">
-                                            <img src={Wallpaper} alt="" className={'w-100'}/>
-                                        </div>
-
-                                        <div className="card-body">
-                                            Ad stuff
-                                        </div>
-                                    </div>
 
                                     <div className="card mb-3">
                                         <div className="card-title">
@@ -141,8 +139,15 @@ const Index = props => {
                                             Ad stuff
                                         </div>
                                     </div>
+                                    <div className="card mb-3">
+                                        <div className="card-title">
+                                            <img src={Wallpaper} alt="" className={'w-100'}/>
+                                        </div>
 
-
+                                        <div className="card-body">
+                                            Ad stuff
+                                        </div>
+                                    </div>
                                     <div className="card mb-3">
                                         <div className="card-title">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
@@ -153,9 +158,8 @@ const Index = props => {
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
+                            </StickyBox>
                         </div>
                     </div>
                 </div>

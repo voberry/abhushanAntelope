@@ -1,6 +1,14 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router-dom'
-import {MDBNavbar, MDBNavbarBrand} from 'mdbreact'
+import {
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBNavItem,
+    MDBDropdown,
+    MDBDropdownItem,
+    MDBDropdownMenu,
+    MDBDropdownToggle
+} from 'mdbreact'
 
 import logo from '../../../assets/images/antelope.png'
 
@@ -12,9 +20,35 @@ const AppHeader = () => {
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div className={'mr-5'}>
                             <ul className="nav justify-content-end lighten-4 py-3">
-                                <Link className="nav-link px-4  black-text" to="/our-services">
-                                    Our Services
-                                </Link>
+                                <MDBNavItem>
+                                    <MDBDropdown>
+                                        <MDBDropdownToggle nav caret>
+                                            <span className="mr-2 black-text">Our Services</span>
+                                        </MDBDropdownToggle>
+                                        <MDBDropdownMenu>
+                                            <MDBDropdownItem>
+                                                <Link to="/our-services/places">
+                                                    Places
+                                                </Link>
+                                            </MDBDropdownItem>
+                                            <MDBDropdownItem>
+                                                <Link to="/our-services/packages">
+                                                    Packages
+                                                </Link>
+                                            </MDBDropdownItem>
+                                            <MDBDropdownItem>
+                                                <Link to="/our-services/hotels">
+                                                    Hotels
+                                                </Link>
+                                            </MDBDropdownItem>
+                                            <MDBDropdownItem>
+                                                <Link to="/our-services/treks">
+                                                    Treks
+                                                </Link>
+                                            </MDBDropdownItem>
+                                        </MDBDropdownMenu>
+                                    </MDBDropdown>
+                                </MDBNavItem>
                                 <Link className="nav-link px-4  black-text" to="/gallery">
                                     Gallery
                                 </Link>

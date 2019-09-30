@@ -10,6 +10,7 @@ import {
     AsyncLoginForm,
     AsyncRegisterPage,
     AsyncAbout,
+    AsyncServices,
     AsyncContact
 } from "./AsyncComponent";
 
@@ -21,6 +22,7 @@ const App = () =>(
             <PublicRoute exact path='/login' layout={StaticLayout} component={AsyncLoginForm}/>
             <PublicRoute exact path='/contact-us' layout={StaticLayout} component={AsyncContact}/>
             <PublicRoute exact path='/about-us' layout={StaticLayout} component={AsyncAbout}/>
+            <PublicRoute path='/our-services' layout={StaticLayout} component={AsyncServices}/>
             <PublicRoute exact path='/signup' layout={StaticLayout} component={AsyncRegisterPage}/>
         </Switch>
     </React.Fragment>

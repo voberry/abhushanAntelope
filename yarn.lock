@@ -777,6 +777,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.1.5":
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
+  integrity sha512-EXxN64agfUqqIGeEjI5dL5z0Sw0ZwWo1mLTi4mQowCZ42O59b7DRpZAnTC6OqdF28wMBMFKNb/4uFGrVaigSpg==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
@@ -9611,13 +9618,14 @@ react-slick@~0.25.2:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-svg-inline@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-svg-inline/-/react-svg-inline-2.1.1.tgz#532664006bf5b4f9ca2879d185e546df9a7476ef"
-  integrity sha512-mN7/qwq133dHMMQdtJRMtZ6tK1ynzOJMZBKR34blzv3HqQpNBsaOKXkEe1kN14hcJJhzrUbsB+uix2ZOpF4kQg==
+react-sticky-box@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/react-sticky-box/-/react-sticky-box-0.8.0.tgz#1c191936af8f5420087b703ec6da4ef46060076c"
+  integrity sha512-al7fY+VzTKBgVrn14l21jQfhuG582Z6FD8tVbWVQDDqzcjLmUrFb+ljG2phxHhRRazg64L3yH4nOKjn78PZmag==
   dependencies:
-    classnames "^2.2.1"
-    prop-types "^15.5.8"
+    "@babel/runtime" "^7.1.5"
+    prop-types "^15.6.2"
+    resize-observer-polyfill "^1.5.1"
 
 react-text-mask@^5.4.3:
   version "5.4.3"
@@ -9664,13 +9672,6 @@ react-transition-group@^4.0.0:
     dom-helpers "^3.4.0"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
-
-react-video-recorder@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/react-video-recorder/-/react-video-recorder-3.10.0.tgz#2772a37db5220d29ecc9ca542c199aa1ca3adf76"
-  integrity sha512-op+tHuXMJV/VSYri4OH0P2rVGeeMEy5v6EEozpngVETyD45vjpJ0IANrZWYcsuwKMzKM95kn6mtiFnVgycoUPw==
-  dependencies:
-    react-svg-inline "^2.1.0"
 
 react@^16.9.0:
   version "16.9.0"

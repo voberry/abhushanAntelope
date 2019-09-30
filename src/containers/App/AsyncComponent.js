@@ -21,6 +21,11 @@ export const AsyncAbout = loadable({
     loading: LoadingComponent,
 });
 
+export const AsyncServices = loadable({
+    loader: () => import('../../containers/Services'),
+    loading: LoadingComponent,
+});
+
 export const AsyncLoginForm = loadable({
     loader: () => import('../../containers/Auth/LoginPageContainer'),
     loading: LoadingComponent,
