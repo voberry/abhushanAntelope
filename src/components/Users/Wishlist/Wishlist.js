@@ -9,7 +9,7 @@ const Wishlist = () => {
             <div className="container">
                 <div className="card card-plain">
                     <div className="card-body">
-                        <h3 className="card-title font-poppins">Shopping Cart</h3>
+                        <h3 className="card-title font-poppins">WishList</h3>
                         <br />
                         <div className="table-responsive">
                             <table className="table table-shopping">
