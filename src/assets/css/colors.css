@@ -1,8 +1,8 @@
-.antelope-green{
+.antelope-green {
     color: #4caf50 !important
 }
 
-.antelope-green-bg{
+.antelope-green-bg {
     background: #4caf50 !important
 }
 
@@ -12,5 +12,34 @@
 /*}*/
 
 .instagram-colors {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
+
+.material-red {
+    color: #ef5350
+}
+
+.material-green {
+    color: #66bb6a
+}
+
+.material-blue {
+    color: #42a5f5
+}
+
+.material-amber {
+    color: #ffca28
+}
+
+.material-gray {
+    color: #bdbdbd
+}
+
+.material-purple {
+    color: #ab47bc
+}
+
+.material-light-green {
+    color: #d4e157
+}
+
