@@ -5,7 +5,7 @@ const MyTrips = () => {
         <div>
             <h5 className={'font-poppins text-center font-weight-bold h5-responsive'}>My Trips</h5>
             <div className="row">
-                <div className="col-md-12">
+                <div className="col-sm-12 col-md-12">
                     <div className="timeline-main">
                         <ul className="stepper stepper-vertical timeline timeline-simple timeline-images pl-0">
 

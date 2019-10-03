@@ -15,7 +15,7 @@ const Index = () => {
                             <h4 className={'h4-responsive font-poppins text-center'}>Tell us about you!</h4>
                             <div className="grey-text">
                                 <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <MDBInput
                                             label="Firstname"
                                             icon="user"
@@ -27,7 +27,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <MDBInput
                                             label="Lastname"
                                             icon="lock"
@@ -37,7 +37,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-12">
+                                    <div className="col-sm-12 col-md-12">
                                         <MDBInput
                                             label="Email Address"
                                             icon="envelope"
@@ -47,14 +47,14 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <p>Date of Birth</p>
                                         <DatePicker
                                             className={'w-100'}
                                         />
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <MDBInput
                                             label="Phone Number"
                                             icon="phone"
@@ -64,7 +64,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <p>Gender</p>
                                         <Select className={'w-100'} showSearch
                                                 placeholder={'Gender'}
@@ -75,7 +75,7 @@ const Index = () => {
                                         </Select>
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <p>Interested In</p>
                                         <Select className={'w-100'} showSearch
                                                 placeholder={'Interested In'}
@@ -95,11 +95,11 @@ const Index = () => {
                             <h4 className={'h4-responsive font-poppins text-center'}>Connect with us!</h4>
                             <div className="grey-text">
                                 <div className="row">
-                                    <div className="col-md-2">
+                                    <div className="col-sm-12 col-md-2">
                                         <i className={'fab fa-facebook-f blue-text fa-2x float-right mt-4'} />
                                     </div>
 
-                                    <div className="col-md-5">
+                                    <div className="col-sm-12 col-md-5">
                                         <MDBInput
                                             label='Facebook'
                                             value={'https://www.facebook.com/'}
@@ -112,7 +112,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-5">
+                                    <div className="col-sm-12 col-md-5">
                                         <MDBInput
                                             label='Facebook Account Id'
                                             group
@@ -125,11 +125,11 @@ const Index = () => {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-md-2">
+                                    <div className="col-sm-12 col-md-2">
                                         <i className={'fab fa-twitter blue-text fa-2x float-right mt-4'} />
                                     </div>
 
-                                    <div className="col-md-5">
+                                    <div className="col-sm-12 col-md-5">
                                         <MDBInput
                                             label='Twitter'
                                             value={'https://www.twitter.com/'}
@@ -142,7 +142,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-5">
+                                    <div className="col-sm-12 col-md-5">
                                         <MDBInput
                                             label='Twitter Account Id'
                                             group
@@ -155,11 +155,11 @@ const Index = () => {
                                 </div>
 
                                 <div className="row">
-                                    <div className="col-md-2">
+                                    <div className="col-sm-12 col-md-2">
                                         <i className={'fab fa-instagram instagram-colors white-text fa-2x float-right mt-4'} />
                                     </div>
 
-                                    <div className="col-md-5">
+                                    <div className="col-sm-12 col-md-5">
                                         <MDBInput
                                             label='Instagram'
                                             value={'https://www.instagram.com/'}
@@ -172,7 +172,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-5">
+                                    <div className="col-sm-12 col-md-5">
                                         <MDBInput
                                             label='Instagram Account Id'
                                             group
@@ -191,7 +191,7 @@ const Index = () => {
                             <h4 className={'h4-responsive font-poppins text-center'}>Where are you from?</h4>
                             <div className="grey-text">
                                 <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <p>Country</p>
                                         <Select className={'w-100'} showSearch
                                                 placeholder={'Country'}
@@ -202,7 +202,7 @@ const Index = () => {
                                         </Select>
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-sm-12 col-md-6">
                                         <MDBInput
                                             label="State"
                                             icon="street-view"
@@ -212,7 +212,7 @@ const Index = () => {
                                         />
                                     </div>
 
-                                    <div className="col-md-12">
+                                    <div className="col-sm-12 col-md-12">
                                         <MDBInput
                                             label="Address"
                                             icon="search-location"

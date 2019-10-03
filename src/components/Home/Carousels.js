@@ -4,10 +4,10 @@ import {chunkArrays} from "../../utils/commonUtil";
 
 const Carousels = () => {
     const [carouselData, setCarouselData] = useState(null);
-    const arrayData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    const arrayData = [1, 2, 3, 4, 5, 6, 7, 8];
 
     useEffect(()=>{
-        let tempArray = chunkArrays(arrayData, 3);
+        let tempArray = chunkArrays(arrayData, 4);
         setCarouselData(tempArray);
     }, []);
 
@@ -30,7 +30,10 @@ const Carousels = () => {
                         {item.map(it =>  <div className="card mx-2">
                             <div className="view overlay">
                                 <img className="card-img-top h-300"
-                                     src="https://via.placeholder.com/300.png/09f/fff"
+                                     style={{
+                                         width: '200px'
+                                     }}
+                                     src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                      alt="Card image cap"/>
                                 <a >
                                     <div className="mask rgba-white-slight"/>
@@ -38,8 +41,7 @@ const Carousels = () => {
                             </div>
                             <div className="card-body">
                                 <h4 className="card-title font-poppins">Card title</h4>
-                                <p className="card-text font-libre-franklin">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
+                                <p className="card-text font-libre-franklin">Some quick example text</p>
                                 <button className="btn btn-primary btn-sm">Button</button>
 
                             </div>

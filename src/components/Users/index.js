@@ -47,7 +47,7 @@ const Index = props => {
                 </div>
                 <div className="container-fluid">
                     <div className="row d-flex">
-                        <nav className="col-md-2 p-5">
+                        <nav className="col-sm-12 col-md-2 p-5">
                             <StickyBox offsetTop={100}>
                             <ul className="nav nav-pills nav-pills-primary flex-column" >
                                 <li className="nav-item mx-5 mb-2">
@@ -103,7 +103,7 @@ const Index = props => {
                             </ul>
                             </StickyBox>
                         </nav>
-                        <div className="col-md-8 py-5">
+                        <div className="col-sm-12 col-md-8 py-5">
                             <div className="tab-content p-0">
                                 <div className={`tab-pane ${activeTabs === 'dashboard' && 'active'}`}>
                                     <Dashboard/>
@@ -125,10 +125,10 @@ const Index = props => {
 
 
 
-                        <div className="col-md-2 p-5">
+                        <div className="col-sm-12 col-md-2 p-5">
                             <StickyBox offsetTop={100} >
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-sm-12 col-md-12">
 
                                     <div className="card mb-3">
                                         <div className="card-title">

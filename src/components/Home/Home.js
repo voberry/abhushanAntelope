@@ -207,7 +207,7 @@ const Home = (props) => {
 
                     <div className="d-flex justify-content-around flex-fill px-5 mx-5 my-5">
                         <div className="row w-100">
-                            <div className="col-md-3">
+                            <div className="col-sm-12 col-md-3">
                                 <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills'}>
                                     <TabPane tab="Premade Packages" key="premade">
                                         <PredefinedPackages/>
@@ -218,7 +218,7 @@ const Home = (props) => {
                                 </Tabs>
                             </div>
 
-                            <div className="col-md-9">
+                            <div className="col-sm-12 col-md-9">
                                 <LocationMap
                                     location={locations}
                                 />
@@ -234,7 +234,7 @@ const Home = (props) => {
                     <div className="d-flex justify-content-around flex-fill px-5 mx-5">
 
                         <div className="row w-100">
-                            <div className="col-md-9">
+                            <div className="col-sm-12 col-md-9">
                                 <Locations/>
 
                                 <div style={{
@@ -254,7 +254,7 @@ const Home = (props) => {
 
                             </div>
 
-                            <div className="col-md-3">
+                            <div className="col-sm-12 col-md-3">
                                 <div className="card mt-5">
                                     <div className="card-body">
 

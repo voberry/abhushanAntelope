@@ -2,13 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {withRouter, Link} from 'react-router-dom'
 import {Map, TileLayer, GeoJSON} from "react-leaflet";
 import allProvinces from '../../../assets/generated-geojson/province'
-import Province1 from '../../../assets/generated-geojson/Province-1'
-import Province2 from '../../../assets/generated-geojson/Province-2'
-import Province3 from '../../../assets/generated-geojson/Province-3'
-import Province4 from '../../../assets/generated-geojson/Province-4'
-import Province5 from '../../../assets/generated-geojson/Province-5'
-import Province6 from '../../../assets/generated-geojson/Province-6'
-import Province7 from '../../../assets/generated-geojson/Province-7'
+import districts from '../../../assets/generated-geojson/districts'
 
 import StickyBox from "react-sticky-box";
 import Wallpaper from "../../../assets/images/wallpaper.jpg";
@@ -16,66 +10,6 @@ import Wallpaper from "../../../assets/images/wallpaper.jpg";
 const Index = () => {
 
     const [selectedProvince, setSelectedProvince] = useState(null);
-    const [allDistricts, setAllDistricts] = useState([]);
-    const provincesDistricts1 = Province1.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    const provincesDistricts2 = Province2.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    const provincesDistricts3 = Province3.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    const provincesDistricts4 = Province4.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    const provincesDistricts5 = Province5.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    const provincesDistricts6 = Province6.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    const provincesDistricts7 = Province7.features.map(item => {
-        return {
-            district: item.properties.DISTRICT,
-            headquaters: item.properties.HQ,
-            provinces_id: item.properties.PROVINCE
-        }
-    });
-
-    useEffect(()=> {
-        setAllDistricts(provincesDistricts1.concat(provincesDistricts2).concat(provincesDistricts3).concat(provincesDistricts4).concat(provincesDistricts5).concat(provincesDistricts6).concat(provincesDistricts7))
-    }, [provincesDistricts1, provincesDistricts2, provincesDistricts3, provincesDistricts4, provincesDistricts5, provincesDistricts6, provincesDistricts7]);
 
     const state = {
         lat: 28.3000,
@@ -127,11 +61,11 @@ const Index = () => {
         <div className={'gray-background'}>
             <div className="container-fluid">
                 <div className="row d-flex">
-                    <div className="col-md-10 p-5">
+                    <div className="col-sm-12 col-md-10 p-5">
                         <Map center={position}
                              viewport={state.center}
-                             zoom={6.5}
-                             style={{height: '60vh'}}
+                             zoom={7}
+                             style={{height: '80vh'}}
                              doubleClickZoom={false}
                              closePopupOnClick={false}
                              dragging={false}
@@ -172,116 +106,17 @@ const Index = () => {
                         </div>}
 
 
-                        <div className="row">
-                            {selectedProvince === 1 && provincesDistricts1.map(item =>
-                                <div className={'col-md-3 my-2'}>
+                        <div className="row d-flex align-items-stretch">
+                            {selectedProvince && districts.features.filter(item => item.properties && item.properties.PROVINCE === selectedProvince)
+                                .map(item =>
+                                <div className={'col-sm-12 col-md-3 my-2'}>
                                     <div className="card">
                                         <img className="card-img-top"
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
-                                        {console.log(item)}
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`./${item.district}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>)}
-                            {selectedProvince === 2 && provincesDistricts2.map(item =>
-                                <div className={'col-md-3 my-2'}>
-                                    <div className="card">
-                                        <img className="card-img-top"
-                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                             alt="Card image cap"/>
-                                        {console.log(item)}
-                                        <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`/${item.district}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>)}
-
-                            {selectedProvince === 3 && provincesDistricts3.map(item =>
-                                <div className={'col-md-3 my-2'}>
-                                    <div className="card">
-                                        <img className="card-img-top"
-                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                             alt="Card image cap"/>
-                                        {console.log(item)}
-                                        <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`/${item.district}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>)}
-                            {selectedProvince === 4 && provincesDistricts4.map(item =>
-                                <div className={'col-md-3 my-2'}>
-                                    <div className="card">
-                                        <img className="card-img-top"
-                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                             alt="Card image cap"/>
-                                        {console.log(item)}
-                                        <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`/${item.district}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>)}
-                            {selectedProvince === 5 && provincesDistricts5.map(item =>
-                                <div className={'col-md-3 my-2'}>
-                                    <div className="card">
-                                        <img className="card-img-top"
-                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                             alt="Card image cap"/>
-                                        {console.log(item)}
-                                        <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`/${item.district}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>)}
-
-                            {selectedProvince === 6 && provincesDistricts6.map(item =>
-                                <div className={'col-md-3 my-2'}>
-                                    <div className="card">
-                                        <img className="card-img-top"
-                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                             alt="Card image cap"/>
-                                        {console.log(item)}
-                                        <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`/${item.district}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>)}
-
-                            {selectedProvince === 7 && provincesDistricts7.map(item =>
-                                <div className={'col-md-3 my-2'}>
-                                    <div className="card">
-                                        <img className="card-img-top"
-                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                             alt="Card image cap"/>
-                                        {console.log(item)}
-                                        <div className="card-body">
-                                            <h6 className="card-title"><a>{item.district}</a></h6>
-                                            <Link to={`/${item.district}`}>
+                                            <h6 className="card-title"><a>{item.properties && item.properties.DISTRICT}</a></h6>
+                                            <Link to={`./places/${item.properties && item.properties.DISTRICT}`}>
                                                 <button className="btn antelope-green-bg btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
@@ -292,10 +127,10 @@ const Index = () => {
 
                     </div>
 
-                    <div className="col-md-2 p-5 px-2">
+                    <div className="col-sm-12 col-md-2 p-5 px-2">
                         <StickyBox offsetTop={100}>
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-sm-12 col-md-12">
 
                                     <div className="card mb-3">
                                         <div className="card-title">

@@ -1,0 +1,698 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "DISTRICT": "JHAPA",
+        "HQ": "BHADRAPUR",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "DISTRICT": "ILAM",
+        "HQ": "ILAM",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "DISTRICT": "PANCHTHAR",
+        "HQ": "PHIDIM",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "DISTRICT": "TAPLEJUNG",
+        "HQ": "TAPLEJUNG",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "DISTRICT": "MORANG",
+        "HQ": "BIRATNAGAR",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "DISTRICT": "SUNSARI",
+        "HQ": "INARUWA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "DISTRICT": "BHOJPUR",
+        "HQ": "BHOJPUR",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "DISTRICT": "DHANKUTA",
+        "HQ": "DHANKUTA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "DISTRICT": "TEHRATHUM",
+        "HQ": "MYANGLUNG",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "DISTRICT": "SANKHUWASABHA",
+        "HQ": "KHANDBARI",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "DISTRICT": "UDAYAPUR",
+        "HQ": "TRIYUGA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "DISTRICT": "KHOTANG",
+        "HQ": "DIKTEL",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "DISTRICT": "OKHALDHUNGA",
+        "HQ": "SIDDHICHARAN",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "DISTRICT": "SOLUKHUMBU",
+        "HQ": "DUDHKUNDA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "DISTRICT": "SAPTARI",
+        "HQ": "RAJBIRAJ",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "DISTRICT": "SIRAHA",
+        "HQ": "SIRAHA",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "DISTRICT": "DHANUSA",
+        "HQ": "JANAKPUR",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "DISTRICT": "MAHOTTARI",
+        "HQ": "JALESHWAR",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "DISTRICT": "SARLAHI",
+        "HQ": "MALANGWA",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "DISTRICT": "BARA",
+        "HQ": "KALAIYA",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "DISTRICT": "PARSA",
+        "HQ": "BIRGANJ",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "DISTRICT": "RAUTAHAT",
+        "HQ": "GAUR",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "DISTRICT": "SINDHULI",
+        "HQ": "KAMALAMAI",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "DISTRICT": "RAMECHHAP",
+        "HQ": "MANTHALI",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "DISTRICT": "DOLAKHA",
+        "HQ": "BHIMESHWAR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "DISTRICT": "BHAKTAPUR",
+        "HQ": "BHAKTAPUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "DISTRICT": "DHADING",
+        "HQ": "NILKANTHA",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "DISTRICT": "KATHMANDU",
+        "HQ": "KATHMANDU",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "DISTRICT": "KAVREPALANCHOWK",
+        "HQ": "DHULIKHEL",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "DISTRICT": "LALITPUR",
+        "HQ": "LALITPUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "DISTRICT": "NUWAKOT",
+        "HQ": "BIDUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "DISTRICT": "RASUWA",
+        "HQ": "DHUNCHE",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "DISTRICT": "SINDHUPALCHOK",
+        "HQ": "CHAUTARA",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "DISTRICT": "CHITWAN",
+        "HQ": "BHARATPUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "DISTRICT": "MAKWANPUR",
+        "HQ": "HETAUDA",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "DISTRICT": "GORKHA",
+        "HQ": "GORKHA",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "DISTRICT": "KASKI",
+        "HQ": "POKHARA",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "DISTRICT": "LAMJUNG",
+        "HQ": "BESISAHAR",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "DISTRICT": "SYANGJA",
+        "HQ": "PUTALIBAZAR",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "DISTRICT": "TANAHU",
+        "HQ": "BYAS",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "DISTRICT": "MANANG",
+        "HQ": "CHAME",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "DISTRICT": "NAWALPUR",
+        "HQ": "KAWASOTI",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "properties": {
+        "DISTRICT": "BAGLUNG",
+        "HQ": "BAGLUNG",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "properties": {
+        "DISTRICT": "MYAGDI",
+        "HQ": "BENI",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "properties": {
+        "DISTRICT": "PARBAT",
+        "HQ": "KUSMA",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "properties": {
+        "DISTRICT": "MUSTANG",
+        "HQ": "JOMSOM",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "DISTRICT": "KAPILVASTU",
+        "HQ": "KAPILVASTU",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "DISTRICT": "PARASI",
+        "HQ": "PARASI",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "DISTRICT": "RUPANDEHI",
+        "HQ": "SIDDHARTHANAGAR",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "DISTRICT": "ARGHAKHANCHI",
+        "HQ": "SANDHIKHARKA",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "DISTRICT": "GULMI",
+        "HQ": "RESUNGA",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "DISTRICT": "PALPA",
+        "HQ": "TANSEN",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "properties": {
+        "DISTRICT": "DANG",
+        "HQ": "TRIBHUWANNAGAR",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "properties": {
+        "DISTRICT": "PYUTHAN",
+        "HQ": "PYUTHAN",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "properties": {
+        "DISTRICT": "ROLPA",
+        "HQ": "LIWANG",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "properties": {
+        "DISTRICT": "EASTERN RUKUM",
+        "HQ": "RUKUMKOT",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "properties": {
+        "DISTRICT": "BANKE",
+        "HQ": "NEPALGANJ",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "properties": {
+        "DISTRICT": "BARDIYA",
+        "HQ": "GULARIYA",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "properties": {
+        "DISTRICT": "WESTERN RUKUM",
+        "HQ": "MUSIKOT",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "properties": {
+        "DISTRICT": "SALYAN",
+        "HQ": "SALYAN",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "properties": {
+        "DISTRICT": "DOLPA",
+        "HQ": "DUNAI",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "properties": {
+        "DISTRICT": "HUMLA",
+        "HQ": "SIMIKOT",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "properties": {
+        "DISTRICT": "JUMLA",
+        "HQ": "CHANDANNATH",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "properties": {
+        "DISTRICT": "KALIKOT",
+        "HQ": "MANMA",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "properties": {
+        "DISTRICT": "MUGU",
+        "HQ": "GAMGHADI",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "properties": {
+        "DISTRICT": "SURKHET",
+        "HQ": "BIRENDRANAGAR",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "properties": {
+        "DISTRICT": "DAILEKH",
+        "HQ": "NARAYAN",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "properties": {
+        "DISTRICT": "JAJARKOT",
+        "HQ": "KHALANGA",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "properties": {
+        "DISTRICT": "KAILALI",
+        "HQ": "DHANGADHI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "properties": {
+        "DISTRICT": "ACHHAM",
+        "HQ": "MANGALSEN",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "properties": {
+        "DISTRICT": "DOTI",
+        "HQ": "DIPAYAL SILGADHI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "properties": {
+        "DISTRICT": "BAJHANG",
+        "HQ": "JAYAPRITHVI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "properties": {
+        "DISTRICT": "BAJURA",
+        "HQ": "MARTADI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "properties": {
+        "DISTRICT": "KANCHANPUR",
+        "HQ": "BHIMDATTA",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "properties": {
+        "DISTRICT": "DADELDHURA",
+        "HQ": "AMARGADHI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "properties": {
+        "DISTRICT": "BAITADI",
+        "HQ": "DASHARATHCHAND",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "properties": {
+        "DISTRICT": "DARCHULA",
+        "HQ": "DARCHULA",
+        "PROVINCE": 7
+      }
+    }
+  ]
+}
