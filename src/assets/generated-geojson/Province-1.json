@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "DISTRICT": "JHAPA",
+        "HQ": "BHADRAPUR",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "DISTRICT": "ILAM",
+        "HQ": "ILAM",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "DISTRICT": "PANCHTHAR",
+        "HQ": "PHIDIM",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "DISTRICT": "TAPLEJUNG",
+        "HQ": "TAPLEJUNG",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "DISTRICT": "MORANG",
+        "HQ": "BIRATNAGAR",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "DISTRICT": "SUNSARI",
+        "HQ": "INARUWA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "DISTRICT": "BHOJPUR",
+        "HQ": "BHOJPUR",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "DISTRICT": "DHANKUTA",
+        "HQ": "DHANKUTA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "DISTRICT": "TEHRATHUM",
+        "HQ": "MYANGLUNG",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "DISTRICT": "SANKHUWASABHA",
+        "HQ": "KHANDBARI",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "DISTRICT": "UDAYAPUR",
+        "HQ": "TRIYUGA",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "DISTRICT": "KHOTANG",
+        "HQ": "DIKTEL",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "DISTRICT": "OKHALDHUNGA",
+        "HQ": "SIDDHICHARAN",
+        "PROVINCE": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "DISTRICT": "SOLUKHUMBU",
+        "HQ": "DUDHKUNDA",
+        "PROVINCE": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "DISTRICT": "SAPTARI",
+        "HQ": "RAJBIRAJ",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "DISTRICT": "SIRAHA",
+        "HQ": "SIRAHA",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "DISTRICT": "DHANUSA",
+        "HQ": "JANAKPUR",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "DISTRICT": "MAHOTTARI",
+        "HQ": "JALESHWAR",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "DISTRICT": "SARLAHI",
+        "HQ": "MALANGWA",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "DISTRICT": "BARA",
+        "HQ": "KALAIYA",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "DISTRICT": "PARSA",
+        "HQ": "BIRGANJ",
+        "PROVINCE": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "DISTRICT": "RAUTAHAT",
+        "HQ": "GAUR",
+        "PROVINCE": 2
+      }
+    }
+  ]
+}

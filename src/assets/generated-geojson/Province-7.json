@@ -1,0 +1,86 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 69,
+      "properties": {
+        "DISTRICT": "KAILALI",
+        "HQ": "DHANGADHI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "properties": {
+        "DISTRICT": "ACHHAM",
+        "HQ": "MANGALSEN",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "properties": {
+        "DISTRICT": "DOTI",
+        "HQ": "DIPAYAL SILGADHI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "properties": {
+        "DISTRICT": "BAJHANG",
+        "HQ": "JAYAPRITHVI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "properties": {
+        "DISTRICT": "BAJURA",
+        "HQ": "MARTADI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "properties": {
+        "DISTRICT": "KANCHANPUR",
+        "HQ": "BHIMDATTA",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "properties": {
+        "DISTRICT": "DADELDHURA",
+        "HQ": "AMARGADHI",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "properties": {
+        "DISTRICT": "BAITADI",
+        "HQ": "DASHARATHCHAND",
+        "PROVINCE": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "properties": {
+        "DISTRICT": "DARCHULA",
+        "HQ": "DARCHULA",
+        "PROVINCE": 7
+      }
+    }
+  ]
+}

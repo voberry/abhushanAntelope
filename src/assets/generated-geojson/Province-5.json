@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "DISTRICT": "KAPILVASTU",
+        "HQ": "KAPILVASTU",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "DISTRICT": "PARASI",
+        "HQ": "PARASI",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "DISTRICT": "RUPANDEHI",
+        "HQ": "SIDDHARTHANAGAR",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "DISTRICT": "ARGHAKHANCHI",
+        "HQ": "SANDHIKHARKA",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "DISTRICT": "GULMI",
+        "HQ": "RESUNGA",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "DISTRICT": "PALPA",
+        "HQ": "TANSEN",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "properties": {
+        "DISTRICT": "DANG",
+        "HQ": "TRIBHUWANNAGAR",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "properties": {
+        "DISTRICT": "PYUTHAN",
+        "HQ": "PYUTHAN",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "properties": {
+        "DISTRICT": "ROLPA",
+        "HQ": "LIWANG",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "properties": {
+        "DISTRICT": "EASTERN RUKUM",
+        "HQ": "RUKUMKOT",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "properties": {
+        "DISTRICT": "BANKE",
+        "HQ": "NEPALGANJ",
+        "PROVINCE": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "properties": {
+        "DISTRICT": "BARDIYA",
+        "HQ": "GULARIYA",
+        "PROVINCE": 5
+      }
+    }
+  ]
+}

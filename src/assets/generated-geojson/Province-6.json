@@ -1,0 +1,95 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 57,
+      "properties": {
+        "DISTRICT": "WESTERN RUKUM",
+        "HQ": "MUSIKOT",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "properties": {
+        "DISTRICT": "SALYAN",
+        "HQ": "SALYAN",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "properties": {
+        "DISTRICT": "DOLPA",
+        "HQ": "DUNAI",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "properties": {
+        "DISTRICT": "HUMLA",
+        "HQ": "SIMIKOT",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "properties": {
+        "DISTRICT": "JUMLA",
+        "HQ": "CHANDANNATH",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "properties": {
+        "DISTRICT": "KALIKOT",
+        "HQ": "MANMA",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "properties": {
+        "DISTRICT": "MUGU",
+        "HQ": "GAMGHADI",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "properties": {
+        "DISTRICT": "SURKHET",
+        "HQ": "BIRENDRANAGAR",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "properties": {
+        "DISTRICT": "DAILEKH",
+        "HQ": "NARAYAN",
+        "PROVINCE": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "properties": {
+        "DISTRICT": "JAJARKOT",
+        "HQ": "KHALANGA",
+        "PROVINCE": 6
+      }
+    }
+  ]
+}

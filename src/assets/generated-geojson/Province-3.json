@@ -1,0 +1,122 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "DISTRICT": "SINDHULI",
+        "HQ": "KAMALAMAI",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "DISTRICT": "RAMECHHAP",
+        "HQ": "MANTHALI",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "DISTRICT": "DOLAKHA",
+        "HQ": "BHIMESHWAR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "DISTRICT": "BHAKTAPUR",
+        "HQ": "BHAKTAPUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "DISTRICT": "DHADING",
+        "HQ": "NILKANTHA",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "DISTRICT": "KATHMANDU",
+        "HQ": "KATHMANDU",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "DISTRICT": "KAVREPALANCHOWK",
+        "HQ": "DHULIKHEL",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "DISTRICT": "LALITPUR",
+        "HQ": "LALITPUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "DISTRICT": "NUWAKOT",
+        "HQ": "BIDUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "DISTRICT": "RASUWA",
+        "HQ": "DHUNCHE",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "DISTRICT": "SINDHUPALCHOK",
+        "HQ": "CHAUTARA",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "DISTRICT": "CHITWAN",
+        "HQ": "BHARATPUR",
+        "PROVINCE": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "DISTRICT": "MAKWANPUR",
+        "HQ": "HETAUDA",
+        "PROVINCE": 3
+      }
+    }
+  ]
+}

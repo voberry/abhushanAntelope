@@ -8,7 +8,8 @@ import Places from './PlacesContainer';
 const About = ({ match }) => (
     <Fragment>
         <Switch>
-            <Route exact path={`${match.url}/places`} component={Places} />
+            <Route path={`${match.url}/`} component={Places} />
+            <Route path={`${match.url}/:name`} component={Places} />
             {/*<Route component={NotFound} />*/}
         </Switch>
     </Fragment>

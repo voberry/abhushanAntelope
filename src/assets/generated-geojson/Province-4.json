@@ -1,0 +1,104 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "DISTRICT": "GORKHA",
+        "HQ": "GORKHA",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "DISTRICT": "KASKI",
+        "HQ": "POKHARA",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "DISTRICT": "LAMJUNG",
+        "HQ": "BESISAHAR",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "DISTRICT": "SYANGJA",
+        "HQ": "PUTALIBAZAR",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "DISTRICT": "TANAHU",
+        "HQ": "BYAS",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "DISTRICT": "MANANG",
+        "HQ": "CHAME",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "DISTRICT": "NAWALPUR",
+        "HQ": "KAWASOTI",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "properties": {
+        "DISTRICT": "BAGLUNG",
+        "HQ": "BAGLUNG",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "properties": {
+        "DISTRICT": "MYAGDI",
+        "HQ": "BENI",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "properties": {
+        "DISTRICT": "PARBAT",
+        "HQ": "KUSMA",
+        "PROVINCE": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "properties": {
+        "DISTRICT": "MUSTANG",
+        "HQ": "JOMSOM",
+        "PROVINCE": 4
+      }
+    }
+  ]
+}
