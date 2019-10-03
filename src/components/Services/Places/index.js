@@ -11,13 +11,13 @@ const Index = () => {
     };
 
     const getColor = (d) => {
-        return d ===1 ? '#ef5350' :
+        return d === 1 ? '#ef5350' :
             d === 2 ? '#66bb6a' :
                 d === 3 ? '#42a5f5' :
                     d === 4 ? '#ffca28' :
                         d === 5 ? '#bdbdbd' :
                             d === 6 ? '#ab47bc' :
-                                    '#d4e157';
+                                '#d4e157';
     };
 
     function style(feature) {
@@ -42,29 +42,32 @@ const Index = () => {
 
     const position = [state.lat, state.lng];
     return (
-        <div>
-            <h1> ALSO IM HERE</h1>
-            <Map center={position}
-                 zoom={7}
-                 style={{height: '600px'}}
-                 doubleClickZoom={false}
-                 closePopupOnClick={false}
-                 dragging={true}
-                 zoomSnap={false}
-                 zoomDelta={false}
-                 trackResize={false}
-                 touchZoom={false}
-                 scrollWheelZoom={false}
-            >
-                <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <GeoJSON data={Province1_geoJson}
-                         style={style}
-                         onEachFeature={onEachFeature}
-                />
-            </Map>
+        <div className="container-fluid">
+            <div className="row d-flex">
+                <nav className="col-md-8 p-5">
+                    <Map center={position}
+                         zoom={6.5}
+                         style={{height: '50vh'}}
+                         doubleClickZoom={false}
+                         closePopupOnClick={false}
+                         dragging={false}
+                         zoomSnap={false}
+                         zoomDelta={false}
+                         trackResize={false}
+                         touchZoom={false}
+                         scrollWheelZoom={false}
+                    >
+                        <TileLayer
+                            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <GeoJSON data={Province1_geoJson}
+                                 style={style}
+                                 onEachFeature={onEachFeature}
+                        />
+                    </Map>
+                </nav>
+            </div>
         </div>
     );
 };
