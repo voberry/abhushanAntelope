@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Kathmandu from '../../assets/images/kathmandu.jpeg'
 
 
-const Map = () => {
+const PredefinedPackage = () => {
 
     const [isFlipped, setIsFlipped] = useState(false);
 
@@ -84,4 +84,4 @@ const Map = () => {
     );
 };
 
-export default Map;
+export default PredefinedPackage;

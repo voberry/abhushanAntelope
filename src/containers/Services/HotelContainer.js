@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Hotels from '../../components/Services/Hotels';
+import Hotel from '../../components/Services/Hotels/Hotel';
 
 export class PlacesContainer extends Component {
 
     render() {
         return (
-            <Hotels
+            <Hotel
                 {...this.props}
             />
         );

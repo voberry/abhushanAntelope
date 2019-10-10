@@ -23,7 +23,7 @@ const Carousels = () => {
 
 
     return (
-        <div>
+        <div className={'multi-carousel'}>
             <Carousel touch={true} className={'mb-5'} nextIcon={nextItemButton} prevIcon={previousItemButton} interval={null}>
                 {carouselData && carouselData.map(item => <Carousel.Item>
                     <div className="d-flex justify-content-around align-items-center w-100">
