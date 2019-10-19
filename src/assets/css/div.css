@@ -8,32 +8,45 @@ body{
     align-items: center;
 }
 
-.carousel-item {
+.multi-carousel .carousel-item {
     height: 100%;
 }
 
-.carousel-indicators li {
+.multi-carousel  .carousel-indicators li {
     width: 10px;
     height: 10px;
     border-radius: 100%;
 }
-.carousel-indicators {
+.multi-carousel .carousel-indicators {
     bottom: -10px;
 }
 
-.carousel-control-prev
+.multi-carousel  .carousel-control-prev
 {
     display: initial;
     position: relative;
     margin: 5%;
 }
 
-.carousel-control-next
+.multi-carousel  .carousel-control-next
 {
     display: initial;
     position: relative;
     float: right;
+}
 
+.carousel-indicators img {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+}
+
+.thumbnailCarousels .carousel-indicators{
+    background: black !important;
+}
+
+.thumbnailCarousels .carousel-indicators li {
+    height: 100px;
 }
 
 .ant-tabs-top-bar{
@@ -115,6 +128,11 @@ body{
 }
 
 .mdbModal .modal-content {
-    background: transparent !important;
-    box-shadow: none;
+            background: transparent !important;
+            box-shadow: none;
+        }
+
+.dotted-borders {
+    border: 2px dotted yellow;
+    padding: 20px
 }

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Services from '../../components/Services';
+import Treks from '../../components/Services/Treks';
 
-export class PlacesContainer extends Component {
+export class TreksContainer extends Component {
 
     render() {
         return (
-            <Services
+            <Treks
                 {...this.props}
             />
         );
@@ -36,4 +36,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PlacesContainer);
+)(TreksContainer);
