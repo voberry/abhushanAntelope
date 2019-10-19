@@ -69,7 +69,7 @@ const AppHeader = () => {
                                 <Link className="nav-link px-4  black-text" to="/gallery">
                                     Gallery
                                 </Link>
-                                <Link className="nav-link px-4 black-text" to="/about">
+                                <Link className="nav-link px-4 black-text" to="/about-us">
                                     About
                                 </Link>
                             </ul>
@@ -86,7 +86,7 @@ const AppHeader = () => {
                                 <Link className="nav-link px-4  black-text" to="/our-services">
                                     Blog
                                 </Link>
-                                <Link className="nav-link px-4  black-text" to="/gallery">
+                                <Link className="nav-link px-4  black-text" to="/contact-us">
                                     Contact
                                 </Link>
                                 <a className="nav-link px-4  black-text" onClick={()=> showLoginModal()}>

@@ -1,12 +1,14 @@
 import React from 'react';
-import Wallpaper from "../../../assets/images/pokhara.jpg";
 import StickyBox from "react-sticky-box";
 import {Tabs} from "antd";
 import Carousels from "../../Home/Carousels";
+import Wallpaper from "../../../assets/images/pokhara.jpg";
+import districts from '../../../assets/generated-geojson/districts'
 
 const {TabPane} = Tabs;
 
 const Locations = (props) => {
+
     return (
         <div style={{
             background : '#f2f2f2'
@@ -35,19 +37,7 @@ const Locations = (props) => {
                 <div className="row d-flex">
                     <div className="col-sm-12 col-md-9 p-5">
                         <div className="row">
-
-                            {/*<div className="col-lg-5 d-flex justify-content-center align-items-center">*/}
-
-                            {/*    <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">*/}
-                            {/*        <img className="img-fluid" src="https://d3hne3c382ip58.cloudfront.net/resized/750x420/kathmandu-valley-trek-tour-2-269861_1559744945.JPG" alt="Sample image" />*/}
-                            {/*        <a>*/}
-                            {/*            <div className="mask rgba-white-slight" />*/}
-                            {/*        </a>*/}
-                            {/*    </div>*/}
-
-                            {/*</div>*/}
-
-                            <div className="col-lg-12 ">
+                            <div className="col-lg-12 col-sm-12 col-md-12 p-5">
 
                                 <a  className="green-text">
                                     <h6 className="font-weight-bold mb-3 font-libre-franklin"><i className="fas fa-city pr-2" />City of Temples</h6>
@@ -71,14 +61,19 @@ const Locations = (props) => {
                                             <Carousels/>
                                         </TabPane>
                                         <TabPane tab="Heritage" key="heritage" >
+                                            <Carousels/>
                                         </TabPane>
                                         <TabPane tab="City Life" key="cityLife" >
+                                            <Carousels/>
                                         </TabPane>
                                         <TabPane tab={`Old ${props.match.params.name}`} key="oldCity" >
+                                            <Carousels/>
                                         </TabPane>
                                         <TabPane tab="Food" key="food" >
+                                            <Carousels/>
                                         </TabPane>
                                         <TabPane tab="Standard Packages" key="standardPackages" >
+                                            <Carousels/>
                                         </TabPane>
                                     </Tabs>
                                 </div>

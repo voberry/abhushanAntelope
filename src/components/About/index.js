@@ -1,11 +1,11 @@
 import React from 'react';
-import Pokhara from "../../assets/images/pokhara.jpg";
+import Kathmandu from "../../assets/images/kathmandu.jpeg";
 
 const Index = () => {
     return (
         <div>
             <div className="page-header header-filter" data-parallax="true" style={{
-                backgroundImage: `url(${Pokhara})`,
+                backgroundImage: `url(${Kathmandu})`,
             }}/>
         </div>
     );

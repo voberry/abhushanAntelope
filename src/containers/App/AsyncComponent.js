@@ -16,6 +16,12 @@ export const AsyncContact = loadable({
     loading: LoadingComponent,
 });
 
+
+export const AsyncGallery = loadable({
+    loader: () => import('../../containers/Gallery'),
+    loading: LoadingComponent,
+});
+
 export const AsyncAbout = loadable({
     loader: () => import('../../containers/About'),
     loading: LoadingComponent,
