@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {withRouter, Link} from 'react-router-dom'
 import {
     MDBNavbar,
@@ -11,8 +11,25 @@ import {
 } from 'mdbreact'
 
 import logo from '../../../assets/images/antelope.png'
+import LoginModal from "./LoginModal";
 
 const AppHeader = () => {
+
+    const [isLoginModalVisible, setIsLoginModalVisible] = useState(false);
+
+    const showLoginModal = () => {
+        setIsLoginModalVisible(true)
+    };
+    const hideLoginModal = () => {
+        setIsLoginModalVisible(false)
+    };
+
+    const LoginModalProps = {
+        showModal: showLoginModal,
+        hideModal : hideLoginModal,
+        isModalVisible: isLoginModalVisible
+    };
+
     return (
         <div>
             <MDBNavbar expand="md" fixed="top" className={'white'}>
@@ -72,18 +89,19 @@ const AppHeader = () => {
                                 <Link className="nav-link px-4  black-text" to="/gallery">
                                     Contact
                                 </Link>
-                                <Link className="nav-link px-4  black-text" to="/login">
+                                <a className="nav-link px-4  black-text" onClick={()=> showLoginModal()}>
                                     Login
-                                </Link>
+                                </a>
                                 <Link className="nav-link px-4  black-text" to="/register">
                                     Sign Up
                                 </Link>
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </MDBNavbar>
+
+            <LoginModal  modalProps={LoginModalProps} />
         </div>
     );
 };
