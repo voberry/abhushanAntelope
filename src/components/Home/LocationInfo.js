@@ -9,7 +9,6 @@ const {TabPane} = Tabs;
 const LocationInfo = (props) => {
     const {location, index} = props;
     const locationContextData = useContext(LocationsContext);
-    console.log(locationContextData, 'context data');
     const {selectedHotel, selectedRestaurants, selectedVehicle} = locationContextData;
 
     return (
@@ -78,30 +77,31 @@ const LocationInfo = (props) => {
                             </div>
                         </div>
 
-                        {selectedHotel &&
+                        {selectedHotel && selectedHotel.map(item=> item.location).includes(location.title) &&
                         <div className="card mt-5">
                             <div className="card-body">
-                                <h4 className="card-title"><Link to='#'>Hotel {selectedHotel}</Link></h4>
+                                <h4 className="card-title"><Link to='#'>Hotel {selectedHotel.hotel}</Link></h4>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                         }
 
-                        {selectedVehicle &&
+
+                        {selectedVehicle && selectedVehicle.map(item=> item.location).includes(location.title) &&
                         <div className="card mt-5">
                             <div className="card-body">
-                                <h4 className="card-title"><Link to='#'>Vehicle {selectedVehicle}</Link></h4>
+                                <h4 className="card-title"><Link to='#'>Vehicle Rentals :  {selectedVehicle.vehicle}</Link></h4>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                         }
 
-                        {selectedRestaurants &&
+                        {selectedRestaurants && selectedRestaurants.map(item=> item.location).includes(location.title) &&
                         <div className="card mt-5">
                             <div className="card-body">
-                                <h4 className="card-title"><Link to='#'>Restaurant {selectedRestaurants}</Link></h4>
+                                <h4 className="card-title"><Link to='#'>Restaurant:  {selectedRestaurants.restaurant}</Link></h4>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>

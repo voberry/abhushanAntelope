@@ -20,7 +20,6 @@ const List = props => {
         validateFields((err, values) => {
             if(!err) {
                 setIsFormSubmitted(true);
-                console.log(values)
             }
         })
     };
