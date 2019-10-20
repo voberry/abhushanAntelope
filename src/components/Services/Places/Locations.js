@@ -1,7 +1,7 @@
 import React from 'react';
 import StickyBox from "react-sticky-box";
 import {Tabs} from "antd";
-import Carousels from "../../Home/Carousels";
+import Carousels from "../../Common/Carousel";
 import Wallpaper from "../../../assets/images/pokhara.jpg";
 import districts from '../../../assets/generated-geojson/districts'
 

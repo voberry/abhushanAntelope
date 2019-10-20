@@ -1,0 +1,120 @@
+import React, {useContext, useState} from 'react';
+import {Tabs} from "antd";
+import {LocationsContext} from "../Contexts/LocationsContext";
+import Carousels from "../Common/Carousel";
+import {Link} from "react-router-dom";
+
+const {TabPane} = Tabs;
+
+const LocationInfo = (props) => {
+    const {location, index} = props;
+    const locationContextData = useContext(LocationsContext);
+    console.log(locationContextData, 'context data');
+    const {selectedHotel, selectedRestaurants, selectedVehicle} = locationContextData;
+
+    return (
+        <div className={`container-fluid px-5 ${index % 2 === 0 ? 'gray-background' : 'white'}`}>
+            <div className="d-flex justify-content-around flex-fill px-5 mx-5">
+                <div className="row w-100">
+                    <div className="col-sm-12 col-md-9">
+                        <div>
+                            <section className="my-5">
+
+                                <div className="row">
+
+                                    <div className="col-lg-5 d-flex justify-content-center align-items-center">
+
+                                        <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+                                            <img className="img-fluid"
+                                                 src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
+                                                 alt="Sample image"/>
+                                            <a>
+                                                <div className="mask rgba-white-slight"/>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="col-lg-7 ">
+
+                                        <a className="green-text">
+                                            <h6 className="font-weight-bold mb-3 antelope-green font-poppins"><i
+                                                className="fas fa-city pr-2"/>City of Temples</h6>
+                                        </a>
+                                        <h3 className="font-weight-bold mb-3 black-text">
+                                            <strong>{location && location.title}</strong></h3>
+
+                                        <p className={'black-text font-libre-franklin'}>{location && location.description}
+                                            <br/>
+
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+
+                        <div>
+                            <Tabs defaultActiveKey="hotels">
+                                <TabPane tab="Hotels" key="hotels">
+                                        <Carousels locations={location} selectedItemFor={'hotel'}/>
+                                </TabPane>
+                                <TabPane tab="Vehicle Rentals" key="vehicles">
+                                    <Carousels locations={location} selectedItemFor={'vehicles'}/>
+                                </TabPane>
+                                <TabPane tab="Restaurants" key="restaurants">
+                                    <Carousels locations={location} selectedItemFor={'restaurants'}/>
+                                </TabPane>
+                            </Tabs>
+                        </div>
+                    </div>
+
+                    <div className="col-sm-12 col-md-3">
+                        <div className="card mt-5">
+                            <div className="card-body">
+                                <h4 className="card-title"><Link to='#'>{location.title} Packages</Link></h4>
+                                <p className="card-text">Some quick example text to build on the card
+                                    title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                        {selectedHotel &&
+                        <div className="card mt-5">
+                            <div className="card-body">
+                                <h4 className="card-title"><Link to='#'>Hotel {selectedHotel}</Link></h4>
+                                <p className="card-text">Some quick example text to build on the card
+                                    title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        }
+
+                        {selectedVehicle &&
+                        <div className="card mt-5">
+                            <div className="card-body">
+                                <h4 className="card-title"><Link to='#'>Vehicle {selectedVehicle}</Link></h4>
+                                <p className="card-text">Some quick example text to build on the card
+                                    title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        }
+
+                        {selectedRestaurants &&
+                        <div className="card mt-5">
+                            <div className="card-body">
+                                <h4 className="card-title"><Link to='#'>Restaurant {selectedRestaurants}</Link></h4>
+                                <p className="card-text">Some quick example text to build on the card
+                                    title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        }
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    );
+};
+
+export default LocationInfo;

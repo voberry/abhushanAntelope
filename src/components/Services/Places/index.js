@@ -115,7 +115,7 @@ const Index = () => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>{item.properties && item.properties.DISTRICT}</a></h6>
+                                            <h6 className="card-title black-text"><a>{item.properties && item.properties.DISTRICT}</a></h6>
                                             <Link to={`./places/${item.properties && item.properties.DISTRICT}`}>
                                                 <button className="btn antelope-green-bg btn-sm white-text p-2">View
                                                 </button>
