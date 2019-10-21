@@ -35,7 +35,7 @@ const List = props => {
                 <div className="row">
                     <div className="col-md-10 col-sm-12 p-5">
                             <h5 className={'h5-responsive antelope-green'}>
-                                Search for your preferred hotels.
+                                Search for your preferred Trek.
                             </h5>
                         <div className="card w-100 p-3">
                             <div className="container">
@@ -286,7 +286,7 @@ const List = props => {
                                                      src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                                      alt="Card image cap"/>
                                                 <div className="card-body">
-                                                    <h6 className="card-title"><a>Random Hotel</a></h6>
+                                                    <h6 className="card-title"><a>Random Trek</a></h6>
                                                     <Link to={`./treks/123`}>
                                                         <button className="btn antelope-green-bg btn-sm white-text p-2">View
                                                         </button>
@@ -302,7 +302,7 @@ const List = props => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>Random Hotel</a></h6>
+                                            <h6 className="card-title"><a>Random Trek</a></h6>
                                             <Link to={`./treks/123`}>
                                                 <button className="btn antelope-green-bg btn-sm white-text p-2">View
                                                 </button>
@@ -318,7 +318,7 @@ const List = props => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>Random Hotel</a></h6>
+                                            <h6 className="card-title"><a>Random Trek</a></h6>
                                             <Link to={`./treks/123`}>
                                                 <button className="btn antelope-green-bg btn-sm white-text p-2">View
                                                 </button>
@@ -334,7 +334,7 @@ const List = props => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>Random Hotel</a></h6>
+                                            <h6 className="card-title"><a>Random Trek</a></h6>
                                             <Link to={`./treks/123`}>
                                                 <button className="btn antelope-green-bg btn-sm white-text p-2">View
                                                 </button>

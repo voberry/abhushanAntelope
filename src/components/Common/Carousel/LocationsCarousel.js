@@ -31,9 +31,9 @@ const Carousels = (props) => {
         <div className={'multi-carousel'}>
             <Carousel touch={true} className={'mb-5'} nextIcon={nextItemButton} prevIcon={previousItemButton}
                       interval={null}>
-                {carouselData && carouselData.map((item, index) => <Carousel.Item>
+                {carouselData && carouselData.map((item) => <Carousel.Item>
                         <div className="d-flex justify-content-around align-items-center w-100">
-                            {item.map((it, index2) => <div className="card mx-2">
+                            {item.map((it) => <div className="card mx-2">
                                 <div className="view overlay">
                                     <img className="card-img-top h-300"
                                          style={{

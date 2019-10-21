@@ -3,13 +3,17 @@ import {Tabs} from "antd";
 import {LocationsContext} from "../Contexts/LocationsContext";
 import Carousels from "../Common/Carousel";
 import {Link} from "react-router-dom";
+import moment from "moment";
 
 const {TabPane} = Tabs;
 
 const LocationInfo = (props) => {
-    const {location, index} = props;
+    const {location, index, form} = props;
+    const {validateFields, getFieldDecorator} = form;
     const locationContextData = useContext(LocationsContext);
     const {selectedHotel, selectedRestaurants, selectedVehicle} = locationContextData;
+
+    // const handleSetInitialHotel = (location, hotel)
 
     return (
         <div className={`container-fluid px-5 ${index % 2 === 0 ? 'gray-background' : 'white'}`}>
@@ -18,11 +22,8 @@ const LocationInfo = (props) => {
                     <div className="col-sm-12 col-md-9">
                         <div>
                             <section className="my-5">
-
                                 <div className="row">
-
                                     <div className="col-lg-5 d-flex justify-content-center align-items-center">
-
                                         <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
                                             <img className="img-fluid"
                                                  src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
@@ -35,7 +36,6 @@ const LocationInfo = (props) => {
                                     </div>
 
                                     <div className="col-lg-7 ">
-
                                         <a className="green-text">
                                             <h6 className="font-weight-bold mb-3 antelope-green font-poppins"><i
                                                 className="fas fa-city pr-2"/>City of Temples</h6>
@@ -56,7 +56,7 @@ const LocationInfo = (props) => {
                         <div>
                             <Tabs defaultActiveKey="hotels">
                                 <TabPane tab="Hotels" key="hotels">
-                                        <Carousels locations={location} selectedItemFor={'hotel'}/>
+                                    <Carousels locations={location} selectedItemFor={'hotel'}/>
                                 </TabPane>
                                 <TabPane tab="Vehicle Rentals" key="vehicles">
                                     <Carousels locations={location} selectedItemFor={'vehicles'}/>
@@ -67,6 +67,7 @@ const LocationInfo = (props) => {
                             </Tabs>
                         </div>
                     </div>
+
 
                     <div className="col-sm-12 col-md-3">
                         <div className="card mt-5">
@@ -80,6 +81,16 @@ const LocationInfo = (props) => {
                         {selectedHotel && selectedHotel.map(item=> item.location).includes(location.title) &&
                         <div className="card mt-5">
                             <div className="card-body">
+                                {getFieldDecorator(`locationInformation['${location.title}']['hotel']`, {
+                                    initialValue: selectedHotel && selectedHotel.find(item => item.location === location.title)
+                                        && selectedHotel.find(item => item.location === location.title).hotel,
+                                    rules: [
+                                        {
+                                            required: true,
+                                            message: `Please select a hotel for ${location.title} `
+                                        }
+                                    ]
+                                })(<div />)}
                                 <h4 className="card-title"><Link to='#'>Hotel {selectedHotel.hotel}</Link></h4>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
@@ -91,6 +102,16 @@ const LocationInfo = (props) => {
                         {selectedVehicle && selectedVehicle.map(item=> item.location).includes(location.title) &&
                         <div className="card mt-5">
                             <div className="card-body">
+                                {getFieldDecorator(`locationInformation['${location.title}']['vehicle']`, {
+                                    initialValue: selectedVehicle && selectedVehicle.find(item => item.location === location.title)
+                                        && selectedVehicle.find(item => item.location === location.title).vehicle,
+                                    rules: [
+                                        {
+                                            required: true,
+                                            message: `Please select a vehicle for ${location.title} `
+                                        }
+                                    ]
+                                })(<div />)}
                                 <h4 className="card-title"><Link to='#'>Vehicle Rentals :  {selectedVehicle.vehicle}</Link></h4>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
@@ -101,17 +122,24 @@ const LocationInfo = (props) => {
                         {selectedRestaurants && selectedRestaurants.map(item=> item.location).includes(location.title) &&
                         <div className="card mt-5">
                             <div className="card-body">
+                                {getFieldDecorator(`locationInformation['${location.title}']['restaurant']`, {
+                                    initialValue: selectedRestaurants && selectedRestaurants.find(item => item.location === location.title)
+                                        && selectedRestaurants.find(item => item.location === location.title).restaurant,
+                                    rules: [
+                                        {
+                                            required: true,
+                                            message: `Please select a restaurant for ${location.title} `
+                                        }
+                                    ]
+                                })(<div />)}
                                 <h4 className="card-title"><Link to='#'>Restaurant:  {selectedRestaurants.restaurant}</Link></h4>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                         }
-
                     </div>
                 </div>
-
-
             </div>
         </div>
     );

@@ -23,7 +23,6 @@ const Home = (props) => {
     const {form, fetchLocations, locations} = props;
     const {validateFields, getFieldDecorator} = form;
 
-
     const handleSubmit = e => {
         e.preventDefault();
         validateFields((err, values) => {
@@ -38,6 +37,14 @@ const Home = (props) => {
             fetchLocations();
             // }
         });
+    };
+
+    const handleLocationsSubmit = e => {
+        e.preventDefault();
+        validateFields((err, values) => {
+            console.log(values)
+
+        })
     };
 
     return (
@@ -229,7 +236,18 @@ const Home = (props) => {
                     </div>
 
                     <LocationsContextProvider>
-                        {locations && locations.map((item, index) => <LocationInfo location={item} index={index}/>)}
+                        <Form layout="inline" onSubmit={handleLocationsSubmit}>
+                            {locations && locations.map((item, index) => <LocationInfo location={item} index={index}
+                                                                                       form={form}/>)}
+
+                            <div className={'px-5'}>
+                                <Button htmlType="submit"
+                                        className={'btn-success antelope-green-bg  w-100'}>
+                                    LETS GO!
+                                </Button>
+                            </div>
+
+                        </Form>
                     </LocationsContextProvider>
 
                 </MDBAnimation>
