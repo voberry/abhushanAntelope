@@ -7,6 +7,7 @@ import StaticLayout from '../../components/Layout/Layout/Static';
 import {
     AsyncHome,
     AsyncUsers,
+    AsyncNotFound,
     AsyncLoginForm,
     AsyncRegisterPage,
     AsyncAbout,
@@ -26,6 +27,7 @@ const App = () =>(
             <PublicRoute path='/our-services' layout={StaticLayout} component={AsyncServices}/>
             <PublicRoute path='/gallery' layout={StaticLayout} component={AsyncGallery}/>
             <PublicRoute exact path='/signup' layout={StaticLayout} component={AsyncRegisterPage}/>
+            <PublicRoute exact path='/not-found' layout={StaticLayout} component={AsyncNotFound}/>
         </Switch>
     </React.Fragment>
 );

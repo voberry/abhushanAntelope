@@ -83,7 +83,7 @@ const AppHeader = () => {
                         </div>
                         <div className={'ml-5'}>
                             <ul className="nav justify-content-start lighten-4 py-3">
-                                <Link className="nav-link px-4  black-text" to="/our-services">
+                                <Link className="nav-link px-4  black-text" to="/not-found">
                                     Blog
                                 </Link>
                                 <Link className="nav-link px-4  black-text" to="/contact-us">

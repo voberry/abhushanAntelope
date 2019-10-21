@@ -11,6 +11,11 @@ export const AsyncUsers = loadable({
     loading: LoadingComponent,
 });
 
+export const AsyncNotFound = loadable({
+    loader: () => import('../../containers/Exception'),
+    loading: LoadingComponent,
+});
+
 export const AsyncContact = loadable({
     loader: () => import('../../containers/Contact'),
     loading: LoadingComponent,
