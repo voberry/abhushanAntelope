@@ -1,5 +1,5 @@
 import React from "react";
-import {Form, Input} from "antd";
+import {Button, Form, Input} from "antd";
 import {withRouter , Link} from "react-router-dom";
 
 const FooterPage = () => {
@@ -19,9 +19,9 @@ const FooterPage = () => {
                             </Form.Item>
 
                             <Form.Item>
-                                <button className={'btn btn-success'} htmlType="submit">
+                                <Button className={'btn btn-success'} htmlType="submit">
                                     Subscribe
-                                </button>
+                                </Button>
                             </Form.Item>
                         </Form>
 

@@ -7,7 +7,7 @@ const PredefinedPackage = () => {
     const [isFlipped, setIsFlipped] = useState(false);
 
     const handleRotateCard = () => {
-        setIsFlipped(!isFlipped)}
+        setIsFlipped(!isFlipped)};
 
     return (
         <div>

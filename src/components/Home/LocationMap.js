@@ -29,7 +29,7 @@ const LocationMap = (props) => {
     useEffect(()=>{
         axios.get(`https://api.tomtom.com/routing/1/calculateRoute/${locationRoutes.join(':')}/json?key=srmwhKEhBWfETVCcS2e0wYlMd0GoW21h&computeBestOrder=true`)
             .then(response => setDirections(response.data));
-    }, [locationRoutes])
+    }, [locationRoutes]);
 
     const handleOnClick = () => {
         setViewPort(DEFAULT_VIEWPORT)
