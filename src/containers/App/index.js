@@ -13,7 +13,8 @@ import {
     AsyncAbout,
     AsyncServices,
     AsyncContact,
-    AsyncGallery
+    AsyncGallery,
+    AsyncBlog
 } from "./AsyncComponent";
 
 const App = () =>(
@@ -26,6 +27,7 @@ const App = () =>(
             <PublicRoute exact path='/about-us' layout={StaticLayout} component={AsyncAbout}/>
             <PublicRoute path='/our-services' layout={StaticLayout} component={AsyncServices}/>
             <PublicRoute path='/gallery' layout={StaticLayout} component={AsyncGallery}/>
+            <PublicRoute path='/blogs' layout={StaticLayout} component={AsyncBlog}/>
             <PublicRoute exact path='/signup' layout={StaticLayout} component={AsyncRegisterPage}/>
             <PublicRoute exact path='/not-found' layout={StaticLayout} component={AsyncNotFound}/>
         </Switch>

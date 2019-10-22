@@ -1,76 +1,83 @@
 import React from 'react';
 import {MDBModal, MDBInput} from "mdbreact";
+import {Link, withRouter} from 'react-router-dom';
+import {Form, Button,Input, Icon} from 'antd'
+
+const FormItem = Form.Item;
 
 const LoginModal = (props) => {
+    const {form} = props;
+    const {getFieldDecorator, validateFields, resetFields} = form;
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        validateFields((err, values) => {
+            if (!err) {
+                props.modalProps.hideModal();
+                props.history.push('/users');
+            }
+        });
+    };
+
+    const handleReset = () => {
+        resetFields();
+    };
+
     return (
         <div className={'mdbModal'}>
-            <MDBModal isOpen={props.modalProps.isModalVisible} >
+            <MDBModal isOpen={props.modalProps.isModalVisible}>
                 <div className="modal-dialog form-dark" role="document">
                     <div className="modal-content card card-image" style={{
                         backgroundImage: `url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg')`
                     }}>
                         <div className="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
                             <div className="modal-header text-center pb-4">
-                                <h3 className="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong>SIGN</strong> <a
+                                <h3 className="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+                                    <strong>SIGN</strong> <a
                                     className="green-text font-weight-bold"><strong> In</strong></a></h3>
-                                <button type="button" className="close white-text" data-dismiss="modal" aria-label="Close" onClick={props.modalProps.hideModal}>
+                                <button type="button" className="close white-text" data-dismiss="modal"
+                                        aria-label="Close" onClick={props.modalProps.hideModal}>
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body">
-                                <div className="md-form mb-5">
-                                    <MDBInput
-                                        label="Type your email"
-                                        icon="envelope"
-                                        group
-                                        type="text"
-                                        validate
-                                        error="wrong"
-                                        success="right"
-                                    />
+                            <Form onSubmit={handleSubmit} onReset={handleReset}>
+                                <div className="modal-body">
+                                    <FormItem>
+                                        {getFieldDecorator('email', {
+                                            rules: [{ required: true, message: 'Please input your email' }],
+                                        })(
+                                            <Input
+                                                size="large"
+                                                prefix={<Icon type="user" style={{ fontSize: 13 }} />}
+                                                placeholder="Email"
+                                            />
+                                        )}
+                                    </FormItem>
+                                    <FormItem>
+                                        {getFieldDecorator('password', {
+                                            rules: [{ required: true, message: 'Please input your Password' }],
+                                        })(
+                                            <Input
+                                                size="large"
+                                                prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
+                                                type="password"
+                                                placeholder="Password"
+                                            />
+                                        )}
+                                    </FormItem>
+                                    <FormItem>
+                                        <Button type="primary" htmlType="submit" className="login-form-button text-center w-100">
+                                            Login
+                                        </Button>
+                                    </FormItem>
                                 </div>
-
-                                <div className="md-form pb-3">
-                                    <MDBInput
-                                        label="Type your Password"
-                                        icon="envelope"
-                                        group
-                                        type="password"
-                                        validate
-                                        error="wrong"
-                                        success="right"
-                                    />
-                                        <div className="form-group mt-4">
-                                            <input className="form-check-input" type="checkbox" id="checkbox624" />
-                                                <label for="checkbox624" className="white-text form-check-label">Accept the<a href="#" className="green-text font-weight-bold">
-                                                    Terms and Conditions</a></label>
-                                        </div>
-                                </div>
-
-                                <div className="row d-flex align-items-center mb-4">
-
-                                    <div className="text-center mb-3 col-md-12">
-                                        <button type="button" className="btn btn-success btn-block btn-rounded z-depth-1">Sign In</button>
-                                    </div>
-
-                                </div>
-
-                                <div className="row">
-
-                                    <div className="col-md-12">
-                                        <p className="font-small white-text d-flex justify-content-end">Have an account? <a href="#" className="green-text ml-1 font-weight-bold">
-                                            Log in</a></p>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                            </Form>
                         </div>
                     </div>
                 </div>
-        </MDBModal>
+            </MDBModal>
         </div>
-    );
+);
 };
 
-export default LoginModal;
+export default Form.create()(withRouter(LoginModal));

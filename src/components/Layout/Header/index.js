@@ -12,6 +12,7 @@ import {
 
 import logo from '../../../assets/images/antelope.png'
 import LoginModal from "./LoginModal";
+import SignUoModal from "./SignUpModal";
 
 const AppHeader = () => {
 
@@ -83,7 +84,7 @@ const AppHeader = () => {
                         </div>
                         <div className={'ml-5'}>
                             <ul className="nav justify-content-start lighten-4 py-3">
-                                <Link className="nav-link px-4  black-text" to="/not-found">
+                                <Link className="nav-link px-4  black-text" to="/blogs">
                                     Blog
                                 </Link>
                                 <Link className="nav-link px-4  black-text" to="/contact-us">
@@ -92,9 +93,9 @@ const AppHeader = () => {
                                 <a className="nav-link px-4  black-text" onClick={()=> showLoginModal()}>
                                     Login
                                 </a>
-                                <Link className="nav-link px-4  black-text" to="/register">
+                                <a className="nav-link px-4 black-text"  onClick={()=> showLoginModal()}>
                                     Sign Up
-                                </Link>
+                                </a>
                             </ul>
                         </div>
                     </div>
@@ -102,6 +103,8 @@ const AppHeader = () => {
             </MDBNavbar>
 
             <LoginModal  modalProps={LoginModalProps} />
+            <SignUoModal  modalProps={LoginModalProps} />
+
         </div>
     );
 };

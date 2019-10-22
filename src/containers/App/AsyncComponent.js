@@ -16,6 +16,12 @@ export const AsyncNotFound = loadable({
     loading: LoadingComponent,
 });
 
+export const AsyncBlog = loadable({
+    loader: () => import('../../containers/Blog'),
+    loading: LoadingComponent,
+});
+
+
 export const AsyncContact = loadable({
     loader: () => import('../../containers/Contact'),
     loading: LoadingComponent,
