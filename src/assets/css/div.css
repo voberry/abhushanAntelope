@@ -163,3 +163,16 @@ body{
         column-width: 100%;
     }
 }
+
+@media (min-width: 600px) {
+    .navbar.scrolling-navbar.top-nav-collapse {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .top-nav-collapse .hide-when-scrolling{
+        /*transition: color .6s ease, font-size .3s linear, display .1s linear .6s;*/
+        display: none;
+        color: white !important;
+    }
+}

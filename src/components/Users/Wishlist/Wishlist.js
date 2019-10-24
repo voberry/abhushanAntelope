@@ -1,166 +1,130 @@
 import React from 'react';
+import {MDBDataTable} from "mdbreact";
+import {withRouter, Link} from 'react-router-dom'
 import Pokhara from '../../../assets/images/pokhara.jpg'
 import Kathmandu from '../../../assets/images/kathmandu.jpeg'
 import chitwan from '../../../assets/images/chitwan.jpg'
 
+
+const imageStyle = {
+    height: '100px',
+    width: '150px',
+    borderRadius: '10%'
+};
+
 const Wishlist = () => {
+    const data = {
+        columns: [
+            {
+                label: 'Location',
+                field: 'image',
+                width: 150
+            },
+            {
+                label: 'Trip Name',
+                field: 'tripName',
+                sort: 'asc',
+                width: 250,
+                searchable: true,
+            },
+            {
+                label: 'Days',
+                field: 'days',
+                width: 270
+            },
+            {
+                label: 'Class',
+                field: 'class',
+                sort: 'asc',
+                width: 200
+            },
+            {
+                label: 'Price',
+                field: 'price',
+                sort: 'asc',
+                width: 100
+            },
+            {
+                label: 'Actions',
+                field: 'actions',
+                sort: 'asc',
+                width: 250
+            },
+
+        ],
+        rows: [
+            {
+                image: <img src={Pokhara} className={'img-fluid z-depth-4'} alt="..." style={imageStyle}/>,
+                tripName: 'Pokhara',
+                days:
+                    <div>
+                        <strong className={'font-weight-bold'}>7</strong>
+                        <br/>
+                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
+                    </div>
+                ,
+                class: 'Premium',
+                price: <div className={'font-weight-bold'}> $400</div>,
+                actions: <div>
+                    <Link to={`/users/Pokhara/checkout`}>
+                        <button className={'btn antelope-green-bg btn-sm white-text d-block'}> Checkout</button>
+                    </Link>
+                    <a className={'red-text d-block text-center'}> Delete </a>
+                </div>
+            },
+            {
+                image: <img src={Kathmandu} className={'img-fluid z-depth-4'} alt="..." style={imageStyle}/>,
+                tripName: 'Kathmandu',
+                days:
+                    <div>
+                        <strong className={'font-weight-bold'}>7</strong>
+                        <br/>
+                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
+                    </div>
+                ,
+                class: 'Moderate',
+                price: <div className={'font-weight-bold'}> $400</div>,
+                actions: <div>
+                    <Link to={`/users/Pokhara/checkout`}>
+                        <button className={'btn antelope-green-bg btn-sm white-text d-block'}> Checkout</button>
+                    </Link>
+                    <a className={'red-text d-block text-center'}> Delete </a>
+                </div>
+            },
+            {
+                image: <img src={chitwan} className={'img-fluid z-depth-4'} alt="..." style={imageStyle}/>,
+                tripName: 'Chitwan',
+                days:
+                    <div>
+                        <strong className={'font-weight-bold'}>14</strong>
+                        <br/>
+                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
+                    </div>
+                ,
+                class: 'Economy',
+                price: <div className={'font-weight-bold'}> $400</div>,
+                actions: <div>
+                    <Link to={`/users/Pokhara/checkout`}>
+                        <button className={'btn antelope-green-bg btn-sm white-text d-block'}> Checkout</button>
+                    </Link>
+                        <a className={'red-text d-block text-center'}> Delete </a>
+                </div>
+            },
+        ]
+    };
+
+
     return (
         <div>
             <div className="container">
                 <div className="card card-plain">
                     <div className="card-body">
                         <h3 className="card-title font-poppins">WishList</h3>
-                        <br />
-                        <div className="table-responsive">
-                            <table className="table table-shopping">
-                                <thead>
-                                <tr>
-                                    <th className="text-center" />
-                                    <th>Trip Name</th>
-                                    <th className="th-description">Days</th>
-                                    <th className="text-right">Class</th>
-                                    <th className="text-right">Price</th>
-                                    <th />
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td className={'w-25'}>
-                                        <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-                                            <img src={Pokhara} className={'img-fluid'} alt="..." />
-                                            <a>
-                                                <div className="mask rgba-white-slight" />
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td className="td-name w-50">
-                                        <a className={'font-weight-bold'}>Pokhara Trip</a>
-                                        <br />
-                                        <small className={'font-libre-franklin grey-text'}> Kathmandu - Chitwan - Pokhara</small>
-                                    </td>
-                                    <td className={'w-25 font-weight-bold'}>
-                                        7
-                                        <br/>
-                                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
-                                    </td>
-                                    <td className={'font-weight-bold'} style={{
-                                        width: '10%'
-                                    }}>
-                                        Economy
-                                    </td>
-                                    <td className="td-number text-right w-25 font-weight-bold" style={{
-                                        width: '10%'
-                                    }}>
-                                        <small>€</small>549
-                                    </td>
-                                    <td className="td-actions" style={{
-                                        width: '10%'
-                                    }}>
-                                        <button type="button" rel="tooltip" data-placement="left" title=""
-                                                className="btn btn-link" data-original-title="Remove item">
-                                            <i className="material-icons red-text">delete</i>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td className={'w-25'}>
-                                        <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-                                            <img src={Kathmandu} className={'img-fluid'} alt="..." />
-                                            <a>
-                                                <div className="mask rgba-white-slight" />
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td className="td-name w-50">
-                                        <a  className={'font-weight-bold'}>Kathmandu Trip</a>
-                                        <br />
-                                        <small className={'font-libre-franklin grey-text'}> Kathmandu - Chitwan - Pokhara</small>
-                                    </td>
-                                    <td className={'w-25 font-weight-bold'}>
-                                        7
-                                        <br/>
-                                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
-                                    </td>
-                                    <td className={'font-weight-bold'} style={{
-                                        width: '10%'
-                                    }}>
-                                        Premium
-                                    </td>
-                                    <td className="td-number text-right font-weight-bold" style={{
-                                        width: '10%'
-                                    }}>
-                                        <small>€</small>549
-                                    </td>
-                                    <td className="td-actions" style={{
-                                        width: '10%'
-                                    }}>
-                                        <button type="button" rel="tooltip" data-placement="left" title=""
-                                                className="btn btn-link" data-original-title="Remove item">
-                                            <i className="material-icons red-text">delete</i>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td className={'w-25'}>
-                                        <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-                                            <img src={chitwan} className={'img-fluid'} alt="..." />
-                                            <a>
-                                                <div className="mask rgba-white-slight" />
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td className="td-name w-50">
-                                        <a  className={'font-weight-bold'}>Chitwan Trip</a>
-                                        <br />
-                                        <small className={'font-libre-franklin grey-text'}> Kathmandu - Chitwan - Pokhara</small>
-                                    </td>
-                                    <td className={'w-25 font-weight-bold'}>
-                                        7
-                                        <br/>
-                                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
-                                    </td>
-                                    <td className={'font-weight-bold'} style={{
-                                        width: '10%'
-                                    }}>
-                                        Moderate
-                                    </td>
-                                    <td className="td-number text-right font-weight-bold" style={{
-                                        width: '10%'
-                                    }}>
-                                        <small>€</small>549
-                                    </td>
-                                    <td className="td-actions" style={{
-                                        width: '10%'
-                                    }}>
-                                        <button type="button" rel="tooltip" data-placement="left" title=""
-                                                className="btn btn-link" data-original-title="Remove item">
-                                            <i className="material-icons red-text">delete</i>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td colSpan="4" />
-                                    <td className="td-total">
-                                        Total
-                                    </td>
-                                    <td colSpan="1" className="td-price">
-                                        <small>€</small>2,346
-                                    </td>
-                                    <td colSpan="1" />
-                                </tr>
-
-                                <tr>
-                                    <td colSpan="6" className="text-right">
-                                        <button type="button" className="btn antelope-green-bg white-text btn-round">Complete
-                                            Purchase <i className="material-icons mt-2">keyboard_arrow_right</i></button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <br/>
+                        <MDBDataTable
+                            striped
+                            data={data}
+                        />
                     </div>
                 </div>
             </div>
@@ -168,4 +132,4 @@ const Wishlist = () => {
     );
 };
 
-export default Wishlist;
+export default withRouter(Wishlist);

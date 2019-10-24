@@ -19,7 +19,7 @@ const FooterPage = () => {
                             </Form.Item>
 
                             <Form.Item>
-                                <Button className={'btn btn-success'} htmlType="submit">
+                                <Button className={'btn btn-success antelope-green-bg white-text'} htmlType="submit">
                                     Subscribe
                                 </Button>
                             </Form.Item>

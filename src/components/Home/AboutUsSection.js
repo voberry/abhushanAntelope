@@ -1,5 +1,6 @@
 import React from "react";
 import {MDBRow, MDBCol} from "mdbreact";
+import {withRouter, Link} from 'react-router-dom'
 import antelope from '../../assets/images/antelope.png'
 
 const AboutUsSection = () => {
@@ -36,14 +37,17 @@ const AboutUsSection = () => {
                             quo reiciendis sequi similique tempora voluptas voluptate.
                         </h5>
 
+                        <Link to={'/about-us'}>
                         <button className={'btn btn-sm antelope-green-bg white-text'}>
+
                             Read More
                         </button>
+                        </Link>
                     </div>
                 </MDBCol>
             </MDBRow>
         </section>
     );
-}
+};
 
-export default AboutUsSection;
+export default withRouter(AboutUsSection);

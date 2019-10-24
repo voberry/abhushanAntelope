@@ -9,7 +9,7 @@ const Gallery = () => {
     const arrayData = [1, 2, 3, 4, 5, 6, 7, 8];
 
     return (
-        <div className={''}>
+        <div>
             <div className={'container-fluid p-5 w-100'}>
                 <h1 className={`h1-responsive h1-lg antelope-green text-center font-weight-bold font-poppins`}>YOUR JOURNEY WITH US.</h1>
                 <h5 className={`h5-responsive h5-lg text-center font-weight-bold font-libre-franklin`}>See the memories you've made</h5>
