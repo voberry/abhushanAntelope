@@ -17,7 +17,7 @@ const CheckoutPage = () => {
     );
 
     return (
-        <div>
+        <div className={'gray-background'}>
             <div className={'container-fluid p-5 w-100'}>
                 <div className="row">
                     <div className="col-md-6">
