@@ -60,7 +60,7 @@ const Wishlist = () => {
                     <div>
                         <strong className={'font-weight-bold'}>7</strong>
                         <br/>
-                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
+                        <small className={'secondary-text grey-text'}>1st September - 9th September</small>
                     </div>
                 ,
                 class: 'Premium',
@@ -79,7 +79,7 @@ const Wishlist = () => {
                     <div>
                         <strong className={'font-weight-bold'}>7</strong>
                         <br/>
-                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
+                        <small className={'secondary-text grey-text'}>1st September - 9th September</small>
                     </div>
                 ,
                 class: 'Moderate',
@@ -98,7 +98,7 @@ const Wishlist = () => {
                     <div>
                         <strong className={'font-weight-bold'}>14</strong>
                         <br/>
-                        <small className={'font-libre-franklin grey-text'}>1st September - 9th September</small>
+                        <small className={'secondary-text grey-text'}>1st September - 9th September</small>
                     </div>
                 ,
                 class: 'Economy',
@@ -119,7 +119,7 @@ const Wishlist = () => {
             <div className="container">
                 <div className="card card-plain">
                     <div className="card-body">
-                        <h3 className="card-title font-poppins">WishList</h3>
+                        <h3 className="card-title main-text">WishList</h3>
                         <br/>
                         <MDBDataTable
                             striped

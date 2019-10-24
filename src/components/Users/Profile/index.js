@@ -11,8 +11,8 @@ const Index = () => {
                 <MDBCol md="12">
                     <form >
                         <div className={'card p-5 mb-2'}>
-                            <h6 className={'h6-responsive my-2 pt-2 font-libre-franklin green-text text-center'}>Profile Form</h6>
-                            <h4 className={'h4-responsive font-poppins text-center'}>Tell us about you!</h4>
+                            <h6 className={'h6-responsive my-2 pt-2 secondary-text green-text text-center'}>Profile Form</h6>
+                            <h4 className={'h4-responsive main-text text-center'}>Tell us about you!</h4>
                             <div className="grey-text">
                                 <div className="row">
                                     <div className="col-sm-12 col-md-6">
@@ -91,8 +91,8 @@ const Index = () => {
                         </div>
 
                         <div className={'card p-5 mb-2'}>
-                            <h6 className={'h6-responsive my-2 pt-2 font-libre-franklin blue-text text-center'}>Social Media</h6>
-                            <h4 className={'h4-responsive font-poppins text-center'}>Connect with us!</h4>
+                            <h6 className={'h6-responsive my-2 pt-2 secondary-text blue-text text-center'}>Social Media</h6>
+                            <h4 className={'h4-responsive main-text text-center'}>Connect with us!</h4>
                             <div className="grey-text">
                                 <div className="row">
                                     <div className="col-sm-12 col-md-2">
@@ -187,8 +187,8 @@ const Index = () => {
                         </div>
 
                         <div className={'card p-5 mb-2'}>
-                            <h6 className={'h6-responsive my-2 pt-2 font-libre-franklin red-text text-center'}>Address</h6>
-                            <h4 className={'h4-responsive font-poppins text-center'}>Where are you from?</h4>
+                            <h6 className={'h6-responsive my-2 pt-2 secondary-text red-text text-center'}>Address</h6>
+                            <h4 className={'h4-responsive main-text text-center'}>Where are you from?</h4>
                             <div className="grey-text">
                                 <div className="row">
                                     <div className="col-sm-12 col-md-6">

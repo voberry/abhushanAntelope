@@ -176,3 +176,8 @@ body{
         color: white !important;
     }
 }
+
+.itinerary-card {
+    height: 50vh;
+    overflow-y: scroll;
+}

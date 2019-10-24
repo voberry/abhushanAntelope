@@ -22,7 +22,7 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-.font-poppins{
+.main-text{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -49,4 +49,12 @@
 
 .dark-grey-text {
     color : #a1a1a1
+}
+
+.main-text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.secondary-text {
+    font-family: 'Libre Franklin', sans-serif;
 }

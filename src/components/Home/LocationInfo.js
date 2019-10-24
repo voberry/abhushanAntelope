@@ -37,13 +37,13 @@ const LocationInfo = (props) => {
 
                                     <div className="col-lg-7 ">
                                         <a className="green-text">
-                                            <h6 className="font-weight-bold mb-3 antelope-green font-poppins"><i
+                                            <h6 className="font-weight-bold mb-3 antelope-green main-text"><i
                                                 className="fas fa-city pr-2"/>City of Temples</h6>
                                         </a>
                                         <h3 className="font-weight-bold mb-3 black-text">
                                             <strong>{location && location.title}</strong></h3>
 
-                                        <p className={'black-text font-libre-franklin'}>{location && location.description}
+                                        <p className={'black-text secondary-text'}>{location && location.description}
                                             <br/>
 
                                         </p>

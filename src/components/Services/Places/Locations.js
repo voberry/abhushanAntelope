@@ -40,11 +40,11 @@ const Locations = (props) => {
                             <div className="col-lg-12 col-sm-12 col-md-12 p-5">
 
                                 <a  className="green-text">
-                                    <h6 className="font-weight-bold mb-3 font-libre-franklin"><i className="fas fa-city pr-2" />City of Temples</h6>
+                                    <h6 className="font-weight-bold mb-3 secondary-text"><i className="fas fa-city pr-2" />City of Temples</h6>
                                 </a>
-                                <h3 className="font-weight-bold mb-3 font-poppins"><strong>  {props.match.params.name}</strong></h3>
+                                <h3 className="font-weight-bold mb-3 main-text"><strong>  {props.match.params.name}</strong></h3>
 
-                                <p className={'font-libre-franklin'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus enim eum harum quae tenetur, ullam? Ab adipisci aut culpa earum perspiciatis porro quis quisquam reiciendis velit veritatis, voluptas voluptates?
+                                <p className={'secondary-text'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus enim eum harum quae tenetur, ullam? Ab adipisci aut culpa earum perspiciatis porro quis quisquam reiciendis velit veritatis, voluptas voluptates?
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi, commodi doloribus magnam magni modi placeat quia quidem sint ut! Asperiores consectetur dolores, eos itaque magni omnis quisquam reprehenderit voluptatum!
                                     <br/>
 

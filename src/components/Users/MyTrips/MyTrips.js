@@ -3,7 +3,7 @@ import React from 'react';
 const MyTrips = () => {
     return (
         <div>
-            <h5 className={'font-poppins text-center font-weight-bold h5-responsive'}>My Trips</h5>
+            <h5 className={'main-text text-center font-weight-bold h5-responsive'}>My Trips</h5>
             <div className="row">
                 <div className="col-sm-12 col-md-12">
                     <div className="timeline-main">

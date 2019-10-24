@@ -12,7 +12,7 @@ const NotFound = () => {
                     width: 'auto'
                 }}/>
 
-                <h1 className={'font-poppins font-weight-bold text-center'}>
+                <h1 className={'main-text font-weight-bold text-center'}>
                     Sorry, the page does not exist.
                 </h1>
             </div>
