@@ -37,10 +37,10 @@ const FooterPage = () => {
 
                             <ul className="list-unstyled">
                                 <li className={'footer-lists'}>
-                                    <Link to='#' >Contact</Link>
+                                    <Link to='/contact-us' >Contact</Link>
                                 </li>
                                 <li className={'footer-lists'}>
-                                    <Link to='#' >About us</Link>
+                                    <Link to='/about-us' >About us</Link>
                                 </li>
                                 <li className={'footer-lists'}>
                                     <Link to='#' >How To?</Link>
@@ -86,7 +86,7 @@ const FooterPage = () => {
                                             <Link to='#' >Destinations</Link>
                                         </li>
                                         <li className={'footer-lists'}>
-                                            <Link to='#' >Trips</Link>
+                                            <Link to='/our-serives/treks' >Trips</Link>
                                         </li>
                                         <li className={'footer-lists'}>
                                             <Link to='#' >Adventure Sports</Link>
@@ -109,7 +109,7 @@ const FooterPage = () => {
                         <h5 className="mb-1">Where do you want to go next?</h5>
                     </li>
                     <li className="list-inline-item">
-                        <Link to='#'  className="btn btn-danger btn-rounded">Start Planning!</Link>
+                        <Link to='/our-services/places'  className="btn btn-danger btn-rounded">Start Planning!</Link>
                     </li>
                 </ul>
 
@@ -127,18 +127,8 @@ const FooterPage = () => {
                             </Link>
                         </li>
                         <li className="list-inline-item">
-                            <Link to='#' className="btn-floating btn-gplus mx-1">
-                                <i className="fab fa-google-plus-g"> </i>
-                            </Link>
-                        </li>
-                        <li className="list-inline-item">
-                            <Link to='#' className="btn-floating btn-li mx-1">
-                                <i className="fab fa-linkedin-in"> </i>
-                            </Link>
-                        </li>
-                        <li className="list-inline-item">
-                            <Link to='#' className="btn-floating btn-dribbble mx-1">
-                                <i className="fab fa-dribbble"> </i>
+                            <Link to='#' className="btn-floating instagram-colors mx-1">
+                                <i className="fab fa-instagram" />
                             </Link>
                         </li>
                     </ul>

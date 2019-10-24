@@ -87,7 +87,7 @@ const BlogContent = () => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body">
+                                        <div className="card-body black-text">
                                             Ad stuff
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@ const BlogContent = () => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body">
+                                        <div className="card-body black-text">
                                             Ad stuff
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@ const BlogContent = () => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body">
+                                        <div className="card-body black-text">
                                             Ad stuff
                                         </div>
                                     </div>
