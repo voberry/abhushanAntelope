@@ -57,11 +57,11 @@ const Home = (props) => {
                 <div
                     className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                     <div>
-                        <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `h3-responsive h3-lg`}>Adventures you
+                        <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `hide`}>Adventures you
                             dream of.</h1>
-                        <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `h3-responsive h3-lg`}>With us.</h1>
+                        <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `hide`}>With us.</h1>
                         <br/>
-                        <h6 className={'text-center px-5 mx-5'}>With Antelope Nepal, you can create the holidays you
+                        <h6 className={!isSubmitted ? `text-center px-5 mx-5` : `hide`} >With Antelope Nepal, you can create the holidays you
                             dream of from the click of your mouse, on the go. And we do it according to your
                             tastes. </h6>
 
@@ -202,26 +202,36 @@ const Home = (props) => {
                     duration="1s"
                     delay="1.5s">
                     <div className={'container-fluid mt-3 px-5"'}>
-                        <div className="d-flex justify-content-around flex-fill px-5 mx-5">
-
-                            {!isEmpty(locations) && locations.map(item =>
-                                <div className="text-center p-2">
-                                    <i className={`fas fa-${item.icon} fa-3x `}/>
-                                    <h5 className="font-weight-bold my-4 ">{item.title}</h5>
-                                    <h6 className="font-weight-bold my-4 ">{item.day} Days</h6>
+                        <div className="px-5 mx-5 card">
+                            <div className="card-body">
+                                <div className="d-flex justify-content-around align-items-center">
+                                    {!isEmpty(locations) && locations.map(item =>
+                                        <div className="text-center">
+                                            <div>
+                                                <i className={`fas fa-${item.icon} fa-2x text-success`}/>
+                                                <h5 className="font-weight-bold my-2 text-success">{item.title}</h5>
+                                                <h6 className="font-weight-bold my-2 text-success ">{item.day} Days</h6>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-                            )}
+                            </div>
                         </div>
 
-                        <div className="d-flex justify-content-around flex-fill px-5 mx-5 my-5">
+                        <div className="d-flex justify-content-around flex-fill mx-5 my-5">
                             <div className="row w-100">
-                                <div className="col-sm-12 col-md-3">
+                                <div className="col-sm-12 col-md-3 p-0">
                                     <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills'}>
-                                        <TabPane tab="Premade Packages" key="premade">
+                                        <TabPane tab="Premade Packages" key="premade" className={'mr-0'}>
                                             <PredefinedPackages/>
                                         </TabPane>
                                         <TabPane tab="Customized" key="custom">
-                                            <Package/>
+                                            <div className={'card'}>
+                                                <div className="card-body">
+                                                    <Package/>
+                                                </div>
+
+                                            </div>
                                         </TabPane>
                                     </Tabs>
                                 </div>

@@ -56,8 +56,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Culture'}
                         >
-                            {getFieldDecorator('culture', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('culture', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -66,8 +68,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Food'}
                         >
-                            {getFieldDecorator('food', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('food', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -76,8 +80,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Nightlife'}
                         >
-                            {getFieldDecorator('nightlife', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('nightlife', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -86,8 +92,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Historical'}
                         >
-                            {getFieldDecorator('historical', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('historical', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -96,8 +104,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Nature'}
                         >
-                            {getFieldDecorator('nature', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('nature', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -106,8 +116,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Mountains'}
                         >
-                            {getFieldDecorator('mountains', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('mountains', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -116,8 +128,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Wildlife'}
                         >
-                            {getFieldDecorator('wildlife', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('wildlife', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
 
@@ -126,8 +140,10 @@ const Package = (props) => {
                             {...formItemLayout}
                             label={'Entertainment'}
                         >
-                            {getFieldDecorator('entertainment', {})(
-                                <Slider defaultValue={30} className={'w-100'}/>
+                            {getFieldDecorator('entertainment', {
+                                initialValue: 30
+                            })(
+                                <Slider className={'w-100'}/>
                             )}
                         </FormItem>
                     </Form>

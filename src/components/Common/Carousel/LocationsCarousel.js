@@ -6,7 +6,7 @@ import {chunkArrays} from "../../../utils/commonUtil";
 const Carousels = (props) => {
     const {selectedItemFor, locations} = props;
     const locationContextData = useContext(LocationsContext);
-    const { handleSelectedHotel, handleSelectedVehicle, handleSelectedRestaurants} = locationContextData;
+    const { handleSelectedHotel, handleSelectedVehicle, handleSelectedRestaurants, selectedHotel} = locationContextData;
 
     const [carouselData, setCarouselData] = useState(null);
     const arrayData = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -33,7 +33,7 @@ const Carousels = (props) => {
                       interval={null}>
                 {carouselData && carouselData.map((item) => <Carousel.Item>
                         <div className="d-flex justify-content-around align-items-center w-100">
-                            {item.map((it) => <div className="card mx-2">
+                            {item.map((it) => <div className={`card mx-2 ${selectedHotel && selectedHotel[0] && it=== selectedHotel[0].hotel ? 'antelope-green-bg-light white-text' : 'white'}`}>
                                 <div className="view overlay">
                                     <img className="card-img-top h-300"
                                          style={{
@@ -45,10 +45,11 @@ const Carousels = (props) => {
                                         <div className="mask rgba-white-slight"/>
                                     </a>
                                 </div>
+                                {console.log(selectedHotel)}
                                 <div className="card-body">
                                     <h4 className="card-title main-text">Something</h4>
-                                    <p className="card-text secondary-text">Some quick example text</p>
-                                    { selectedItemFor === 'hotel' &&  <button className="btn btn-primary btn-sm" onClick={()=> handleSelectedHotel(it, locations.title)}>Button</button> }
+                                    <p className=" secondary-text">Some quick example text</p>
+                                    { selectedItemFor === 'hotel' &&  <button className={`btn btn-primary btn-sm`} onClick={()=> handleSelectedHotel(it, locations.title)}>Button</button> }
                                     { selectedItemFor === 'restaurants' && <button className="btn btn-primary btn-sm" onClick={()=> handleSelectedRestaurants(it, locations.title)}>Button</button>}
                                     { selectedItemFor === 'vehicles' && <button className="btn btn-primary btn-sm" onClick={()=> handleSelectedVehicle(it, locations.title)}>Button</button>}
                                 </div>

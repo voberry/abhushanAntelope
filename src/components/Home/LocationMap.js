@@ -51,7 +51,11 @@ const LocationMap = (props) => {
     }, [directions])
 
     return (
-        <Map style={{
+        <Map
+            minZoom={7}
+            dragging={false}
+            className={'card z-depth-2'}
+            style={{
             height: '100%'
         }}
              onClick={() => handleOnClick}

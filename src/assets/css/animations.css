@@ -5,5 +5,9 @@
 
 .home-transition-after {
     margin-top: 80px;
-    height: 50vh !important;
+    height:22vh !important;
+}
+
+.hide{
+    display: none
 }

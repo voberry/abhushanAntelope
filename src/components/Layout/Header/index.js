@@ -50,12 +50,12 @@ const AppHeader = () => {
             <MDBNavbar expand="md" fixed="top" scrolling className={'white'}>
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">
-                        <div className={'mr-5 hide-when-scrolling'}>
-                            <ul className="nav justify-content-end lighten-4 py-3 hide-when-scrolling">
-                                <MDBNavItem className={'hide-when-scrolling'}>
+                        <div className={'mr-5'}>
+                            <ul className="nav justify-content-end lighten-4 py-3">
+                                <MDBNavItem>
                                     <MDBDropdown>
                                         <MDBDropdownToggle nav>
-                                            <span className="mr-2 black-text hide-when-scrolling">Our Services</span>
+                                            <span className="mr-2 black-text">Our Services</span>
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu>
                                             <MDBDropdownItem>
@@ -81,10 +81,10 @@ const AppHeader = () => {
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavItem>
-                                <Link className="nav-link px-4  black-text hide-when-scrolling" to="/gallery">
+                                <Link className="nav-link px-4  black-text" to="/gallery">
                                     Gallery
                                 </Link>
-                                <Link className="nav-link px-4 black-text hide-when-scrolling" to="/about-us">
+                                <Link className="nav-link px-4 black-text" to="/about-us">
                                     About
                                 </Link>
                             </ul>
@@ -96,18 +96,18 @@ const AppHeader = () => {
                                 </Link>
                             </MDBNavbarBrand>
                         </div>
-                        <div className={'ml-5 hide-when-scrolling'}>
+                        <div className={'ml-5'}>
                             <ul className="nav justify-content-start lighten-4 py-3">
-                                <Link className="nav-link px-4  black-text hide-when-scrolling" to="/blogs">
+                                <Link className="nav-link px-4  black-text" to="/blogs">
                                     Blog
                                 </Link>
-                                <Link className="nav-link px-4  black-text hide-when-scrolling" to="/contact-us">
+                                <Link className="nav-link px-4  black-text" to="/contact-us">
                                     Contact
                                 </Link>
-                                <a className="nav-link px-4  black-text hide-when-scrolling" onClick={()=> showLoginModal()}>
+                                <a className="nav-link px-4  black-text" onClick={()=> showLoginModal()}>
                                     Login
                                 </a>
-                                <a className="nav-link px-4 black-text hide-when-scrolling"  onClick={()=> showSignUpModal()}>
+                                <a className="nav-link px-4 black-text"  onClick={()=> showSignUpModal()}>
                                     Sign Up
                                 </a>
                             </ul>

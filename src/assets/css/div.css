@@ -175,9 +175,14 @@ body{
         display: none;
         color: white !important;
     }
+
 }
 
 .itinerary-card {
     height: 50vh;
     overflow-y: scroll;
+}
+
+.ant-form-item{
+    margin-bottom: 0 !important;
 }

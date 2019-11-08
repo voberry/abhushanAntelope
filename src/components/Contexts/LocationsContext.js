@@ -1,4 +1,5 @@
 import React, {createContext, useState} from 'react'
+import {isEmpty} from "../../utils/commonUtil";
 
 export const LocationsContext = createContext();
 
@@ -10,7 +11,7 @@ export const LocationsContextProvider = props => {
 
     const handleSelectedHotel = (hotel, location) => {
         let tempData = [...selectedHotel];
-        if(tempData.indexOf(location) === -1)
+        if(isEmpty(tempData.filter(item => item.location === location)))
         {
             tempData.push({
                 hotel: hotel,
@@ -18,15 +19,18 @@ export const LocationsContextProvider = props => {
             });
         }
         else {
-            let itemIndex = tempData.find(item => item.location === location);
-            tempData[itemIndex].hotel = hotel;
+            let itemIndex = tempData.findIndex(item => item.location === location);
+            if(tempData && tempData[itemIndex])
+            {
+                tempData[itemIndex].hotel = hotel;
+            }
         }
         setSelectedHotel(tempData)
     };
 
     const handleSelectedVehicle = (vehicles,location) => {
         let tempData = [...selectedVehicle];
-        if(tempData.indexOf(location) === -1)
+        if(isEmpty(tempData.filter(item => item.location === location)))
         {
             tempData.push({
                 vehicle: vehicles,
@@ -34,15 +38,17 @@ export const LocationsContextProvider = props => {
             });
         }
         else {
-            let itemIndex = tempData.find(item => item.location === location);
-            tempData[itemIndex].vehicle = vehicles;
+            let itemIndex = tempData.findIndex(item => item.location === location);
+            if(tempData && tempData[itemIndex]) {
+                tempData[itemIndex].vehicle = vehicles;
+            }
         }
         setSelectedVehicle(tempData)
     };
 
     const handleSelectedRestaurants = (rests, location) => {
         let tempData = [...selectedRestaurants];
-        if(tempData.indexOf(location) === -1)
+        if(isEmpty(tempData.filter(item => item.location === location)))
         {
             tempData.push({
                 restaurant: rests,
@@ -50,8 +56,10 @@ export const LocationsContextProvider = props => {
             });
         }
         else {
-            let itemIndex = tempData.find(item => item.location === location);
-            tempData[itemIndex].restaurant = rests;
+            let itemIndex = tempData.findIndex(item => item.location === location);
+            if(tempData && tempData[itemIndex]) {
+                tempData[itemIndex].restaurant = rests;
+            }
         }
         setSelectedRestaurants(tempData)
     };
