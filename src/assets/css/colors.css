@@ -51,20 +51,8 @@
 
 .gray-background{
     background: rgb(242, 242, 242);
-
 }
 
-.ant-slider-track {
-    height: 6px;
-    background-color: #eccab6;
-    border-radius: 10px;
-}
-
-.ant-slider-handle {
-    width: 8px;
-    height: 17px;
-    margin-top: -6px;
-    margin-left: -7px;
-    background-color: #efa774;
-    border-radius: 40%;
+.dropdown-item:hover{
+    color: white !important;
 }

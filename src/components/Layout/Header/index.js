@@ -12,12 +12,10 @@ import {
 
 import logo from '../../../assets/images/antelope.png'
 import LoginModal from "./LoginModal";
-import SignUoModal from "./SignUpModal";
 
 const AppHeader = () => {
 
     const [isLoginModalVisible, setIsLoginModalVisible] = useState(false);
-    const [isSignUpModalVisible, setIsSignUpModalVisible] = useState(false);
 
     const showLoginModal = () => {
         setIsLoginModalVisible(true)
@@ -26,23 +24,10 @@ const AppHeader = () => {
         setIsLoginModalVisible(false)
     };
 
-    const showSignUpModal = () => {
-        setIsSignUpModalVisible(true)
-    };
-    const hideSignUpModal = () => {
-        setIsSignUpModalVisible(false)
-    };
-
     const LoginModalProps = {
         showModal: showLoginModal,
         hideModal : hideLoginModal,
         isModalVisible: isLoginModalVisible
-    };
-
-    const SignUpModalProps = {
-        showModal: showSignUpModal,
-        hideModal : hideSignUpModal,
-        isModalVisible: isSignUpModalVisible
     };
 
     return (
@@ -105,10 +90,7 @@ const AppHeader = () => {
                                     Contact
                                 </Link>
                                 <a className="nav-link px-4  black-text" onClick={()=> showLoginModal()}>
-                                    Login
-                                </a>
-                                <a className="nav-link px-4 black-text"  onClick={()=> showSignUpModal()}>
-                                    Sign Up
+                                    Join Us
                                 </a>
                             </ul>
                         </div>
@@ -117,8 +99,6 @@ const AppHeader = () => {
             </MDBNavbar>
 
             <LoginModal  modalProps={LoginModalProps} />
-            <SignUoModal  modalProps={SignUpModalProps} />
-
         </div>
     );
 };
