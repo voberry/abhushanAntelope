@@ -2,6 +2,10 @@ body{
     margin-top: 90px;
 }
 
+.larger-button{
+    height: 44px !important;
+}
+
 .home-flex-center {
     display: flex;
     justify-content: center;
@@ -221,4 +225,12 @@ body{
     box-shadow: 3px 2px 3px 1px gainsboro;
     color : #adb5bd !important;
     padding: 0.625rem 0.75rem;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 700px;
+        margin: 1.75rem auto;
+        min-height: 80vh;
+    }
 }
