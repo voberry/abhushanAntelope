@@ -13,7 +13,7 @@ const Index = () => {
 
     const state = {
         lat: 28.3000,
-        lng: 84.1240,
+        lng: 84.0240,
         center: [28.4000, 84.1240],
         zoom: 7,
     };
@@ -64,8 +64,8 @@ const Index = () => {
                     <div className="col-sm-12 col-md-10 p-5">
                         <Map center={position}
                              viewport={state.center}
-                             zoom={7}
-                             style={{height: '80vh'}}
+                             zoom={6.5}
+                             style={{height: '50vh'}}
                              doubleClickZoom={false}
                              closePopupOnClick={false}
                              dragging={false}
@@ -86,24 +86,24 @@ const Index = () => {
                             />
                         </Map>
 
-                        {selectedProvince && <div className="card p-5 mt-3">
-                            {allProvinces.features.find(item => item.properties.d_id === selectedProvince)
-                            && allProvinces.features.find(item => item.properties.d_id === selectedProvince)
-                                .properties &&
-                            allProvinces.features.find(item => item.properties.d_id === selectedProvince)
-                                .properties.title
-                            }
+                        {/*{selectedProvince && <div className="card px-5 py-2 mt-3 text-primary">*/}
+                        {/*    {allProvinces.features.find(item => item.properties.d_id === selectedProvince)*/}
+                        {/*    && allProvinces.features.find(item => item.properties.d_id === selectedProvince)*/}
+                        {/*        .properties &&*/}
+                        {/*    allProvinces.features.find(item => item.properties.d_id === selectedProvince)*/}
+                        {/*        .properties.title*/}
+                        {/*    }*/}
 
-                            <br/>
+                        {/*    <br/>*/}
 
-                            <span>Province Capital : {allProvinces.features.find(item => item.properties.d_id === selectedProvince)
-                            && allProvinces.features.find(item => item.properties.d_id === selectedProvince)
-                                .properties &&
-                            allProvinces.features.find(item => item.properties.d_id === selectedProvince)
-                                .properties.capital
-                            }</span>
+                        {/*    <span className={'text-primary'}>Province Capital : {allProvinces.features.find(item => item.properties.d_id === selectedProvince)*/}
+                        {/*    && allProvinces.features.find(item => item.properties.d_id === selectedProvince)*/}
+                        {/*        .properties &&*/}
+                        {/*    allProvinces.features.find(item => item.properties.d_id === selectedProvince)*/}
+                        {/*        .properties.capital*/}
+                        {/*    }</span>*/}
 
-                        </div>}
+                        {/*</div>}*/}
 
 
                         <div className="row d-flex align-items-stretch">
