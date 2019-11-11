@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {MDBModal, MDBInput, MDBBtn, MDBAnimation} from "mdbreact";
-import {Link, withRouter} from 'react-router-dom';
-import {Form, Button, Input, Icon} from 'antd'
+import {MDBModal} from "mdbreact";
+import { withRouter} from 'react-router-dom';
+import {Form, Button} from 'antd'
 import '../../../assets/css/authForm.css'
 
 const FormItem = Form.Item;
@@ -9,7 +9,6 @@ const FormItem = Form.Item;
 const LoginModal = (props) => {
     const {form} = props;
     const {getFieldDecorator, validateFields, resetFields, setFieldsValue, getFieldValue} = form;
-    const [isLoginModal, setIsLoginModal] = useState(true);
 
     const [isPhoneNumberRequired, setIsPhoneNumberRequired] = useState(false);
 
@@ -214,7 +213,6 @@ const LoginModal = (props) => {
                         </div>
                     </div>
                 </div>
-
             </MDBModal>
         </div>
     );
