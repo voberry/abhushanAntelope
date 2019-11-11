@@ -58,3 +58,9 @@
 .secondary-text {
     font-family: 'Libre Franklin', sans-serif;
 }
+
+
+.login-form ::-webkit-input-placeholder {
+    color: peachpuff;
+    font-size: 13px;
+}
