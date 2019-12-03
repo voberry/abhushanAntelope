@@ -13,7 +13,7 @@ import {
 import logo from '../../../assets/images/antelope.png'
 import LoginModal from "./LoginModal";
 
-const AppHeader = () => {
+const AppHeader = props => {
 
     const [isLoginModalVisible, setIsLoginModalVisible] = useState(false);
 
@@ -32,7 +32,7 @@ const AppHeader = () => {
 
     return (
         <div>
-            <MDBNavbar expand="md" fixed="top" scrolling className={'white'}>
+            <MDBNavbar expand="md" fixed="top" scrolling transparent={props.match.url === '/'} color={props.match.url !== '/' && 'elegant-color-dark'}>
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div className={'mr-5'}>
@@ -40,7 +40,7 @@ const AppHeader = () => {
                                 <MDBNavItem>
                                     <MDBDropdown>
                                         <MDBDropdownToggle nav>
-                                            <span className="mr-2 black-text">Our Services</span>
+                                            <span className="mr-2 white-text">Our Services</span>
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu>
                                             <MDBDropdownItem>
@@ -66,10 +66,10 @@ const AppHeader = () => {
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavItem>
-                                <Link className="nav-link px-4  black-text" to="/gallery">
+                                <Link className="nav-link px-4  white-text" to="/gallery">
                                     Gallery
                                 </Link>
-                                <Link className="nav-link px-4 black-text" to="/about-us">
+                                <Link className="nav-link px-4 white-text" to="/about-us">
                                     About
                                 </Link>
                             </ul>
@@ -83,13 +83,13 @@ const AppHeader = () => {
                         </div>
                         <div className={'ml-5'}>
                             <ul className="nav justify-content-start lighten-4 py-3">
-                                <Link className="nav-link px-4  black-text" to="/blogs">
+                                <Link className="nav-link px-4  white-text" to="/blogs">
                                     Blog
                                 </Link>
-                                <Link className="nav-link px-4  black-text" to="/contact-us">
+                                <Link className="nav-link px-4  white-text" to="/contact-us">
                                     Contact
                                 </Link>
-                                <a className="nav-link px-4  black-text" onClick={()=> showLoginModal()}>
+                                <a className="nav-link px-4  white-text" onClick={()=> showLoginModal()}>
                                     Join Us
                                 </a>
                             </ul>

@@ -35,7 +35,7 @@ const Index = props => {
                              className={'img-raised rounded-circle profile-img-raised d-block'}/>
                     </button>
                     <h1 className={'h1-responsive'} style={{
-                        marginTop: '-100px'
+                        marginTop: '-50px'
                     }}
                     >
                         User Name

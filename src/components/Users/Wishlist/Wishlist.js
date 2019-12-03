@@ -28,11 +28,6 @@ const Wishlist = () => {
                 searchable: true,
             },
             {
-                label: 'Days',
-                field: 'days',
-                width: 270
-            },
-            {
                 label: 'Class',
                 field: 'class',
                 sort: 'asc',
@@ -56,13 +51,6 @@ const Wishlist = () => {
             {
                 image: <img src={Pokhara} className={'img-fluid z-depth-4'} alt="..." style={imageStyle}/>,
                 tripName: 'Pokhara',
-                days:
-                    <div>
-                        <strong className={'font-weight-bold'}>7</strong>
-                        <br/>
-                        <small className={'secondary-text grey-text'}>1st September - 9th September</small>
-                    </div>
-                ,
                 class: 'Premium',
                 price: <div className={'font-weight-bold'}> $400</div>,
                 actions: <div>
@@ -75,13 +63,6 @@ const Wishlist = () => {
             {
                 image: <img src={Kathmandu} className={'img-fluid z-depth-4'} alt="..." style={imageStyle}/>,
                 tripName: 'Kathmandu',
-                days:
-                    <div>
-                        <strong className={'font-weight-bold'}>7</strong>
-                        <br/>
-                        <small className={'secondary-text grey-text'}>1st September - 9th September</small>
-                    </div>
-                ,
                 class: 'Moderate',
                 price: <div className={'font-weight-bold'}> $400</div>,
                 actions: <div>
@@ -94,13 +75,6 @@ const Wishlist = () => {
             {
                 image: <img src={chitwan} className={'img-fluid z-depth-4'} alt="..." style={imageStyle}/>,
                 tripName: 'Chitwan',
-                days:
-                    <div>
-                        <strong className={'font-weight-bold'}>14</strong>
-                        <br/>
-                        <small className={'secondary-text grey-text'}>1st September - 9th September</small>
-                    </div>
-                ,
                 class: 'Economy',
                 price: <div className={'font-weight-bold'}> $400</div>,
                 actions: <div>

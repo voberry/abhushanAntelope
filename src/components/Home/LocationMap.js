@@ -53,7 +53,6 @@ const LocationMap = (props) => {
     return (
         <Map
             minZoom={7}
-            dragging={false}
             className={'card z-depth-2'}
             style={{
             height: '100%'
