@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import Wallpaper from "../../assets/images/wallpaper.jpg";
+import Image from '../../assets/images/carefree.png'
 
-const BlogContent = () => {
+import {AuthContext} from '../../components/Layout/Header/AuthContext'
+
+const BlogContent = props => {
+    const authData = useContext(AuthContext);
+    const {isAuthenticated} = authData;
+
     return (
         <div className={'container-fluid p-5'}>
             <section>
@@ -15,7 +21,7 @@ const BlogContent = () => {
                                 <img className="card-img-top"
                                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg"
                                      alt="Sample image"/>
-                                <a href="#!">
+                                <a>
                                     <div className="mask rgba-white-slight"></div>
                                 </a>
                             </div>
@@ -70,6 +76,71 @@ const BlogContent = () => {
                                 voluptates
                                 repudiandae sint et molestiae non recusandae itaque earum rerum.</p>
 
+                        </div>
+
+                        <div style={{
+                            borderTop: '3px solid rgba(0, 0, 0, 0.1)'
+                        }}
+                        className={'container-fluid p-5'}
+                        >
+                            {!isAuthenticated ?
+                                <div className={'mt-4'}>
+                                    <h4 className={'font-weight-bold '}>
+                                        Leave a reply
+                                    </h4>
+
+                                    <div className="row">
+                                        <div className="col-md-6 smaller font-weight bold">
+                                            0 Comments
+                                        </div>
+                                        <div className="col-md-6 text-right">
+                                            <div className="form-group row">
+                                                <label htmlFor="inputEmail"
+                                                       className="col-sm-9 col-form-label">Sort By</label>
+                                                <div className="col-sm-3 w-50">
+                                                    <select className="browser-default custom-select">
+                                                        <option value="1" defaultValue>Oldest</option>
+                                                        <option value="2">Newest</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="row">
+                                        <div className="col-md-1">
+                                            <img src={Image}  style={{
+                                                height: '40px',
+                                                width: '40px'
+                                            }} alt=""/>
+                                        </div>
+                                        <div className="col-md-11">
+                                            <textarea name="comment" className={'form-control'} />
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="row">
+                                        <div className="col-md-1">
+                                            <img src={Image}  style={{
+                                                height: '40px',
+                                                width: '40px'
+                                            }} alt=""/>
+                                        </div>
+                                        <div className="col-md-11">
+                                            <textarea name="comment" className={'form-control'} />
+                                        </div>
+                                    </div>
+
+                                    <hr/>
+                                    <h6 className={'font-weight-bold'}>
+
+                                    </h6>
+                                </div>
+                                :
+                                <div className={'mt-4'}>
+
+                                </div>
+                            }
                         </div>
                     </div>
 
