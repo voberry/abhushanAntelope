@@ -181,7 +181,7 @@ body{
     }
 
     .top-nav-collapse {
-        background: #212121
+        background: #212121d9
     ;
     }
     @media only screen and (max-width: 768px) {
@@ -247,7 +247,7 @@ body{
 }
 
 .home-view {
-    background: url("https://wallpaperplay.com/walls/full/7/d/a/235479.jpg")no-repeat center center;
+    background: url("https://wallpaperplay.com/walls/full/d/8/d/235481.jpg")no-repeat center center;
     background-size: cover;
     max-height: 100vh !important;
     height: 100%
