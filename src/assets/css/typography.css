@@ -1,15 +1,17 @@
 .h1-lg{
     font-size: 4rem;
+    color: white !important;
 }
 
 .h3-lg{
     font-size: 2rem;
+    color: white !important;
     transition: font 1.5s ease
 }
 
 
 .ant-form-item-label > label {
-    /*color: white;*/
+    color: white;
     font-weight: 600;
 }
 
