@@ -43,7 +43,7 @@ const LocationInfo = (props) => {
                                         <h3 className="font-weight-bold mb-3 black-text">
                                             <strong>{location && location.title}</strong></h3>
 
-                                        <p className={'black-text secondary-text'}>{location && location.description}
+                                        <p className={'black-text font-nunito'}>{location && location.description}
                                             <br/>
 
                                         </p>

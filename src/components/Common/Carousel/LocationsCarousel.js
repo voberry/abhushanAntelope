@@ -47,7 +47,7 @@ const Carousels = (props) => {
                                 </div>
                                 {console.log(selectedHotel)}
                                 <div className="card-body">
-                                    <h4 className="card-title main-text">Something</h4>
+                                    <h5 className="card-title main-text">Something</h5>
                                     <p className=" secondary-text">Some quick example text</p>
                                     { selectedItemFor === 'hotel' &&  <button className={`btn btn-primary btn-sm`} onClick={()=> handleSelectedHotel(it, locations.title)}>Button</button> }
                                     { selectedItemFor === 'restaurants' && <button className="btn btn-primary btn-sm" onClick={()=> handleSelectedRestaurants(it, locations.title)}>Button</button>}

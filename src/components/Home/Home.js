@@ -58,7 +58,7 @@ const Home = (props) => {
                         <div
                             className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                             <div>
-                                <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `hide`}>Adventures you
+                                <h1 className={!isSubmitted ? `h1-responsive h1-lg font-adlanta` : `hide`}>Adventures you
                                     dream of.</h1>
                                 <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `hide`}>With us.</h1>
                                 <br/>
@@ -263,7 +263,7 @@ const Home = (props) => {
                         </div>
 
                     </Form>
-                </LocationsContextProvider>z
+                </LocationsContextProvider>
 
             </MDBAnimation>
             }
