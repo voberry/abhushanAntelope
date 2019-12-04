@@ -206,9 +206,9 @@ const Home = (props) => {
                 type="fadeIn"
                 duration="1s"
                 delay="1.5s">
-                <div className={'container-fluid mt-3 px-5"'}>
-                    <div className="px-5 mx-5 card">
-                        <div className="card-body">
+                <div className={'container-fluid mt-5 px-5"'}>
+                    <div className="px-5 mx-5">
+                        <div>
                             <div className="d-flex justify-content-around align-items-center">
                                 {!isEmpty(locations) && locations.map(item =>
                                     <div className="text-center">
