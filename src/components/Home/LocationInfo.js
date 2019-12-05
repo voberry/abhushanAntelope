@@ -16,7 +16,7 @@ const LocationInfo = (props) => {
     // const handleSetInitialHotel = (location, hotel)
 
     return (
-        <div className={`container-fluid px-5 ${index % 2 === 0 ? 'gray-background' : 'white'}`}>
+        <div className={`container-fluid px-5 ${index % 2 !== 0 ? 'gray-background' : 'white'}`}>
             <div className="d-flex justify-content-around flex-fill px-5 mx-5">
                 <div className="row w-100">
                     <div className="col-sm-12 col-md-9">

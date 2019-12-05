@@ -68,7 +68,7 @@ const Home = (props) => {
                                     tastes. </h6>
 
                                 <div className="container">
-                                    <Form layout="inline" onSubmit={handleSubmit}>
+                                    <Form layout="inline" onSubmit={handleSubmit} className={'main-page-form'}>
                                         <div className="mt-3 d-flex flex-fill">
                                             <div className="px-3">
                                                 <FormItem label={'From'}>
@@ -206,7 +206,7 @@ const Home = (props) => {
                 type="fadeIn"
                 duration="1s"
                 delay="1.5s">
-                <div className={'container-fluid mt-5 px-5"'}>
+                <div className={'container-fluid p-5 gray-background'}>
                     <div className="px-5 mx-5">
                         <div>
                             <div className="d-flex justify-content-around align-items-center">
@@ -223,7 +223,7 @@ const Home = (props) => {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-around flex-fill mx-5 my-5">
+                    <div className="d-flex justify-content-around flex-fill mx-5 my-5 ">
                         <div className="row w-100">
                             <div className="col-sm-12 col-md-3 p-0">
                                 <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills'}>
@@ -231,7 +231,7 @@ const Home = (props) => {
                                         <PredefinedPackages/>
                                     </TabPane>
                                     <TabPane tab="Customized" key="custom">
-                                        <div className={'card'}>
+                                        <div className={'card z-depth-4'}>
                                             <div className="card-body">
                                                 <Package/>
                                             </div>
@@ -241,7 +241,9 @@ const Home = (props) => {
                                 </Tabs>
                             </div>
 
-                            <div className="col-sm-12 col-md-9">
+                            <div className="col-sm-12 col-md-9" style={{
+                                height: '400px'
+                            }}>
                                 <LocationMap
                                     location={locations}
                                 />
@@ -255,12 +257,6 @@ const Home = (props) => {
                         {locations && locations.map((item, index) => <LocationInfo location={item} index={index}
                                                                                    form={form}/>)}
 
-                        <div className={'px-5'}>
-                            <Button htmlType="submit"
-                                    className={'btn-success antelope-green-bg  w-100'}>
-                                LETS GO!
-                            </Button>
-                        </div>
 
                     </Form>
                 </LocationsContextProvider>

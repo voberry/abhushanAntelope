@@ -37,7 +37,8 @@ const Carousels = (props) => {
                                 <div className="view overlay">
                                     <img className="card-img-top h-300"
                                          style={{
-                                             width: '200px'
+                                             height: '200px',
+                                             width : 'auto'
                                          }}
                                          src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                          alt="Card image cap"/>

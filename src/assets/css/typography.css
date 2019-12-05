@@ -22,8 +22,17 @@
 
 
 .ant-form-item-label > label {
+    color: black;
+    font-weight: 600;
+}
+
+.main-page-form .ant-form-item-label > label {
     color: white;
     font-weight: 600;
+}
+
+.ant-slider-step {
+    background: #00c8518c
 }
 
 .footer-lists{
