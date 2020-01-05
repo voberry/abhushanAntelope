@@ -256,11 +256,8 @@ const Home = (props) => {
                     <Form layout="inline" onSubmit={handleLocationsSubmit}>
                         {locations && locations.map((item, index) => <LocationInfo location={item} index={index}
                                                                                    form={form}/>)}
-
-
                     </Form>
                 </LocationsContextProvider>
-
             </MDBAnimation>
             }
             <div>
