@@ -15,7 +15,7 @@ const ContactPage = () => {
                 }}/>
             </div>
             <section className="container-fluid p-5 my-5">
-                <h2 className="h1-responsive font-weight-bold text-center my-5">
+                <h2 className="h1-responsive font-weight-bold text-center mb-5">
                     Contact us
                 </h2>
                 <p className="text-center w-responsive mx-auto pb-5">
@@ -27,7 +27,7 @@ const ContactPage = () => {
                     <MDBCol lg="5" className="lg-0 mb-4">
                         <MDBCard>
                             <MDBCardBody>
-                                <div className="form-header blue accent-1">
+                                <div className="form-header antelope-green-bg accent-1">
                                     <h3 className="mt-2">
                                         <MDBIcon icon="envelope"/> Write to us:
                                     </h3>
@@ -39,7 +39,7 @@ const ContactPage = () => {
                                     <MDBInput
                                         icon="user"
                                         label="Your name"
-                                        iconClass="grey-text"
+                                        iconClass={'material-gray'}
                                         type="text"
                                         id="form-name"
                                     />
@@ -48,7 +48,7 @@ const ContactPage = () => {
                                     <MDBInput
                                         icon="envelope"
                                         label="Your email"
-                                        iconClass="grey-text"
+                                        iconClass="material-gray"
                                         type="text"
                                         id="form-email"
                                     />
@@ -57,22 +57,22 @@ const ContactPage = () => {
                                     <MDBInput
                                         icon="tag"
                                         label="Subject"
-                                        iconClass="grey-text"
+                                        iconClass={'material-gray'}
                                         type="text"
                                         id="form-subject"
                                     />
                                 </div>
                                 <div className="md-form">
                                     <MDBInput
-                                        icon="pencil-alt"
-                                        label="Icon Prefix"
-                                        iconClass="grey-text"
+                                        icon="envelope"
+                                        label="Comments"
+                                        iconClass={'material-gray'}
                                         type="textarea"
                                         id="form-text"
                                     />
                                 </div>
                                 <div className="text-center">
-                                    <MDBBtn color="light-blue">Submit</MDBBtn>
+                                    <MDBBtn className="antelope-green-bg white-text">Submit</MDBBtn>
                                 </div>
                             </MDBCardBody>
                         </MDBCard>
@@ -83,33 +83,26 @@ const ContactPage = () => {
                             className="rounded z-depth-1-half map-container"
                             style={{height: "400px"}}
                         >
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d76765.98321148289!2d-73.96694563267306!3d40.751663750099084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1525939514494"
-                                title="This is a unique title"
-                                width="100%"
-                                height="100%"
-                                frameBorder="0"
-                                style={{border: 0}}
-                            />
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1YeV-CBqH1wi1X9q1UyoHyl-5ais" width="100%" height="100%" />
                         </div>
                         <br/>
                         <MDBRow className="text-center">
                             <MDBCol md="4">
-                                <MDBBtn tag="a" floating color="blue" className="accent-1">
+                                <MDBBtn tag="a" floating className="antelope-green-bg accent-1">
                                     <MDBIcon icon="map-marker-alt"/>
                                 </MDBBtn>
                                 <p>New York, 94126</p>
                                 <p className="mb-md-0">United States</p>
                             </MDBCol>
                             <MDBCol md="4">
-                                <MDBBtn tag="a" floating color="blue" className="accent-1">
+                                <MDBBtn tag="a" floating className="antelope-green-bg accent-1">
                                     <MDBIcon icon="phone"/>
                                 </MDBBtn>
                                 <p>+ 01 234 567 89</p>
                                 <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
                             </MDBCol>
                             <MDBCol md="4">
-                                <MDBBtn tag="a" floating color="blue" className="accent-1">
+                                <MDBBtn tag="a" floating className="antelope-green-bg accent-1">
                                     <MDBIcon icon="envelope"/>
                                 </MDBBtn>
                                 <p>info@gmail.com</p>

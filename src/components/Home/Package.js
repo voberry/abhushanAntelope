@@ -43,7 +43,7 @@ const Package = (props) => {
 
 
     return (
-        <React.Fragment>
+        <div>
                     <Form
                         onSubmit={handleSubmit}
                         onReset={handleReset}
@@ -51,6 +51,7 @@ const Package = (props) => {
                         layout="horizontal"
                         colon={false}
                     >
+
                         <FormItem
                             className="not-required-label"
                             {...formItemLayout}
@@ -147,7 +148,7 @@ const Package = (props) => {
                             )}
                         </FormItem>
                     </Form>
-        </React.Fragment>
+        </div>
     );
 };
 

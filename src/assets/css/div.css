@@ -269,3 +269,8 @@ body{
 .full-height, .full-bg-img{
     max-height: 100vh;
     height: 100%}
+
+.premade-packages-view{
+    height: 120px;
+    width: 100%;
+}

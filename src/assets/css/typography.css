@@ -1,3 +1,14 @@
+/*@font-face {*/
+/*    font-family: 'adlanta-light';*/
+/*    src: url('../adlanta/Adlanta Font/Adlanta-light.otf') format('truetype');*/
+/*}*/
+/*!*bold version*!*/
+/*@font-face {*/
+/*    font-family: 'adlanta';*/
+/*    src: url('../adlanta/Adlanta Font/Adlanta.otf') format('truetype');*/
+/*    font-weight: bold;*/
+/*}*/
+
 .h1-lg{
     font-size: 4rem;
     color: white !important;
@@ -11,8 +22,17 @@
 
 
 .ant-form-item-label > label {
+    color: black;
+    font-weight: 600;
+}
+
+.main-page-form .ant-form-item-label > label {
     color: white;
     font-weight: 600;
+}
+
+.ant-slider-step {
+    background: #00c8518c
 }
 
 .footer-lists{
@@ -24,12 +44,24 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
+.font-lato {
+    font-family: "Lato", sans-serif;
+}
+
 .main-text{
     font-family: 'Poppins', sans-serif;
 }
 
-.font-family {
+.font-Nunito{
     font-family: 'Nunito', sans-serif;
+}
+
+.font-adlanta-light {
+    font-family: adlanta-light, sans-serif;
+}
+
+.font-adlanta {
+    font-family: adlanta, sans-serif;
 }
 
 .font-weight-500 {
