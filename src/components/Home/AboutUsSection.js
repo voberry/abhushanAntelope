@@ -29,13 +29,13 @@ const AboutUsSection = () => {
 
                     <MDBCol lg="6" className={'px-5 d-flex justify-content-center align-items-center'}>
                         <div>
-                            <h6 className="h6-responsive mt-5 green-text main-text">Change the way you
+                            <h6 className="h6-responsive mt-5 green-text text-uppercase">Change the way you
                                 travel!</h6>
                             <h2 className="h2-responsive font-weight-bold mb-5 main-text antelope-blue-light">
                                 We are Antelope Nepal
                             </h2>
 
-                            <h5 className={'h5-responsive font-weight-300 secondary-text dim-grey-text'}>
+                            <h5 className={'h5-responsive font-weight-300 grey-text'}>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Alias doloribus eaque earum eos esse et facere hic illo labore laudantium minima
                                 molestias
@@ -44,7 +44,7 @@ const AboutUsSection = () => {
                             </h5>
 
                             <Link to={'/about-us'}>
-                                <button className={'btn btn-sm antelope-green-bg-light white-text'}>
+                                <button className={'btn btn-sm antelope-green-bg-light-outline  white-text'}>
 
                                     Read More
                                 </button>

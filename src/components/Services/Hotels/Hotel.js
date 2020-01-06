@@ -23,7 +23,7 @@ const Hotel = () => {
                             </div>
 
                             <div className="col-md-3 col-sm-12 ">
-                                <button className={'btn antelope-green-bg-light white-text btn-sm float-right mt-3'}>Book Now</button>
+                                <button className={'btn antelope-green-bg-light-outline  white-text btn-sm float-right mt-3'}>Book Now</button>
                             </div>
                         </div>
 
@@ -62,7 +62,7 @@ const Hotel = () => {
                             </div>
                         </div>
 
-                        <div className={'p-4 mt-4 antelope-green-bg-light white-text'}>
+                        <div className={'p-4 mt-4 antelope-green-bg-light-outline  white-text'}>
                             <h4> Price : 1400/day
                                 <button className={'btn btn-sm btn-danger float-right'}>Book Now</button>
                             </h4>

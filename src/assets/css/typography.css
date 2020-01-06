@@ -1,23 +1,14 @@
-/*@font-face {*/
-/*    font-family: 'adlanta-light';*/
-/*    src: url('../adlanta/Adlanta Font/Adlanta-light.otf') format('truetype');*/
-/*}*/
-/*!*bold version*!*/
-/*@font-face {*/
-/*    font-family: 'adlanta';*/
-/*    src: url('../adlanta/Adlanta Font/Adlanta.otf') format('truetype');*/
-/*    font-weight: bold;*/
-/*}*/
-
 h1, h2 {
     font-family: 'Poiret One', cursive !important;
     font-size: 250% !important;
+    font-weight: bold;
 }
 
-h3, h4 ,h5 ,h6, p, span,a, label, body {
+h3, h4 ,h5 ,h6, p, span,a, body {
     font-family: 'Flamenco', cursive !important;
     font-size: 110% ;
     letter-spacing: 0.5px;
+    font-weight: bolder;
 }
 
 .card-title{
@@ -70,7 +61,7 @@ h3, h4 ,h5 ,h6, p, span,a, label, body {
 }
 
 .font-Nunito{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif !important;
 }
 
 .font-adlanta-light {

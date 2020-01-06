@@ -188,7 +188,7 @@ const Home = (props) => {
                                             </div>
                                             <div className="px-3">
                                                 <Button htmlType="submit"
-                                                        className={'mt-5 btn-sm antelope-green-bg-light  w-100'}>
+                                                        className={'mt-5 btn-sm antelope-green-bg-light-outline   w-100'}>
                                                     LETS GO!
                                                 </Button>
                                             </div>

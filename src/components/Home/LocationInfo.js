@@ -37,13 +37,13 @@ const LocationInfo = (props) => {
 
                                     <div className="col-lg-7 ">
                                         <a className="green-text">
-                                            <h6 className="font-weight-bold mb-3 antelope-green main-text"><i
+                                            <h6 className="font-weight-bold mb-3 antelope-blue-light main-text"><i
                                                 className="fas fa-city pr-2"/>City of Temples</h6>
                                         </a>
-                                        <h3 className="font-weight-bold mb-3 grey-text ">
+                                        <h3 className="font-weight-bold mb-3 antelope-green">
                                             <strong>{location && location.title}</strong></h3>
 
-                                        <h6 className={'gray-text font-nunito'}>{location && location.description}
+                                        <h6 className={'gray-text font-Nunito'}>{location && location.description}
                                             <br/>
 
                                         </h6>
@@ -73,7 +73,7 @@ const LocationInfo = (props) => {
                         <div className="card mt-5">
                             <div className="card-body">
                                 <h3 className="card-title antelope-green" >{location.title} Packages</h3>
-                                <p className="card-text">Some quick example text to build on the card
+                                <p className="card-text antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -91,8 +91,8 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div />)}
-                                <h3 className="card-title"><Link to='#'>Hotel {selectedHotel.hotel}</Link></h3>
-                                <p className="card-text">Some quick example text to build on the card
+                                <h3 className="card-title antelope-green">Hotel {selectedHotel.hotel}</h3>
+                                <p className="card-text antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -112,8 +112,8 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div />)}
-                                <h3 className="card-title"><Link to='#'>Vehicle Rentals :  {selectedVehicle.vehicle}</Link></h3>
-                                <p className="card-text">Some quick example text to build on the card
+                                <h3 className="card-title antelope-green">Vehicle Rentals :  {selectedVehicle.vehicle}</h3>
+                                <p className="card-text antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div />)}
-                                <h3 className="card-title"><Link to='#'>Restaurant:  {selectedRestaurants.restaurant}</Link></h3>
+                                <h3 className="card-title antelope-green">Restaurant:  {selectedRestaurants.restaurant}</h3>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>

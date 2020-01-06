@@ -117,7 +117,7 @@ const Index = () => {
                                         <div className="card-body">
                                             <h6 className="card-title grey-text "><a>{item.properties && item.properties.DISTRICT}</a></h6>
                                             <Link to={`./places/${item.properties && item.properties.DISTRICT}`}>
-                                                <button className="btn antelope-green-bg-light btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>

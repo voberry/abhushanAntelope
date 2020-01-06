@@ -1,5 +1,12 @@
 .antelope-green {
-    color: #6a9086 !important
+    color: #4e9075 !important
+}
+
+.antelope-green-bg-outline {
+    border: 1px solid #6a9086 !important;
+    color: #6a9086;
+    font-weight: bold;
+    font-size: 110%;
 }
 
 .antelope-green-bg {
@@ -8,12 +15,19 @@
 }
 
 .antelope-blue-light {
-    color: #869ba7 !important
+    color: #6f85a7 !important
 }
 
-.antelope-green-bg-light  {
+.antelope-green-bg-light   {
     background: #869ba7 !important;
     color: white !important;
+}
+
+.antelope-green-bg-light-outline {
+    border: 1px solid #9598dd !important;
+    color: #9598dd !important;
+    font-size: 110%;
+    font-weight: bold;
 }
 
 .instagram-colors {

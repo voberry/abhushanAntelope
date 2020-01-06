@@ -55,7 +55,7 @@ const Wishlist = () => {
                 price: <div className={'font-weight-bold'}> $400</div>,
                 actions: <div>
                     <Link to={`/users/Pokhara/checkout`}>
-                        <button className={'btn antelope-green-bg-light btn-sm white-text d-block'}> Checkout</button>
+                        <button className={'btn antelope-green-bg-light-outline  btn-sm white-text d-block'}> Checkout</button>
                     </Link>
                     <a className={'red-text d-block text-center'}> Delete </a>
                 </div>
@@ -67,7 +67,7 @@ const Wishlist = () => {
                 price: <div className={'font-weight-bold'}> $400</div>,
                 actions: <div>
                     <Link to={`/users/Pokhara/checkout`}>
-                        <button className={'btn antelope-green-bg-light btn-sm white-text d-block'}> Checkout</button>
+                        <button className={'btn antelope-green-bg-light-outline  btn-sm white-text d-block'}> Checkout</button>
                     </Link>
                     <a className={'red-text d-block text-center'}> Delete </a>
                 </div>
@@ -79,7 +79,7 @@ const Wishlist = () => {
                 price: <div className={'font-weight-bold'}> $400</div>,
                 actions: <div>
                     <Link to={`/users/Pokhara/checkout`}>
-                        <button className={'btn antelope-green-bg-light btn-sm white-text d-block'}> Checkout</button>
+                        <button className={'btn antelope-green-bg-light-outline  btn-sm white-text d-block'}> Checkout</button>
                     </Link>
                         <a className={'red-text d-block text-center'}> Delete </a>
                 </div>
