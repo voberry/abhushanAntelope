@@ -17,12 +17,12 @@ const Carousels = (props) => {
     }, []);
 
     const nextItemButton =
-        <button className={'btn btn-success btn-sm mt-3'}>
+        <button className={'btn antelope-green-bg-light   btn-sm mt-3'}>
             <i className={'fas fa-chevron-right'}/>
         </button>;
 
     const previousItemButton =
-        <button className={'btn btn-success btn-sm mt-3'}>
+        <button className={'btn antelope-green-bg-light btn-sm mt-3'}>
             <i className={'fas fa-chevron-left'}/>
         </button>;
 
@@ -33,7 +33,7 @@ const Carousels = (props) => {
                       interval={null}>
                 {carouselData && carouselData.map((item) => <Carousel.Item>
                         <div className="d-flex justify-content-around align-items-center w-100">
-                            {item.map((it) => <div className={`card mx-2 ${selectedHotel && selectedHotel[0] && it=== selectedHotel[0].hotel ? 'antelope-green-bg-light white-text' : 'white'}`}>
+                            {item.map((it) => <div className={`card mx-2 ${selectedHotel && selectedHotel[0] && it=== selectedHotel[0].hotel ? 'antelope-green-bg-light  white-text' : 'white'}`}>
                                 <div className="view overlay">
                                     <img className="card-img-top h-300"
                                          style={{
@@ -46,13 +46,12 @@ const Carousels = (props) => {
                                         <div className="mask rgba-white-slight"/>
                                     </a>
                                 </div>
-                                {console.log(selectedHotel)}
                                 <div className="card-body">
-                                    <h5 className="card-title main-text">Something</h5>
+                                    <h3 className="card-title h3">Something</h3>
                                     <p className=" secondary-text">Some quick example text</p>
-                                    { selectedItemFor === 'hotel' &&  <button className={`btn btn-primary btn-sm`} onClick={()=> handleSelectedHotel(it, locations.title)}>Button</button> }
-                                    { selectedItemFor === 'restaurants' && <button className="btn btn-primary btn-sm" onClick={()=> handleSelectedRestaurants(it, locations.title)}>Button</button>}
-                                    { selectedItemFor === 'vehicles' && <button className="btn btn-primary btn-sm" onClick={()=> handleSelectedVehicle(it, locations.title)}>Button</button>}
+                                    { selectedItemFor === 'hotel' &&  <button className={`btn antelope-green-bg-light btn-sm`} onClick={()=> handleSelectedHotel(it, locations.title)}>Button</button> }
+                                    { selectedItemFor === 'restaurants' && <button className="btn antelope-green-bg-light btn-sm" onClick={()=> handleSelectedRestaurants(it, locations.title)}>Button</button>}
+                                    { selectedItemFor === 'vehicles' && <button className="btn antelope-green-bg-light btn-sm" onClick={()=> handleSelectedVehicle(it, locations.title)}>Button</button>}
                                 </div>
                             </div>)}
                         </div>

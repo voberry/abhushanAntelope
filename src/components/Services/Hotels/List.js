@@ -115,7 +115,7 @@ const List = props => {
                                         </div>
                                         <div className="px-3">
                                             <Button htmlType="submit"
-                                                    className={'mt-5 btn-success antelope-green-bg  w-100'}>
+                                                    className={'mt-5 btn-success antelope-green-bg-light  w-100'}>
                                                 Search!
                                             </Button>
                                         </div>
@@ -293,7 +293,7 @@ const List = props => {
                                                 <div className="card-body">
                                                     <h6 className="card-title"><a>Random Hotel</a></h6>
                                                     <Link to={`./hotels/123`}>
-                                                        <button className="btn antelope-green-bg btn-sm white-text p-2">View
+                                                        <button className="btn antelope-green-bg-light btn-sm white-text p-2">View
                                                         </button>
                                                     </Link>
                                                 </div>
@@ -309,7 +309,7 @@ const List = props => {
                                         <div className="card-body">
                                             <h6 className="card-title"><a>Random Hotel</a></h6>
                                             <Link to={`./hotels/123`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>
@@ -325,7 +325,7 @@ const List = props => {
                                         <div className="card-body">
                                             <h6 className="card-title"><a>Random Hotel</a></h6>
                                             <Link to={`./hotels/123`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>
@@ -341,7 +341,7 @@ const List = props => {
                                         <div className="card-body">
                                             <h6 className="card-title"><a>Random Hotel</a></h6>
                                             <Link to={`./123`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>
@@ -366,7 +366,7 @@ const List = props => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
@@ -375,7 +375,7 @@ const List = props => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
@@ -384,7 +384,7 @@ const List = props => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>

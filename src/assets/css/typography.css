@@ -9,6 +9,23 @@
 /*    font-weight: bold;*/
 /*}*/
 
+h1, h2 {
+    font-family: 'Poiret One', cursive !important;
+    font-size: 250% !important;
+}
+
+h3, h4 ,h5 ,h6, p, span,a, label, body {
+    font-family: 'Flamenco', cursive !important;
+    font-size: 110% ;
+    letter-spacing: 0.5px;
+}
+
+.card-title{
+    font-family: 'Flamenco', cursive !important;
+    font-size: 150%;
+    letter-spacing: 0.5px;
+}
+
 .h1-lg{
     font-size: 4rem;
     color: white !important;
@@ -49,7 +66,7 @@
 }
 
 .main-text{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poiret One', cursive;
 }
 
 .font-Nunito{
@@ -97,4 +114,14 @@
 .login-form ::-webkit-input-placeholder {
     color: peachpuff;
     font-size: 13px;
+}
+
+.icon-images {
+    height: 40px;
+    width: 40px;
+}
+
+.icon-images-lg {
+    height: 60px;
+    width: 60px;
 }

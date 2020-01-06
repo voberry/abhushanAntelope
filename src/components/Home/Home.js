@@ -188,7 +188,7 @@ const Home = (props) => {
                                             </div>
                                             <div className="px-3">
                                                 <Button htmlType="submit"
-                                                        className={'mt-5 btn-success antelope-green-bg  w-100'}>
+                                                        className={'mt-5 btn-sm antelope-green-bg-light  w-100'}>
                                                     LETS GO!
                                                 </Button>
                                             </div>
@@ -213,9 +213,9 @@ const Home = (props) => {
                                 {!isEmpty(locations) && locations.map(item =>
                                     <div className="text-center">
                                         <div>
-                                            <i className={`fas fa-${item.icon} fa-2x text-success`}/>
-                                            <h5 className="font-weight-bold my-2 text-success">{item.title}</h5>
-                                            <h6 className="font-weight-bold my-2 text-success ">{item.day} Days</h6>
+                                            <i className={`fas fa-${item.icon} fa-2x antelope-green`}/>
+                                            <h5 className="font-weight-bold my-2 antelope-green">{item.title}</h5>
+                                            <h6 className="font-weight-bold my-2 antelope-green">{item.day} Days</h6>
                                         </div>
                                     </div>
                                 )}

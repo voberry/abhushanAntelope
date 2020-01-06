@@ -40,13 +40,13 @@ const LocationInfo = (props) => {
                                             <h6 className="font-weight-bold mb-3 antelope-green main-text"><i
                                                 className="fas fa-city pr-2"/>City of Temples</h6>
                                         </a>
-                                        <h3 className="font-weight-bold mb-3 black-text">
+                                        <h3 className="font-weight-bold mb-3 grey-text ">
                                             <strong>{location && location.title}</strong></h3>
 
-                                        <p className={'black-text font-nunito'}>{location && location.description}
+                                        <h6 className={'gray-text font-nunito'}>{location && location.description}
                                             <br/>
 
-                                        </p>
+                                        </h6>
                                     </div>
 
                                 </div>
@@ -72,7 +72,7 @@ const LocationInfo = (props) => {
                     <div className="col-sm-12 col-md-3">
                         <div className="card mt-5">
                             <div className="card-body">
-                                <h4 className="card-title"><Link to='#'>{location.title} Packages</Link></h4>
+                                <h3 className="card-title antelope-green" >{location.title} Packages</h3>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
@@ -91,7 +91,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div />)}
-                                <h4 className="card-title"><Link to='#'>Hotel {selectedHotel.hotel}</Link></h4>
+                                <h3 className="card-title"><Link to='#'>Hotel {selectedHotel.hotel}</Link></h3>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
@@ -112,7 +112,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div />)}
-                                <h4 className="card-title"><Link to='#'>Vehicle Rentals :  {selectedVehicle.vehicle}</Link></h4>
+                                <h3 className="card-title"><Link to='#'>Vehicle Rentals :  {selectedVehicle.vehicle}</Link></h3>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
@@ -132,7 +132,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div />)}
-                                <h4 className="card-title"><Link to='#'>Restaurant:  {selectedRestaurants.restaurant}</Link></h4>
+                                <h3 className="card-title"><Link to='#'>Restaurant:  {selectedRestaurants.restaurant}</Link></h3>
                                 <p className="card-text">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>

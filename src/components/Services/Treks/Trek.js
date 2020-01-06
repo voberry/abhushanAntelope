@@ -23,7 +23,7 @@ const Trek = () => {
                             </div>
 
                             <div className="col-md-3 col-sm-12 ">
-                                <button className={'btn antelope-green-bg white-text btn-sm float-right mt-3'}>Book Now</button>
+                                <button className={'btn antelope-green-bg-light white-text btn-sm float-right mt-3'}>Book Now</button>
                             </div>
                         </div>
 
@@ -62,7 +62,7 @@ const Trek = () => {
                             </div>
                         </div>
 
-                        <div className={'p-4 mt-4 antelope-green-bg white-text'}>
+                        <div className={'p-4 mt-4 antelope-green-bg-light white-text'}>
                             <h4> Price : 1400/day
                                 <button className={'btn btn-sm btn-danger float-right'}>Book Now</button>
                             </h4>
@@ -85,7 +85,7 @@ const Trek = () => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
@@ -94,7 +94,7 @@ const Trek = () => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@ const Trek = () => {
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
