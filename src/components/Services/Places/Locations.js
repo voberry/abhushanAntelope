@@ -42,7 +42,7 @@ const Locations = (props) => {
                                 <a  className="green-text">
                                     <h6 className="font-weight-bold mb-3 secondary-text"><i className="fas fa-city pr-2" />City of Temples</h6>
                                 </a>
-                                <h3 className="font-weight-bold mb-3 main-text"><strong>  {props.match.params.name}</strong></h3>
+                                <h3 className="font-weight-bold mb-3  "><strong>  {props.match.params.name}</strong></h3>
 
                                 <p className={'secondary-text'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus enim eum harum quae tenetur, ullam? Ab adipisci aut culpa earum perspiciatis porro quis quisquam reiciendis velit veritatis, voluptas voluptates?
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi, commodi doloribus magnam magni modi placeat quia quidem sint ut! Asperiores consectetur dolores, eos itaque magni omnis quisquam reprehenderit voluptatum!
@@ -88,7 +88,7 @@ const Locations = (props) => {
                                 <div className="col-sm-12 col-md-12">
 
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
@@ -97,7 +97,7 @@ const Locations = (props) => {
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
@@ -106,7 +106,7 @@ const Locations = (props) => {
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 

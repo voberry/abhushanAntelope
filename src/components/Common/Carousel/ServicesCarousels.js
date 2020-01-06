@@ -40,7 +40,7 @@ const Carousels = () => {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <h4 className="card-title main-text">Something</h4>
+                                    <h4 className="card-title  ">Something</h4>
                                     <p className="card-text secondary-text">Some quick example text</p>
                                     <button className="btn btn-primary btn-sm">Button</button>
 

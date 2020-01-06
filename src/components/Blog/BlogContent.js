@@ -154,7 +154,7 @@ const BlogContent = props => {
                                 <div className="col-sm-12 col-md-12">
 
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
@@ -163,7 +163,7 @@ const BlogContent = props => {
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
@@ -172,7 +172,7 @@ const BlogContent = props => {
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 

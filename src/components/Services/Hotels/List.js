@@ -291,7 +291,7 @@ const List = props => {
                                                      src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                                      alt="Card image cap"/>
                                                 <div className="card-body">
-                                                    <h6 className="card-title"><a>Random Hotel</a></h6>
+                                                    <h6 className="card-title antelope-green"><a>Random Hotel</a></h6>
                                                     <Link to={`./hotels/123`}>
                                                         <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
                                                         </button>
@@ -307,7 +307,7 @@ const List = props => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>Random Hotel</a></h6>
+                                            <h6 className="card-title antelope-green"><a>Random Hotel</a></h6>
                                             <Link to={`./hotels/123`}>
                                                 <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
                                                 </button>
@@ -323,7 +323,7 @@ const List = props => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>Random Hotel</a></h6>
+                                            <h6 className="card-title antelope-green"><a>Random Hotel</a></h6>
                                             <Link to={`./hotels/123`}>
                                                 <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
                                                 </button>
@@ -339,7 +339,7 @@ const List = props => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title"><a>Random Hotel</a></h6>
+                                            <h6 className="card-title antelope-green"><a>Random Hotel</a></h6>
                                             <Link to={`./123`}>
                                                 <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
                                                 </button>
@@ -362,7 +362,7 @@ const List = props => {
                                 <div className="col-sm-12 col-md-12">
 
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
@@ -371,7 +371,7 @@ const List = props => {
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
@@ -380,7 +380,7 @@ const List = props => {
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 

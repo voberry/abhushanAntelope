@@ -1,5 +1,5 @@
 .antelope-green {
-    color: #4e9075 !important
+    color: #6a9086 !important
 }
 
 .antelope-green-bg-outline {
@@ -15,7 +15,7 @@
 }
 
 .antelope-blue-light {
-    color: #6f85a7 !important
+    color: #869ba7 !important
 }
 
 .antelope-green-bg-light   {
@@ -24,8 +24,8 @@
 }
 
 .antelope-green-bg-light-outline {
-    border: 1px solid #9598dd !important;
-    color: #9598dd !important;
+    border: 1px solid #869ba7 !important;
+    color: #869ba7 !important;
     font-size: 110%;
     font-weight: bold;
 }

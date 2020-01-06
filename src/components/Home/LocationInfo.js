@@ -16,7 +16,7 @@ const LocationInfo = (props) => {
     // const handleSetInitialHotel = (location, hotel)
 
     return (
-        <div className={`container-fluid px-5 ${index % 2 !== 0 ? 'gray-background' : 'white'}`}>
+        <div className={`container-fluid px-5 ${index % 2 === 0 ? 'gray-background' : 'white'}`}>
             <div className="d-flex justify-content-around flex-fill px-5 mx-5">
                 <div className="row w-100">
                     <div className="col-sm-12 col-md-9">
@@ -37,16 +37,15 @@ const LocationInfo = (props) => {
 
                                     <div className="col-lg-7 ">
                                         <a className="green-text">
-                                            <h6 className="font-weight-bold mb-3 antelope-blue-light main-text"><i
+                                            <h6 className="font-weight-bold mb-3 antelope-blue-light  "><i
                                                 className="fas fa-city pr-2"/>City of Temples</h6>
                                         </a>
-                                        <h3 className="font-weight-bold mb-3 antelope-green">
+                                        <h3 className="font-weight-bold mb-3 antelope-green text-uppercase">
                                             <strong>{location && location.title}</strong></h3>
 
-                                        <h6 className={'gray-text font-Nunito'}>{location && location.description}
-                                            <br/>
+                                        <p className={'secondary-text'}>{location && location.description}</p>
 
-                                        </h6>
+                                        <br/>
                                     </div>
 
                                 </div>
@@ -73,7 +72,7 @@ const LocationInfo = (props) => {
                         <div className="card mt-5">
                             <div className="card-body">
                                 <h3 className="card-title antelope-green" >{location.title} Packages</h3>
-                                <p className="card-text antelope-blue-light">Some quick example text to build on the card
+                                <p className="antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -92,7 +91,7 @@ const LocationInfo = (props) => {
                                     ]
                                 })(<div />)}
                                 <h3 className="card-title antelope-green">Hotel {selectedHotel.hotel}</h3>
-                                <p className="card-text antelope-blue-light">Some quick example text to build on the card
+                                <p className="antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -113,7 +112,7 @@ const LocationInfo = (props) => {
                                     ]
                                 })(<div />)}
                                 <h3 className="card-title antelope-green">Vehicle Rentals :  {selectedVehicle.vehicle}</h3>
-                                <p className="card-text antelope-blue-light">Some quick example text to build on the card
+                                <p className="antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -133,7 +132,7 @@ const LocationInfo = (props) => {
                                     ]
                                 })(<div />)}
                                 <h3 className="card-title antelope-green">Restaurant:  {selectedRestaurants.restaurant}</h3>
-                                <p className="card-text">Some quick example text to build on the card
+                                <p className="antelope-blue-light">Some quick example text to build on the card
                                     title and make up the bulk of the card's content.</p>
                             </div>
                         </div>

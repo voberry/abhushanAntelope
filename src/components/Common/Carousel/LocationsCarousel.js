@@ -38,7 +38,7 @@ const Carousels = (props) => {
                                     <img className="card-img-top h-300"
                                          style={{
                                              height: '200px',
-                                             width : 'auto'
+                                             maxWidth : '100%'
                                          }}
                                          src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                          alt="Card image cap"/>
@@ -47,8 +47,8 @@ const Carousels = (props) => {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <h3 className="card-title h3">Something</h3>
-                                    <p className=" secondary-text">Some quick example text</p>
+                                    <h3 className="card-title antelope-green">Something</h3>
+                                    <p className=" secondary-text antelope-blue-light">Some quick example text</p>
                                     { selectedItemFor === 'hotel' &&  <button className={`btn antelope-green-bg-light-outline  btn-sm`} onClick={()=> handleSelectedHotel(it, locations.title)}>Button</button> }
                                     { selectedItemFor === 'restaurants' && <button className="btn antelope-green-bg-light-outline  btn-sm" onClick={()=> handleSelectedRestaurants(it, locations.title)}>Button</button>}
                                     { selectedItemFor === 'vehicles' && <button className="btn antelope-green-bg-light-outline  btn-sm" onClick={()=> handleSelectedVehicle(it, locations.title)}>Button</button>}

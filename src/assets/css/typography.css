@@ -1,19 +1,53 @@
-h1, h2 {
+h1 {
     font-family: 'Poiret One', cursive !important;
-    font-size: 250% !important;
+    font-size: 2rem;
     font-weight: bold;
 }
 
-h3, h4 ,h5 ,h6, p, span,a, body {
+h2{
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h3{
     font-family: 'Flamenco', cursive !important;
-    font-size: 110% ;
+    font-size: 1.6rem ;
     letter-spacing: 0.5px;
     font-weight: bolder;
 }
 
-.card-title{
+h4{
     font-family: 'Flamenco', cursive !important;
-    font-size: 150%;
+    font-size: 1.5rem ;
+    letter-spacing: 0.5px;
+    font-weight: bolder;
+}
+
+h5 {
+    font-family: 'Flamenco', cursive !important;
+    font-size: 1.3rem ;
+    letter-spacing: 0.5px;
+    font-weight: bolder;
+}
+
+h6, a, span, p, body {
+    font-family: 'Flamenco', cursive !important;
+    font-size: 1.1rem ;
+    letter-spacing: 0.5px;
+    }
+
+.card-title{
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1.6rem;
+    font-weight: bold !important;
+    letter-spacing: 0.5px;
+
+}
+
+.card-body, .card-text{
+    font-family: 'Flamenco', cursive !important;
+    font-size: 1.1rem !important;
     letter-spacing: 0.5px;
 }
 
@@ -56,20 +90,8 @@ h3, h4 ,h5 ,h6, p, span,a, body {
     font-family: "Lato", sans-serif;
 }
 
-.main-text{
-    font-family: 'Poiret One', cursive;
-}
-
 .font-Nunito{
     font-family: 'Nunito', sans-serif !important;
-}
-
-.font-adlanta-light {
-    font-family: adlanta-light, sans-serif;
-}
-
-.font-adlanta {
-    font-family: adlanta, sans-serif;
 }
 
 .font-weight-500 {
@@ -92,15 +114,6 @@ h3, h4 ,h5 ,h6, p, span,a, body {
 .dark-grey-text {
     color : #a1a1a1
 }
-
-.main-text {
-    font-family: 'Poppins', sans-serif;
-}
-
-.secondary-text {
-    font-family: 'Libre Franklin', sans-serif;
-}
-
 
 .login-form ::-webkit-input-placeholder {
     color: peachpuff;
