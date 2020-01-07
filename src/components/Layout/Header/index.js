@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {withRouter, Link} from 'react-router-dom'
 import {
     MDBNavbar,
@@ -16,6 +16,7 @@ import LoginModal from "./LoginModal";
 const AppHeader = props => {
 
     const [isLoginModalVisible, setIsLoginModalVisible] = useState(false);
+    const [isHomePage, setIsHomePage] = useState(false);
 
     const showLoginModal = () => {
         setIsLoginModalVisible(true)
@@ -23,6 +24,15 @@ const AppHeader = props => {
     const hideLoginModal = () => {
         setIsLoginModalVisible(false)
     };
+
+    useEffect(()=> {
+        if(props.match.url === '/'){
+            setIsHomePage(true)
+        }
+        else{
+            setIsHomePage(false)
+        }
+    }, [props.match])
 
     const LoginModalProps = {
         showModal: showLoginModal,
