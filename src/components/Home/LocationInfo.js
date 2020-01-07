@@ -16,8 +16,8 @@ const LocationInfo = (props) => {
     // const handleSetInitialHotel = (location, hotel)
 
     return (
-        <div className={`container-fluid px-5 ${index % 2 !== 0 ? 'gray-background' : 'white'}`}>
-            <div className="d-flex justify-content-around flex-fill px-5 mx-5">
+        <div className={`container-fluid ${index % 2 === 0 ? 'gray-background' : 'white'}`}>
+            <div className="d-flex justify-content-around flex-fill mx-5">
                 <div className="row w-100">
                     <div className="col-sm-12 col-md-9">
                         <div>
@@ -37,16 +37,15 @@ const LocationInfo = (props) => {
 
                                     <div className="col-lg-7 ">
                                         <a className="green-text">
-                                            <h6 className="font-weight-bold mb-3 antelope-green main-text"><i
+                                            <h6 className="font-weight-bold mb-3 antelope-blue-light  "><i
                                                 className="fas fa-city pr-2"/>City of Temples</h6>
                                         </a>
-                                        <h3 className="font-weight-bold mb-3 black-text">
+                                        <h3 className="font-weight-bold mb-3 antelope-green text-uppercase">
                                             <strong>{location && location.title}</strong></h3>
 
-                                        <p className={'black-text font-nunito'}>{location && location.description}
-                                            <br/>
+                                        <p className={'secondary-text'}>{location && location.description}</p>
 
-                                        </p>
+                                        <br/>
                                     </div>
 
                                 </div>
@@ -70,74 +69,116 @@ const LocationInfo = (props) => {
 
 
                     <div className="col-sm-12 col-md-3">
-                        <div className="card mt-5">
+                        <div className="card mt-5 flat-box-shadow">
                             <div className="card-body">
-                                <h4 className="card-title"><Link to='#'>{location.title} Packages</Link></h4>
-                                <p className="card-text">Some quick example text to build on the card
-                                    title and make up the bulk of the card's content.</p>
+                                <h3 className="card-title antelope-green">{location.title} Packages</h3>
+
+                                <hr/>
+
+                                {selectedHotel && selectedHotel.map(item => item.location).includes(location.title) &&
+                                <div>
+                                    {getFieldDecorator(`locationInformation['${location.title}']['hotel']`, {
+                                        initialValue: selectedHotel && selectedHotel.find(item => item.location === location.title)
+                                            && selectedHotel.find(item => item.location === location.title).hotel,
+                                        rules: [
+                                            {
+                                                required: true,
+                                                message: `Please select a hotel for ${location.title} `
+                                            }
+                                        ]
+                                    })(<div/>)}
+                                    <h4 className="card-title antelope-green">Hotel {selectedHotel.hotel}</h4>
+                                    <h6 className={'antelope-blue-light'}>Location, City</h6>
+                                    <div>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'far fa-star yellow-text'}/>
+
+                                        <span className={'text-muted ml-2'}>(15 reviews)</span>
+                                    </div>
+                                    <span className={'pr-2'}>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-search'}/>
+                                            </button>
+                                        </span>
+                                    <span>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-trash'}/>
+                                            </button>
+                                    </span>
+                                </div>
+                                }
+
+                                <hr/>
+
+                                {selectedVehicle && selectedVehicle.map(item => item.location).includes(location.title) &&
+                                <div>
+                                    {getFieldDecorator(`locationInformation['${location.title}']['vehicle']`, {
+                                        initialValue: selectedVehicle && selectedVehicle.find(item => item.location === location.title)
+                                            && selectedVehicle.find(item => item.location === location.title).vehicle,
+                                        rules: [
+                                            {
+                                                required: true,
+                                                message: `Please select a vehicle for ${location.title} `
+                                            }
+                                        ]
+                                    })(<div/>)}
+                                    <h4 className="card-title antelope-green">Vehicle {selectedVehicle.vehicle}</h4>
+                                    <h6 className={'antelope-blue-light'}>Type</h6>
+                                    <span className={'pr-2'}>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-search'}/>
+                                            </button>
+                                        </span>
+                                    <span>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-trash'}/>
+                                            </button>
+                                    </span>
+                                </div>
+                                }
+
+                                <hr/>
+
+                                {selectedRestaurants && selectedRestaurants.map(item => item.location).includes(location.title) &&
+                                <div>
+                                    {getFieldDecorator(`locationInformation['${location.title}']['restaurant']`, {
+                                        initialValue: selectedRestaurants && selectedRestaurants.find(item => item.location === location.title)
+                                            && selectedRestaurants.find(item => item.location === location.title).restaurant,
+                                        rules: [
+                                            {
+                                                required: true,
+                                                message: `Please select a restaurant for ${location.title} `
+                                            }
+                                        ]
+                                    })(<div/>)}
+                                    <h4 className="card-title antelope-green">Restaurant {selectedRestaurants.restaurant}</h4>
+                                    <h6 className={'antelope-blue-light'}>Location, City</h6>
+                                    <div>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'fas fa-star yellow-text'}/>
+                                        <i className={'far fa-star yellow-text'}/>
+
+                                        <span className={'text-muted ml-2'}>(15 reviews)</span>
+                                    </div>
+                                    <span className={'pr-2'}>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-search'}/>
+                                            </button>
+                                        </span>
+                                    <span>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-trash'}/>
+                                            </button>
+                                    </span>
+                                </div>
+                                }
                             </div>
                         </div>
-
-                        {selectedHotel && selectedHotel.map(item=> item.location).includes(location.title) &&
-                        <div className="card mt-5">
-                            <div className="card-body">
-                                {getFieldDecorator(`locationInformation['${location.title}']['hotel']`, {
-                                    initialValue: selectedHotel && selectedHotel.find(item => item.location === location.title)
-                                        && selectedHotel.find(item => item.location === location.title).hotel,
-                                    rules: [
-                                        {
-                                            required: true,
-                                            message: `Please select a hotel for ${location.title} `
-                                        }
-                                    ]
-                                })(<div />)}
-                                <h4 className="card-title"><Link to='#'>Hotel {selectedHotel.hotel}</Link></h4>
-                                <p className="card-text">Some quick example text to build on the card
-                                    title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        }
-
-
-                        {selectedVehicle && selectedVehicle.map(item=> item.location).includes(location.title) &&
-                        <div className="card mt-5">
-                            <div className="card-body">
-                                {getFieldDecorator(`locationInformation['${location.title}']['vehicle']`, {
-                                    initialValue: selectedVehicle && selectedVehicle.find(item => item.location === location.title)
-                                        && selectedVehicle.find(item => item.location === location.title).vehicle,
-                                    rules: [
-                                        {
-                                            required: true,
-                                            message: `Please select a vehicle for ${location.title} `
-                                        }
-                                    ]
-                                })(<div />)}
-                                <h4 className="card-title"><Link to='#'>Vehicle Rentals :  {selectedVehicle.vehicle}</Link></h4>
-                                <p className="card-text">Some quick example text to build on the card
-                                    title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        }
-
-                        {selectedRestaurants && selectedRestaurants.map(item=> item.location).includes(location.title) &&
-                        <div className="card mt-5">
-                            <div className="card-body">
-                                {getFieldDecorator(`locationInformation['${location.title}']['restaurant']`, {
-                                    initialValue: selectedRestaurants && selectedRestaurants.find(item => item.location === location.title)
-                                        && selectedRestaurants.find(item => item.location === location.title).restaurant,
-                                    rules: [
-                                        {
-                                            required: true,
-                                            message: `Please select a restaurant for ${location.title} `
-                                        }
-                                    ]
-                                })(<div />)}
-                                <h4 className="card-title"><Link to='#'>Restaurant:  {selectedRestaurants.restaurant}</Link></h4>
-                                <p className="card-text">Some quick example text to build on the card
-                                    title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        }
                     </div>
                 </div>
             </div>

@@ -13,6 +13,10 @@ import LocationInfo from "./LocationInfo";
 import AboutUsSection from "./AboutUsSection";
 import LocationsContextProvider from "../Contexts/LocationsContext";
 
+import animal from '../../assets/images/animal.png';
+import temple from '../../assets/images/temple.png';
+import party from '../../assets/images/party.png';
+
 const {Option} = Select;
 const {TabPane} = Tabs;
 
@@ -188,7 +192,7 @@ const Home = (props) => {
                                             </div>
                                             <div className="px-3">
                                                 <Button htmlType="submit"
-                                                        className={'mt-5 btn-success antelope-green-bg  w-100'}>
+                                                        className={'mt-5 btn-sm antelope-green-bg-light-outline   w-100'}>
                                                     LETS GO!
                                                 </Button>
                                             </div>
@@ -206,16 +210,16 @@ const Home = (props) => {
                 type="fadeIn"
                 duration="1s"
                 delay="1.5s">
-                <div className={'container-fluid p-5 gray-background'}>
+                <div className={'container-fluid p-5'}>
                     <div className="px-5 mx-5">
                         <div>
                             <div className="d-flex justify-content-around align-items-center">
                                 {!isEmpty(locations) && locations.map(item =>
                                     <div className="text-center">
                                         <div>
-                                            <i className={`fas fa-${item.icon} fa-2x text-success`}/>
-                                            <h5 className="font-weight-bold my-2 text-success">{item.title}</h5>
-                                            <h6 className="font-weight-bold my-2 text-success ">{item.day} Days</h6>
+                                            <img src={item.icon === 'animal' ? animal : item.icon === 'party' ? party : temple} alt="" className='icon-images-lg'/>
+                                            <h5 className="font-weight-bold my-2 antelope-green">{item.title}</h5>
+                                            <h6 className="font-weight-bold my-2 antelope-green">{item.day} Days</h6>
                                         </div>
                                     </div>
                                 )}
@@ -256,11 +260,8 @@ const Home = (props) => {
                     <Form layout="inline" onSubmit={handleLocationsSubmit}>
                         {locations && locations.map((item, index) => <LocationInfo location={item} index={index}
                                                                                    form={form}/>)}
-
-
                     </Form>
                 </LocationsContextProvider>
-
             </MDBAnimation>
             }
             <div>

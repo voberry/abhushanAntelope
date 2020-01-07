@@ -274,3 +274,12 @@ body{
     height: 120px;
     width: 100%;
 }
+
+.carousel-images-size {
+    height: 200px;
+    width: 250px
+}
+
+.flat-box-shadow {
+    box-shadow: 1px 1px rgba(0, 0, 0, .16);
+}

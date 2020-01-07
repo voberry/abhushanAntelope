@@ -23,7 +23,7 @@ const CheckoutPage = () => {
                     <div className="col-md-6">
                         <div className="card itinerary-card">
                             <div className="card-body">
-                                <h4 className={'font-weight-bold antelope-green main-text text-center'}>Itinerary Information</h4>
+                                <h4 className={'font-weight-bold antelope-green text-center'}>Itinerary Information</h4>
 
                                 <hr className={'w-75 text-center'}/>
                                 <ul style={{
@@ -99,7 +99,7 @@ const CheckoutPage = () => {
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-body">
-                                <h4 className={'font-weight-bold antelope-green main-text text-center'}>Tour Information</h4>
+                                <h4 className={'font-weight-bold antelope-green text-center'}>Tour Information</h4>
 
                                 <hr className={'w-75 text-center'}/>
 

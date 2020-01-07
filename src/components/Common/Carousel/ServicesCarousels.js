@@ -36,11 +36,11 @@ const Carousels = () => {
                                          src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                          alt="Card image cap"/>
                                     <a >
-                                        <div className="mask rgba-white-slight"/>
+                                        <div className="mask rgba-black-light"/>
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <h4 className="card-title main-text">Something</h4>
+                                    <h4 className="card-title  ">Something</h4>
                                     <p className="card-text secondary-text">Some quick example text</p>
                                     <button className="btn btn-primary btn-sm">Button</button>
 

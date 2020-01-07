@@ -115,9 +115,9 @@ const Index = () => {
                                              src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
                                              alt="Card image cap"/>
                                         <div className="card-body">
-                                            <h6 className="card-title black-text"><a>{item.properties && item.properties.DISTRICT}</a></h6>
+                                            <h6 className="card-title grey-text "><a>{item.properties && item.properties.DISTRICT}</a></h6>
                                             <Link to={`./places/${item.properties && item.properties.DISTRICT}`}>
-                                                <button className="btn antelope-green-bg btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>
@@ -133,29 +133,29 @@ const Index = () => {
                                 <div className="col-sm-12 col-md-12">
 
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>
                                     <div className="card mb-3">
-                                        <div className="card-title">
+                                        <div className="card-title antelope-green">
                                             <img src={Wallpaper} alt="" className={'w-100'}/>
                                         </div>
 
-                                        <div className="card-body black-text">
+                                        <div className="card-body grey-text ">
                                             Ad stuff
                                         </div>
                                     </div>

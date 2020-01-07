@@ -27,7 +27,7 @@ const ContactPage = () => {
                     <MDBCol lg="5" className="lg-0 mb-4">
                         <MDBCard>
                             <MDBCardBody>
-                                <div className="form-header antelope-green-bg accent-1">
+                                <div className="form-header antelope-green-bg-light-outline  accent-1">
                                     <h3 className="mt-2">
                                         <MDBIcon icon="envelope"/> Write to us:
                                     </h3>
@@ -72,7 +72,7 @@ const ContactPage = () => {
                                     />
                                 </div>
                                 <div className="text-center">
-                                    <MDBBtn className="antelope-green-bg white-text">Submit</MDBBtn>
+                                    <MDBBtn className="antelope-green-bg-light-outline  white-text">Submit</MDBBtn>
                                 </div>
                             </MDBCardBody>
                         </MDBCard>
@@ -88,21 +88,21 @@ const ContactPage = () => {
                         <br/>
                         <MDBRow className="text-center">
                             <MDBCol md="4">
-                                <MDBBtn tag="a" floating className="antelope-green-bg accent-1">
+                                <MDBBtn tag="a" floating className="antelope-green-bg-light-outline  accent-1">
                                     <MDBIcon icon="map-marker-alt"/>
                                 </MDBBtn>
                                 <p>New York, 94126</p>
                                 <p className="mb-md-0">United States</p>
                             </MDBCol>
                             <MDBCol md="4">
-                                <MDBBtn tag="a" floating className="antelope-green-bg accent-1">
+                                <MDBBtn tag="a" floating className="antelope-green-bg-light-outline  accent-1">
                                     <MDBIcon icon="phone"/>
                                 </MDBBtn>
                                 <p>+ 01 234 567 89</p>
                                 <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
                             </MDBCol>
                             <MDBCol md="4">
-                                <MDBBtn tag="a" floating className="antelope-green-bg accent-1">
+                                <MDBBtn tag="a" floating className="antelope-green-bg-light-outline  accent-1">
                                     <MDBIcon icon="envelope"/>
                                 </MDBBtn>
                                 <p>info@gmail.com</p>
