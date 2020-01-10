@@ -21,7 +21,7 @@ const LocationInfo = (props) => {
                 <div className="row w-100">
                     <div className="col-sm-12 col-md-9">
                         <div>
-                            <section className="my-5">
+                            <section className="my-5 ">
                                 <div className="row">
                                     <div className="col-lg-5 d-flex justify-content-center align-items-center">
                                         <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
@@ -108,10 +108,12 @@ const LocationInfo = (props) => {
                                                 <i className={'fas fa-trash'}/>
                                             </button>
                                     </span>
+
+                                    <hr/>
                                 </div>
                                 }
 
-                                <hr/>
+
 
                                 {selectedVehicle && selectedVehicle.map(item => item.location).includes(location.title) &&
                                 <div>
@@ -137,10 +139,10 @@ const LocationInfo = (props) => {
                                                 <i className={'fas fa-trash'}/>
                                             </button>
                                     </span>
+
+                                    <hr/>
                                 </div>
                                 }
-
-                                <hr/>
 
                                 {selectedRestaurants && selectedRestaurants.map(item => item.location).includes(location.title) &&
                                 <div>
