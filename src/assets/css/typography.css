@@ -31,7 +31,7 @@ h5 {
     font-weight: bolder;
 }
 
-h6, a, span, p, body {
+body {
     font-family: 'Flamenco', cursive !important;
     font-size: 1.1rem ;
     letter-spacing: 0.5px;

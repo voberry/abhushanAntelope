@@ -23,7 +23,7 @@ const {TabPane} = Tabs;
 const FormItem = Form.Item;
 
 const Home = (props) => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(true);
     const {form, fetchLocations, locations} = props;
     const {validateFields, getFieldDecorator} = form;
 

@@ -13,15 +13,16 @@ export default {
                 title: 'Kathmandu',
                 description: 'Kathmandu is the capital and largest city of Nepal, with a population of around one million.' +
                     ' Kathmandu is also the largest metropolis in the hilly region.' +
-                    ' Nepali and Newari are the most spoken languages in the city.' +
-                    '' +
-                    'Kathmandu, also known as City of Temples, stands at an elevation of approximately 1,400 metres' +
-                    ' (4,600 feet) above sea level in the bowl-shaped Kathmandu Valley in central Nepal.',
+                    ' Nepali and Newari are the most spoken languages in the city.',
                 image: Kathmandu,
                 latitude: '27.700769',
                 longitude: '85.300140',
                 day: 5,
-                icon: 'temple'
+                icon: 'temple',
+                wildLife: 2,
+                nightLife : 5,
+                culture: 5,
+                mountains: 2,
             },
             {
                 id: 3,
@@ -29,27 +30,32 @@ export default {
                 title: 'Chitwan',
                 description: "Chitwan District (Nepali: चितवन जिल्ला) is one of 77 districts of Nepal," +
                     " and is located in the southwestern part of Province No. 3 with Bharatpur, the fourth largest city" +
-                    " of Nepal, as its district headquarters. It covers an area of 2,238.39 km2 (864.25 sq mi), and in" +
-                    " 2011 had a population of 579,984 (279,087 male and 300,897 female) people.",
+                    " of Nepal, as its district headquarters. It covers an area of 2,238.39 km2 (864.25 sq mi)",
                 image: Chitwan,
                 latitude: '27.68333',
                 longitude: '84.43333',
                 day: 2,
-                icon: 'animal'
+                icon: 'animal',
+                wildLife: 5,
+                nightLife : 1,
+                culture: 2,
+                mountains: 1,
             },
             {
                 id: 2,
                 code: 'PKR',
                 title: 'Pokhara',
                 description: "Pokhara is the city of lakes. There are several lakes in Pokhara and the prominent ones are " +
-                    "Fewa Lake, Rupa Lake and Begnas Lake. Among these lakes, Fewa Lake is by far the most beautiful lake." +
-                    " Nestled on a little island on Fewa Lake is the Barahi Temple. For a small charge, you can go on a boat " +
-                    "ride on this lake. The sunlight reflects on the lake and glitters and the mountains smile upon us in the reflection.\n",
+                    "Fewa Lake, Rupa Lake and Begnas Lake. Among these lakes, Fewa Lake is by far the most beautiful lake.",
                 image: Pokhara,
                 latitude: '28.26689',
                 longitude: '83.96851',
                 day: 3,
-                icon: 'party'
+                icon: 'party',
+                wildLife: 3,
+                nightLife : 5,
+                culture: 3,
+                mountains: 4,
             }
         ]
     }

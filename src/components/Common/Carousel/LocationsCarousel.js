@@ -18,12 +18,12 @@ const Carousels = (props) => {
     }, []);
 
     const nextItemButton =
-        <button className={'btn antelope-green-bg-light-outline btn-sm mt-3'}>
+        <button className={'btn antelope-green-bg-light btn-sm mt-3'}>
             <i className={'fas fa-chevron-right'}/>
         </button>;
 
     const previousItemButton =
-        <button className={'btn antelope-green-bg-light-outline btn-sm mt-3'}>
+        <button className={'btn antelope-green-bg-light btn-sm mt-3'}>
             <i className={'fas fa-chevron-left'}/>
         </button>;
 

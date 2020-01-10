@@ -276,10 +276,18 @@ body{
 }
 
 .carousel-images-size {
-    height: 200px;
+    height: 300px;
     width: 250px
 }
 
 .flat-box-shadow {
     box-shadow: 1px 1px rgba(0, 0, 0, .16);
+}
+
+.recommended-item{
+    border: 1px dashed gold;
+}
+
+.custom-md-tabs{
+    background-color: #6a90868c;
 }
