@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Button, DatePicker, Form, InputNumber, Select, Tabs} from "antd";
 import {withRouter, Link} from 'react-router-dom';
 import moment from "moment";
-import {MDBAnimation} from "mdbreact";
+import {MDBAnimation, MDBCol} from "mdbreact";
 
 import locationOptions from '../../services/__mocks__/locations'
 import Package from "./Package";
@@ -23,7 +23,7 @@ const {TabPane} = Tabs;
 const FormItem = Form.Item;
 
 const Home = (props) => {
-    const [isSubmitted, setIsSubmitted] = useState(true);
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const {form, fetchLocations, locations} = props;
     const {validateFields, getFieldDecorator} = form;
 
@@ -71,7 +71,7 @@ const Home = (props) => {
                                     dream of from the click of your mouse, on the go. And we do it according to your
                                     tastes. </h6>
 
-                                <div className="container">
+                                <div className="container-fluid">
                                     <Form layout="inline" onSubmit={handleSubmit} className={'main-page-form'}>
                                         <div className="mt-3 d-flex flex-fill">
                                             <div className="px-3">
@@ -192,7 +192,7 @@ const Home = (props) => {
                                             </div>
                                             <div className="px-3">
                                                 <Button htmlType="submit"
-                                                        className={'mt-5 btn-sm antelope-green-bg-light-outline   w-100'}>
+                                                        className={'mt-5 btn-sm antelope-green-bg w-100'}>
                                                     LETS GO!
                                                 </Button>
                                             </div>
@@ -256,12 +256,36 @@ const Home = (props) => {
                     </div>
                 </div>
 
+                <div className={'d-flex justify-content-center align-items-center'}>
+                    <div>
+                        <h1 className="h1-responsive font-weight-bold mb-1 antelope-green">
+                            Customize your trip
+                        </h1>
+
+                        <hr className={'text-center w-25 antelope-green-bg'}/>
+
+                    </div>
+                </div>
                 <LocationsContextProvider>
                     <Form layout="inline" onSubmit={handleLocationsSubmit}>
                         {locations && locations.map((item, index) => <LocationInfo location={item} index={index}
                                                                                    form={form}/>)}
+
+                        <div className={'d-flex justify-content-center align-items-center'}>
+                            <div>
+                                <button type="button" className="btn btn-flat btn-lg antelope-green-bg">
+
+                                    Submit and Go !
+                                </button>
+
+                            </div>
+                        </div>
+
                     </Form>
+
+
                 </LocationsContextProvider>
+
             </MDBAnimation>
             }
             <div>

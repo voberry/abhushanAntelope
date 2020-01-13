@@ -7,7 +7,7 @@
 }
 
 .antelope-green-bg-outline {
-    border: 1px solid #6a9086 !important;
+    border: 2px solid #6a9086 !important;
     color: #6a9086;
     font-weight: bold;
     font-size: 110%;
@@ -72,4 +72,17 @@
 
 .dropdown-item:hover{
     color: white !important;
+}
+
+
+.flat-box-shadow {
+    box-shadow: 1px 1px rgba(0, 0, 0, .16);
+}
+
+.recommended-item{
+    border: 1px dashed gold;
+}
+
+.custom-md-tabs{
+    background-color: #6a9086;
 }

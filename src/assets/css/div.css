@@ -247,7 +247,7 @@ body{
 }
 
 .home-view {
-    background: url("https://wallpaperplay.com/walls/full/d/8/d/235481.jpg")no-repeat center center;
+    background: url("https://wallpapercave.com/wp/3Nfgmqx.jpg")no-repeat center center;
     background-size: cover;
     max-height: 100vh !important;
     height: 100%
@@ -276,18 +276,6 @@ body{
 }
 
 .carousel-images-size {
-    height: 300px;
-    width: 250px
-}
-
-.flat-box-shadow {
-    box-shadow: 1px 1px rgba(0, 0, 0, .16);
-}
-
-.recommended-item{
-    border: 1px dashed gold;
-}
-
-.custom-md-tabs{
-    background-color: #6a90868c;
+    height: 200px;
+    width: 150px
 }

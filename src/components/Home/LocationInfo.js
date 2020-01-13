@@ -3,13 +3,8 @@ import {Tabs} from "antd";
 import {LocationsContext} from "../Contexts/LocationsContext";
 import Carousels from "../Common/Carousel";
 import {Link} from "react-router-dom";
-import moment from "moment";
 import {MDBIcon, MDBNav, MDBNavItem, MDBNavLink, MDBTabContent, MDBTabPane} from "mdbreact";
-import animal from "../../assets/images/animal.png";
-import party from "../../assets/images/party.png";
-import temple from "../../assets/images/temple.png";
 
-const {TabPane} = Tabs;
 const LocationInfo = (props) => {
     const {location, index, form} = props;
     const [state, setState] = useState({
@@ -25,7 +20,6 @@ const LocationInfo = (props) => {
     };
 
 
-    const {validateFields, getFieldDecorator} = form;
     const locationContextData = useContext(LocationsContext);
     const {selectedHotel, selectedRestaurants, selectedVehicle} = locationContextData;
 
