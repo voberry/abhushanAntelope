@@ -46,7 +46,7 @@ const LocationInfo = (props) => {
                         </h1>
 
                             <hr/>
-                            <h5 className={'h5-responsive font-weight-300 grey-text'}>{location && location.description}</h5>
+                            <h5 className={'h5-responsive font-weight-300'}>{location && location.description}</h5>
 
                         </div>
                     </div>
