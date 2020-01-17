@@ -53,6 +53,8 @@ class AuthProvider extends Component {
         clearLocalStorage('userName');
         clearLocalStorage('userEmail');
         clearLocalStorage('userPicture');
+        history.push({pathname: '/'});
+
     };
 
     render() {

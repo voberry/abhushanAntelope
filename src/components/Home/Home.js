@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Button, DatePicker, Form, InputNumber, Select, Tabs} from "antd";
+import React, {useEffect, useState} from 'react';
+import {Button, DatePicker, Form, InputNumber, Select, Tabs, Spin} from "antd";
 import {withRouter, Link} from 'react-router-dom';
 import moment from "moment";
 import {MDBAnimation, MDBCol} from "mdbreact";
@@ -26,7 +26,6 @@ const Home = (props) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const {form, fetchLocations, locations} = props;
     const {validateFields, getFieldDecorator} = form;
-
     const handleSubmit = e => {
         e.preventDefault();
         validateFields((err, values) => {

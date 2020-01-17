@@ -177,7 +177,18 @@ const LoginModal = (props) => {
                                             <Form onSubmit={handleLoginFormSubmit} onReset={handleReset}>
                                                 <h1>Sign in</h1>
                                                 <div className="social-authContainer">
-                                                    <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
+                                                    <FacebookLogin
+                                                        appId="495814407719513" //APP ID NOT CREATED YET
+                                                        fields="name,email,picture"
+                                                        callback={loginViaFacebook}
+                                                        icon="fab fa-facebook"
+                                                        textButton={''}
+                                                        cssClass={'iconButtons'}
+                                                        size={'fa'}
+                                                        style={{
+                                                            padding: '5px'
+                                                        }}
+                                                    />
                                                     <a href="#" className="social"><i
                                                         className="fab fa-google-plus-g"></i></a>
                                                     <a href="#" className="social"><i

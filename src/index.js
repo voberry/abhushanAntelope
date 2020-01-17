@@ -14,22 +14,10 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import './assets/style.css'
-import config from './constants/authConfig'
 import * as serviceWorker from './serviceWorker';
 
 const store = configureStore();
 const mountNode = document.getElementById('root');
-
-// A function that routes the user to the right place
-// after login
-const onRedirectCallback = appState => {
-    history.push(
-        appState && appState.targetUrl
-            ? appState.targetUrl
-            : window.location.pathname
-    );
-};
-
 
 ReactDOM.render(<Provider store={store}>
         <ConnectedRouter history={history}>
