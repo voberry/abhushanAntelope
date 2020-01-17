@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {withRouter, Link} from 'react-router-dom'
 import {
     MDBNavbar,
@@ -12,37 +12,42 @@ import {
 
 import logo from '../../../assets/images/antelope.png'
 import LoginModal from "./LoginModal";
+import {isUserLoggedIn} from "../../../utils/jwtUtil";
+import {AuthContext} from "./AuthContext";
+import {getLocalStorage} from "../../../utils/storageUtil";
 
 const AppHeader = props => {
-
-    const [isLoginModalVisible, setIsLoginModalVisible] = useState(false);
+    const authData = useContext(AuthContext);
+    const {userData, displayLoginModal, disableLoginModal} = authData;
+    const getFirstUserPhoto = getLocalStorage('userPicture');
     const [isHomePage, setIsHomePage] = useState(false);
 
     const showLoginModal = () => {
-        setIsLoginModalVisible(true)
-    };
-    const hideLoginModal = () => {
-        setIsLoginModalVisible(false)
+        displayLoginModal()
     };
 
-    useEffect(()=> {
-        if(props.match.url === '/'){
+    const hideLoginModal = () => {
+        disableLoginModal()
+    };
+
+    useEffect(() => {
+        if (props.match.url === '/') {
             setIsHomePage(true)
-        }
-        else{
+        } else {
             setIsHomePage(false)
         }
-    }, [props.match])
+    }, [props.match]);
 
     const LoginModalProps = {
         showModal: showLoginModal,
-        hideModal : hideLoginModal,
-        isModalVisible: isLoginModalVisible
+        hideModal: hideLoginModal,
+        isModalVisible: authData.isLoginModalVisible
     };
 
     return (
         <div>
-            <MDBNavbar expand="md" fixed="top" scrolling transparent={props.match.url === '/'} color={props.match.url !== '/' && 'elegant-color-dark'}>
+            <MDBNavbar expand="md" fixed="top" scrolling transparent={props.match.url === '/'}
+                       color={props.match.url !== '/' && 'elegant-color-dark'}>
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div className={'mr-5'}>
@@ -99,16 +104,41 @@ const AppHeader = props => {
                                 <Link className="nav-link px-4  white-text" to="/contact-us">
                                     Contact
                                 </Link>
-                                <a className="nav-link px-4  white-text" onClick={()=> showLoginModal()}>
-                                    Join Us
-                                </a>
+                                {isUserLoggedIn() ?
+                                    <MDBNavItem>
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle nav>
+                                                <img
+                                                    src={(userData && userData.userPicture) || getFirstUserPhoto } alt="Avatar"
+                                                    style={{height: '30px', width: '30px', borderRadius: '50%'}}/>
+                                                <span
+                                                    className="ml-2 white-text">{(userData && userData.userName) || getLocalStorage('userName')}</span>
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <MDBDropdownItem>
+                                                    <Link to="/users">
+                                                        Profile
+                                                    </Link>
+                                                </MDBDropdownItem>
+                                                <MDBDropdownItem>
+                                                    <a onClick={authData.logout}>
+                                                        SignOut
+                                                    </a>
+                                                </MDBDropdownItem>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavItem>
+                                    : <a className="nav-link px-4  white-text" onClick={() => showLoginModal()}>
+                                        Join Us
+                                    </a>}
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </MDBNavbar>
 
-            <LoginModal  modalProps={LoginModalProps} />
+            <LoginModal modalProps={LoginModalProps}/>
         </div>
     );
 };

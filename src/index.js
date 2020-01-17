@@ -15,9 +15,6 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import './assets/style.css'
 import config from './constants/authConfig'
-
-import {Auth0Provider} from './components/Contexts/Auth0Context/react-auth0-spa';
-
 import * as serviceWorker from './serviceWorker';
 
 const store = configureStore();
@@ -37,13 +34,9 @@ const onRedirectCallback = appState => {
 ReactDOM.render(<Provider store={store}>
         <ConnectedRouter history={history}>
             <Router history={history}>
-                <Auth0Provider
-                    domain={config.domain}
-                    client_id={config.clientId}
-                    redirect_uri={window.location.origin}
-                    onRedirectCallback={onRedirectCallback}>
+                <AuthProvider>
                     <App/>
-                </Auth0Provider>
+                </AuthProvider>
             </Router>
         </ConnectedRouter>
     </Provider>,

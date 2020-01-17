@@ -2,6 +2,8 @@ import React from 'react';
 import { withRouter, Switch } from 'react-router-dom';
 
 import PublicRoute from '../../routes/PublicRoute';
+import PrivateRoute from "../../routes/PrivateRoute";
+
 import StaticLayout from '../../components/Layout/Layout/Static';
 
 import {
@@ -21,7 +23,7 @@ const App = () =>(
     <React.Fragment>
         <Switch>
             <PublicRoute exact path='/' layout={StaticLayout} component={AsyncHome}/>
-            <PublicRoute path='/users' layout={StaticLayout} component={AsyncUsers}/>
+            <PrivateRoute path='/users' layout={StaticLayout} component={AsyncUsers}/>
             <PublicRoute exact path='/login' layout={StaticLayout} component={AsyncLoginForm}/>
             <PublicRoute exact path='/contact-us' layout={StaticLayout} component={AsyncContact}/>
             <PublicRoute exact path='/about-us' layout={StaticLayout} component={AsyncAbout}/>

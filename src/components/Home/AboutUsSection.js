@@ -31,17 +31,17 @@ const AboutUsSection = () => {
                         <div>
                             <h6 className="h6-responsive mt-5 green-text text-uppercase">Change the way you
                                 travel!</h6>
-                            <h1 className="h1-responsive font-weight-bold mb-5 antelope-green">
+                            <h2 className="h2-responsive font-weight-bold mb-5 antelope-green">
                                 We are Antelope Nepal
-                            </h1>
+                            </h2>
 
-                            <h5 className={'h5-responsive font-weight-300'}>
+                            <h6 className={'h6-responsive font-weight-300 grey-text'}>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Alias doloribus eaque earum eos esse et facere hic illo labore laudantium minima
                                 molestias
                                 provident,
                                 quo reiciendis sequi similique tempora voluptas voluptate.
-                            </h5>
+                            </h6>
 
                             <Link to={'/about-us'}>
                                 <button className={'btn btn-sm antelope-green-bg-light-outline  white-text'}>
@@ -65,7 +65,7 @@ const AboutUsSection = () => {
                             <img src={search} className='icon-images-lg' alt=""/>
                             <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase ">Search</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
-                            <p className=" mb-md-0 mb-5">
+                            <p className=" mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Reprehenderit maiores aperiam minima assumenda deleniti hic.
                             </p>
@@ -74,7 +74,7 @@ const AboutUsSection = () => {
                             <img src={customize} className={'icon-images-lg'} alt=""/>
                             <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase ">Customize</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
-                            <p className="mb-md-0 mb-5">
+                            <p className="mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Reprehenderit maiores aperiam minima assumenda deleniti hic.
                             </p>
@@ -83,7 +83,7 @@ const AboutUsSection = () => {
                             <img src={design} className={'icon-images-lg'} alt=""/>
                             <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase">Design</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
-                            <p className="mb-md-0 mb-5">
+                            <p className="mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Reprehenderit maiores aperiam minima assumenda deleniti hic.
                             </p>
@@ -92,7 +92,7 @@ const AboutUsSection = () => {
                             <img src={checkout} className={'icon-images-lg'} alt=""/>
                             <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase">Checkout</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
-                            <p className="mb-md-0 mb-5">
+                            <p className="mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Reprehenderit maiores aperiam minima assumenda deleniti hic.
                             </p>

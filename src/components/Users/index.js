@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import StickyBox from 'react-sticky-box'
 
 import Wallpaper from '../../assets/images/wallpaper.jpg'
@@ -8,9 +8,12 @@ import Profile from './Profile'
 import Wishlist from './Wishlist/Wishlist'
 import Blogs from './Blogs/Blogs'
 import MyTrips from './MyTrips/MyTrips'
+import {AuthContext} from "../Layout/Header/AuthContext";
+import {getLocalStorage} from "../../utils/storageUtil";
 
 const Index = props => {
-
+    const authData = useContext(AuthContext);
+    const {userData} = authData;
     const [activeTabs, setActiveTabs] = useState('dashboard');
 
     const handleTabs = (tabs) => {
@@ -31,14 +34,14 @@ const Index = props => {
                         transform: 'translate3d(0,-50%,0)',
                         padding: '0'
                     }}>
-                        <img src={Kathmandu} alt="some name"
+                        <img src={userData && userData.userPicture || getLocalStorage('userPicture')} alt="some name"
                              className={'img-raised rounded-circle profile-img-raised d-block'}/>
                     </button>
                     <h3 className={'h3-responsive'} style={{
                         marginTop: '-50px'
                     }}
                     >
-                        User Name
+                        {userData && userData.userName || getLocalStorage('userName')}
                     </h3>
                 </div>
                 <div className="container-fluid">

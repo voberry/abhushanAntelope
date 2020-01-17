@@ -20,9 +20,17 @@ export let decodeUsername = (token) => {
 };
 
 export let getToken = () => {
-  return getLocalStorage('token');
+  return getLocalStorage("antelope-token");
 };
 
 export let isAuthenticated = () => {
-  return !!getToken() && !isTokenExpired(getToken());
+  return !!getToken();
 };
+
+export let getUserData = () => {
+  return getLocalStorage('userName');
+};
+
+export let isUserLoggedIn = () => {
+  return !!getUserData();
+}
