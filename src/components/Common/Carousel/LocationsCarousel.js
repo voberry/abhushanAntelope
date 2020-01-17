@@ -13,7 +13,7 @@ const Carousels = (props) => {
     const arrayData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     useEffect(() => {
-        let tempArray = chunkArrays(arrayData, 6);
+        let tempArray = chunkArrays(arrayData, 3);
         setCarouselData(tempArray);
     }, []);
 

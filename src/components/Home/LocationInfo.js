@@ -2,11 +2,11 @@ import React, {useContext, useState} from 'react';
 import {Tabs} from "antd";
 import {LocationsContext} from "../Contexts/LocationsContext";
 import Carousels from "../Common/Carousel";
-import {Link} from "react-router-dom";
-import {MDBIcon, MDBNav, MDBNavItem, MDBNavLink, MDBTabContent, MDBTabPane} from "mdbreact";
+const {TabPane} = Tabs;
 
 const LocationInfo = (props) => {
     const {location, index, form} = props;
+    const { getFieldDecorator } = form;
     const [state, setState] = useState({
         activeItem: "hotel"
     });
@@ -26,105 +26,170 @@ const LocationInfo = (props) => {
     // const handleSetInitialHotel = (location, hotel)
 
     return (
-        <div className={`container-fluid p-5`}>
+        <div className="d-flex justify-content-around flex-fill mx-5">
             <div className="row w-100">
-                <div className="col-md-4 col-sm-12">
-                    <div className="card">
-                        <img className="card-img-top" src={location.image}
-                             alt="Card image cap"/>
-                        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                             viewBox="0 0 583 95" style={{
-                            marginTop: '-3.7rem',
-                            background: 'transparent'
-                        }}>
-                            <polygon fill={'white'} points="0,52 583,95 0,95"/>
-                            <polygon fill={'white'} opacity=".5" points="0,42 583,95 683,0 0,95"/>
-                        </svg>
-                        <div className={'p-3'}>
-                            <h1 className="h1-responsive font-weight-bold antelope-green">
-                               {location.title}
-                        </h1>
+                <div className="col-sm-12 col-md-9">
+                    <div>
+                        <section className="my-5 ">
+                            <div className="row">
+                                <div className="col-lg-5 d-flex justify-content-center align-items-center">
+                                    <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+                                        <img className="img-fluid"
+                                             src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
+                                             alt="Sample image"/>
+                                        <a>
+                                            <div className="mask rgba-white-slight"/>
+                                        </a>
+                                    </div>
 
-                            <hr/>
-                            <h5 className={'h5-responsive font-weight-300'}>{location && location.description}</h5>
+                                </div>
 
-                        </div>
+                                <div className="col-lg-7 ">
+                                    <a className="green-text">
+                                        <h6 className="font-weight-bold mb-3 antelope-blue-light  "><i
+                                            className="fas fa-city pr-2"/>City of Temples</h6>
+                                    </a>
+                                    <h3 className="font-weight-bold mb-3 antelope-green text-uppercase">
+                                        <strong>{location && location.title}</strong></h3>
+
+                                    <p className={'secondary-text'}>{location && location.description}</p>
+
+                                    <br/>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+
+                    <div>
+                        <Tabs defaultActiveKey="hotels">
+                            <TabPane tab="Hotels" key="hotels">
+                                <Carousels locations={location} selectedItemFor={'hotel'}/>
+                            </TabPane>
+                            <TabPane tab="Vehicle Rentals" key="vehicles">
+                                <Carousels locations={location} selectedItemFor={'vehicles'}/>
+                            </TabPane>
+                            <TabPane tab="Restaurants" key="restaurants">
+                                <Carousels locations={location} selectedItemFor={'restaurants'}/>
+                            </TabPane>
+                        </Tabs>
                     </div>
                 </div>
 
-                <div className="col-md-8 col-sm-12">
-                    <MDBNav tabs className="nav-justified custom-md-tabs">
-                        <MDBNavItem>
-                            <MDBNavLink
-                                to="#"
-                                active={state.activeItem === "hotel"}
-                                onClick={toggle("hotel")}
-                                role="tab"
-                            >
-                                <MDBIcon icon="user"/> Hotels
-                            </MDBNavLink>
-                        </MDBNavItem>
-                        <MDBNavItem>
-                            <MDBNavLink
-                                to="#"
-                                active={state.activeItem === "vehicles"}
-                                onClick={toggle("vehicles")}
-                                role="tab"
-                            >
-                                <MDBIcon icon="heart"/> Vehicles
-                            </MDBNavLink>
-                        </MDBNavItem>
-                        <MDBNavItem>
-                            <MDBNavLink
-                                to="#"
-                                active={state.activeItem === "restaurants"}
-                                onClick={toggle("restaurants")}
-                                role="tab"
-                            >
-                                <MDBIcon icon="envelope"/> Restaurant
-                            </MDBNavLink>
-                        </MDBNavItem>
-                    </MDBNav>
-                    <MDBTabContent
-                        activeItem={state.activeItem}
-                    >
-                        <MDBTabPane tabId="hotel" role="tabpanel">
-                            <div className="row">
-                                <div className="col-md-3">
-                                    <div className="d-flex justify-content-around align-items-center w-100">
-                                        <div className={`card mx-2 recommended-item`}>
-                                            <div className="view overlay">
-                                                <img className="card-img-top h-300 carousel-images-size"
-                                                     src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                                     alt="Card image cap"/>
-                                                <a>
-                                                    <div className="mask rgba-black-strong flex-center">
-                                                        <div>
-                                                            <h3 className="white-text">Hotel Name</h3>
-                                                            <h6 className={'white-text'}>
-                                                                <Link to="/#" target="_blank">
-                                                                    Read More
-                                                                </Link>
-                                                            </h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                <div className="col-sm-12 col-md-3">
+                    <div className="card mt-5 flat-box-shadow">
+                        <div className="card-body">
+                            <h3 className="card-title antelope-green">{location.title} Packages</h3>
+
+                            <hr/>
+
+                            {selectedHotel && selectedHotel.map(item => item.location).includes(location.title) &&
+                            <div>
+                                {getFieldDecorator(`locationInformation['${location.title}']['hotel']`, {
+                                    initialValue: selectedHotel && selectedHotel.find(item => item.location === location.title)
+                                        && selectedHotel.find(item => item.location === location.title).hotel,
+                                    rules: [
+                                        {
+                                            required: true,
+                                            message: `Please select a hotel for ${location.title} `
+                                        }
+                                    ]
+                                })(<div/>)}
+                                <h4 className="card-title antelope-green">Hotel {selectedHotel.hotel}</h4>
+                                <h6 className={'antelope-blue-light'}>Location, City</h6>
+                                <div>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'far fa-star yellow-text'}/>
+
+                                    <span className={'text-muted ml-2'}>(15 reviews)</span>
                                 </div>
-                                <div className="col-md-9">
-                                    <Carousels locations={location} selectedItemFor={'hotel'}/>
-                                </div>
+                                <span className={'pr-2'}>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-search'}/>
+                                            </button>
+                                        </span>
+                                <span>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-trash'}/>
+                                            </button>
+                                    </span>
+
+                                <hr/>
                             </div>
-                        </MDBTabPane>
-                        <MDBTabPane tabId="vehicles" role="tabpanel">
-                            <Carousels locations={location} selectedItemFor={'vehicles'}/>
-                        </MDBTabPane>
-                        <MDBTabPane tabId="restaurants" role="tabpanel">
-                            <Carousels locations={location} selectedItemFor={'restaurants'}/>
-                        </MDBTabPane>
-                    </MDBTabContent>
+                            }
+
+
+
+                            {selectedVehicle && selectedVehicle.map(item => item.location).includes(location.title) &&
+                            <div>
+                                {getFieldDecorator(`locationInformation['${location.title}']['vehicle']`, {
+                                    initialValue: selectedVehicle && selectedVehicle.find(item => item.location === location.title)
+                                        && selectedVehicle.find(item => item.location === location.title).vehicle,
+                                    rules: [
+                                        {
+                                            required: true,
+                                            message: `Please select a vehicle for ${location.title} `
+                                        }
+                                    ]
+                                })(<div/>)}
+                                <h4 className="card-title antelope-green">Vehicle {selectedVehicle.vehicle}</h4>
+                                <h6 className={'antelope-blue-light'}>Type</h6>
+                                <span className={'pr-2'}>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-search'}/>
+                                            </button>
+                                        </span>
+                                <span>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-trash'}/>
+                                            </button>
+                                    </span>
+
+                                <hr/>
+                            </div>
+                            }
+
+                            {selectedRestaurants && selectedRestaurants.map(item => item.location).includes(location.title) &&
+                            <div>
+                                {getFieldDecorator(`locationInformation['${location.title}']['restaurant']`, {
+                                    initialValue: selectedRestaurants && selectedRestaurants.find(item => item.location === location.title)
+                                        && selectedRestaurants.find(item => item.location === location.title).restaurant,
+                                    rules: [
+                                        {
+                                            required: true,
+                                            message: `Please select a restaurant for ${location.title} `
+                                        }
+                                    ]
+                                })(<div/>)}
+                                <h4 className="card-title antelope-green">Restaurant {selectedRestaurants.restaurant}</h4>
+                                <h6 className={'antelope-blue-light'}>Location, City</h6>
+                                <div>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'fas fa-star yellow-text'}/>
+                                    <i className={'far fa-star yellow-text'}/>
+
+                                    <span className={'text-muted ml-2'}>(15 reviews)</span>
+                                </div>
+                                <span className={'pr-2'}>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-search'}/>
+                                            </button>
+                                        </span>
+                                <span>
+                                            <button className={'btn btn-sm flat-box-shadow'}>
+                                                <i className={'fas fa-trash'}/>
+                                            </button>
+                                    </span>
+                            </div>
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
