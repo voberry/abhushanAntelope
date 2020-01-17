@@ -1,13 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {MDBModal} from "mdbreact";
 import { withRouter} from 'react-router-dom';
 import {Form, Button} from 'antd'
 import '../../../assets/css/authForm.css'
+import {Auth0Context} from "../../Contexts/Auth0Context/react-auth0-spa";
 
 const FormItem = Form.Item;
 
 const LoginModal = (props) => {
     const {form} = props;
+    const auth0Context = useContext(Auth0Context);
+    const {loginWithPopup } = auth0Context;
     const {getFieldDecorator, validateFields, resetFields, setFieldsValue, getFieldValue} = form;
 
     const [isPhoneNumberRequired, setIsPhoneNumberRequired] = useState(false);

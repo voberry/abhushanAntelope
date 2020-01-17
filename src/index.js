@@ -14,16 +14,36 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import './assets/style.css'
+import config from './constants/authConfig'
+
+import {Auth0Provider} from './components/Contexts/Auth0Context/react-auth0-spa';
 
 import * as serviceWorker from './serviceWorker';
+
 const store = configureStore();
 const mountNode = document.getElementById('root');
+
+// A function that routes the user to the right place
+// after login
+const onRedirectCallback = appState => {
+    history.push(
+        appState && appState.targetUrl
+            ? appState.targetUrl
+            : window.location.pathname
+    );
+};
+
+
 ReactDOM.render(<Provider store={store}>
         <ConnectedRouter history={history}>
             <Router history={history}>
-                <AuthProvider>
+                <Auth0Provider
+                    domain={config.domain}
+                    client_id={config.clientId}
+                    redirect_uri={window.location.origin}
+                    onRedirectCallback={onRedirectCallback}>
                     <App/>
-                </AuthProvider>
+                </Auth0Provider>
             </Router>
         </ConnectedRouter>
     </Provider>,
