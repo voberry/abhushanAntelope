@@ -54,7 +54,7 @@ const AboutUsSection = () => {
                 </MDBRow>
             </section>
 
-            <section className="container-fluid d-flex justify-content-around align-items-center px-5 pb-5 gray-background">
+            <section className="container-fluid d-flex justify-content-around align-items-center px-5 pb-5">
                 <div className={'text-center'}>
                     <h1 className="h1-responsive font-weight-bold my-5 antelope-blue-light  ">
                         How we work

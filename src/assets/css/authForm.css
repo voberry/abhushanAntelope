@@ -28,8 +28,8 @@
 
 .mdbModal button {
     border-radius: 20px;
-    border: 1px solid #009a4d;
-    background-color: #009a4d;
+    border: 1px solid #6a9086;
+    background-color: #6a9086;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -143,9 +143,9 @@
 }
 
 .authOverlay {
-    background: #1fb274;
-    background: -webkit-linear-gradient(to right, #009a4d, #4caf50);
-    background: linear-gradient(to right, #009a4d, #4caf50);
+    background: #6A9086;
+    background: -webkit-linear-gradient(to right, #6A9086, #389080);
+    background: linear-gradient(to right, #6A9086, #389080);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;

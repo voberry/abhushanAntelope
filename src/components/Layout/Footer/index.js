@@ -19,7 +19,7 @@ const FooterPage = () => {
                             </Form.Item>
 
                             <Form.Item>
-                                <button className={'btn gantelope-green-bg-light-outline  white-text'} type="submit">
+                                <button className={'btn antelope-green-bg-light-outline  white-text'} type="submit">
                                     Subscribe
                                 </button>
                             </Form.Item>
@@ -109,7 +109,7 @@ const FooterPage = () => {
                         <h5 className="mb-1">Where do you want to go next?</h5>
                     </li>
                     <li className="list-inline-item">
-                        <Link to='/our-services/places'  className="btn btn-danger btn-rounded">Start Planning!</Link>
+                        <Link to='/our-services/places'  className="btn antelope-green-bg btn-rounded">Start Planning!</Link>
                     </li>
                 </ul>
 

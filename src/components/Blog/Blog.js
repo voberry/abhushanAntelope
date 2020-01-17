@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <div className={'container p-5'}>
             <section>
-                <h2 className="h1-responsive font-weight-bold text-center mb-5">Our Blogs</h2>
+                <h2 className="font-weight-bold mb-5 antelope-green text-center">Our Blogs</h2>
                 <p className="text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate
                     velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -27,11 +27,11 @@ const Blog = () => {
                     </div>
                     <div className="col-lg-7">
                         <a href="#!" className="green-text">
-                            <h6 className="font-weight-bold mb-3"><i className="fas fa-utensils pr-2"></i>Category</h6>
+                            <h6 className="font-weight-bold mb-3 small"><i className="fas fa-suitcase pr-2"></i>Category</h6>
                         </a>
                         <h3 className="font-weight-bold mb-3">
                             <Link to={'/blogs/title'}>
-                                <strong>Title of the blog</strong>
+                                <h5 className={'font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase '}>Title of the blog</h5>
                             </Link>
                         </h3>                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque
                         nihil impedit quo minus id
@@ -39,7 +39,7 @@ const Blog = () => {
                         placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
                         officiis debitis.</p>
                         <p>by <a><strong>Carine Fox</strong></a>, 19/08/2018</p>
-                        <a className="btn btn-success btn-md">Read more</a>
+                        <a className="btn antelope-green-bg btn-md">Read more</a>
                     </div>
                 </div>
                 <hr className="my-5"/>
@@ -47,11 +47,11 @@ const Blog = () => {
                     <div className="col-lg-7">
 
                         <a href="#!" className="pink-text">
-                            <h6 className="font-weight-bold mb-3"><i className="fas fa-image pr-2"></i>Category</h6>
+                            <h6 className="font-weight-bold mb-3 small"><i className="fas fa-suitcase pr-2"></i>Category</h6>
                         </a>
                         <h3 className="font-weight-bold mb-3">
                             <Link to={'/blogs/title'}>
-                                <strong>Title of the blog</strong>
+                                <h5 className={'font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase '}>Title of the blog</h5>
                             </Link>
                         </h3>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
@@ -60,7 +60,7 @@ const Blog = () => {
                             non
                             provident.</p>
                         <p>by <a><strong>Carine Fox</strong></a>, 14/08/2018</p>
-                        <a className="btn btn-pink btn-md mb-lg-0 mb-4">Read more</a>
+                        <a className="btn antelope-green-bg btn-md">Read more</a>
 
                     </div>
 
@@ -95,11 +95,11 @@ const Blog = () => {
                     </div>
                     <div className="col-lg-7">
                         <a href="#!" className="indigo-text">
-                            <h6 className="font-weight-bold mb-3"><i className="fas fa-suitcase pr-2"></i>Category</h6>
+                            <h6 className="font-weight-bold mb-3 small"><i className="fas fa-suitcase pr-2"></i>Category</h6>
                         </a>
                         <h3 className="font-weight-bold mb-3">
                             <Link to={'/blogs/title'}>
-                                <strong>Title of the blog</strong>
+                                <h5 className={'font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase '}>Title of the blog</h5>
                             </Link>
                         </h3>                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
                         aut fugit, sed quia
@@ -107,7 +107,7 @@ const Blog = () => {
                         magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro qui dolorem ipsum quia
                         sit amet.</p>
                         <p>by <a><strong>Carine Fox</strong></a>, 11/08/2018</p>
-                        <a className="btn btn-indigo btn-md">Read more</a>
+                        <a className="btn antelope-green-bg btn-md">Read more</a>
 
                     </div>
 

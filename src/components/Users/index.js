@@ -34,20 +34,16 @@ const Index = props => {
                         <img src={Kathmandu} alt="some name"
                              className={'img-raised rounded-circle profile-img-raised d-block'}/>
                     </button>
-                    <h1 className={'h1-responsive'} style={{
+                    <h3 className={'h3-responsive'} style={{
                         marginTop: '-50px'
                     }}
                     >
                         User Name
-                    </h1>
-
-                    <h6 className={'h6-responsive'}>
-                        User description
-                    </h6>
+                    </h3>
                 </div>
                 <div className="container-fluid">
                     <div className="row d-flex">
-                        <nav className="col-sm-12 col-md-2 p-5">
+                        <nav className="col-sm-12 col-md-2 px-5">
                             <StickyBox offsetTop={100}>
                             <ul className="nav nav-pills nav-pills-primary flex-column" >
                                 <li className="nav-item mx-5 mb-2">
@@ -103,7 +99,7 @@ const Index = props => {
                             </ul>
                             </StickyBox>
                         </nav>
-                        <div className="col-sm-12 col-md-8 py-5">
+                        <div className="col-sm-12 col-md-8">
                             <div className="tab-content p-0">
                                 <div className={`tab-pane ${activeTabs === 'dashboard' && 'active'}`}>
                                     <Dashboard/>
@@ -122,10 +118,7 @@ const Index = props => {
                                 </div>
                             </div>
                         </div>
-
-
-
-                        <div className="col-sm-12 col-md-2 p-5">
+                        <div className="col-sm-12 col-md-2 px-5">
                             <StickyBox offsetTop={100} >
                             <div className="row">
                                 <div className="col-sm-12 col-md-12">

@@ -30,22 +30,22 @@ const BlogContent = props => {
                                 <h2 className="font-weight-bold"><a>Title of the blog</a></h2>
                                 <p>Written by <a><strong>Abby Madison</strong></a>, 26/08/2018</p>
                                 <div className="social-counters">
-                                    <a className="btn btn-fb">
+                                    <a className="btn btn-fb btn-sm">
                                         <i className="fab fa-facebook-f pr-2"></i>
                                         <span className="clearfix d-none d-md-inline-block">Facebook</span>
                                     </a>
                                     <span className="counter">46</span>
-                                    <a className="btn btn-tw">
+                                    <a className="btn btn-tw btn-sm">
                                         <i className="fab fa-twitter pr-2"></i>
                                         <span className="clearfix d-none d-md-inline-block">Twitter</span>
                                     </a>
                                     <span className="counter">22</span>
-                                    <a className="btn btn-gplus">
+                                    <a className="btn btn-gplus btn-sm">
                                         <i className="fab fa-google-plus-g pr-2"></i>
                                         <span className="clearfix d-none d-md-inline-block">Google+</span>
                                     </a>
                                     <span className="counter">31</span>
-                                    <a className="btn btn-default">
+                                    <a className="btn btn-default btn-sm">
                                         <i className="far fa-comments pr-2"></i>
                                         <span className="clearfix d-none d-md-inline-block">Comments</span>
                                     </a>
@@ -118,7 +118,8 @@ const BlogContent = props => {
                                             <textarea name="comment" className={'form-control'} />
                                         </div>
                                     </div>
-                                    
+
+                                    <hr/>
                                     <div className="row">
                                         <div className="col-md-1">
                                             <img src={Image}  style={{
@@ -127,14 +128,14 @@ const BlogContent = props => {
                                             }} alt=""/>
                                         </div>
                                         <div className="col-md-11">
-                                            <textarea name="comment" className={'form-control'} />
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                                                . Amet animi aperiam blanditiis deleniti ex exercitationem,
+                                                fugit quisquam ratione sequi sunt tempore voluptatem
+                                                voluptatum! Eius itaque magni natus omnis sequi voluptatum.
+                                            </p>
                                         </div>
                                     </div>
-
-                                    <hr/>
-                                    <h6 className={'font-weight-bold'}>
-
-                                    </h6>
                                 </div>
                                 :
                                 <div className={'mt-4'}>
