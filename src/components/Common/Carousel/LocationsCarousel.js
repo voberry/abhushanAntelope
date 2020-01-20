@@ -49,8 +49,8 @@ const Carousels = (props) => {
                                         <a>
                                             <div className="mask rgba-black-strong flex-center">
                                                 <div>
-                                                <h3 className="white-text primary-font">Hotel Name</h3>
-                                                <h6 className={'white-text'}>
+                                                <h4 className="white-text primary-font">Hotel Name</h4>
+                                                <h6 className={'white-text antelope-green'}>
                                                     <Link to="/#" target="_blank">
                                                     Read More
                                                     </Link>
