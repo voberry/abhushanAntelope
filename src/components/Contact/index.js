@@ -15,7 +15,7 @@ const ContactPage = () => {
                 }}/>
             </div>
             <section className="container-fluid p-5 my-5">
-                <h2 className="h1-responsive font-weight-bold text-center mb-5 primary-font">
+                <h2 className="h1-responsive font-weight-bolder text-center mb-5 primary-font">
                     Contact us
                 </h2>
                 <p className="text-center w-responsive mx-auto pb-5">

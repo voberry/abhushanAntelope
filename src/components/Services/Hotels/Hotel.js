@@ -35,7 +35,7 @@ const Hotel = () => {
                             <div className="col-md-7">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h4 className="font-weight-bold mb-3 antelope-green h4-responsive"><strong>Kathmandu</strong></h4>
+                                        <h4 className="font-weight-bolder mb-3 antelope-green h4-responsive"><strong>Kathmandu</strong></h4>
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus enim eum harum quae tenetur, ullam? Ab adipisci aut culpa earum perspiciatis porro quis quisquam reiciendis velit veritatis, voluptas voluptates?
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi, commodi doloribus magnam magni modi placeat quia quidem sint ut! Asperiores consectetur dolores, eos itaque magni omnis quisquam reprehenderit voluptatum!
@@ -49,7 +49,7 @@ const Hotel = () => {
                             <div className="col-md-5">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h6 className="font-weight-bold mb-3 antelope-green h6-responsive"><strong>Facilities</strong></h6>
+                                        <h6 className="font-weight-bolder mb-3 antelope-green h6-responsive"><strong>Facilities</strong></h6>
                                         <ul className="list-group">
                                             <li className="list-group-item">Cras justo odio</li>
                                             <li className="list-group-item">Dapibus ac facilisis in</li>

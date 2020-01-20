@@ -61,9 +61,9 @@ const Home = (props) => {
                         <div
                             className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                             <div>
-                                <h1 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>Adventures you
-                                    dream of.</h1>
-                                <h1 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>With us.</h1>
+                                <h2 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>Adventures you
+                                    dream of.</h2>
+                                <h2 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>With us.</h2>
                                 <br/>
                                 <h6 className={!isSubmitted ? `text-center px-5 mx-5 white-text ` : `hide`}>With Antelope Nepal, you
                                     can create the holidays you
@@ -217,8 +217,8 @@ const Home = (props) => {
                                     <div className="text-center">
                                         <div>
                                             <img src={item.icon === 'animal' ? animal : item.icon === 'party' ? party : temple} alt="" className='icon-images-lg'/>
-                                            <h5 className="font-weight-bold my-2 antelope-green">{item.title}</h5>
-                                            <h6 className="font-weight-bold my-2 antelope-green">{item.day} Days</h6>
+                                            <h5 className="font-weight-bolder my-2 antelope-green">{item.title}</h5>
+                                            <h6 className="font-weight-bolder my-2 antelope-green">{item.day} Days</h6>
                                         </div>
                                     </div>
                                 )}
@@ -257,14 +257,13 @@ const Home = (props) => {
 
                 <div className={'d-flex justify-content-center align-items-center'}>
                     <div>
-                        <h1 className="h1-responsive font-weight-bold mb-1 primary-font antelope-green">
+                        <h2 className="font-weight-bolder mb-1 primary-font antelope-green">
                             Customize your trip
-                        </h1>
-
+                        </h2>
                         <hr className={'text-center w-25 antelope-green-bg'}/>
-
                     </div>
                 </div>
+
                 <LocationsContextProvider>
                     <Form layout="inline" onSubmit={handleLocationsSubmit}>
                         {locations && locations.map((item, index) => <LocationInfo location={item} index={index}
@@ -273,16 +272,11 @@ const Home = (props) => {
                         <div className={'d-flex justify-content-center align-items-center'}>
                             <div>
                                 <button type="button" className="btn btn-flat btn-lg antelope-green-bg">
-
                                     Submit and Go !
                                 </button>
-
                             </div>
                         </div>
-
                     </Form>
-
-
                 </LocationsContextProvider>
 
             </MDBAnimation>

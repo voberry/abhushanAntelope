@@ -11,8 +11,8 @@ const Gallery = () => {
     return (
         <div>
             <div className={'container-fluid p-5 w-100'}>
-                <h1 className={`h1-responsive h1-lg antelope-green text-center font-weight-bold  primary-font`}>YOUR JOURNEY WITH US.</h1>
-                <h5 className={`h5-responsive h5-lg text-center font-weight-bold secondary-text`}>See the memories you've made</h5>
+                <h1 className={`h1-responsive h1-lg antelope-green text-center font-weight-bolder  primary-font`}>YOUR JOURNEY WITH US.</h1>
+                <h5 className={`h5-responsive h5-lg text-center font-weight-bolder secondary-text`}>See the memories you've made</h5>
                 <br/>
                 <div className={'container'}>
                     <div className="gallery" id="gallery">

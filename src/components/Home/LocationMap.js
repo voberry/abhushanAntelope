@@ -67,7 +67,7 @@ const LocationMap = (props) => {
                                                       radius={5000}>
                 <Tooltip style={{
                     width: '200px',
-                }}> <h6 className={'red-text font-weight-bold text-center'}>{item.title}</h6>
+                }}> <h6 className={'red-text font-weight-bolder text-center'}>{item.title}</h6>
                     <img src={item.image} alt={'Ktm'} height={'200px'} width={'200px'}/>
                 </Tooltip>
             </Circle>)}

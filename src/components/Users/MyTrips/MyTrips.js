@@ -3,7 +3,7 @@ import React from 'react';
 const MyTrips = () => {
     return (
         <div>
-            <h5 className={'text-center font-weight-bold h5-responsive'}>My Trips</h5>
+            <h5 className={'text-center font-weight-bolder h5-responsive'}>My Trips</h5>
             <div className="row">
                 <div className="col-sm-12 col-md-12">
                     <div className="timeline-main">
@@ -18,7 +18,7 @@ const MyTrips = () => {
                                     <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(135).jpg"
                                          className="img-fluid"
                                          alt="Responsive image" />
-                                        <h4 className="font-weight-bold p-4 mb-0">Ut enim ad minim veniam</h4>
+                                        <h4 className="font-weight-bolder p-4 mb-0">Ut enim ad minim veniam</h4>
                                         <p className="text-muted px-4 mb-0"><i className="far fa-clock"
                                                                                aria-hidden="true"/> 2017</p>
                                         <p className="mb-0 p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -37,7 +37,7 @@ const MyTrips = () => {
                                     <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
                                          className="img-fluid"
                                          alt="Responsive image" />
-                                        <h4 className="font-weight-bold p-4 mb-0">Duis aute irure dolor</h4>
+                                        <h4 className="font-weight-bolder p-4 mb-0">Duis aute irure dolor</h4>
                                         <p className="text-muted px-4 mb-0"><i className="far fa-clock"
                                                                                aria-hidden="true"/> 2016</p>
                                         <p className="mb-0 p-4">Sed ut perspiciatis unde omnis iste natus error sit
@@ -60,7 +60,7 @@ const MyTrips = () => {
                                     <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(131).jpg"
                                          className="img-fluid"
                                          alt="Responsive image" />
-                                        <h4 className="font-weight-bold p-4 mb-0">Sed ut nihil unde omnis</h4>
+                                        <h4 className="font-weight-bolder p-4 mb-0">Sed ut nihil unde omnis</h4>
                                         <p className="text-muted px-4 mb-0"><i className="far fa-clock"
                                                                                aria-hidden="true"/> 2015</p>
                                         <p className="mb-0 p-4">Neque porro quisquam est, qui dolorem ipsum quia dolor
@@ -85,7 +85,7 @@ const MyTrips = () => {
                                     <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg"
                                          className="img-fluid"
                                          alt="Responsive image" />
-                                        <h4 className="font-weight-bold p-4 mb-0"> Quis autem vel eum voluptate</h4>
+                                        <h4 className="font-weight-bolder p-4 mb-0"> Quis autem vel eum voluptate</h4>
                                         <p className="text-muted px-4 mb-0"><i className="far fa-clock"
                                                                                aria-hidden="true"/> 2014</p>
                                         <p className="mb-0 p-4">At vero eos et accusamus et iusto odio dignissimos
@@ -107,7 +107,7 @@ const MyTrips = () => {
                                     <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg"
                                          className="img-fluid"
                                          alt="Responsive image" />
-                                        <h4 className="font-weight-bold p-4 mb-0">Mussum ipsum cacilds</h4>
+                                        <h4 className="font-weight-bolder p-4 mb-0">Mussum ipsum cacilds</h4>
                                         <p className="text-muted px-4 mb-0"><i className="far fa-clock"
                                                                                aria-hidden="true"/> 2013</p>
                                         <p className="mb-0 p-4">Temporibus autem quibusdam et aut officiis debitis aut

@@ -12,7 +12,7 @@ const FooterPage = () => {
 
                     <div className="col-sm-12 col-md-4 mx-auto text-center">
 
-                        <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Newsletter</h5>
+                        <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">Newsletter</h5>
                         <Form onSubmit={()=> console.log('submission form')}>
                             <Form.Item>
                                 <Input placeholder={'Email'} className={'form-control'}/>
@@ -33,7 +33,7 @@ const FooterPage = () => {
 
                         <div className="col-sm-12 col-md-2 mx-auto">
 
-                            <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Company</h5>
+                            <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">Company</h5>
 
                             <ul className="list-unstyled">
                                 <li className={'footer-lists'}>
@@ -56,7 +56,7 @@ const FooterPage = () => {
 
                             <div className="col-sm-12 col-md-2 mx-auto">
 
-                                <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Support</h5>
+                                <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">Support</h5>
 
                                 <ul className="list-unstyled">
                                     <li className={'footer-lists'}>
@@ -79,7 +79,7 @@ const FooterPage = () => {
 
                                 <div className="col-sm-12 col-md-2 mx-auto">
 
-                                    <h5 className="font-weight-bold text-uppercase mt-3 mb-4">More</h5>
+                                    <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">More</h5>
 
                                     <ul className="list-unstyled">
                                         <li className={'footer-lists'}>

@@ -31,7 +31,7 @@ const AboutUsSection = () => {
                         <div>
                             <h6 className="h6-responsive mt-5 green-text text-uppercase">Change the way you
                                 travel!</h6>
-                            <h2 className="h2-responsive font-weight-bold mb-5 antelope-green primary-font">
+                            <h2 className="h2-responsive font-weight-bolder mb-5 antelope-green primary-font">
                                 We are Antelope Nepal
                             </h2>
 
@@ -56,14 +56,14 @@ const AboutUsSection = () => {
 
             <section className="container-fluid d-flex justify-content-around align-items-center px-5 pb-5">
                 <div className={'text-center'}>
-                    <h1 className="h1-responsive font-weight-bold my-5 antelope-blue-light text-uppercase">
+                    <h1 className="h1-responsive font-weight-bolder my-5 antelope-blue-light text-uppercase">
                         How we work
                     </h1>
 
                     <MDBRow className={'p-5'}>
                         <MDBCol md="3">
                             <img src={search} className='icon-images-lg' alt=""/>
-                            <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase ">Search</h5>
+                            <h5 className="font-weight-bolder mt-4 mb-2 antelope-blue-light text-uppercase ">Search</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
                             <p className=" mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -72,7 +72,7 @@ const AboutUsSection = () => {
                         </MDBCol>
                         <MDBCol md="3">
                             <img src={customize} className={'icon-images-lg'} alt=""/>
-                            <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase ">Customize</h5>
+                            <h5 className="font-weight-bolder mt-4 mb-2 antelope-blue-light text-uppercase ">Customize</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
                             <p className="mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -81,7 +81,7 @@ const AboutUsSection = () => {
                         </MDBCol>
                         <MDBCol md="3">
                             <img src={design} className={'icon-images-lg'} alt=""/>
-                            <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase">Design</h5>
+                            <h5 className="font-weight-bolder mt-4 mb-2 antelope-blue-light text-uppercase">Design</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
                             <p className="mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -90,7 +90,7 @@ const AboutUsSection = () => {
                         </MDBCol>
                         <MDBCol md="3">
                             <img src={checkout} className={'icon-images-lg'} alt=""/>
-                            <h5 className="font-weight-bold mt-4 mb-2 antelope-blue-light text-uppercase">Checkout</h5>
+                            <h5 className="font-weight-bolder mt-4 mb-2 antelope-blue-light text-uppercase">Checkout</h5>
                             <hr className={'text-center w-25 antelope-green-bg'}/>
                             <p className="mb-md-0 mb-5 grey-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

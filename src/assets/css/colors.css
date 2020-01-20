@@ -86,3 +86,13 @@
 .custom-md-tabs{
     background-color: #6a9086;
 }
+
+.ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-tab {
+    color: #6a9086;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.ant-tabs-ink-bar {
+    background-color: #6a9086;
+}
