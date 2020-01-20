@@ -15,7 +15,7 @@ const ContactPage = () => {
                 }}/>
             </div>
             <section className="container-fluid p-5 my-5">
-                <h2 className="h1-responsive font-weight-bold text-center mb-5">
+                <h2 className="h1-responsive font-weight-bold text-center mb-5 primary-font">
                     Contact us
                 </h2>
                 <p className="text-center w-responsive mx-auto pb-5">
@@ -28,7 +28,7 @@ const ContactPage = () => {
                         <MDBCard>
                             <MDBCardBody>
                                 <div className="form-header antelope-green-bg-light-outline  accent-1">
-                                    <h3 className="mt-2">
+                                    <h3 className="mt-2 primary-font">
                                         <MDBIcon icon="envelope"/> Write to us:
                                     </h3>
                                 </div>

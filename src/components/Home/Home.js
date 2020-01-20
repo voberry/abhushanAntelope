@@ -61,9 +61,9 @@ const Home = (props) => {
                         <div
                             className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                             <div>
-                                <h1 className={!isSubmitted ? `h1-responsive h1-lg font-adlanta` : `hide`}>Adventures you
+                                <h1 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>Adventures you
                                     dream of.</h1>
-                                <h1 className={!isSubmitted ? `h1-responsive h1-lg` : `hide`}>With us.</h1>
+                                <h1 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>With us.</h1>
                                 <br/>
                                 <h6 className={!isSubmitted ? `text-center px-5 mx-5 white-text ` : `hide`}>With Antelope Nepal, you
                                     can create the holidays you
@@ -257,7 +257,7 @@ const Home = (props) => {
 
                 <div className={'d-flex justify-content-center align-items-center'}>
                     <div>
-                        <h1 className="h1-responsive font-weight-bold mb-1 antelope-green">
+                        <h1 className="h1-responsive font-weight-bold mb-1 primary-font antelope-green">
                             Customize your trip
                         </h1>
 

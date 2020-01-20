@@ -27,7 +27,7 @@ const BlogContent = props => {
                             </div>
 
                             <div className="card-body card-body-cascade text-center">
-                                <h2 className="font-weight-bold"><a>Title of the blog</a></h2>
+                                <h2 className="font-weight-bold primary-font"><a>Title of the blog</a></h2>
                                 <p>Written by <a><strong>Abby Madison</strong></a>, 26/08/2018</p>
                                 <div className="social-counters">
                                     <a className="btn btn-fb btn-sm">

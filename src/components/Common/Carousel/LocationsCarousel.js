@@ -49,7 +49,7 @@ const Carousels = (props) => {
                                         <a>
                                             <div className="mask rgba-black-strong flex-center">
                                                 <div>
-                                                <h3 className="white-text">Hotel Name</h3>
+                                                <h3 className="white-text primary-font">Hotel Name</h3>
                                                 <h6 className={'white-text'}>
                                                     <Link to="/#" target="_blank">
                                                     Read More

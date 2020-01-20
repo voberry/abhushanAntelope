@@ -80,7 +80,7 @@ const LocationInfo = (props) => {
                 <div className="col-sm-12 col-md-3">
                     <div className="card mt-5 flat-box-shadow">
                         <div className="card-body">
-                            <h3 className="card-title antelope-green">{location.title} Packages</h3>
+                            <h3 className="card-title antelope-green primary-font">{location.title} Packages</h3>
 
                             <hr/>
 
@@ -96,7 +96,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div/>)}
-                                <h4 className="card-title antelope-green">Hotel {selectedHotel.hotel}</h4>
+                                <h4 className="card-title antelope-green primary-font">Hotel {selectedHotel.hotel}</h4>
                                 <h6 className={'antelope-blue-light'}>Location, City</h6>
                                 <div>
                                     <i className={'fas fa-star yellow-text'}/>
@@ -136,7 +136,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div/>)}
-                                <h4 className="card-title antelope-green">Vehicle {selectedVehicle.vehicle}</h4>
+                                <h4 className="card-title antelope-green primary-font">Vehicle {selectedVehicle.vehicle}</h4>
                                 <h6 className={'antelope-blue-light'}>Type</h6>
                                 <span className={'pr-2'}>
                                             <button className={'btn btn-sm flat-box-shadow'}>
@@ -165,7 +165,7 @@ const LocationInfo = (props) => {
                                         }
                                     ]
                                 })(<div/>)}
-                                <h4 className="card-title antelope-green">Restaurant {selectedRestaurants.restaurant}</h4>
+                                <h4 className="card-title antelope-green primary-font">Restaurant {selectedRestaurants.restaurant}</h4>
                                 <h6 className={'antelope-blue-light'}>Location, City</h6>
                                 <div>
                                     <i className={'fas fa-star yellow-text'}/>

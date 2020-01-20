@@ -1,17 +1,23 @@
 
 body {
-    font-family: 'Comfortaa', cursive !important;
-    }
+    font-family: 'Lato', sans-serif !important;
+}
+
+.primary-font {
+    font-family: 'Montserrat', sans-serif !important;
+}
 
 
 .h1-lg{
     font-size: 4rem;
     color: white !important;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .h3-lg{
     font-size: 2rem;
     color: white !important;
+    font-family: 'Montserrat', sans-serif !important;
     transition: font 1.5s ease
 }
 

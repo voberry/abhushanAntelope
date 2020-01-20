@@ -31,7 +31,7 @@ const AboutUsSection = () => {
                         <div>
                             <h6 className="h6-responsive mt-5 green-text text-uppercase">Change the way you
                                 travel!</h6>
-                            <h2 className="h2-responsive font-weight-bold mb-5 antelope-green">
+                            <h2 className="h2-responsive font-weight-bold mb-5 antelope-green primary-font">
                                 We are Antelope Nepal
                             </h2>
 
@@ -56,7 +56,7 @@ const AboutUsSection = () => {
 
             <section className="container-fluid d-flex justify-content-around align-items-center px-5 pb-5">
                 <div className={'text-center'}>
-                    <h1 className="h1-responsive font-weight-bold my-5 antelope-blue-light  ">
+                    <h1 className="h1-responsive font-weight-bold my-5 antelope-blue-light text-uppercase">
                         How we work
                     </h1>
 
