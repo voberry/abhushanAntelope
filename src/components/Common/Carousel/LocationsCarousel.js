@@ -27,7 +27,6 @@ const Carousels = (props) => {
             <i className={'fas fa-chevron-left'}/>
         </button>;
 
-
     return (
         <div className={'multi-carousel'}>
             <Carousel touch={true} className={'mb-5'} nextIcon={nextItemButton} prevIcon={previousItemButton}
