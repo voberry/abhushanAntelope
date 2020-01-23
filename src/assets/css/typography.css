@@ -9,13 +9,11 @@ body {
 
 
 .h1-lg{
-    font-size: 4rem;
     color: white !important;
     font-family: 'Montserrat', sans-serif !important;
 }
 
 .h3-lg{
-    font-size: 2rem;
     color: white !important;
     font-family: 'Montserrat', sans-serif !important;
     transition: font 1.5s ease
@@ -30,10 +28,12 @@ body {
 .main-page-form .ant-form-item-label > label {
     color: white;
     font-weight: 600;
+    text-align: left;
+    margin-bottom: 0;
 }
 
 .ant-slider-step {
-    background: #00c8518c
+    background: #999e9b8c
 }
 
 .footer-lists{

@@ -46,7 +46,7 @@ const LocationInfo = (props) => {
 
                                 <div className="col-lg-7 ">
                                     <a className="green-text">
-                                        <h6 className="font-weight-bolder mb-3 antelope-blue-light  "><i
+                                        <h6 className="font-weight-bolder mb-3 grey-text"><i
                                             className="fas fa-city pr-2"/>City of Temples</h6>
                                     </a>
                                     <h3 className="font-weight-bolder mb-3 antelope-green text-uppercase">

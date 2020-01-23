@@ -12,7 +12,7 @@ const FooterPage = () => {
 
                     <div className="col-sm-12 col-md-4 mx-auto text-center">
 
-                        <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">Newsletter</h5>
+                        <h5 className="font-weight-bolder text-uppercase mt-3 mb-4 white-text">Newsletter</h5>
                         <Form onSubmit={()=> console.log('submission form')}>
                             <Form.Item>
                                 <Input placeholder={'Email'} className={'form-control'}/>
@@ -33,7 +33,7 @@ const FooterPage = () => {
 
                         <div className="col-sm-12 col-md-2 mx-auto">
 
-                            <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">Company</h5>
+                            <h5 className="font-weight-bolder text-uppercase mt-3 mb-4  white-text">Company</h5>
 
                             <ul className="list-unstyled">
                                 <li className={'footer-lists'}>
@@ -56,7 +56,7 @@ const FooterPage = () => {
 
                             <div className="col-sm-12 col-md-2 mx-auto">
 
-                                <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">Support</h5>
+                                <h5 className="font-weight-bolder text-uppercase mt-3 mb-4  white-text">Support</h5>
 
                                 <ul className="list-unstyled">
                                     <li className={'footer-lists'}>
@@ -79,7 +79,7 @@ const FooterPage = () => {
 
                                 <div className="col-sm-12 col-md-2 mx-auto">
 
-                                    <h5 className="font-weight-bolder text-uppercase mt-3 mb-4">More</h5>
+                                    <h5 className="font-weight-bolder text-uppercase mt-3 mb-4  white-text">More</h5>
 
                                     <ul className="list-unstyled">
                                         <li className={'footer-lists'}>
@@ -106,7 +106,7 @@ const FooterPage = () => {
 
                 <ul className="list-unstyled list-inline text-center py-2">
                     <li className="list-inline-item">
-                        <h5 className="mb-1">Where do you want to go next?</h5>
+                        <h5 className="mb-1  white-text">Where do you want to go next?</h5>
                     </li>
                     <li className="list-inline-item">
                         <Link to='/our-services/places'  className="btn antelope-green-bg btn-rounded">Start Planning!</Link>
@@ -117,17 +117,17 @@ const FooterPage = () => {
 
                     <ul className="list-unstyled list-inline text-center">
                         <li className="list-inline-item">
-                            <Link to='#' className="btn-floating btn-fb mx-1">
+                            <Link to='#' className="mx-1">
                                 <i className="fab fa-facebook-f"> </i>
                             </Link>
                         </li>
                         <li className="list-inline-item">
-                            <Link to='#' className="btn-floating btn-tw mx-1">
+                            <Link to='#' className="mx-1">
                                 <i className="fab fa-twitter"> </i>
                             </Link>
                         </li>
                         <li className="list-inline-item">
-                            <Link to='#' className="btn-floating instagram-colors mx-1">
+                            <Link to='#' className="mx-1">
                                 <i className="fab fa-instagram" />
                             </Link>
                         </li>

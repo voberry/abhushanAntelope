@@ -50,10 +50,16 @@ const Home = (props) => {
         })
     };
 
+    const handleScrollToView = () => {
+        document.getElementById('how-we-work-section-scroller').scrollIntoView({
+            behavior: "smooth"
+        })
+    };
+
     return (
         <div style={{
             height: '100%',
-            marginTop : '-100px'
+            marginTop: '-100px'
         }}>
             <div className="home-view intro-2">
                 <div className="full-bg-img">
@@ -61,16 +67,22 @@ const Home = (props) => {
                         <div
                             className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                             <div>
-                                <h2 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>Adventures you
+                                <h2 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>Adventures
+                                    you
                                     dream of.</h2>
                                 <h2 className={!isSubmitted ? `h1-responsive h1-lg primary-font` : `hide`}>With us.</h2>
                                 <br/>
-                                <h6 className={!isSubmitted ? `text-center px-5 mx-5 white-text ` : `hide`}>With Antelope Nepal, you
+                                <h6 className={!isSubmitted ? `text-center px-5 mx-5 white-text ` : `hide`}>With
+                                    Antelope Nepal, you
                                     can create the holidays you
                                     dream of from the click of your mouse, on the go. And we do it according to your
                                     tastes. </h6>
 
                                 <div className="container-fluid">
+                                    {!isSubmitted && <div className={'my-5'}>
+                                        <h3 className={'antelope-green text-uppercase'}>Start your journey</h3>
+                                        <hr className={'white w-25'}/>
+                                    </div>}
                                     <Form layout="inline" onSubmit={handleSubmit} className={'main-page-form'}>
                                         <div className="mt-3 d-flex flex-fill">
                                             <div className="px-3">
@@ -83,7 +95,7 @@ const Home = (props) => {
                                                             }
                                                         ]
                                                     })(
-                                                        <Select style={{width: 120}} showSearch
+                                                        <Select style={{width: 150}} showSearch
                                                                 placeholder={'Select Location'}
                                                         >
                                                             {locationOptions && locationOptions.locations.data.map(item =>
@@ -105,7 +117,7 @@ const Home = (props) => {
                                                             }
                                                         ]
                                                     })(
-                                                        <Select style={{width: 120}} showSearch
+                                                        <Select style={{width: 150}} showSearch
                                                                 placeholder={'Select Location'}
                                                         >
                                                             {locationOptions && locationOptions.locations.data.map(item =>
@@ -162,7 +174,7 @@ const Home = (props) => {
                                                         ]
                                                     })(
                                                         <InputNumber
-                                                            className={'form-control w-100'}
+                                                            className={'w-75'}
                                                             min={0}
                                                         />
                                                     )}
@@ -200,6 +212,11 @@ const Home = (props) => {
                                 </div>
                             </div>
                         </div>
+
+                        {!isSubmitted && <div className="arrow" onClick={handleScrollToView}>
+                            <span/>
+                            <span/>
+                        </div>}
                     </div>
                 </div>
             </div>
@@ -216,7 +233,9 @@ const Home = (props) => {
                                 {!isEmpty(locations) && locations.map(item =>
                                     <div className="text-center">
                                         <div>
-                                            <img src={item.icon === 'animal' ? animal : item.icon === 'party' ? party : temple} alt="" className='icon-images-lg'/>
+                                            <img
+                                                src={item.icon === 'animal' ? animal : item.icon === 'party' ? party : temple}
+                                                alt="" className='icon-images-lg'/>
                                             <h5 className="font-weight-bolder my-2 antelope-green">{item.title}</h5>
                                             <h6 className="font-weight-bolder my-2 antelope-green">{item.day} Days</h6>
                                         </div>
@@ -229,7 +248,7 @@ const Home = (props) => {
                     <div className="d-flex justify-content-around flex-fill mx-5 my-5 ">
                         <div className="row w-100">
                             <div className="col-sm-12 col-md-3 p-0">
-                                <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills'}>
+                                <Tabs defaultActiveKey="premade" className={'nav-justified nav-pills home-nav-tabs'}>
                                     <TabPane tab="Premade Packages" key="premade" className={'mr-0'}>
                                         <PredefinedPackages/>
                                     </TabPane>
@@ -281,8 +300,9 @@ const Home = (props) => {
 
             </MDBAnimation>
             }
+            <div id='how-we-work-section-scroller'/>
             <div>
-                <AboutUsSection/>
+                <AboutUsSection className={'mt-5'}/>
             </div>
 
         </div>

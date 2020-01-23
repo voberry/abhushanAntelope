@@ -40,11 +40,13 @@ class AuthProvider extends Component {
     };
 
     loginViaFacebook = (response) => {
-        setLocalStorage('userName', response.name);
-        setLocalStorage('userEmail', response.email);
-        setLocalStorage('userPicture', response.picture.data.url);
-        this.disableLoginModal();
-        history.push({pathname: '/users'});
+        if(response.status !== 'unknown'){
+            setLocalStorage('userName', response.name);
+            setLocalStorage('userEmail', response.email);
+            setLocalStorage('userPicture', response.picture.data.url);
+            this.disableLoginModal();
+            history.push({pathname: '/users'});
+        }
     };
 
 
@@ -68,7 +70,6 @@ class AuthProvider extends Component {
                     disableLoginModal: this.disableLoginModal,
                     loginViaFacebook: this.loginViaFacebook,
                     logout: this.logout,
-                    goToDashboard: this.goToDashboard,
                 }}
             >
                 {this.props.children}
