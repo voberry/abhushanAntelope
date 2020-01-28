@@ -43,6 +43,13 @@ const Home = (props) => {
         });
     };
 
+    const handleLocationClick = (title) => {
+         document.getElementById(`${title}`).scrollIntoView({
+             behavior: "smooth",
+             block: "center"
+         })
+    }
+
     const handleLocationsSubmit = e => {
         e.preventDefault();
         validateFields((err, values) => {
@@ -233,7 +240,7 @@ const Home = (props) => {
                             <div className="d-flex justify-content-around align-items-center">
                                 {!isEmpty(locations) && locations.map(item =>
                                     <div className="text-center">
-                                        <div>
+                                        <div onClick={() => handleLocationClick(item.title)}>
                                             <img
                                                 src={item.icon === 'animal' ? animal : item.icon === 'party' ? party : temple}
                                                 alt="" className='icon-images-lg'/>

@@ -26,11 +26,11 @@ const LocationInfo = (props) => {
     // const handleSetInitialHotel = (location, hotel)
 
     return (
-        <div className="d-flex justify-content-around flex-fill mx-5">
+        <div className="d-flex justify-content-around flex-fill mx-5" id={location && location.title}>
             <div className="row w-100">
                 <div className="col-sm-12 col-md-9">
                     <div>
-                        <section className="my-5 ">
+                        <section className="my-5 " >
                             <div className="row">
                                 <div className="col-lg-5 d-flex justify-content-center align-items-center">
                                     <div className="view overlay rounded z-depth-2 mb-lg-0 mb-4">
