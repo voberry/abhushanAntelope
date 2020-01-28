@@ -16,6 +16,7 @@ import LocationsContextProvider from "../Contexts/LocationsContext";
 import animal from '../../assets/images/animal.png';
 import temple from '../../assets/images/temple.png';
 import party from '../../assets/images/party.png';
+import HomepageBG from '../../assets/images/homepage.jpg';
 
 const {Option} = Select;
 const {TabPane} = Tabs;
@@ -61,9 +62,9 @@ const Home = (props) => {
             height: '100%',
             marginTop: '-100px'
         }}>
-            <div className="home-view intro-2">
+            <div className="home-view intro-2" style={{backgroundImage: `url(${HomepageBG})`}}>
                 <div className="full-bg-img">
-                    <div className="mask rgba-black-strong flex-center">
+                    <div className="mask rgba-black-light flex-center">
                         <div
                             className={` text-center home-transition-before home-flex-center ${isSubmitted && 'home-transition-after home-flex-end'}`}>
                             <div>
@@ -80,7 +81,7 @@ const Home = (props) => {
 
                                 <div className="container-fluid">
                                     {!isSubmitted && <div className={'my-5'}>
-                                        <h3 className={'antelope-green text-uppercase'}>Start your journey</h3>
+                                        <h3 className={' white-text text-uppercase'}>Start your journey</h3>
                                         <hr className={'white w-25'}/>
                                     </div>}
                                     <Form layout="inline" onSubmit={handleSubmit} className={'main-page-form'}>

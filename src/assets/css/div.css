@@ -252,7 +252,6 @@ body{
 }
 
 .home-view {
-    background: url("https://wallpapercave.com/wp/3Nfgmqx.jpg")no-repeat center center;
     background-size: cover;
     max-height: 100vh !important;
     height: 100%
@@ -272,7 +271,6 @@ body{
 }
 
 .full-height, .full-bg-img{
-    max-height: 100vh;
     height: 100%}
 
 .premade-packages-view{
@@ -338,4 +336,22 @@ body{
 
 .navbar .dropdown-menu a:hover {
     color: #fff;
+}
+
+.fix-height {
+    height: 12.5rem;
+}
+
+.fix-height-middle {
+    height: 14rem;
+}
+
+@media only screen and (min-width: 1440px) {
+    .fix-height {
+        height: 20rem;
+    }
+
+    .fix-height-middle {
+        height: 21rem;
+    }
 }
