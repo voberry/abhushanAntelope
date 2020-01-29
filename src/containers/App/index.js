@@ -4,8 +4,6 @@ import { withRouter, Switch } from 'react-router-dom';
 import PublicRoute from '../../routes/PublicRoute';
 import PrivateRoute from "../../routes/PrivateRoute";
 
-import StaticLayout from '../../components/Layout/Layout/Static';
-
 import {
     AsyncHome,
     AsyncUsers,
@@ -16,22 +14,23 @@ import {
     AsyncServices,
     AsyncContact,
     AsyncGallery,
-    AsyncBlog
+    AsyncBlog,
+    AsyncLayout
 } from "./AsyncComponent";
 
 const App = () =>(
     <React.Fragment>
         <Switch>
-            <PublicRoute exact path='/' layout={StaticLayout} component={AsyncHome}/>
-            <PrivateRoute path='/users' layout={StaticLayout} component={AsyncUsers}/>
-            <PublicRoute exact path='/login' layout={StaticLayout} component={AsyncLoginForm}/>
-            <PublicRoute exact path='/contact-us' layout={StaticLayout} component={AsyncContact}/>
-            <PublicRoute exact path='/about-us' layout={StaticLayout} component={AsyncAbout}/>
-            <PublicRoute path='/our-services' layout={StaticLayout} component={AsyncServices}/>
-            <PublicRoute path='/gallery' layout={StaticLayout} component={AsyncGallery}/>
-            <PublicRoute path='/blogs' layout={StaticLayout} component={AsyncBlog}/>
-            <PublicRoute exact path='/signup' layout={StaticLayout} component={AsyncRegisterPage}/>
-            <PublicRoute exact path='/not-found' layout={StaticLayout} component={AsyncNotFound}/>
+            <PublicRoute exact path='/' layout={AsyncLayout} component={AsyncHome}/>
+            <PrivateRoute path='/users' layout={AsyncLayout} component={AsyncUsers}/>
+            <PublicRoute exact path='/login' layout={AsyncLayout} component={AsyncLoginForm}/>
+            <PublicRoute exact path='/contact-us' layout={AsyncLayout} component={AsyncContact}/>
+            <PublicRoute exact path='/about-us' layout={AsyncLayout} component={AsyncAbout}/>
+            <PublicRoute path='/our-services' layout={AsyncLayout} component={AsyncServices}/>
+            <PublicRoute path='/gallery' layout={AsyncLayout} component={AsyncGallery}/>
+            <PublicRoute path='/blogs' layout={AsyncLayout} component={AsyncBlog}/>
+            <PublicRoute exact path='/signup' layout={AsyncLayout} component={AsyncRegisterPage}/>
+            <PublicRoute exact path='/not-found' layout={AsyncLayout} component={AsyncNotFound}/>
         </Switch>
     </React.Fragment>
 );
