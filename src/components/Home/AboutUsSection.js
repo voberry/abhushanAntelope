@@ -83,13 +83,10 @@ const AboutUsSection = () => {
               <h3 className="white-text text-center mt-5">
                 Ready and Set for you to Fly Awesome Tours
               </h3>
-              <div className="row w-100 no-gutters mb-5 p-5 ">
+              <div className="row w-100 mb-5 p-5 ">
                 <div className="col-4 col-xs-12">
                   <div
-                    className="card flat-box-shadow"
-                    style={{
-                      transform: "scale(0.95)"
-                    }}
+                    className="card flat-box-shadow hoverable-card"
                   >
                     <img
                       className="card-img-top fix-height"
@@ -116,13 +113,10 @@ const AboutUsSection = () => {
                 </div>
                 <div className="col-4 col-xs-12">
                   <div
-                    className="card flat-box-shadow"
-                    style={{
-                      transform: "scale(1.05)"
-                    }}
+                    className="card flat-box-shadow hoverable-card"
                   >
                     <img
-                      className="card-img-top fix-height-middle"
+                      className="card-img-top fix-height"
                       src={Image2}
                       alt="Card cap"
                     />
@@ -165,10 +159,7 @@ const AboutUsSection = () => {
                 </div>
                 <div className="col-4 col-xs-12">
                   <div
-                    className="card flat-box-shadow"
-                    style={{
-                      transform: "scale(0.95)"
-                    }}
+                    className="card flat-box-shadow hoverable-card"
                   >
                     <img
                       className="card-img-top fix-height"

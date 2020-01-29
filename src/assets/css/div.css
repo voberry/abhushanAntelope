@@ -122,8 +122,13 @@ body{
     border-right : 2px solid whitesmoke
 }
 
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .navbar .navbar-brand img {
-    height: 65px;
+    height: 75px;
 }
 
 .chart-canvas canvas {
@@ -354,4 +359,8 @@ body{
     .fix-height-middle {
         height: 21rem;
     }
+}
+
+.hoverable-card:hover {
+    transform: scale(1.1);
 }

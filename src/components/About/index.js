@@ -41,7 +41,7 @@ const Index = () => {
                 Change the way you travel!
               </h2>
 
-<hr/>
+              <hr />
               <h4 className={"h4-responsive font-weight-300 grey-text"}>
                 Antelope Nepal is a travel platform focusing on providing a
                 stress free, easy access and easy to build travel packages that

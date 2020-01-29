@@ -47,7 +47,7 @@ const AppHeader = props => {
     return (
         <div>
             <MDBNavbar expand="md" fixed="top" scrolling transparent={props.match.url === '/'}
-                       color={props.match.url !== '/' && 'elegant-color-dark'}>
+                       color={props.match.url !== '/' && 'elegant-color-dark'} style={{boxShadow: ' 0 0 transparent'}}>
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div className={'mr-5'}>
