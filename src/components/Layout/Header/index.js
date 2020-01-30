@@ -52,11 +52,11 @@ const AppHeader = props => {
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div className={'mr-5'}>
-                            <ul className="nav justify-content-end lighten-4 py-3">
+                            <ul className="nav justify-content-end lighten-4 py-3 nav-texts">
                                 <MDBNavItem>
                                     <MDBDropdown>
                                         <MDBDropdownToggle nav>
-                                            <span className="mr-2 white-text">Our Services</span>
+                                            <span className="mr-2 nav-text-span">Our Services</span>
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu>
                                             <MDBDropdownItem>
@@ -82,10 +82,10 @@ const AppHeader = props => {
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBNavItem>
-                                <Link className="nav-link px-4  white-text" to="/gallery">
+                                <Link className="nav-link px-4" to="/gallery">
                                     Gallery
                                 </Link>
-                                <Link className="nav-link px-4 white-text" to="/about-us">
+                                <Link className="nav-link px-4" to="/about-us">
                                     About
                                 </Link>
                             </ul>
@@ -98,11 +98,11 @@ const AppHeader = props => {
                             </MDBNavbarBrand>
                         </div>
                         <div className={'ml-5'}>
-                            <ul className="nav justify-content-start lighten-4 py-3">
-                                <Link className="nav-link px-4  white-text" to="/blogs">
+                            <ul className="nav justify-content-start lighten-4 py-3 nav-texts">
+                                <Link className="nav-link px-4" to="/blogs">
                                     Blog
                                 </Link>
-                                <Link className="nav-link px-4  white-text" to="/contact-us">
+                                <Link className="nav-link px-4" to="/contact-us">
                                     Contact
                                 </Link>
                                 {isUserLoggedIn() ?
@@ -113,7 +113,7 @@ const AppHeader = props => {
                                                     src={(userData && userData.userPicture) || getFirstUserPhoto } alt="Avatar"
                                                     style={{height: '30px', width: '30px', borderRadius: '50%'}}/>
                                                 <span
-                                                    className="ml-2 white-text">{(userData && userData.userName) || getLocalStorage('userName')}</span>
+                                                    className="ml-2 nav-text-span">{(userData && userData.userName) || getLocalStorage('userName')}</span>
                                             </MDBDropdownToggle>
                                             <MDBDropdownMenu>
                                                 <MDBDropdownItem>
@@ -129,7 +129,7 @@ const AppHeader = props => {
                                             </MDBDropdownMenu>
                                         </MDBDropdown>
                                     </MDBNavItem>
-                                    : <a className="nav-link px-4  white-text" onClick={() => showLoginModal()}>
+                                    : <a className="nav-link px-4" onClick={() => showLoginModal()}>
                                         Join Us
                                     </a>}
 

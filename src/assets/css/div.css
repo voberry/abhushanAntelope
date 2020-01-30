@@ -186,9 +186,14 @@
     }
 
     .top-nav-collapse {
-        background: #212121d9
-    ;
+        background: #212121d9;
     }
+
+    .nav-texts > a, .nav-text-span {
+        color: white !important;
+    }
+
+
     @media only screen and (max-width: 768px) {
         .navbar {
             background-color: #212121
@@ -264,8 +269,8 @@
 
 .non-home-view{
     background-size: cover;
-    min-height: 100vh !important;
-    height: 100%
+    max-height: 50vh !important;
+    height: 50vh
 }
 
 @media (min-width: 768px) {
@@ -286,8 +291,8 @@
 }
 
 .full-bg-image-not-home {
-    min-height: 100vh;
-    height: 100vh;
+    max-height: 50vh;
+    height: 50vh;
 }
 
 .premade-packages-view{
@@ -375,4 +380,11 @@
 
 .hoverable-card:hover {
     transform: scale(1.1);
+}
+
+.flex-start-end {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
 }

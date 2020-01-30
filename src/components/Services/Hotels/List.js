@@ -47,7 +47,7 @@ const List = props => {
           style={{ backgroundImage: `url(${HotelBG})` }}
         >
           <div className="full-bg-image-not-home">
-            <div className="mask rgba-black-light flex-center">
+            <div className="mask rgba-black-light flex-start-end p-5">
                 <h1 className='white-text text-uppercase'>Hotels</h1>
             </div>
           </div>

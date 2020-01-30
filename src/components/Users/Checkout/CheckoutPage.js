@@ -3,6 +3,7 @@ import {Form} from 'antd';
 import {withRouter, Link} from 'react-router-dom'
 import {MDBTable, MDBTableBody, MDBTableHead, MDBInput} from "mdbreact";
 import {Popover, OverlayTrigger} from "react-bootstrap";
+import AboutUs from '../../../assets/images/aboutUs.jpg'
 
 const CheckoutPage = () => {
 
@@ -18,6 +19,14 @@ const CheckoutPage = () => {
 
     return (
         <div className={'gray-background'}>
+             <div
+        className="page-header header-filter"
+        data-parallax="true"
+        style={{
+          backgroundImage: `url(${AboutUs})`
+        }}
+      />
+
             <div className={'container-fluid p-5 w-100'}>
                 <div className="row">
                     <div className="col-md-6">
