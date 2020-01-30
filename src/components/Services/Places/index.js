@@ -6,6 +6,8 @@ import districts from '../../../assets/generated-geojson/districts'
 
 import StickyBox from "react-sticky-box";
 import Wallpaper from "../../../assets/images/wallpaper.jpg";
+import {MDBAnimation} from "mdbreact";
+import HotelBG from "../../../assets/images/nicelava.jpg";
 
 const Index = () => {
 
@@ -58,6 +60,21 @@ const Index = () => {
 
     const position = [state.lat, state.lng];
     return (
+        <MDBAnimation type="fadeIn" duration="1s">
+
+            <div
+                className={'non-home-view intro-2'}
+                style={{
+                    height: "100%",
+                }}
+            >
+                <img src={HotelBG} alt="Snow" className={'w-100'} style={{height: '-webkit-fill-available'}} />
+                <div className="bottom-left">
+                    <h1 className='white-text text-uppercase'>Places</h1>
+                </div>
+            </div>
+
+
         <div className={'gray-background'}>
             <div className="container-fluid">
                 <div className="row d-flex">
@@ -166,6 +183,7 @@ const Index = () => {
                 </div>
             </div>
         </div>
+        </MDBAnimation>
     );
 };
 

@@ -5,6 +5,8 @@ import StickyBox from "react-sticky-box";
 import Wallpaper from "../../../assets/images/wallpaper.jpg";
 import PredefinedPackages from './../../Home/PredefinedPackages'
 import locationOptions from "../../../services/__mocks__/locations";
+import HotelBG from "../../../assets/images/niceRiver.jpg";
+import {MDBAnimation} from "mdbreact";
 
 const FormItem = Form.Item;
 const { Option } = Select;
@@ -30,6 +32,23 @@ const List = props => {
 
 
     return (
+        <MDBAnimation type="fadeIn" duration="1s">
+            <div
+                style={{
+                    height: "100%",
+                }}
+            >
+                <div
+                    className="non-home-view intro-2"
+                    style={{ backgroundImage: `url(${HotelBG})` }}
+                >
+                    <div className="full-bg-image-not-home">
+                        <div className="mask rgba-black-light flex-start-end p-5">
+                            <h1 className='white-text text-uppercase'>Treks</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div className={'gray-background'}>
             <div className="container-fluid">
                 <div className="row">
@@ -392,6 +411,7 @@ const List = props => {
                 </div>
             </div>
         </div>
+        </MDBAnimation>
     );
 };
 

@@ -22,7 +22,7 @@ const App = () =>(
     <React.Fragment>
         <Switch>
             <PublicRoute exact path='/' layout={AsyncLayout} component={AsyncHome}/>
-            <PrivateRoute path='/users' layout={AsyncLayout} component={AsyncUsers}/>
+            <PublicRoute path='/users' layout={AsyncLayout} component={AsyncUsers}/>
             <PublicRoute exact path='/login' layout={AsyncLayout} component={AsyncLoginForm}/>
             <PublicRoute exact path='/contact-us' layout={AsyncLayout} component={AsyncContact}/>
             <PublicRoute exact path='/about-us' layout={AsyncLayout} component={AsyncAbout}/>

@@ -6,6 +6,8 @@ import chitwan from '../../assets/images/chitwan.jpg';
 import aboutUs from '../../assets/images/aboutUs.jpg';
 import carefree from '../../assets/images/carefree.png';
 import notFound from '../../assets/images/notFound.png';
+import HotelBG from "../../assets/images/hotels.jpg";
+import {MDBAnimation} from "mdbreact";
 
 
 const Gallery = () => {
@@ -24,6 +26,23 @@ const Gallery = () => {
 
     return (
         <div>
+            <MDBAnimation type="fadeIn" duration="1s">
+                <div
+                    style={{
+                        height: "100%",
+                    }}
+                >
+                    <div
+                        className="non-home-view intro-2"
+                        style={{ backgroundImage: `url(${HotelBG})` }}
+                    >
+                        <div className="full-bg-image-not-home">
+                            <div className="mask rgba-black-light flex-start-end p-5">
+                                <h1 className='white-text text-uppercase'>Hotels</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <div className={'container-fluid p-5 w-100'}>
                 <h3 className={`h3-responsive h3-lg antelope-green text-center font-weight-bolder  primary-font`}>YOUR JOURNEY WITH US.</h3>
                 <h5 className={`h5-responsive h5-lg text-center font-weight-bolder secondary-text`}>See the memories you've made</h5>
@@ -88,6 +107,7 @@ const Gallery = () => {
                 </div>
 
             </div>
+            </MDBAnimation>
         </div>
     )
 };
