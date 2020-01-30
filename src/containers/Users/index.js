@@ -5,20 +5,14 @@ import { Switch, Route } from 'react-router-dom';
 //
 import Profile from './ProfileContainer';
 import Checkout from './CheckoutContainer';
-// import AddForm from './AddFormContainer';
-// import EditForm from './EditFormContainer';
-// import PendingList from './PendingListContainer';
-// import PendingDetail from './PendingDetailContainer';
+
 
 const Users = ({ match }) => (
     <Fragment>
         <Switch>
             <Route exact path={`${match.url}/`} component={Profile} />
             <Route exact path={`${match.url}/:name/checkout`} component={Checkout} />
-            {/*<Route exact path={`${match.url}/add`} component={AddForm} />*/}
-            {/*<Route exact path={`${match.url}/:id/edit/`} component={EditForm} />*/}
-            {/*<Route exact path={`${match.url}/pending/`} component={PendingList} />*/}
-            {/*<Route exact path={`${match.url}/pending/:id/detail`} component={PendingDetail} />*/}
+
             {/*<Route component={NotFound} />*/}
         </Switch>
     </Fragment>

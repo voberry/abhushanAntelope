@@ -1,6 +1,6 @@
-body{
+/* body{
     margin-top: 100px !important;
-}
+} */
 
 .larger-button{
     height: 44px !important;
@@ -262,6 +262,12 @@ body{
     height: 100%
 }
 
+.non-home-view{
+    background-size: cover;
+    min-height: 100vh !important;
+    height: 100%
+}
+
 @media (min-width: 768px) {
     .home-view {
         overflow: visible;
@@ -276,7 +282,13 @@ body{
 }
 
 .full-height, .full-bg-img{
-    height: 100%}
+    height: 100%
+}
+
+.full-bg-image-not-home {
+    min-height: 100vh;
+    height: 100vh;
+}
 
 .premade-packages-view{
     height: 120px;

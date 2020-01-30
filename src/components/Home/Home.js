@@ -87,7 +87,6 @@ const Home = props => {
       <div
         style={{
           height: "100%",
-          marginTop: "-100px"
         }}
       >
         <div
