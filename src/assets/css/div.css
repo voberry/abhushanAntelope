@@ -263,6 +263,7 @@
 
 .home-view {
     background-size: cover;
+    background-position: center;
     max-height: 100vh !important;
     height: 100%
 }
@@ -273,6 +274,7 @@
     color: white;
     max-height: 100vh !important;
     height: 100vh;
+    background-position: center;
 }
 
 .bottom-left {

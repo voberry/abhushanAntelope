@@ -44,10 +44,13 @@ const List = props => {
       >
         <div
           className="non-home-view intro-2"
+          style={{ backgroundImage: `url(${HotelBG})`,
+          backgroundPosition: 'center'}}
         >
-          <img src={HotelBG} alt="Snow" className={'w-100'} style={{height: '-webkit-fill-available'}} />
-          <div className="bottom-left">
-            <h1 className='white-text text-uppercase'>Hotels</h1>
+          <div className="full-bg-image-not-home">
+            <div className="mask rgba-black-light flex-start-end p-5">
+                <h1 className='white-text text-uppercase'>Hotels</h1>
+            </div>
           </div>
         </div>
       </div>

@@ -10,7 +10,8 @@ const Index = () => {
         className="page-header header-filter"
         data-parallax="true"
         style={{
-          backgroundImage: `url(${AboutUs})`
+          backgroundImage: `url(${AboutUs})`,
+            backgroundPosition: 'center'
         }}
       />
       <section className="p-5">
