@@ -142,7 +142,7 @@ const Home = props => {
                       className={"main-page-form"}
                     >
                       <div class="row">
-                        <div class="col">
+                        <div class="col-2">
                           <small id="from" class="form-text white-text">
                             Where are you from
                           </small>
@@ -164,7 +164,7 @@ const Home = props => {
                             </Select>
                           )}
                         </div>
-                        <div class="col">
+                        <div class="col-2">
                           <small id="from" class="form-text white-text">
                             Where do you want to go?
                           </small>
@@ -186,7 +186,7 @@ const Home = props => {
                             </Select>
                           )}
                         </div>
-                        <div class="col">
+                        <div class="col-3">
                           <small id="from" class="form-text white-text">
                             When are the dates?
                           </small>
