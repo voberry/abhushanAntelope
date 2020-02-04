@@ -11,8 +11,8 @@ const BlogContent = props => {
     const {isAuthenticated} = authData;
 
     return (
-        <div className={'container-fluid p-5'}>
-            <section>
+        <div className={'container-fluid p-5 mt-5'}>
+            <section className='mt-5'>
                 <div className="row">
                     <div className="col-md-10">
                         <div className="card card-cascade wider reverse">

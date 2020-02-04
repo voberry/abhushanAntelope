@@ -20,7 +20,7 @@ const AppHeader = props => {
     const authData = useContext(AuthContext);
     const {userData, displayLoginModal, disableLoginModal} = authData;
     const getFirstUserPhoto = getLocalStorage('userPicture');
-    const [isHomePage, setIsHomePage] = useState(false);
+    const [isSelectedPages, setIsSelectedPages] = useState(false);
 
     const showLoginModal = () => {
         displayLoginModal()
@@ -31,10 +31,10 @@ const AppHeader = props => {
     };
 
     useEffect(() => {
-        if (props.match.url === '/') {
-            setIsHomePage(true)
+        if (props.match.url === '/contact-us' || props.match.url === '/blogs' || props.match.url === '/gallery') {
+            setIsSelectedPages(true)
         } else {
-            setIsHomePage(false)
+            setIsSelectedPages(false)
         }
     }, [props.match]);
 
@@ -47,7 +47,10 @@ const AppHeader = props => {
     return (
         <div>
             <MDBNavbar expand="md" fixed="top" scrolling
-                        style={{boxShadow: ' 0 0 transparent'}}>
+                        style={{boxShadow: ' 0 0 transparent'}}
+                        transparent={!isSelectedPages}
+                        color={isSelectedPages ? 'elegant-color-dark' : 'transparent'}
+                        >
                 {/* transparent={props.match.url === '/'}  color={props.match.url !== '/' && 'elegant-color-dark'}*/}
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">

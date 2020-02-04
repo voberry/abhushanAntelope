@@ -3,8 +3,8 @@ import {Link, withRouter} from 'react-router-dom'
 
 const Blog = () => {
     return (
-        <div className={'container p-5'}>
-            <section>
+        <div className={'container mt-5 p-5'}>
+            <section className='mt-4'>
                 <h2 className="font-weight-bolder mb-5 antelope-green text-center primary-font">Our Blogs</h2>
                 <p className="text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate
                     velit
