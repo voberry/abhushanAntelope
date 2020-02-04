@@ -37,7 +37,7 @@ const Carousels = (props) => {
                         }}>
                             {item.map((it) =>
                                 <div className={`card mx-2 mb-2 ${selectedHotel && selectedHotel[0]
-                                && it === selectedHotel[0].hotel ? 'antelope-green-bg-light white-text' : 'white'}`}>
+                                && it === selectedHotel[0].hotel ? 'antelope-green-bg-light white-textwhite-text' : 'white'}`}>
                                     <div className="view overlay"
                                          onClick={() => selectedItemFor === 'hotel' ? handleSelectedHotel(it, locations.title)
                                              : selectedItemFor === 'restaurants' ? handleSelectedRestaurants(it, locations.title)

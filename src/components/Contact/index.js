@@ -40,7 +40,7 @@ const ContactPage = () => {
           <MDBCol lg="5" className="lg-0 mb-4">
             <MDBCard>
               <MDBCardBody>
-                <div className="form-header antelope-green-bg-light-outline  accent-1">
+                <div className="form-header antelope-green-bg-light white-text accent-1">
                   <h3 className="mt-2 primary-font">
                     <MDBIcon icon="envelope" /> Write to us:
                   </h3>
@@ -85,7 +85,7 @@ const ContactPage = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <MDBBtn className="antelope-green-bg-light white-text  accent-1">
+                  <MDBBtn className="antelope-green-bg-light white-textwhite-text  accent-1">
                     Submit
                   </MDBBtn>
                 </div>
@@ -110,7 +110,7 @@ const ContactPage = () => {
                 <MDBBtn
                   tag="a"
                   floating
-                  className="antelope-green-bg-light white-text  accent-1"
+                  className="antelope-green-bg-light white-textwhite-text  accent-1"
                 >
                   <MDBIcon icon="map-marker-alt" />
                 </MDBBtn>
@@ -121,7 +121,7 @@ const ContactPage = () => {
                 <MDBBtn
                   tag="a"
                   floating
-                  className="antelope-green-bg-light white-text  accent-1"
+                  className="antelope-green-bg-light white-textwhite-text  accent-1"
                 >
                   <MDBIcon icon="phone" />
                 </MDBBtn>
@@ -132,7 +132,7 @@ const ContactPage = () => {
                 <MDBBtn
                   tag="a"
                   floating
-                  className="antelope-green-bg-light white-text  accent-1"
+                  className="antelope-green-bg-light white-textwhite-text  accent-1"
                 >
                   <MDBIcon icon="envelope" />
                 </MDBBtn>

@@ -33,22 +33,18 @@ const List = props => {
 
     return (
         <MDBAnimation type="fadeIn" duration="1s">
-            <div
-                style={{
-                    height: "100%",
-                }}
-            >
-                <div
-                    className="non-home-view intro-2"
-                    style={{ backgroundImage: `url(${HotelBG})` }}
-                >
-                    <div className="full-bg-image-not-home">
-                        <div className="mask rgba-black-light flex-start-end p-5">
-                            <h1 className='white-text text-uppercase'>Treks</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div
+        className={'non-home-view intro-2'}
+        style={{
+            height: "100%",
+        }}
+    >
+        <img src={HotelBG} alt="Snow" className={'w-100'} style={{height: '-webkit-fill-available'}} />
+        <div className="bottom-left">
+            <h1 className='white-text text-uppercase'>Trips</h1>
+        </div>
+    </div>
         <div className={'gray-background'}>
             <div className="container-fluid">
                 <div className="row">
@@ -134,7 +130,7 @@ const List = props => {
                                         </div>
                                         <div className="px-3">
                                             <Button htmlType="submit"
-                                                    className={'mt-5 btn-success antelope-green-bg-light-outline   w-100'}>
+                                                    className={'mt-5 btn-success antelope-green-bg-light white-text  w-100'}>
                                                 Search!
                                             </Button>
                                         </div>
@@ -309,7 +305,7 @@ const List = props => {
                                                 <div className="card-body">
                                                     <h6 className="card-title"><a>Random Trek</a></h6>
                                                     <Link to={`./treks/123`}>
-                                                        <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
+                                                        <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">View
                                                         </button>
                                                     </Link>
                                                 </div>
@@ -325,7 +321,7 @@ const List = props => {
                                         <div className="card-body">
                                             <h6 className="card-title"><a>Random Trek</a></h6>
                                             <Link to={`./treks/123`}>
-                                                <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>
@@ -341,7 +337,7 @@ const List = props => {
                                         <div className="card-body">
                                             <h6 className="card-title"><a>Random Trek</a></h6>
                                             <Link to={`./treks/123`}>
-                                                <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>
@@ -357,7 +353,7 @@ const List = props => {
                                         <div className="card-body">
                                             <h6 className="card-title"><a>Random Trek</a></h6>
                                             <Link to={`./treks/123`}>
-                                                <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">View
+                                                <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">View
                                                 </button>
                                             </Link>
                                         </div>

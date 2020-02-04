@@ -37,23 +37,18 @@ const List = props => {
 
   return (
     <MDBAnimation type="fadeIn" duration="1s">
-      <div
+
+    <div
+        className={'non-home-view intro-2'}
         style={{
-          height: "100%",
+            height: "100%",
         }}
-      >
-        <div
-          className="non-home-view intro-2"
-          style={{ backgroundImage: `url(${HotelBG})`,
-          backgroundPosition: 'center'}}
-        >
-          <div className="full-bg-image-not-home">
-            <div className="mask rgba-black-light flex-start-end p-5">
-                <h1 className='white-text text-uppercase'>Hotels</h1>
-            </div>
-          </div>
+    >
+        <img src={HotelBG} alt="Snow" className={'w-100'} style={{height: '-webkit-fill-available'}} />
+        <div className="bottom-left">
+            <h1 className='white-text text-uppercase'>Places</h1>
         </div>
-      </div>
+    </div>
 
 
       <div className={"gray-background"}>
@@ -138,7 +133,7 @@ const List = props => {
                         <Button
                           htmlType="submit"
                           className={
-                            "mt-5 btn-success antelope-green-bg-light-outline   w-100"
+                            "mt-5 btn-success antelope-green-bg-light white-text  w-100"
                           }
                         >
                           Search!
@@ -341,7 +336,7 @@ const List = props => {
                           <a>Random Hotel</a>
                         </h6>
                         <Link to={`./hotels/123`}>
-                          <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">
+                          <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">
                             View
                           </button>
                         </Link>
@@ -363,7 +358,7 @@ const List = props => {
                           <a>Random Hotel</a>
                         </h6>
                         <Link to={`./hotels/123`}>
-                          <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">
+                          <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">
                             View
                           </button>
                         </Link>
@@ -385,7 +380,7 @@ const List = props => {
                           <a>Random Hotel</a>
                         </h6>
                         <Link to={`./hotels/123`}>
-                          <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">
+                          <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">
                             View
                           </button>
                         </Link>
@@ -407,7 +402,7 @@ const List = props => {
                           <a>Random Hotel</a>
                         </h6>
                         <Link to={`./123`}>
-                          <button className="btn antelope-green-bg-light-outline  btn-sm white-text p-2">
+                          <button className="btn antelope-green-bg-light white-text btn-sm white-text p-2">
                             View
                           </button>
                         </Link>

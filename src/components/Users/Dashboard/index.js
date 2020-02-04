@@ -54,7 +54,7 @@ const Index = () => {
                             className="form-control"
                         />
                         <div className="mt-4">
-                            <button className={'btn antelope-green-bg-light-outline  white-text'}>Submit</button>
+                            <button className={'btn antelope-green-bg-light white-text white-text'}>Submit</button>
                         </div>
                     </form>
                 </div>
