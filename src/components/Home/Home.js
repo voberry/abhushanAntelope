@@ -86,7 +86,7 @@ const Home = props => {
     <MDBAnimation type="fadeIn" duration="1s">
       <div
         style={{
-          height: "100%",
+          height: "100%"
         }}
       >
         <div
@@ -141,115 +141,114 @@ const Home = props => {
                       onSubmit={handleSubmit}
                       className={"main-page-form"}
                     >
-                      <div className="mt-3 d-flex flex-fill">
-                        <div className="px-3">
-                          <FormItem label={"From"}>
-                            {getFieldDecorator("from", {
-                              rules: [
-                                {
-                                  required: true,
-                                  message: "This is required"
-                                }
-                              ]
-                            })(
-                              <Select
-                                style={{ width: 150 }}
-                                showSearch
-                                placeholder={"Select Location"}
-                              >
-                                {locationOptions &&
-                                  locationOptions.locations.data.map(item => (
-                                    <Option key={item.code} value={item.title}>
-                                      {item.title}
-                                    </Option>
-                                  ))}
-                              </Select>
-                            )}
-                          </FormItem>
+                      <div class="row">
+                        <div class="col">
+                          <small id="from" class="form-text white-text">
+                            Where are you from
+                          </small>
+                          {getFieldDecorator("from", {
+                            rules: [
+                              {
+                                required: true,
+                                message: "This is required"
+                              }
+                            ]
+                          })(
+                            <Select showSearch placeholder={"Select Location"}>
+                              {locationOptions &&
+                                locationOptions.locations.data.map(item => (
+                                  <Option key={item.code} value={item.title}>
+                                    {item.title}
+                                  </Option>
+                                ))}
+                            </Select>
+                          )}
                         </div>
-                        <div className="px-3">
-                          <FormItem label={"To"}>
-                            {getFieldDecorator("to", {
-                              rules: [
-                                {
-                                  required: true,
-                                  message: "This is required"
-                                }
-                              ]
-                            })(
-                              <Select
-                                style={{ width: 150 }}
-                                showSearch
-                                placeholder={"Select Location"}
-                              >
-                                {locationOptions &&
-                                  locationOptions.locations.data.map(item => (
-                                    <Option key={item.code} value={item.title}>
-                                      {item.title}
-                                    </Option>
-                                  ))}
-                              </Select>
-                            )}
-                          </FormItem>
+                        <div class="col">
+                          <small id="from" class="form-text white-text">
+                            Where do you want to go?
+                          </small>
+                          {getFieldDecorator("to", {
+                            rules: [
+                              {
+                                required: true,
+                                message: "This is required"
+                              }
+                            ]
+                          })(
+                            <Select showSearch placeholder={"Select Location"}>
+                              {locationOptions &&
+                                locationOptions.locations.data.map(item => (
+                                  <Option key={item.code} value={item.title}>
+                                    {item.title}
+                                  </Option>
+                                ))}
+                            </Select>
+                          )}
                         </div>
-
-                        <div className="px-3">
-                          <FormItem label={"Dates"}>
-                            {getFieldDecorator("checkIn", {
-                              rules: [
-                                {
-                                  required: true,
-                                  message: "This is required"
-                                }
-                              ]
-                            })(<RangePicker className={"w-100"} />)}
-                          </FormItem>
+                        <div class="col">
+                          <small id="from" class="form-text white-text">
+                            When are the dates?
+                          </small>
+                          {getFieldDecorator("checkIn", {
+                            rules: [
+                              {
+                                required: true,
+                                message: "This is required"
+                              }
+                            ]
+                          })(<RangePicker className={"w-100"} />)}
                         </div>
-                        <div className="px-3">
-                          <FormItem label={"Adults"}>
-                            {getFieldDecorator("adults", {
-                              rules: [
-                                {
-                                  required: true,
-                                  message: "This is required"
-                                }
-                              ]
-                            })(<InputNumber min={0} />)}
-                          </FormItem>
-                          <FormItem label={"Children"}>
-                            {getFieldDecorator("children", {
-                              rules: [
-                                {
-                                  required: true,
-                                  message: "This is required"
-                                }
-                              ]
-                            })(<InputNumber min={0} />)}
-                          </FormItem>
+                        <div class="col">
+                          <small id="to" class="form-text white-text">
+                            Number of adults
+                          </small>
+                          {getFieldDecorator("adults", {
+                            rules: [
+                              {
+                                required: true,
+                                message: "This is required"
+                              }
+                            ]
+                          })(<InputNumber min={0} className="form-control" />)}
                         </div>
-                        <div className="px-3">
-                          <FormItem label={"Class"}>
-                            {getFieldDecorator("class", {
-                              initialValue: "moderate",
-                              rules: [
-                                {
-                                  required: true,
-                                  message: "This is required"
-                                }
-                              ]
-                            })(
-                              <Select style={{ width: 120 }} showSearch>
-                                <Option value="economy">Economy</Option>
-                                <Option value="moderate">Moderate</Option>
-                                <Option value="premium">Premium</Option>
-                              </Select>
-                            )}
-                          </FormItem>
+                        <div class="col">
+                          <small id="to" class="form-text white-text">
+                            Any Children?
+                          </small>
+                          {getFieldDecorator("children", {
+                            rules: [
+                              {
+                                required: true,
+                                message: "This is required"
+                              }
+                            ]
+                          })(<InputNumber min={0} className="form-control" />)}
                         </div>
-                        <div className="px-3">
+                        <div class="col">
+                          <small id="to" class="form-text white-text">
+                            Select the class of trip.
+                          </small>
+                          {getFieldDecorator("class", {
+                            initialValue: "moderate",
+                            rules: [
+                              {
+                                required: true,
+                                message: "This is required"
+                              }
+                            ]
+                          })(
+                            <Select showSearch>
+                              <Option value="economy">Economy</Option>
+                              <Option value="moderate">Moderate</Option>
+                              <Option value="premium">Premium</Option>
+                            </Select>
+                          )}
+                        </div>
+                        <div class="col">
                           <Button
                             htmlType="submit"
-                            className={"mt-5 btn-sm antelope-green-bg w-100"}
+                            className={"mt-3 btn-sm antelope-green-bg w-100"}
                           >
                             LETS GO!
                           </Button>
