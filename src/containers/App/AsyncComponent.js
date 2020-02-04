@@ -17,21 +17,24 @@ export const AsyncUsers = loadable({
 });
 
 export const AsyncNotFound = loadable({
-    loader: () => import('../../containers/Exception'),
+    loader: () => import('../../containers/Exception/NotFoundContainer'),
     loading: LoadingComponent,
 });
+
+export const AsyncInternalServer = loadable({
+    loader: () => import('../../containers/Exception/InternalServerContainer'),
+    loading: LoadingComponent,
+  });
 
 export const AsyncBlog = loadable({
     loader: () => import('../../containers/Blog'),
     loading: LoadingComponent,
 });
 
-
 export const AsyncContact = loadable({
     loader: () => import('../../containers/Contact'),
     loading: LoadingComponent,
 });
-
 
 export const AsyncGallery = loadable({
     loader: () => import('../../containers/Gallery'),

@@ -141,9 +141,9 @@ const Home = props => {
                       onSubmit={handleSubmit}
                       className={"main-page-form"}
                     >
-                      <div class="row">
-                        <div class="col-2">
-                          <small id="from" class="form-text white-text">
+                      <div className="row">
+                        <div className="col-2">
+                          <small id="from" className="form-text white-text">
                             Where are you from
                           </small>
                           {getFieldDecorator("from", {
@@ -164,8 +164,8 @@ const Home = props => {
                             </Select>
                           )}
                         </div>
-                        <div class="col-2">
-                          <small id="from" class="form-text white-text">
+                        <div className="col-2">
+                          <small id="from" className="form-text white-text">
                             Where do you want to go?
                           </small>
                           {getFieldDecorator("to", {
@@ -186,8 +186,8 @@ const Home = props => {
                             </Select>
                           )}
                         </div>
-                        <div class="col-3">
-                          <small id="from" class="form-text white-text">
+                        <div className="col-3">
+                          <small id="from" className="form-text white-text">
                             When are the dates?
                           </small>
                           {getFieldDecorator("checkIn", {
@@ -199,8 +199,8 @@ const Home = props => {
                             ]
                           })(<RangePicker className={"w-100"} />)}
                         </div>
-                        <div class="col">
-                          <small id="to" class="form-text white-text">
+                        <div className="col">
+                          <small id="to" className="form-text white-text">
                             Number of adults
                           </small>
                           {getFieldDecorator("adults", {
@@ -212,8 +212,8 @@ const Home = props => {
                             ]
                           })(<InputNumber min={0} className="form-control" />)}
                         </div>
-                        <div class="col">
-                          <small id="to" class="form-text white-text">
+                        <div className="col">
+                          <small id="to" className="form-text white-text">
                             Any Children?
                           </small>
                           {getFieldDecorator("children", {
@@ -225,8 +225,8 @@ const Home = props => {
                             ]
                           })(<InputNumber min={0} className="form-control" />)}
                         </div>
-                        <div class="col">
-                          <small id="to" class="form-text white-text">
+                        <div className="col">
+                          <small id="to" className="form-text white-text">
                             Select the class of trip.
                           </small>
                           {getFieldDecorator("class", {
@@ -245,7 +245,7 @@ const Home = props => {
                             </Select>
                           )}
                         </div>
-                        <div class="col">
+                        <div className="col">
                           <Button
                             htmlType="submit"
                             className={"mt-3 btn-sm antelope-green-bg w-100"}

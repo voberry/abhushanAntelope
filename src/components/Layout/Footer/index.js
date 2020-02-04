@@ -86,7 +86,7 @@ const FooterPage = () => {
                                             <Link to='#' >Destinations</Link>
                                         </li>
                                         <li className={'footer-lists'}>
-                                            <Link to='/our-serives/treks' >Trips</Link>
+                                            <Link to='/our-services/treks' >Trips</Link>
                                         </li>
                                         <li className={'footer-lists'}>
                                             <Link to='#' >Adventure Sports</Link>

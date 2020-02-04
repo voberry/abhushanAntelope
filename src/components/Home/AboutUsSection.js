@@ -176,7 +176,7 @@ const AboutUsSection = () => {
                         make up the bulk of the card's content.
                       </p>
 
-                      <Link to={"/our-services/trips"}>
+                      <Link to={"/our-services/treks"}>
                         <button className="btn antelope-green-bg btn-sm white-text">
                           BOOK NOW
                         </button>

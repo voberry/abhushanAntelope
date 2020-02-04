@@ -6,7 +6,7 @@ import Main from './NotFoundContainer'
 const Exception = ({ match }) => (
     <Fragment>
         <Switch>
-            <Route exact path={`${match.url}/`} component={Main} />
+            <Route exact path={`${match.url}`} component={Main} />
             {/*<Route component={NotFound} />*/}
         </Switch>
     </Fragment>
