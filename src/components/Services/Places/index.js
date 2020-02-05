@@ -9,7 +9,7 @@ import Wallpaper from "../../../assets/images/wallpaper.jpg";
 import {MDBAnimation} from "mdbreact";
 import HotelBG from "../../../assets/images/nicelava.jpg";
 
-const Index = () => {
+const Index = props => {
 
     const [selectedProvince, setSelectedProvince] = useState(null);
 
@@ -143,7 +143,6 @@ const Index = () => {
                         </div>
 
                     </div>
-
                     <div className="col-sm-12 col-md-2 p-5 px-2">
                         <StickyBox offsetTop={100}>
                             <div className="row">

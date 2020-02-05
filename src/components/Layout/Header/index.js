@@ -31,7 +31,10 @@ const AppHeader = props => {
     };
 
     useEffect(() => {
-        if (props.match.url === '/contact-us' || props.match.url === '/blogs' || props.match.url === '/gallery') {
+        console.log(window.location.pathname === `/our-services/treks`)
+        if (props.match.url === '/contact-us'
+         || props.match.url === '/blogs'
+         || props.match.url === '/gallery') {
             setIsSelectedPages(true)
         } else {
             setIsSelectedPages(false)
@@ -50,12 +53,13 @@ const AppHeader = props => {
                         style={{boxShadow: ' 0 0 transparent'}}
                         transparent={!isSelectedPages}
                         color={isSelectedPages ? 'elegant-color-dark' : 'transparent'}
+                        className="p-0"
                         >
                 {/* transparent={props.match.url === '/'}  color={props.match.url !== '/' && 'elegant-color-dark'}*/}
                 <div className="container">
                     <div className="d-flex flex-fill w-100 justify-content-center">
                         <div className={'mr-5'}>
-                            <ul className="nav justify-content-end lighten-4 py-3 nav-texts">
+                            <ul className="nav justify-content-end lighten-4 py-4 nav-texts">
                                 <MDBNavItem>
                                     <MDBDropdown>
                                         <MDBDropdownToggle nav>
@@ -96,12 +100,16 @@ const AppHeader = props => {
                         <div>
                             <MDBNavbarBrand className={'nav justify-content-center lighten-4 mr-0 nav-header'}>
                                 <Link to={'/'} className={'brand-image'}>
-                                    <img src={logo} className={' img-fluid '} alt=""/>
+                                    <img src={logo} className={' img-fluid '} alt="" style={{
+                                            paddingLeft: '10px',
+                                            paddingRight: '10px',
+                                            background: '#fbfbfbd6'
+                                    }}/>
                                 </Link>
                             </MDBNavbarBrand>
                         </div>
                         <div className={'ml-5'}>
-                            <ul className="nav justify-content-start lighten-4 py-3 nav-texts">
+                            <ul className="nav justify-content-start lighten-4 py-4 nav-texts">
                                 <Link className="nav-link px-4" to="/blogs">
                                     Blog
                                 </Link>

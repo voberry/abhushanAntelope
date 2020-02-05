@@ -18,22 +18,22 @@ export class PlacesContainer extends Component {
 /**
  * Map the state to props.
  */
-const mapStateToProps = state => ({
-});
+// const mapStateToProps = state => ({
+// });
 
-/**
- * Map the actions to props.
- */
-const mapDispatchToProps = dispatch => {
-    return {
-        actions: bindActionCreators(
-            Object.assign({}),
-            dispatch
-        ),
-    };
-};
+// /**
+//  * Map the actions to props.
+//  */
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         actions: bindActionCreators(
+//             Object.assign({}),
+//             dispatch
+//         ),
+//     };
+// };
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    // mapStateToProps,
+    // mapDispatchToProps
 )(PlacesContainer);
