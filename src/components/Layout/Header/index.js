@@ -103,7 +103,6 @@ const AppHeader = props => {
                                     <img src={logo} className={' img-fluid '} alt="" style={{
                                             paddingLeft: '10px',
                                             paddingRight: '10px',
-                                            background: '#fbfbfbd6'
                                     }}/>
                                 </Link>
                             </MDBNavbarBrand>
