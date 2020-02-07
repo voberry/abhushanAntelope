@@ -29,8 +29,8 @@ const AboutUsSection = () => {
               </h5>
               <hr className={"text-center w-25 antelope-green-bg"} />
               <p className=" mb-md-0 mb-5 grey-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                So you’re ready to go on an adventure. Hop into Antelope Nepal
+                and search for packages and services that you’re interested in
               </p>
             </div>
             <div className="col">
@@ -40,8 +40,8 @@ const AboutUsSection = () => {
               </h5>
               <hr className={"text-center w-25 antelope-green-bg"} />
               <p className="mb-md-0 mb-5 grey-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                Find Pre made Packages. These are tailored to be the best for
+                you. Go through them and decide on one! And you’re ready!
               </p>
             </div>
             <div className="col">
@@ -51,8 +51,8 @@ const AboutUsSection = () => {
               </h5>
               <hr className={"text-center w-25 antelope-green-bg"} />
               <p className="mb-md-0 mb-5 grey-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                Not satsified? Don’t worry, you can actually start taking pre
+                made packages apart and customise them to be the best for you!
               </p>
             </div>
             <div className="col">
@@ -62,8 +62,8 @@ const AboutUsSection = () => {
               </h5>
               <hr className={"text-center w-25 antelope-green-bg"} />
               <p className="mb-md-0 mb-5 grey-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                Still not happy? We’ve got you covered! Start using out unique
+                system and start building your own holiday and compare prices!
               </p>
             </div>
             <div className="col">
@@ -73,8 +73,8 @@ const AboutUsSection = () => {
               </h5>
               <hr className={"text-center w-25 antelope-green-bg"} />
               <p className="mb-md-0 mb-5 grey-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                There you go! You’re ready! Save packages to your cart while we
+                confirm. Once confirmed, you can check out and be on your way!
               </p>
             </div>
           </div>
@@ -97,9 +97,7 @@ const AboutUsSection = () => {
               </h3>
               <div className="row w-100 mb-5 p-5 ">
                 <div className="col-4 col-xs-12">
-                  <div
-                    className="card flat-box-shadow hoverable-card"
-                  >
+                  <div className="card flat-box-shadow hoverable-card">
                     <img
                       className="card-img-top fix-height"
                       src={Image1}
@@ -124,9 +122,7 @@ const AboutUsSection = () => {
                   </div>
                 </div>
                 <div className="col-4 col-xs-12">
-                  <div
-                    className="card flat-box-shadow hoverable-card"
-                  >
+                  <div className="card flat-box-shadow hoverable-card">
                     <img
                       className="card-img-top fix-height"
                       src={Image2}
@@ -170,9 +166,7 @@ const AboutUsSection = () => {
                   </svg> */}
                 </div>
                 <div className="col-4 col-xs-12">
-                  <div
-                    className="card flat-box-shadow hoverable-card"
-                  >
+                  <div className="card flat-box-shadow hoverable-card">
                     <img
                       className="card-img-top fix-height"
                       src={Image3}
