@@ -10,7 +10,7 @@ const Carousels = (props) => {
     const {handleSelectedHotel, handleSelectedVehicle, handleSelectedRestaurants, selectedHotel} = locationContextData;
 
     const [carouselData, setCarouselData] = useState(null);
-    const arrayData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const arrayData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
     useEffect(() => {
         let tempArray = chunkArrays(arrayData, 6);
@@ -36,16 +36,21 @@ const Carousels = (props) => {
                             flexWrap: 'wrap'
                         }}>
                             {item.map((it) =>
-                                <div className="carousel-container">
-                                    <img
-                                        src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
-                                        alt="Snow"
-                                        className={'carousel-images-size'}
-                                    />
-                                    <div className="carousel-bottom-left ">Bottom Left</div>
-                                    <div className="carousel-top-right">5</div>
-                                    <div className="carousel-text-center">
-                                        Hotel Name
+                                <div className="view overlay hoverable-card">
+                                    <div className="carousel-container"
+                                         onClick={() => selectedItemFor === 'hotel' ? handleSelectedHotel(it, locations.title)
+                                             : selectedItemFor === 'restaurants' ? handleSelectedRestaurants(it, locations.title)
+                                                 : handleSelectedVehicle(it, locations.title)}>
+                                        <img
+                                            src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(Math.random() * 100)}.jpg`}
+                                            alt="Snow"
+                                            className={'carousel-images-size'}
+                                        />
+                                        <div className="carousel-bottom-left ">Bottom Left</div>
+                                        <div className="carousel-top-right">5</div>
+                                        <div className="carousel-text-center">
+                                            Hotel Name
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -56,10 +61,7 @@ const Carousels = (props) => {
             </Carousel>
             {/*<div className={`card mx-2 mb-2 ${selectedHotel && selectedHotel[0]*/}
             {/*&& it === selectedHotel[0].hotel ? 'antelope-green-bg-light white-textwhite-text' : 'white'}`}>*/}
-            {/*    <div className="view overlay"*/}
-            {/*         onClick={() => selectedItemFor === 'hotel' ? handleSelectedHotel(it, locations.title)*/}
-            {/*             : selectedItemFor === 'restaurants' ? handleSelectedRestaurants(it, locations.title)*/}
-            {/*                 : handleSelectedVehicle(it, locations.title)}>*/}
+            {/*    <div className="view overlay">
             {/*        <img className="card-img-top h-300 carousel-images-size"*/}
             {/*             */}
             {/*             alt="Card image cap"/>*/}
