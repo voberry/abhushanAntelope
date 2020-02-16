@@ -311,8 +311,9 @@
 }
 
 .carousel-images-size {
-    height: 200px;
-    width: 250px
+    height: 130px;
+    width: auto;
+    max-width: 200px
 }
 
 .arrow{
@@ -397,4 +398,34 @@
     justify-content: flex-start;
     align-items: flex-end;
     height: 100%;
+}
+
+.carousel-container
+{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.carousel-bottom-left {
+    position: absolute;
+    bottom: 0%;
+    background: #b4c7c28c;
+    padding: 5px;
+}
+/* Top right text */
+.carousel-top-right {
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    background: #ffe000bf;
+    right: 16px;
+}
+
+.carousel-text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
