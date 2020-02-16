@@ -290,7 +290,7 @@ const Home = props => {
                               alt=""
                               style={{ cursor: "pointer" }}
                               onClick={() => handleLocationClick(item.title)}
-                              className="icon-images-lg hoverable-card"
+                              className="icon-images hoverable-card"
                             />
                             <h5 className="font-weight-bolder my-2 antelope-green">
                               {item.title}
