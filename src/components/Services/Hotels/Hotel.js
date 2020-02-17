@@ -12,7 +12,7 @@ const Hotel = () => {
       <div className={"gray-background"}>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-9 col-sm-12 p-5">
+            <div className="col-md-10 col-sm-12 p-5">
               <div className="row">
                 <div className="col-md-9 col-sm-12">
                   <h3 className={"h3-responsive antelope-green"}>Hotel 1</h3>
@@ -33,8 +33,16 @@ const Hotel = () => {
                 </div>
               </div>
 
-              <div className={"z-depth-4 thumbnailCarousels"}>
-                <HotelsCarousel />
+              <div className="row">
+                <div className="col-md-9 col-sm-12">
+                  <div className={"z-depth-4 thumbnailCarousels"}>
+                    <HotelsCarousel />
+                  </div>
+                </div>
+
+                <div className="col-md-3 col-sm-12">
+                  <HotelsLocation />
+                </div>
               </div>
 
               <div className="row">
@@ -96,11 +104,9 @@ const Hotel = () => {
                   </button>
                 </h4>
               </div>
-
-              <HotelsLocation />
             </div>
 
-            <div className="col-sm-12 col-md-3 p-5 px-2">
+            <div className="col-sm-12 col-md-2 p-5 px-2">
               <Link to={"/blogs"}>Other Hotels in this area</Link>
               <StickyBox offsetTop={100}>
                 <div className="row">
