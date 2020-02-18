@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import HotelsCarousel from "./HotelsCarousel";
 import HotelsLocation from "./HotelLocation";
 
 import Wallpaper from "../../../assets/images/wallpaper.jpg";
+import {MDBContainer, MDBNav, MDBNavItem, MDBNavLink, MDBTabContent, MDBTabPane} from "mdbreact";
 
 const imageStyle = {
     height: '100px',
@@ -12,8 +13,21 @@ const imageStyle = {
     borderRadius: '10%'
 };
 
+const tabStyles = {
+    background: '#809086',
+    color: 'white',
+    padding: '10px',
+    textDecoration: 'underline',
+}
+
 
 const Hotel = () => {
+    const [activeItem, setActiveItem] = useState('hotelDetails');
+
+    const toggleTabs = tab => {
+        setActiveItem(tab);
+    };
+
     return (
         <div className="mt-5 pt-5">
             <div className={"gray-background"}>
@@ -53,54 +67,78 @@ const Hotel = () => {
                             </div>
 
                             <div className="row">
-                                <div className="col-md-7">
-                                    <div className="card">
-                                        <div className="card-body">
-                                            <h4 className="font-weight-bolder mb-3 antelope-green h4-responsive">
-                                                <strong>Kathmandu</strong>
-                                            </h4>
+                                <div className="col-md-12">
+                                    <MDBContainer>
+                                        <MDBNav
+                                            className="nav-tabs mt-5 d-flex justify-content-between align-items-center"
+                                            style={tabStyles}>
+                                            <MDBNavItem>
+                                                <a className={`nav-link px-5 ${activeItem === 'hotelDetails' ? 'active' : 'not-active'}`}
+                                                   active={activeItem === 'hotelDetails'}
+                                                   onClick={() => toggleTabs("hotelDetails")} role="tab">
+                                                    Hotel Details
+                                                </a>
+                                            </MDBNavItem>
+                                            <MDBNavItem>
+                                                <a className={`nav-link px-5 ${activeItem === 'amenities' ? 'active' : 'not-active'}`}
+                                                   active={activeItem === 'amenities'}
+                                                   onClick={() => toggleTabs("amenities")} role="tab">
+                                                    Amenities
+                                                </a>
+                                            </MDBNavItem>
+                                            <MDBNavItem>
+                                                <a className={`nav-link px-5 ${activeItem === 'policies' ? 'active' : 'not-active'}`}
+                                                   active={activeItem === 'policies'}
+                                                   onClick={() => toggleTabs("policies")} role="tab">
+                                                    Policies
+                                                </a>
+                                            </MDBNavItem>
+                                        </MDBNav>
+                                        <MDBTabContent activeItem={activeItem} className={'p-0 '}>
 
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Aliquid delectus enim eum harum quae tenetur,
-                                                ullam? Ab adipisci aut culpa earum perspiciatis porro
-                                                quis quisquam reiciendis velit veritatis, voluptas
-                                                voluptates? Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit. Accusamus animi, commodi doloribus
-                                                magnam magni modi placeat quia quidem sint ut!
-                                                Asperiores consectetur dolores, eos itaque magni omnis
-                                                quisquam reprehenderit voluptatum!
-                                                <br/>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                            <MDBTabPane tabId="hotelDetails" role="tabPanel">
+                                                <div className="card p-3 flat-box-shadow ">
+                                                    <h4 className="font-weight-bolder mb-3 antelope-green h4-responsive">
+                                                        <strong>Kathmandu</strong>
+                                                    </h4>
 
-                                <div className="col-md-5">
-                                    <div className="card">
-                                        <div className="card-body">
-                                            <h6 className="font-weight-bolder mb-3 antelope-green h6-responsive">
-                                                <strong>Facilities</strong>
-                                            </h6>
-                                            <ul className="list-group">
-                                                <li className="list-group-item">Cras justo odio</li>
-                                                <li className="list-group-item">
-                                                    Dapibus ac facilisis in
-                                                </li>
-                                                <li className="list-group-item">Morbi leo risus</li>
-                                                <li className="list-group-item">
-                                                    Porta ac consectetur ac
-                                                </li>
-                                                <li className="list-group-item">Vestibulum at eros</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                        elit. Aliquid delectus enim eum harum quae tenetur,
+                                                        ullam? Ab adipisci aut culpa earum perspiciatis porro
+                                                        quis quisquam reiciendis velit veritatis, voluptas
+                                                        voluptates? Lorem ipsum dolor sit amet, consectetur
+                                                        adipisicing elit. Accusamus animi, commodi doloribus
+                                                        magnam magni modi placeat quia quidem sint ut!
+                                                        Asperiores consectetur dolores, eos itaque magni omnis
+                                                        quisquam reprehenderit voluptatum!
+                                                        <br/>
+                                                    </p>
+                                                </div>
+                                            </MDBTabPane>
+                                            <MDBTabPane tabId="amenities" role="tabPanel">
+                                                <div className="card p-3 flat-box-shadow ">
+                                                    <p className="mt-2">
+                                                       Amenities
+                                                    </p>
+                                                </div>
+                                            </MDBTabPane>
+                                            <MDBTabPane tabId="policies" role="tabPanel">
+                                                <div className="card p-3 flat-box-shadow ">
+                                                    <p className="mt-2">
+                                                       Policies
+                                                    </p>
+                                                </div>
+                                            </MDBTabPane>
+
+                                        </MDBTabContent>
+                                    </MDBContainer>
                                 </div>
                             </div>
-
                             <div className={'card mt-5'}>
                                 <div className="card-body">
-                                    <h4 className="card-title font-weight-bold antelope-green"><a>Available Rooms</a></h4>
+                                    <h4 className="card-title font-weight-bold antelope-green"><a>Available Rooms</a>
+                                    </h4>
                                     <table className="table table-borderless">
                                         <tbody>
                                         <tr>
@@ -115,107 +153,107 @@ const Hotel = () => {
                                                 />
                                             </th>
                                             <td><h4 className={'font-weight-bold mb-1'}>Kathmandu Room</h4>
-                                              <h6 className={'font-weight-bold grey-text'}>
-                                                Adults 2, Child 1
-                                              </h6>
-                                              <div className="row">
-                                                <div className="col-xs-6 col-md-5 go-right">
-                                                  <p>No. Rooms</p>
+                                                <h6 className={'font-weight-bold grey-text'}>
+                                                    Adults 2, Child 1
+                                                </h6>
+                                                <div className="row">
+                                                    <div className="col-xs-6 col-md-5 go-right">
+                                                        <p>No. Rooms</p>
+                                                    </div>
+                                                    <div className="col-xs-6 col-md-4 go-left">
+                                                        <select className="browser-default custom-select w-50">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                                <div className="col-xs-6 col-md-4 go-left">
-                                                  <select className="browser-default custom-select w-50">
-                                                  <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                  </select>
-                                                </div>
-                                              </div>
                                             </td>
                                             <td>Otto</td>
                                             <td>@mdo</td>
                                         </tr>
                                         <tr>
-                                          <th className={'w-25'}>
-                                            <img
-                                                src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(
-                                                    Math.random() * 100
-                                                )}.jpg`}
-                                                alt=""
-                                                className={'img-fluid z-depth-4'}
-                                                style={imageStyle}
-                                            />
-                                          </th>
-                                          <td><h4 className={'font-weight-bold mb-1'}>Double Deluxe Room</h4>
-                                            <h6 className={'font-weight-bold grey-text'}>
-                                              Adults 2, Child 1
-                                            </h6>
-                                            <div className="row">
-                                              <div className="col-xs-6 col-md-5 go-right">
-                                                <p>No. Rooms</p>
-                                              </div>
-                                              <div className="col-xs-6 col-md-4 go-left">
-                                                <select className="browser-default custom-select w-50">
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
+                                            <th className={'w-25'}>
+                                                <img
+                                                    src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(
+                                                        Math.random() * 100
+                                                    )}.jpg`}
+                                                    alt=""
+                                                    className={'img-fluid z-depth-4'}
+                                                    style={imageStyle}
+                                                />
+                                            </th>
+                                            <td><h4 className={'font-weight-bold mb-1'}>Double Deluxe Room</h4>
+                                                <h6 className={'font-weight-bold grey-text'}>
+                                                    Adults 2, Child 1
+                                                </h6>
+                                                <div className="row">
+                                                    <div className="col-xs-6 col-md-5 go-right">
+                                                        <p>No. Rooms</p>
+                                                    </div>
+                                                    <div className="col-xs-6 col-md-4 go-left">
+                                                        <select className="browser-default custom-select w-50">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
                                         </tr>
                                         <tr>
-                                          <th className={'w-25'}>
-                                            <img
-                                                src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(
-                                                    Math.random() * 100
-                                                )}.jpg`}
-                                                alt=""
-                                                className={'img-fluid z-depth-4'}
-                                                style={imageStyle}
-                                            />
-                                          </th>
-                                          <td><h4 className={'font-weight-bold mb-1'}>Kathmandu Room</h4>
-                                            <h6 className={'font-weight-bold grey-text'}>
-                                              Adults 2, Child 1
-                                            </h6>
-                                            <div className="row">
-                                              <div className="col-xs-6 col-md-5 go-right">
-                                                <p>No. Rooms</p>
-                                              </div>
-                                              <div className="col-xs-6 col-md-4 go-left">
-                                                <select className="browser-default custom-select w-50">
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
+                                            <th className={'w-25'}>
+                                                <img
+                                                    src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(
+                                                        Math.random() * 100
+                                                    )}.jpg`}
+                                                    alt=""
+                                                    className={'img-fluid z-depth-4'}
+                                                    style={imageStyle}
+                                                />
+                                            </th>
+                                            <td><h4 className={'font-weight-bold mb-1'}>Kathmandu Room</h4>
+                                                <h6 className={'font-weight-bold grey-text'}>
+                                                    Adults 2, Child 1
+                                                </h6>
+                                                <div className="row">
+                                                    <div className="col-xs-6 col-md-5 go-right">
+                                                        <p>No. Rooms</p>
+                                                    </div>
+                                                    <div className="col-xs-6 col-md-4 go-left">
+                                                        <select className="browser-default custom-select w-50">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
                                         </tr>
                                         </tbody>
                                     </table>
