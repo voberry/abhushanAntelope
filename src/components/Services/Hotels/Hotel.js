@@ -1,11 +1,13 @@
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import HotelsCarousel from "./HotelsCarousel";
 import HotelsLocation from "./HotelLocation";
 
 import Wallpaper from "../../../assets/images/wallpaper.jpg";
 import {MDBContainer, MDBNav, MDBNavItem, MDBNavLink, MDBTabContent, MDBTabPane} from "mdbreact";
+import {Button, DatePicker, Form, Input, InputNumber, Select} from "antd";
+import locationOptions from "../../../services/__mocks__/locations";
 
 const imageStyle = {
     height: '100px',
@@ -19,13 +21,41 @@ const tabStyles = {
     padding: '10px',
     textDecoration: 'underline',
 }
+const FormItem = Form.Item;
+const {Option} = Select;
+const {RangePicker} = DatePicker;
 
-
-const Hotel = () => {
+const Hotel = (props) => {
+    const {form} = props;
+    const {
+        getFieldDecorator,
+        getFieldValue,
+        validateFields,
+        resetFields
+    } = form;
     const [activeItem, setActiveItem] = useState('hotelDetails');
+
+    const handleViewDetailsButtonClick = (index, locationName) => {
+        let ishidden = document.getElementById(`${locationName}`).style.display;
+        ishidden === 'none' ?
+            document.getElementById(`${locationName}`).style.display = 'table-row' :
+            document.getElementById(`${locationName}`).style.display = 'none'
+    };
 
     const toggleTabs = tab => {
         setActiveItem(tab);
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        validateFields((err, values) => {
+            if (!err) {
+            }
+        });
+    };
+
+    const handleReset = () => {
+        resetFields();
     };
 
     return (
@@ -68,78 +98,150 @@ const Hotel = () => {
 
                             <div className="row">
                                 <div className="col-md-12">
-                                    <MDBContainer>
-                                        <MDBNav
-                                            className="nav-tabs mt-5 d-flex justify-content-between align-items-center"
-                                            style={tabStyles}>
-                                            <MDBNavItem>
-                                                <a className={`nav-link px-5 ${activeItem === 'hotelDetails' ? 'active' : 'not-active'}`}
-                                                   active={activeItem === 'hotelDetails'}
-                                                   onClick={() => toggleTabs("hotelDetails")} role="tab">
-                                                    Hotel Details
-                                                </a>
-                                            </MDBNavItem>
-                                            <MDBNavItem>
-                                                <a className={`nav-link px-5 ${activeItem === 'amenities' ? 'active' : 'not-active'}`}
-                                                   active={activeItem === 'amenities'}
-                                                   onClick={() => toggleTabs("amenities")} role="tab">
+                                    <MDBNav
+                                        className="nav-tabs mt-5 d-flex justify-content-between align-items-center"
+                                        style={tabStyles}>
+                                        <MDBNavItem>
+                                            <a className={`nav-link px-5 ${activeItem === 'hotelDetails' ? 'active' : 'not-active'}`}
+                                               active={activeItem === 'hotelDetails'}
+                                               onClick={() => toggleTabs("hotelDetails")} role="tab">
+                                                Hotel Details
+                                            </a>
+                                        </MDBNavItem>
+                                        <MDBNavItem>
+                                            <a className={`nav-link px-5 ${activeItem === 'amenities' ? 'active' : 'not-active'}`}
+                                               active={activeItem === 'amenities'}
+                                               onClick={() => toggleTabs("amenities")} role="tab">
+                                                Amenities
+                                            </a>
+                                        </MDBNavItem>
+                                        <MDBNavItem>
+                                            <a className={`nav-link px-5 ${activeItem === 'policies' ? 'active' : 'not-active'}`}
+                                               active={activeItem === 'policies'}
+                                               onClick={() => toggleTabs("policies")} role="tab">
+                                                Policies
+                                            </a>
+                                        </MDBNavItem>
+                                    </MDBNav>
+                                    <MDBTabContent activeItem={activeItem} className={'p-0 '}>
+
+                                        <MDBTabPane tabId="hotelDetails" role="tabPanel">
+                                            <div className="card p-3 flat-box-shadow ">
+                                                <h4 className="font-weight-bolder mb-3 antelope-green h4-responsive">
+                                                    <strong>Kathmandu</strong>
+                                                </h4>
+
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit. Aliquid delectus enim eum harum quae tenetur,
+                                                    ullam? Ab adipisci aut culpa earum perspiciatis porro
+                                                    quis quisquam reiciendis velit veritatis, voluptas
+                                                    voluptates? Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit. Accusamus animi, commodi doloribus
+                                                    magnam magni modi placeat quia quidem sint ut!
+                                                    Asperiores consectetur dolores, eos itaque magni omnis
+                                                    quisquam reprehenderit voluptatum!
+                                                    <br/>
+                                                </p>
+                                            </div>
+                                        </MDBTabPane>
+                                        <MDBTabPane tabId="amenities" role="tabPanel">
+                                            <div className="card p-3 flat-box-shadow ">
+                                                <p className="mt-2">
                                                     Amenities
-                                                </a>
-                                            </MDBNavItem>
-                                            <MDBNavItem>
-                                                <a className={`nav-link px-5 ${activeItem === 'policies' ? 'active' : 'not-active'}`}
-                                                   active={activeItem === 'policies'}
-                                                   onClick={() => toggleTabs("policies")} role="tab">
+                                                </p>
+                                            </div>
+                                        </MDBTabPane>
+                                        <MDBTabPane tabId="policies" role="tabPanel">
+                                            <div className="card p-3 flat-box-shadow ">
+                                                <p className="mt-2">
                                                     Policies
-                                                </a>
-                                            </MDBNavItem>
-                                        </MDBNav>
-                                        <MDBTabContent activeItem={activeItem} className={'p-0 '}>
+                                                </p>
+                                            </div>
+                                        </MDBTabPane>
 
-                                            <MDBTabPane tabId="hotelDetails" role="tabPanel">
-                                                <div className="card p-3 flat-box-shadow ">
-                                                    <h4 className="font-weight-bolder mb-3 antelope-green h4-responsive">
-                                                        <strong>Kathmandu</strong>
-                                                    </h4>
+                                    </MDBTabContent>
+                                </div>
+                            </div>
 
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                        elit. Aliquid delectus enim eum harum quae tenetur,
-                                                        ullam? Ab adipisci aut culpa earum perspiciatis porro
-                                                        quis quisquam reiciendis velit veritatis, voluptas
-                                                        voluptates? Lorem ipsum dolor sit amet, consectetur
-                                                        adipisicing elit. Accusamus animi, commodi doloribus
-                                                        magnam magni modi placeat quia quidem sint ut!
-                                                        Asperiores consectetur dolores, eos itaque magni omnis
-                                                        quisquam reprehenderit voluptatum!
-                                                        <br/>
-                                                    </p>
-                                                </div>
-                                            </MDBTabPane>
-                                            <MDBTabPane tabId="amenities" role="tabPanel">
-                                                <div className="card p-3 flat-box-shadow ">
-                                                    <p className="mt-2">
-                                                       Amenities
-                                                    </p>
-                                                </div>
-                                            </MDBTabPane>
-                                            <MDBTabPane tabId="policies" role="tabPanel">
-                                                <div className="card p-3 flat-box-shadow ">
-                                                    <p className="mt-2">
-                                                       Policies
-                                                    </p>
-                                                </div>
-                                            </MDBTabPane>
+                            <div className="card w-100 p-3 mt-5">
+                                <div className="container">
 
-                                        </MDBTabContent>
-                                    </MDBContainer>
+                                    <h4 className="card-title font-weight-bold antelope-green"><a>Rooms</a>
+                                    </h4>
+                                    <Form layout="inline" onSubmit={handleSubmit}>
+                                        <div className="mt-3 d-flex flex-fill">
+                                            <div className="px-1">
+                                                <FormItem label={"Dates"}>
+                                                    {getFieldDecorator("checkIn", {})(<RangePicker className={"w-100"}
+                                                                                                   style={{width: 200}}/>)}
+                                                </FormItem>
+                                            </div>
+                                            <div className="px-1">
+                                                <FormItem label={"No. of People"}>
+                                                    {getFieldDecorator("peopleCount", {
+                                                        rules: [
+                                                            {
+                                                                required: true,
+                                                                message: "This is required"
+                                                            }
+                                                        ]
+                                                    })(
+                                                        <InputNumber
+                                                            className={"form-control w-100"}
+                                                            min={0}
+                                                        />
+                                                    )}
+                                                </FormItem>
+
+                                            </div>
+                                            <div className="px-1">
+                                                <FormItem label={"No. of Children"}>
+                                                    {getFieldDecorator("childrenCount", {
+                                                        rules: [
+                                                            {
+                                                                required: true,
+                                                                message: "This is required"
+                                                            }
+                                                        ]
+                                                    })(
+                                                        <InputNumber
+                                                            className={"form-control w-100"}
+                                                            min={0}
+                                                        />
+                                                    )}
+                                                </FormItem>
+
+                                            </div>
+                                            <div className="px-1">
+                                                <Button
+                                                    htmlType="submit"
+                                                    className={
+                                                        "mt-5 btn-success antelope-green-bg-light white-text  w-100"
+                                                    }
+                                                >
+                                                    Search!
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </Form>
                                 </div>
                             </div>
                             <div className={'card mt-5'}>
                                 <div className="card-body">
                                     <h4 className="card-title font-weight-bold antelope-green"><a>Available Rooms</a>
                                     </h4>
-                                    <table className="table table-borderless">
+                                    <table className="table table-borderless table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th />
+                                            <th />
+                                            <th />
+                                            <th />
+                                            <th />
+                                            <th />
+                                        </tr>
+                                        </thead>
                                         <tbody>
                                         <tr>
                                             <th className={'w-25'}>
@@ -152,7 +254,8 @@ const Hotel = () => {
                                                     style={imageStyle}
                                                 />
                                             </th>
-                                            <td><h4 className={'font-weight-bold mb-1'}>Kathmandu Room</h4>
+                                            <td className={'w-25'}><h4 className={'font-weight-bold mb-1'}>Kathmandu
+                                                Room</h4>
                                                 <h6 className={'font-weight-bold grey-text'}>
                                                     Adults 2, Child 1
                                                 </h6>
@@ -161,7 +264,7 @@ const Hotel = () => {
                                                         <p>No. Rooms</p>
                                                     </div>
                                                     <div className="col-xs-6 col-md-4 go-left">
-                                                        <select className="browser-default custom-select w-50">
+                                                        <select className="browser-default custom-select w-100">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -176,8 +279,49 @@ const Hotel = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <td>
+                                                <button className={'btn antelope-green-bg btn-sm'}
+                                                        onClick={() => handleViewDetailsButtonClick(1, 'room1')}>
+                                                    View Details
+                                                </button>
+                                            </td>
+                                            <td><h2>
+                                                <small>NPR </small> <strong>रू2,750</strong>
+                                            </h2></td>
+                                            <td>
+                                                <div className="form-check">
+                                                    <input type="checkbox" className="form-check-input"
+                                                           id="materialUnchecked"/>
+                                                    <label className="form-check-label" htmlFor="materialUnchecked"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style={{display: 'none'}} id={'room1'}>
+                                            <td colSpan={5}>
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" className="custom-control-input"
+                                                           id="defaultInline1"
+                                                           name="inlineDefaultRadiosExample"/>
+                                                    <label className="custom-control-label" htmlFor="defaultInline1">Bed
+                                                        and BreakFast</label>
+                                                </div>
+
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" className="custom-control-input"
+                                                           id="defaultInline2"
+                                                           name="inlineDefaultRadiosExample"/>
+                                                    <label className="custom-control-label"
+                                                           htmlFor="defaultInline2">MAP</label>
+                                                </div>
+
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" className="custom-control-input"
+                                                           id="defaultInline3"
+                                                           name="inlineDefaultRadiosExample"/>
+                                                    <label className="custom-control-label"
+                                                           htmlFor="defaultInline3">AP</label>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th className={'w-25'}>
@@ -199,7 +343,7 @@ const Hotel = () => {
                                                         <p>No. Rooms</p>
                                                     </div>
                                                     <div className="col-xs-6 col-md-4 go-left">
-                                                        <select className="browser-default custom-select w-50">
+                                                        <select className="browser-default custom-select w-100">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -214,11 +358,52 @@ const Hotel = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <td>
+                                                <button className={'btn antelope-green-bg btn-sm'}
+                                                        onClick={() => handleViewDetailsButtonClick(1, 'room2')}>
+                                                    View Details
+                                                </button>
+                                            </td>
+                                            <td><h2>
+                                                <small>NPR </small> <strong>रू2,750</strong>
+                                            </h2></td>
+                                            <td>
+                                                <div className="form-check">
+                                                    <input type="checkbox" className="form-check-input"
+                                                           id="materialUnchecked2"/>
+                                                    <label className="form-check-label" htmlFor="materialUnchecked2"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style={{display: 'none'}} id={'room2'}>
+                                            <td colSpan={5}>
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" className="custom-control-input"
+                                                           id="defaultInline1"
+                                                           name="inlineDefaultRadiosExample"/>
+                                                    <label className="custom-control-label" htmlFor="defaultInline1">Bed
+                                                        and BreakFast</label>
+                                                </div>
+
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" className="custom-control-input"
+                                                           id="defaultInline2"
+                                                           name="inlineDefaultRadiosExample"/>
+                                                    <label className="custom-control-label"
+                                                           htmlFor="defaultInline2">MAP</label>
+                                                </div>
+
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" className="custom-control-input"
+                                                           id="defaultInline3"
+                                                           name="inlineDefaultRadiosExample"/>
+                                                    <label className="custom-control-label"
+                                                           htmlFor="defaultInline3">AP</label>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <th className={'w-25'}>
+                                            <td className={'w-25'}>
                                                 <img
                                                     src={`https://mdbootstrap.com/img/Photos/Others/images/${Math.floor(
                                                         Math.random() * 100
@@ -227,7 +412,7 @@ const Hotel = () => {
                                                     className={'img-fluid z-depth-4'}
                                                     style={imageStyle}
                                                 />
-                                            </th>
+                                            </td>
                                             <td><h4 className={'font-weight-bold mb-1'}>Kathmandu Room</h4>
                                                 <h6 className={'font-weight-bold grey-text'}>
                                                     Adults 2, Child 1
@@ -237,7 +422,7 @@ const Hotel = () => {
                                                         <p>No. Rooms</p>
                                                     </div>
                                                     <div className="col-xs-6 col-md-4 go-left">
-                                                        <select className="browser-default custom-select w-50">
+                                                        <select className="browser-default custom-select w-100">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -252,8 +437,57 @@ const Hotel = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <td>
+                                                <button className={'btn antelope-green-bg btn-sm'}
+                                                        onClick={() => handleViewDetailsButtonClick(1, 'room3')}>
+                                                    View Details
+                                                </button>
+                                            </td>
+                                            <td><h2>
+                                                <small>NPR </small> <strong>रू2,750</strong>
+                                            </h2></td>
+                                            <td>
+                                                <div className="form-check">
+                                                    <input type="checkbox" className="form-check-input"
+                                                           id="materialUnchecked3"/>
+                                                    <label className="form-check-label" htmlFor="materialUnchecked3"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style={{display: 'none'}} id={'room3'} >
+                                                <td colSpan='5'>
+                                                    <h5>About Hotel</h5>
+                                                        <div className="d-flex ">
+                                                            <div className="px-3">
+                                                                Meal Options
+                                                            </div>
+                                                            <div className="px-3">
+                                                                <div className="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" className="custom-control-input"
+                                                                           id="defaultInline1"
+                                                                           name="inlineDefaultRadiosExample"/>
+                                                                    <label className="custom-control-label"
+                                                                           htmlFor="defaultInline1">Bed and BreakFast</label>
+                                                                </div>
+
+                                                                <div className="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" className="custom-control-input"
+                                                                           id="defaultInline2"
+                                                                           name="inlineDefaultRadiosExample"/>
+                                                                    <label className="custom-control-label"
+                                                                           htmlFor="defaultInline2">MAP</label>
+                                                                </div>
+
+                                                                <div className="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" className="custom-control-input"
+                                                                           id="defaultInline3"
+                                                                           name="inlineDefaultRadiosExample"/>
+                                                                    <label className="custom-control-label"
+                                                                           htmlFor="defaultInline3">AP</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -262,14 +496,35 @@ const Hotel = () => {
 
                             <div
                                 className={
-                                    "p-4 mt-4 antelope-green-bg-light white-text white-text"
+                                    "p-4 mt-4"
                                 }
                             >
                                 <h4>
-                                    {" "}
-                                    Price : 1400/day
-                                    <button className={"btn btn-sm btn-danger float-right"}>
-                                        Book Now
+                                    <div className="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" className="custom-control-input"
+                                               id="esewa"
+                                               name="inlineDefaultRadiosExample"/>
+                                        <label className="custom-control-label"
+                                               htmlFor="esewa">E-sewa</label>
+                                    </div>
+
+                                    <div className="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" className="custom-control-input"
+                                               id="ipsPayment"
+                                               name="inlineDefaultRadiosExample"/>
+                                        <label className="custom-control-label"
+                                               htmlFor="ipsPayment">IPS payment</label>
+                                    </div>
+
+                                    <div className="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" className="custom-control-input"
+                                               id="paymentNepal"
+                                               name="inlineDefaultRadiosExample"/>
+                                        <label className="custom-control-label"
+                                               htmlFor="paymentNepal">Payment Nepal</label>
+                                    </div>
+                                    <button className={"btn btn-lg antelope-green-bg float-right"}>
+                                        Checkout
                                     </button>
                                 </h4>
                             </div>
@@ -312,4 +567,4 @@ const Hotel = () => {
     );
 };
 
-export default Hotel;
+export default Form.create()(withRouter(Hotel));
