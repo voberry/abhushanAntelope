@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Form, Input, Select } from "antd";
 import { withRouter, Link } from "react-router-dom";
 import { MDBTable, MDBTableBody, MDBTableHead, MDBInput } from "mdbreact";
@@ -7,6 +7,9 @@ import AboutUs from "../../../assets/images/aboutUs.jpg";
 import locationOptions from "../../../services/__mocks__/locations";
 
 const CheckoutPage = () => {
+
+  const [itineraryHeight, setItineraryHeight]= useState(null);
+
   const popover = (
     <Popover id="popover-basic">
       <Popover.Title as="h3">Popover right</Popover.Title>
@@ -17,6 +20,10 @@ const CheckoutPage = () => {
     </Popover>
   );
 
+  useEffect(()=>{
+    setItineraryHeight(document.getElementById('tourInformation').offsetHeight);
+  }, [])
+
   return (
     <div className={"gray-background"}>
       <div
@@ -26,12 +33,12 @@ const CheckoutPage = () => {
           backgroundImage: `url(${AboutUs})`
         }}
       />
-
       <div className={"container-fluid p-5 w-100"}>
-        <div className="d-flex align-items-stretch justify-content-around">
+        <div className={'d-flex'}>
+
           <div
-            className={"mr-5 w-100 itinerary-card"}
-            style={{ minHeight: "100%" }}
+            className={"mr-5 flex-1 itinerary-card" }
+            style={{ minHeight: "100%", height: itineraryHeight }}
           >
             <div className="card">
               <div className="card-body">
@@ -135,7 +142,7 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          <div className={"w-50"} style={{ minHeight: "100%" }}>
+          <div id='tourInformation' className={'flex-1 '} style={{ minHeight: "100%" }}>
             <div className="card">
               <div className="card-body">
                 <h4 className={"font-weight-bolder antelope-green text-center"}>

@@ -38,7 +38,7 @@ const List = props => {
 
     return (
         <MDBAnimation type="fadeIn" duration="1s">
-            <div className={"gray-background mt-5 pt-5"}>
+            <div className={"gray-background "}>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-10 col-sm-12 p-5">

@@ -8,7 +8,7 @@ import Wallpaper from "../../../assets/images/wallpaper.jpg";
 
 const Trek = () => {
   return (
-    <div className='mt-5 pt-5'>
+    <div >
       <div className={"gray-background"}>
         <div className="container-fluid">
           <div className="row">

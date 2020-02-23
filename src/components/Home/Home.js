@@ -86,7 +86,8 @@ const Home = props => {
     <MDBAnimation type="fadeIn" duration="1s">
       <div
         style={{
-          height: "100%"
+          height: "100%",
+          marginTop : '-100px'
         }}
       >
         <div

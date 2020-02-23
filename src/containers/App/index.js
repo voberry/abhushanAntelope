@@ -16,7 +16,8 @@ import {
   AsyncGallery,
   AsyncBlog,
   AsyncLayout,
-  AsyncInternalServer
+  AsyncInternalServer,
+  AsyncInvoice
 } from "./AsyncComponent";
 
 const App = () => (
@@ -58,6 +59,12 @@ const App = () => (
         path="/signup"
         layout={AsyncLayout}
         component={AsyncRegisterPage}
+      />
+      <PublicRoute
+          exact
+          path="/invoice"
+          layout={AsyncLayout}
+          component={AsyncInvoice}
       />
 
       <Route path="/500" component={AsyncInternalServer} />

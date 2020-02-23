@@ -60,3 +60,8 @@ export const AsyncRegisterPage = loadable({
     loader: () => import('../../containers/Auth/RegisterPageContainer'),
     loading: LoadingComponent,
 });
+
+export const AsyncInvoice = loadable({
+    loader: () => import('../../containers/Users/InvoiceContainer'),
+    loading: LoadingComponent
+})

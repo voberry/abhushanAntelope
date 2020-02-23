@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 //
 import Profile from './ProfileContainer';
 import Checkout from './CheckoutContainer';
+import Invoice from './InvoiceContainer';
 
 
 const Users = ({ match }) => (
@@ -12,7 +13,6 @@ const Users = ({ match }) => (
         <Switch>
             <Route exact path={`${match.url}/`} component={Profile} />
             <Route exact path={`${match.url}/:name/checkout`} component={Checkout} />
-
             {/*<Route component={NotFound} />*/}
         </Switch>
     </Fragment>

@@ -59,7 +59,7 @@ const Hotel = (props) => {
     };
 
     return (
-        <div className="mt-5 pt-5">
+        <div>
             <div className={"gray-background"}>
                 <div className="container-fluid">
                     <div className="row">
